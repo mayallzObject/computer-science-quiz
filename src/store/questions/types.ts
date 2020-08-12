@@ -1,4 +1,6 @@
-export const FETCH_QUESTION = "FETCH_QUESTION"
+export const FETCH_QUESTIONS = "FETCH_QUESTIONS"
+export const FETCH_QUESTION_ERROR = "FETCH_QUESTION_ERROR"
+
 
 export type Question = {
     category: string
@@ -9,10 +11,12 @@ export type Question = {
     type: string
 }
 
-export type fetchQuestion = {
+export type FetchQuestions = {
     type: string
     payload: Question[]
-};
+}
 
-export type QuestionActionTypes = fetchQuestion
+export type QuestionActionTypes = FetchQuestions
+
+
 

@@ -1,4 +1,4 @@
-import { Question } from "./questions/types";
+import { Question, QuestionActionTypes } from "./questions/types";
 
 
 export type StoreState = {
@@ -7,5 +7,4 @@ export type StoreState = {
 
 export type GetState = () => StoreState;
 
-
-
+export type AppActions = QuestionActionTypes
