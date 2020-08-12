@@ -1,6 +1,4 @@
 export const FETCH_QUESTIONS = "FETCH_QUESTIONS"
-export const FETCH_QUESTION_ERROR = "FETCH_QUESTION_ERROR"
-
 
 export type Question = {
     category: string
