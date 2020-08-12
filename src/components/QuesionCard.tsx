@@ -5,21 +5,20 @@ import { selectQuestion } from "../store/questions/selectors";
 
 
 const Card = () => {
+
     const dispatch = useDispatch();
     const someQuestions = useSelector(selectQuestion);
-
-    console.log(
-        "the log is", someQuestions)
+    console.log("what are we selecting :", someQuestions)
 
     useEffect(() => {
         dispatch(fetchQuestions());
-    }, [dispatch]);
+    }, [dispatch])
 
     return (
         <div>
-            Haaloo
+
         </div>
-    );
+    )
 }
 
 export default Card
