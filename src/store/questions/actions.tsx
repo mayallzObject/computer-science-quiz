@@ -1,18 +1,28 @@
 import axios from "axios";
 import { Dispatch } from "redux";
-import { GetState } from "../rootTypes";
-import { Question, FETCH_QUESTION } from "./types";
+import { AppActions } from "../rootTypes";
+import { FETCH_QUESTIONS, Question } from "./types";
+
 
 const API_URL = `https://opentdb.com/api.php?amount=10`;
 
-export function fetchQuestion(questions: Question[]) {
-    return {
-        type: FETCH_QUESTION,
-        payload: questions
-    };
+export const questionsFetched = (payload: Question[]): AppActions => ({
+    type: FETCH_QUESTIONS,
+    payload: payload,
+})
+
+
+export const fetchQuestions = () => async (dispatch: Dispatch) => {
+    try {
+        const res = await axios.get(`${API_URL}`);
+        console.log("What is the responce: ", res.data, dispatch)
+        dispatch(questionsFetched(res.data.results));
+
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-export async function fetchNext5Posts(dispatch: Dispatch, getState: GetState) {
-    const res = await axios.get(`${API_URL}`);
-    dispatch(fetchQuestion(res.data));
-}
+
+
+

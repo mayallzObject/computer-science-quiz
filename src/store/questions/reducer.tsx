@@ -1,45 +1,17 @@
-import { QuestionActionTypes, FETCH_QUESTION, Question } from "./types"
+import { FETCH_QUESTIONS, Question } from "./types"
+import { AppActions } from "../rootTypes"
 
-const initialState: Question[] = [
-    {
-        category: "Entertainment: Books",
-        type: "multiple",
-        difficulty: "medium",
-        question: "What is the fourth book of the Old Testament?",
-        correct_answer: "Numbers",
-        incorrect_answers: ["Genesis", "Exodus", "Leviticus"]
-    },
-    {
-        category: "Entertainment: Music",
-        type: "multiple",
-        difficulty: "hard",
-        question: "Which M83 album is the song &quot;Midnight City&quot; featured in?",
-        correct_answer: "Hurry Up, We&#039;re Dreaming",
-        incorrect_answers: ["Saturdays = Youth", "Before the Dawn Heals Us", "Junk"]
-    },
-    {
-        category: "Entertainment: Books",
-        type: "multiple",
-        difficulty: "medium",
-        question: "What is the fourth book of the Old Testament?",
-        correct_answer: "Numbers",
-        incorrect_answers: ["Genesis", "Exodus", "Leviticus"]
-    },
-    {
-        category: "Entertainment: Music",
-        type: "multiple",
-        difficulty: "hard",
-        question: "Which M83 album is the song &quot;Midnight City&quot; featured in?",
-        correct_answer: "Hurry Up, We&#039;re Dreaming",
-        incorrect_answers: ["Saturdays = Youth", "Before the Dawn Heals Us", "Junk"]
-    }
-]
+const initialState: Question[] = []
 
 
-export default (state = initialState, action: QuestionActionTypes) => {
+export default (state = initialState, action: AppActions): Question[] => {
     switch (action.type) {
-        case FETCH_QUESTION:
+
+        case FETCH_QUESTIONS:
+            console.log("this", action.payload)
             return [...action.payload]
+
+
         default:
             return state
     }

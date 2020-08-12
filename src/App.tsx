@@ -1,8 +1,11 @@
 import React from 'react'
+import Card from './components/QuesionCard'
 
 
 const App: React.FC = () => {
-  return (<></>)
+  return (<div>
+    <Card />
+  </div>)
 }
 
 export default App
