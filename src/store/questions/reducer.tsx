@@ -1,4 +1,4 @@
-import { QuestionActionTypes, FETCH_QUESTION, Question } from "./types";
+import { QuestionActionTypes, FETCH_QUESTION, Question } from "./types"
 
 const initialState: Question[] = [
     {
@@ -8,6 +8,14 @@ const initialState: Question[] = [
         question: "What is the fourth book of the Old Testament?",
         correct_answer: "Numbers",
         incorrect_answers: ["Genesis", "Exodus", "Leviticus"]
+    },
+    {
+        category: "Entertainment: Music",
+        type: "multiple",
+        difficulty: "hard",
+        question: "Which M83 album is the song &quot;Midnight City&quot; featured in?",
+        correct_answer: "Hurry Up, We&#039;re Dreaming",
+        incorrect_answers: ["Saturdays = Youth", "Before the Dawn Heals Us", "Junk"]
     },
     {
         category: "Entertainment: Books",
@@ -25,11 +33,7 @@ const initialState: Question[] = [
         correct_answer: "Hurry Up, We&#039;re Dreaming",
         incorrect_answers: ["Saturdays = Youth", "Before the Dawn Heals Us", "Junk"]
     }
-
-
-
 ]
-
 
 
 export default (state = initialState, action: QuestionActionTypes) => {
@@ -37,6 +41,6 @@ export default (state = initialState, action: QuestionActionTypes) => {
         case FETCH_QUESTION:
             return [...action.payload]
         default:
-            return state;
+            return state
     }
 }
