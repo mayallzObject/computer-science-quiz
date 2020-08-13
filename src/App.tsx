@@ -6,10 +6,12 @@ import Home from './pages/Home'
 import LoginPage from './pages/Login'
 import SingupPage from './pages/Signup'
 import ScoreboardPage from './pages/Scoreboard'
+import NavBar from './components/Navigation'
 
 const App = () => {
   return (
     <div>
+      <NavBar />
       <Switch>
         <Route exact path="/Scoreboard" component={ScoreboardPage} />
         <Route exact path="/singup" component={SingupPage} />
