@@ -1,8 +1,8 @@
-import { QuestionActionTypes, FETCH_QUESTION, Question } from "./types";
+import { FETCH_QUESTION, QuestionActionTypes } from "./types";
+import { Question } from "../../types/questionTypes"
+
 
 const initialState: Question[] = []
-
-
 
 export default (state = initialState, action: QuestionActionTypes) => {
     switch (action.type) {

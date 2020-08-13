@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchQuestions } from "../store/questions/actions";
 import { selectQuestion } from "../store/questions/selectors";
 
+//! Working on the game logic
 
 const Card = () => {
 
