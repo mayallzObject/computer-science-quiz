@@ -9,7 +9,6 @@ export const questionsFetched = (questions: Question[]): QuestionActionTypes => 
     payload: questions,
 })
 
-
 export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {
     try {
         const res = await axios.get("https://opentdb.com/api.php?amount=10");

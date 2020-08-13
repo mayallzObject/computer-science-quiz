@@ -1,7 +1,5 @@
 import { Message } from "../../types/appStateTypes";
 
-
-
 export const APP_LOADING = "APP_LOADING";
 export const APP_DONE_LOADING = "APP_DONE_LOADING";
 export const SET_MESSAGE = "SET_MESSAGE";

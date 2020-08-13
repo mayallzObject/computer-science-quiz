@@ -7,6 +7,4 @@ export type fetchQuestion = {
     payload: Question[]
 };
 
-
-
 export type QuestionActionTypes = fetchQuestion
