@@ -13,7 +13,7 @@ export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetStat
 
         dispatch({
             type: GET_QUESTIONS,
-            payload: res.data,
+            payload: res.data.results,
         })
     } catch (error) {
         dispatch({
