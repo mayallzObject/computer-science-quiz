@@ -1,7 +1,6 @@
 import { FETCH_QUESTION, QuestionActionTypes } from "./types";
 import { Question } from "../../types/questionTypes"
 
-
 const initialState: Question[] = []
 
 export default (state = initialState, action: QuestionActionTypes) => {
@@ -9,6 +8,6 @@ export default (state = initialState, action: QuestionActionTypes) => {
         case FETCH_QUESTION:
             return [...action.payload]
         default:
-            return state;
+            return state
     }
 }

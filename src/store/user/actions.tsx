@@ -1,8 +1,8 @@
 import axios from "axios"
 import { Dispatch } from "redux"
 import { apiUrl } from "../../config/constants"
-import { User, Credentials, SignupData } from "../../types/userTypes"
-import { GetState } from "../types";
+import { User, Credentials, } from "../../types/userTypes"
+import { GetState } from "../types"
 import {
     AuthTypes,
     FETCH_USER,
@@ -27,7 +27,6 @@ export const tokenStillValid = (user: User): AuthTypes => ({
 });
 
 
-
 export const logOut = (): AuthTypes => ({ type: LOG_OUT, user: null })
 
 export const login = (credentials: Credentials) => {
@@ -42,20 +41,20 @@ export const login = (credentials: Credentials) => {
 
             if (res.data.verified) {
                 dispatch(userFetched(res.data));
-                const message = `Hello ${res.data.firstName}, welcome back to Traveler's Diary.`
+                const message = `Hello ${res.data.firstName}`
                 dispatch(
                     // @ts-ignore
                     showMessageWithTimeout("success", false, message, 1500)
                 );
             } else {
-                console.log("message to verify account");
-                const message = `Hello, ${res.data.firstName}, please verify your account by clicking the link sent to your email`;
+                console.log("message to verify account")
+                const message = `Hello, ${res.data.firstName}`
                 dispatch(
                     // @ts-ignore
                     showMessageWithTimeout("info", false, message, 4000)
                 );
             }
-            dispatch(appDoneLoading());
+            dispatch(appDoneLoading())
         } catch (error) {
             if (error.response) {
                 console.log(error.response.data.message);
@@ -64,10 +63,10 @@ export const login = (credentials: Credentials) => {
                 console.log(error.message);
                 dispatch(setMessage("error", true, error.message))
             }
-            dispatch(appDoneLoading());
+            dispatch(appDoneLoading())
         }
-    };
-};
+    }
+}
 
 
 

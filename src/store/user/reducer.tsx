@@ -1,13 +1,13 @@
-import { User } from "../../types/userTypes";
+import { User } from "../../types/userTypes"
 import {
     UserActionTypes,
     FETCH_USER,
     TOKEN_STILL_VALID,
     LOG_OUT,
 
-} from "./types";
+} from "./types"
 
-const token = localStorage.getItem("token");
+const token = localStorage.getItem("token")
 
 const initialState: User = {
     id: null,
@@ -32,4 +32,4 @@ export default (state = initialState, action: UserActionTypes) => {
         default:
             return state;
     }
-};
+}
