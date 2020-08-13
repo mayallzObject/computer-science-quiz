@@ -1,3 +1,5 @@
+
+
 export const FETCH_QUESTION = "FETCH_QUESTION"
 
 export type Question = {
@@ -8,6 +10,7 @@ export type Question = {
     question: string
     type: string
 }
+
 
 export type fetchQuestion = {
     type: string
