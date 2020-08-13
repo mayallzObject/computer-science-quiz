@@ -8,11 +8,9 @@ import { User } from "../types/userTypes";
 
 
 export type StoreState = {
-    appState: AppState;
     questions: Question[];
+    appState: AppState;
     users: User
-    score: number | null
-    token: string | null
 };
 
 export type GetState = () => StoreState;

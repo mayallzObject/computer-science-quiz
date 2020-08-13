@@ -2,7 +2,6 @@ import axios from "axios";
 import { Dispatch } from "redux";
 import { apiUrl } from "../../config/constants";
 import { User, Credentials, SignupData } from "../../types/userTypes";
-import { selectToken } from "./selector";
 import { GetState } from "../types";
 import {
     AuthTypes,
@@ -97,31 +96,7 @@ export const signUp = (signUpData: SignupData) => {
             }
             dispatch(appDoneLoading());
         }
-    };
-};
-
-export const getUserWithStoredToken = () => {
-    return async (dispatch: Dispatch, getState: GetState) => {
-        const token = selectToken(getState());
-
-        if (token === null) return;
-        dispatch(appLoading());
-        try {
-            const res = await axios.get(`${apiUrl}/auth/me`, {
-                headers: { Authorization: `Bearer ${token}` },
-            });
-
-            dispatch(tokenStillValid(res.data));
-            dispatch(appDoneLoading());
-        } catch (error) {
-            if (error.response) {
-                console.log(error.response.data.message);
-            } else {
-                console.log(error.message);
-            }
-            dispatch(appDoneLoading());
-            dispatch(logOut());
-        }
     }
 }
+
 
