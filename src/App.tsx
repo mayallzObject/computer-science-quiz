@@ -1,11 +1,7 @@
 import React from 'react'
-import Card from './components/QuestionCard'
 
-
-const App: React.FC = () => {
-  return (<>
-    <Card />
-  </>)
+const App = () => {
+  return <></>
 }
 
 export default App

@@ -6,14 +6,17 @@ import {
     CLEAR_MESSAGE,
 } from "./types";
 import { AppActions } from "../types";
+import { Dispatch } from "redux";
 
-export const appLoading = (): AppActions => ({ type: APP_LOADING });
+export const appLoading = (): AppActions => ({
+    type: APP_LOADING
+})
 export const appDoneLoading = (): AppActions => ({
     type: APP_DONE_LOADING,
-});
+})
 export const clearMessage = (): AppActions => ({
     type: CLEAR_MESSAGE,
-});
+})
 
 export const setMessage = (
     variant: any,
@@ -27,8 +30,8 @@ export const setMessage = (
             dismissable,
             text,
         },
-    };
-};
+    }
+}
 
 export const showMessageWithTimeout = (
     variant: string,
@@ -36,10 +39,10 @@ export const showMessageWithTimeout = (
     text: string,
     timeOutMilliSeconds: number
 ) => {
-    return (dispatch: any) => {
-        dispatch(setMessage(variant, dismissable, text));
+    return (dispatch: Dispatch) => {
+        dispatch(setMessage(variant, dismissable, text))
 
-        const timeout = timeOutMilliSeconds || DEFAULT_MESSAGE_TIMEOUT;
-        setTimeout(() => dispatch(clearMessage()), timeout);
-    };
-};
+        const timeout = timeOutMilliSeconds || DEFAULT_MESSAGE_TIMEOUT
+        setTimeout(() => dispatch(clearMessage()), timeout)
+    }
+}
