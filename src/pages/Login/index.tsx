@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-//? React imports
 import { useDispatch } from "react-redux";
 import { login } from "../../store/user/actions";
+import { Link } from "react-router-dom";
 
 //? TypeScript types
 import { Credentials } from "../../types/userTypes";
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function LogInForm(props: any) {
     const classes = useStyles();
 
-    const { onClose, setOnClose } = props
+    const { onClose, setForm } = props
     const [credentials, setCredentials] = useState<Credentials>({
         email: "",
         password: "",
@@ -71,7 +71,7 @@ export default function LogInForm(props: any) {
             </FormControl>
 
             <FormControl variant="outlined">
-                <InputLabel color="secondary" htmlFor="component-outlined">Password</InputLabel>
+                <InputLabel htmlFor="component-outlined">Password</InputLabel>
                 <OutlinedInput
                     type="password"
                     id="component-outlined"
@@ -85,23 +85,18 @@ export default function LogInForm(props: any) {
                 />
             </FormControl>
             <Button
-                className="navbtn"
                 onClick={(e) => submitCredentials(e)}
             >
                 Log in
             </Button>
             <Button
-                className="navbtn"
                 onClick={onClose}
             >
                 Close
             </Button>
-            <Button
-                onClick={(e) => setOnClose("Signup")}
-
-            >
-                Singup
-            </Button>
+            <Link to="/signup">
+                Already have an account? login here.
+            </Link>
         </form>
     )
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Switch, Route } from "react-router-dom"
+import React, { useState } from 'react'
+import { Route } from "react-router-dom"
 
 //? Components
 import NavBar from './components/Navigation'
@@ -8,19 +8,34 @@ import LoginPage from './pages/Login'
 import SingupPage from './pages/Signup'
 import ScoreboardPage from './pages/Scoreboard'
 
+//? MUI components
+import Paper from '@material-ui/core/Paper'
+import Switch from '@material-ui/core/Switch';
+import { ThemeProvider, Theme } from '@material-ui/core/styles'
+import { createMuiTheme } from "@material-ui/core/styles"
+
 
 const App = () => {
 
+  const [darkMode, setDarkMode] = useState(false)
+  const theme: Theme = createMuiTheme({
+    palette: {
+      type: darkMode ? "dark" : "light"
+    }
+  })
+
   return (
-    <>
-      <NavBar />
-      <Switch>
+    <ThemeProvider theme={theme}>
+      <Paper style={{ height: "100vh" }}>
+        <NavBar />
+
         <Route exact path="/Scoreboard" component={ScoreboardPage} />
-        <Route exact path="/singup" component={SingupPage} />
+        <Route exact path="/signup" component={SingupPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/:me" component={Home} />
-      </Switch>
-    </>
+        <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
+      </Paper>
+    </ThemeProvider>
   )
 }
 

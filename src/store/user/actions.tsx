@@ -1,7 +1,7 @@
 import axios from "axios"
 import { Dispatch } from "redux"
 import { apiUrl } from "../../config/constants"
-import { User, Credentials, } from "../../types/userTypes"
+import { User, Credentials, SignupData, } from "../../types/userTypes"
 
 //? Types
 import { GetState } from "../types"
@@ -73,5 +73,32 @@ export const login = (credentials: Credentials) => {
     }
 }
 
+export const signUp = (signUpData: SignupData) => {
+    return async (dispatch: Dispatch, getState: GetState) => {
+        dispatch(appLoading());
 
+        const data = { ...signUpData };
+        try {
+            const res = await axios.post(`${apiUrl}/auth/signup`, {
+                data,
+            });
+
+            const message = `Welcome ${res.data.name}.`;
+            dispatch(
+                // @ts-ignore
+                showMessageWithTimeout("success", false, message, 1500)
+            );
+            dispatch(appDoneLoading());
+        } catch (error) {
+            if (error.response) {
+                console.log(error.response.data.message);
+                dispatch(setMessage("error", true, error.response.data.message));
+            } else {
+                console.log(error.message);
+                dispatch(setMessage("error", true, error.message));
+            }
+            dispatch(appDoneLoading());
+        }
+    };
+};
 
