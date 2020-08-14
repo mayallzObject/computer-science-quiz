@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-//? React imports
 import { useDispatch } from "react-redux";
 import { login } from "../../store/user/actions";
+import { Link } from "react-router-dom";
 
 //? TypeScript types
 import { Credentials } from "../../types/userTypes";
@@ -16,7 +16,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
-import { Link } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -72,7 +71,7 @@ export default function LogInForm(props: any) {
             </FormControl>
 
             <FormControl variant="outlined">
-                <InputLabel color="secondary" htmlFor="component-outlined">Password</InputLabel>
+                <InputLabel htmlFor="component-outlined">Password</InputLabel>
                 <OutlinedInput
                     type="password"
                     id="component-outlined"
@@ -96,7 +95,7 @@ export default function LogInForm(props: any) {
                 Close
             </Button>
             <Link to="/signup">
-                Already have an account, login here.
+                Already have an account? login here.
             </Link>
         </form>
     )
