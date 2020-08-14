@@ -16,6 +16,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
+import { Link } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function LogInForm(props: any) {
     const classes = useStyles();
 
-    const { onClose, setOnClose } = props
+    const { onClose, setForm } = props
     const [credentials, setCredentials] = useState<Credentials>({
         email: "",
         password: "",
@@ -85,23 +86,18 @@ export default function LogInForm(props: any) {
                 />
             </FormControl>
             <Button
-                className="navbtn"
                 onClick={(e) => submitCredentials(e)}
             >
                 Log in
             </Button>
             <Button
-                className="navbtn"
                 onClick={onClose}
             >
                 Close
             </Button>
-            <Button
-                onClick={(e) => setOnClose("Signup")}
-
-            >
-                Singup
-            </Button>
+            <Link to="/signup">
+                Already have an account, login here.
+            </Link>
         </form>
     )
 }
