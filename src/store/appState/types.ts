@@ -24,7 +24,8 @@ export type showMessageWithTimeout = (
     dismissable: boolean,
     text: string,
     timeOutMilliSeconds: number
-) => void;
+) => void
+
 
 export type AppStateActionTypes =
     | appLoading

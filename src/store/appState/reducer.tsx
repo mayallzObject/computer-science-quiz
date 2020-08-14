@@ -1,3 +1,4 @@
+//? Types
 import {
     AppStateActionTypes,
     APP_LOADING,
@@ -6,10 +7,11 @@ import {
     CLEAR_MESSAGE,
 } from "./types"
 
+
 const initialState = {
     loading: false,
     message: null,
-};
+}
 
 export default (state = initialState, action: AppStateActionTypes) => {
     switch (action.type) {
@@ -29,4 +31,4 @@ export default (state = initialState, action: AppStateActionTypes) => {
         default:
             return state;
     }
-};
+}

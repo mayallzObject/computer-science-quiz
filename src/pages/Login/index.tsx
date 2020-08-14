@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+//? React imports
 import { useDispatch } from "react-redux";
+import { login } from "../../store/user/actions";
+
+//? TypeScript types
 import { Credentials } from "../../types/userTypes";
 import { OnClick, OnChange } from "../../types/eventType";
-import { login } from "../../store/user/actions";
+
+//? Action creator
 import { showMessageWithTimeout } from "../../store/appState/actions";
 
+//? MUI Components
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-
 import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -22,8 +28,6 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 )
-
-
 
 export default function LogInForm(props: any) {
     const classes = useStyles();

@@ -7,13 +7,12 @@ export type User = {
 }
 
 export type Credentials = {
-    email: string;
-    password: string;
+    email: string
+    password: string
 }
 
 export type SignupData = {
-    name: string;
-    email: string;
-    password: string;
-
+    name: string
+    email: string
+    password: string
 }
