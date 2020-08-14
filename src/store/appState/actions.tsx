@@ -1,12 +1,17 @@
-import { DEFAULT_MESSAGE_TIMEOUT } from "../../config/constants";
+import { Dispatch } from "redux"
+
+//? Timeout 
+import { DEFAULT_MESSAGE_TIMEOUT } from "../../config/constants"
+
+//? TypeScript types
+import { AppActions } from "../types"
 import {
     APP_LOADING,
     APP_DONE_LOADING,
     SET_MESSAGE,
     CLEAR_MESSAGE,
-} from "./types";
-import { AppActions } from "../types";
-import { Dispatch } from "redux";
+} from "./types"
+
 
 export const appLoading = (): AppActions => ({
     type: APP_LOADING
