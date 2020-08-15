@@ -7,7 +7,7 @@ import { User } from "../types/userTypes"
 export type StoreState = {
     questions: Question[]
     appState: AppState
-    users: User
+    user: User
 }
 
 export type GetState = () => StoreState

@@ -15,13 +15,15 @@ const NavBar = () => {
                 <Toolbar>
                     <Switch />
                     <Button component={Link}
-                        color="inherit" to={'/'}>Scoreboard</Button>
+                        color="inherit" to={'/'}>Home</Button>
                     <Button component={Link}
                         color="inherit" to={'/login'}>login</Button>
                     <Button component={Link}
                         color="inherit" to={'/signup'}>sing up</Button>
                     <Button component={Link}
-                        color="inherit" to={'/scoreboard'}>My button</Button>
+                        color="inherit" to={'/scoreboard'}>Scoreboard</Button>
+                    <Button component={Link}
+                        color="inherit" to={'/questions'}>Game</Button>
                 </Toolbar>
             </AppBar>
         </div>

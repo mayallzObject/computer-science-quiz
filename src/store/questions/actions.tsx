@@ -12,13 +12,32 @@ export const questionsFetched = (questions: Question[]): QuestionActionTypes => 
     payload: questions,
 })
 
+
+const shuffleArray = (array: any[]) =>
+    [...array].sort(() => Math.random() - 0.5);
+
+
+
+
 export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {
     try {
-        const res = await axios.get("https://opentdb.com/api.php?amount=10");
+        const res = await axios.get("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple");
 
-        dispatch(questionsFetched(res.data.results))
+
+        const data = res.data.results.map((question: Question) => ({
+            ...question,
+            answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
+        }))
+
+        console.log(data)
+
+        dispatch(questionsFetched(data))
+
+
 
     } catch (error) {
         console.log(error)
     }
 }
+
+

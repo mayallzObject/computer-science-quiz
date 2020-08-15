@@ -21,6 +21,7 @@ import {
 } from "../appState/actions"
 
 
+
 export const userFetched = (user: User): AuthTypes => ({
     type: FETCH_USER,
     user,
@@ -38,22 +39,29 @@ export const login = (credentials: Credentials) => {
     const { email, password } = credentials
     return async function thunk(dispatch: Dispatch, getState: GetState) {
 
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+
+        const body = JSON.stringify({
+            email,
+            password,
+        })
         try {
             dispatch(appLoading())
-            const res = await axios.post(`${apiUrl}/auth/login`, {
-                email,
-                password,
-            })
-            if (res.data.verified) {
+            const res = await axios.post(`${apiUrl}/login`, body, config)
+            if (res.data) {
                 dispatch(userFetched(res.data));
-                const message = `Hello ${res.data.firstName}`
+                const message = `Hello ${res.data.name}`
                 dispatch(
                     // @ts-ignore
                     showMessageWithTimeout("success", false, message, 2000)
                 )
             } else {
                 console.log("message to verify account")
-                const message = `Hello, ${res.data.firstName}`
+                const message = `Hello, ${res.data.name}`
                 dispatch(
                     // @ts-ignore
                     showMessageWithTimeout("info", false, message, 3000)
@@ -78,10 +86,17 @@ export const signUp = (signUpData: SignupData) => {
         dispatch(appLoading());
 
         const data = { ...signUpData };
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+
+        const body = JSON.stringify(data)
         try {
-            const res = await axios.post(`${apiUrl}/auth/signup`, {
-                data,
-            });
+
+            const res = await axios.post(`${apiUrl}/signup`, body, config);
 
             const message = `Welcome ${res.data.name}.`;
             dispatch(
@@ -102,3 +117,47 @@ export const signUp = (signUpData: SignupData) => {
     };
 };
 
+
+
+
+
+export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => {
+    if (localStorage.token === undefined) return;
+
+    try {
+        const res = await axios.get(`${apiUrl}/me`, {
+            headers: { Authorization: `Bearer ${localStorage.token}` }
+        });
+
+
+        dispatch(userFetched(res.data));
+
+    } catch (error) {
+        console.log('no user')
+        if (error.response) {
+
+            dispatch(setMessage("error", true, error.response.data.message))
+        } else {
+            dispatch(setMessage("error", true, error.message))
+        }
+        dispatch(appDoneLoading())
+    }
+};
+
+
+
+export const addScore = (score: number, userId: number) => async (dispatch: Dispatch, getState: GetState) => {
+
+    const config = {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
+    try {
+
+        await axios.post(`http://localhost:4000/score/addScoreBoard`, JSON.stringify({ score, userId }), config)
+
+    } catch (error) {
+
+    }
+}
