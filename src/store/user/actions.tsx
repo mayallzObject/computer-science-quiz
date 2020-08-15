@@ -19,6 +19,7 @@ import {
     appDoneLoading,
     appLoading,
 } from "../appState/actions"
+import { config } from "process"
 
 
 export const userFetched = (user: User): AuthTypes => ({
@@ -38,22 +39,29 @@ export const login = (credentials: Credentials) => {
     const { email, password } = credentials
     return async function thunk(dispatch: Dispatch, getState: GetState) {
 
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+
+        const body = JSON.stringify({
+            email,
+            password,
+        })
         try {
             dispatch(appLoading())
-            const res = await axios.post(`${apiUrl}/auth/login`, {
-                email,
-                password,
-            })
-            if (res.data.verified) {
+            const res = await axios.post(`${apiUrl}/login`, body, config)
+            if (res.data) {
                 dispatch(userFetched(res.data));
-                const message = `Hello ${res.data.firstName}`
+                const message = `Hello ${res.data.name}`
                 dispatch(
                     // @ts-ignore
                     showMessageWithTimeout("success", false, message, 2000)
                 )
             } else {
                 console.log("message to verify account")
-                const message = `Hello, ${res.data.firstName}`
+                const message = `Hello, ${res.data.name}`
                 dispatch(
                     // @ts-ignore
                     showMessageWithTimeout("info", false, message, 3000)
@@ -78,10 +86,17 @@ export const signUp = (signUpData: SignupData) => {
         dispatch(appLoading());
 
         const data = { ...signUpData };
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+
+        const body = JSON.stringify(data)
         try {
-            const res = await axios.post(`${apiUrl}/auth/signup`, {
-                data,
-            });
+
+            const res = await axios.post(`${apiUrl}/signup`, body, config);
 
             const message = `Welcome ${res.data.name}.`;
             dispatch(

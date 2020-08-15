@@ -3,6 +3,8 @@ import { Route } from "react-router-dom"
 
 //? Components
 import NavBar from './components/Navigation'
+import Question from './components/QuestionCard/index'
+
 import Home from './pages/Home'
 import LoginPage from './pages/Login'
 import SingupPage from './pages/Signup'
@@ -29,7 +31,8 @@ const App = () => {
       <Paper style={{ height: "100vh" }}>
         <NavBar />
 
-        <Route exact path="/Scoreboard" component={ScoreboardPage} />
+        <Route exact path="/score" component={ScoreboardPage} />
+        <Route exact path="/questions" component={Question} />
         <Route exact path="/signup" component={SingupPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/:me" component={Home} />
