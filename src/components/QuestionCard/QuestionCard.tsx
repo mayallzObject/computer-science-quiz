@@ -1,17 +1,9 @@
 import React from 'react'
 
 
+import { Button } from '@material-ui/core'
+
 import { AnswerObject } from './index';
-
-
-// type Props = {
-//     question: string;
-//     answers: string[];
-//     callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
-//     userAnswer: AnswerObject | undefined;
-//     questionNr: number;
-//     totalQuestions: number;
-// };
 
 
 type Props = {
@@ -39,12 +31,13 @@ const QuestionCard: React.FC<Props> = ({
             <p dangerouslySetInnerHTML={{ __html: question }} />
             <div>
                 {answers.map((answer) => (
-                    <button
+                    <Button
+                        variant="contained"
                         key={answer}>
-                        <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+                        <Button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{ __html: answer }} />
-                        </button>
-                    </button>
+                        </Button>
+                    </Button>
                 ))}
             </div>
         </div>

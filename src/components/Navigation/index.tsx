@@ -22,6 +22,8 @@ const NavBar = () => {
                         color="inherit" to={'/signup'}>sing up</Button>
                     <Button component={Link}
                         color="inherit" to={'/scoreboard'}>Scoreboard</Button>
+                    <Button component={Link}
+                        color="inherit" to={'/questions'}>Game</Button>
                 </Toolbar>
             </AppBar>
         </div>

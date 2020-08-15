@@ -117,3 +117,47 @@ export const signUp = (signUpData: SignupData) => {
     };
 };
 
+
+
+
+
+export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => {
+    if (localStorage.token === undefined) return;
+
+    try {
+        const res = await axios.get(`${apiUrl}/me`, {
+            headers: { Authorization: `Bearer ${localStorage.token}` }
+        });
+
+
+        dispatch(userFetched(res.data));
+
+    } catch (error) {
+        console.log('no user')
+        if (error.response) {
+
+            dispatch(setMessage("error", true, error.response.data.message))
+        } else {
+            dispatch(setMessage("error", true, error.message))
+        }
+        dispatch(appDoneLoading())
+    }
+};
+
+
+
+export const addScore = (score: number, userId: number) => async (dispatch: Dispatch, getState: GetState) => {
+
+    const config = {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
+    try {
+
+        await axios.post(`http://localhost:4000/score/addScoreBoard`, JSON.stringify({ score, userId }), config)
+
+    } catch (error) {
+
+    }
+}

@@ -7,6 +7,10 @@ import { selectUser } from "../../store/user/selectors"
 
 import QuestionCard from "./QuestionCard"
 
+import { addScore } from "../../store/user/actions"
+
+
+
 
 
 
@@ -29,9 +33,13 @@ export type Question = {
 
 };
 
+type ID = number | any;
+
 export type QuestionsState = Question & { answers: string[] };
 
 const Card: React.FC = () => {
+
+
 
     const [TOTAL_QUESTIONS] = useState(10);
     const [questions, setQuestions] = useState<QuestionsState[]>([])
@@ -40,6 +48,8 @@ const Card: React.FC = () => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
     const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
+
+    const [id, setID] = useState<ID>(null);
 
 
 
@@ -52,7 +62,8 @@ const Card: React.FC = () => {
     useEffect(() => {
 
         dispatch(fetchQuestions())
-    }, [dispatch])
+        setID(someUser.id)
+    }, [dispatch, someUser, id])
 
 
 
@@ -95,10 +106,21 @@ const Card: React.FC = () => {
 
         if (nextQ === TOTAL_QUESTIONS) {
             setGameOver(true);
+
+
+            //call the funciton here, which will pass the score and the user
         } else {
             setNumber(nextQ);
         }
     };
+
+
+    const submitScore = () => {
+        dispatch(addScore(score, id))
+        setNumber(0)
+    }
+
+
 
 
     return <>
@@ -131,6 +153,13 @@ const Card: React.FC = () => {
                     Next Question
                 </button>
             ) : null}
+
+            {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+                <button className='start' onClick={submitScore}>
+                    Submit Score
+                </button>
+            ) : null}
+
 
 
         </div>

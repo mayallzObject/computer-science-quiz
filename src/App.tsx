@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route } from "react-router-dom"
 
 //? Components
@@ -15,9 +15,19 @@ import Paper from '@material-ui/core/Paper'
 import Switch from '@material-ui/core/Switch';
 import { ThemeProvider, Theme } from '@material-ui/core/styles'
 import { createMuiTheme } from "@material-ui/core/styles"
+import { useDispatch } from "react-redux"
 
-
+import { loadUser } from './store/user/actions'
 const App = () => {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+
+    dispatch(loadUser())
+  }, [dispatch])
+
+
 
   const [darkMode, setDarkMode] = useState(false)
   const theme: Theme = createMuiTheme({
@@ -31,7 +41,7 @@ const App = () => {
       <Paper style={{ height: "100vh" }}>
         <NavBar />
 
-        <Route exact path="/score" component={ScoreboardPage} />
+        <Route exact path="/scoreboard" component={ScoreboardPage} />
         <Route exact path="/questions" component={Question} />
         <Route exact path="/signup" component={SingupPage} />
         <Route exact path="/login" component={LoginPage} />
