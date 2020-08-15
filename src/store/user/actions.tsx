@@ -19,7 +19,7 @@ import {
     appDoneLoading,
     appLoading,
 } from "../appState/actions"
-import { config } from "process"
+
 
 
 export const userFetched = (user: User): AuthTypes => ({

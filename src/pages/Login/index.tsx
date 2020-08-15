@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function LogInForm(props: any) {
     const classes = useStyles();
 
-    const { onClose, setForm } = props
+    const { onClose } = props
     const [credentials, setCredentials] = useState<Credentials>({
         email: "",
         password: "",
