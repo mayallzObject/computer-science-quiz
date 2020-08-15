@@ -16,12 +16,16 @@ const NavBar = () => {
                     <Switch />
                     <Button component={Link}
                         color="inherit" to={'/'}>Home</Button>
+
                     <Button component={Link}
                         color="inherit" to={'/login'}>login</Button>
+
                     <Button component={Link}
                         color="inherit" to={'/signup'}>sing up</Button>
+
                     <Button component={Link}
                         color="inherit" to={'/scoreboard'}>Scoreboard</Button>
+
                     <Button component={Link}
                         color="inherit" to={'/questions'}>Game</Button>
                 </Toolbar>

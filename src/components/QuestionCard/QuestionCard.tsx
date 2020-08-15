@@ -1,19 +1,6 @@
 import React from 'react'
-
-
 import { Button } from '@material-ui/core'
-
-import { AnswerObject } from './index';
-
-
-type Props = {
-    question: string
-    answers: string[]
-    userAnswer: any,
-    callback: any
-    questionNr: number
-    totalQuestions: number
-}
+import { Props } from "./types"
 
 
 const QuestionCard: React.FC<Props> = ({

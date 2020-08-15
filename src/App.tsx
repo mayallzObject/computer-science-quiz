@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Route } from "react-router-dom"
+import { useDispatch } from "react-redux"
 
 //? Components
 import NavBar from './components/Navigation'
 import Question from './components/QuestionCard/index'
-
 import Home from './pages/Home'
 import LoginPage from './pages/Login'
 import SingupPage from './pages/Signup'
@@ -15,9 +15,10 @@ import Paper from '@material-ui/core/Paper'
 import Switch from '@material-ui/core/Switch';
 import { ThemeProvider, Theme } from '@material-ui/core/styles'
 import { createMuiTheme } from "@material-ui/core/styles"
-import { useDispatch } from "react-redux"
 
 import { loadUser } from './store/user/actions'
+
+
 const App = () => {
 
   const dispatch = useDispatch()
@@ -53,3 +54,4 @@ const App = () => {
 }
 
 export default App
+
