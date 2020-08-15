@@ -42,8 +42,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import Login from "../../pages/Login";
-import Signup from "../../pages/Signup";
+import Login from "./Login";
+import SignUp from "./Signup";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -82,7 +82,7 @@ export default function AuthModal() {
         modalForm === "Login" ? (
             <Login handleClose={handleClose} set_modalForm={set_modalForm} />
         ) : (
-                <Signup handleClose={handleClose} set_modalForm={set_modalForm} />
+                <SignUp handleClose={handleClose} set_modalForm={set_modalForm} />
             );
     return (
         <Paper>
