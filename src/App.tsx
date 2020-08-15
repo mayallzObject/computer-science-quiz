@@ -40,14 +40,13 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Paper style={{ height: "100vh" }}>
+        <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
         <NavBar />
-
         <Route exact path="/scoreboard" component={ScoreboardPage} />
         <Route exact path="/questions" component={Question} />
         <Route exact path="/signup" component={SingupPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/:me" component={Home} />
-        <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
       </Paper>
     </ThemeProvider>
   )
