@@ -134,13 +134,15 @@ const Questions: React.FC = () => {
                         </Button>
                     ) : null
                 }
-                {
-                    number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-                        <Button onClick={submitScore}>
-                            Submit Score
-                        </Button>
-                    ) : null
-                }
+                <Box m={2} pt={5}>
+                    {
+                        number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+                            <Button onClick={submitScore}>
+                                Submit Score
+                            </Button>
+                        ) : null
+                    }
+                </Box>
             </Grid>
         </Grid>
     )
