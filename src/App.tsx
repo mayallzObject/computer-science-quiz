@@ -29,7 +29,6 @@ const App = () => {
     dispatch(loadUser())
   }, [dispatch])
 
-
   const [darkMode, setDarkMode] = useState(false)
   const theme: Theme = createMuiTheme({
     palette: {
@@ -37,10 +36,12 @@ const App = () => {
     }
   })
 
+
+
   return (
     <ThemeProvider theme={theme}>
-      <Paper style={{ height: "100vh" }}>
-        <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
+      <Paper style={{ height: "100vh" }} >
+        <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} /> {"DarkMode"}
         <NavBar />
         <Route exact path="/scoreboard" component={ScoreboardPage} />
         <Route exact path="/signup" component={SingupPage} />

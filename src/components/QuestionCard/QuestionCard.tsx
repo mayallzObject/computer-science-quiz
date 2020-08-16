@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
+import { Button, Grid, Typography } from '@material-ui/core'
 import { Props } from "./types"
 
 
@@ -11,24 +11,37 @@ const QuestionCard: React.FC<Props> = ({
     questionNr,
     totalQuestions,
 }) => (
-        <div>
-            <p className='number'>
+        <Grid spacing={5}>
+            <Typography align="center">
                 Question: {questionNr} / {totalQuestions}
-            </p>
-            <p dangerouslySetInnerHTML={{ __html: question }} />
+            </Typography>
+            {/* <p dangerouslySetInnerHTML={{ __html: question }} /> */}
+            <Typography align="center">
+                {question}
+            </Typography>
             <div>
                 {answers.map((answer) => (
                     <Button
                         variant="contained"
                         key={answer}>
-                        <Button color="inherit" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-                            <span dangerouslySetInnerHTML={{ __html: answer }} />
+                        <Button color="primary"
+                            variant="contained"
+                            disabled={userAnswer ? true : false}
+                            value={answer}
+                            onClick={callback}>
+                            {/* <span dangerouslySetInnerHTML={{ __html: answer }} /> */}
+                            <span>
+                                <Typography align="center">
+                                    {answers}
+                                </Typography>
+                            </span>
                         </Button>
                     </Button>
                 ))}
             </div>
-        </div>
+        </Grid>
     );
 
 
 export default QuestionCard
+

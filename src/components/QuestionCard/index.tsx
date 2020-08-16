@@ -12,8 +12,30 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 //? Types
 import { AnswerObject, ID, QuestionsState } from "./types"
+import { Theme, makeStyles } from '@material-ui/core/styles'
+import { Button } from '@material-ui/core'
+
+
+
+const useStyles = makeStyles((theme: Theme) => ({
+    root: {
+        margin: 0,
+        padding: theme.spacing(2),
+    },
+    btn: {
+        fontWeight: "bold",
+        color: "#aa0d00",
+        backgroundColor: "#ffffff",
+        "&:hover": {
+            color: "#000000",
+            backgroundColor: "#ffa000",
+        },
+    },
+}));
+
 
 const Card: React.FC = () => {
+    const classes = useStyles()
 
     const [TOTAL_QUESTIONS] = useState(10);
     const [questions, setQuestions] = useState<QuestionsState[]>([])
@@ -87,9 +109,9 @@ const Card: React.FC = () => {
             <h1>REACT QUIZ</h1>
 
             {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-                <button className='start' onClick={startTrivia}>
+                <Button className={classes.btn} onClick={startTrivia}>
                     Start
-                </button>
+                </Button>
             ) : null}
 
             {!gameOver ? <p className='score'>Score: {score}</p> : null}
@@ -106,15 +128,15 @@ const Card: React.FC = () => {
             )}
 
             {!gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-                <button className='next' onClick={nextQuestion}>
+                <Button className={classes.btn} onClick={nextQuestion}>
                     Next Question
-                </button>
+                </Button>
             ) : null}
 
             {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-                <button className='start' onClick={submitScore}>
+                <Button className={classes.btn} onClick={submitScore}>
                     Submit Score
-                </button>
+                </Button>
             ) : null}
 
 

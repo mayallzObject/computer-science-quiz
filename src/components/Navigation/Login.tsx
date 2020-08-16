@@ -68,7 +68,7 @@ const Login = (props: any) => {
             <DialogActions>
                 <Button variant="contained" color="primary" onClick={submitForm}>
                     Log in
-        </Button>
+                </Button>
             </DialogActions>
             <DialogContentText className={classes.dialogFooter}>
                 Don't have an account yet? Sign up{" "}
