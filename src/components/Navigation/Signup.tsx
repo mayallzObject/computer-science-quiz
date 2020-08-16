@@ -104,3 +104,4 @@ const SingUp = (props: any) => {
 }
 
 export default SingUp
+

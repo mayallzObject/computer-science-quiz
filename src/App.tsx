@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"
 
 //? Components
 import NavBar from './components/Navigation'
-import Question from './components/QuestionCard/index'
+
 import Home from './pages/Home'
 import LoginPage from './pages/Login'
 import SingupPage from './pages/Signup'
@@ -19,6 +19,7 @@ import { createMuiTheme } from "@material-ui/core/styles"
 import { loadUser } from './store/user/actions'
 
 
+
 const App = () => {
 
   const dispatch = useDispatch()
@@ -27,7 +28,6 @@ const App = () => {
 
     dispatch(loadUser())
   }, [dispatch])
-
 
 
   const [darkMode, setDarkMode] = useState(false)
@@ -43,7 +43,6 @@ const App = () => {
         <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
         <NavBar />
         <Route exact path="/scoreboard" component={ScoreboardPage} />
-        <Route exact path="/questions" component={Question} />
         <Route exact path="/signup" component={SingupPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/:me" component={Home} />

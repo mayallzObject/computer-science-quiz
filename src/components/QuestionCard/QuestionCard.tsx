@@ -21,7 +21,7 @@ const QuestionCard: React.FC<Props> = ({
                     <Button
                         variant="contained"
                         key={answer}>
-                        <Button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+                        <Button color="inherit" disabled={userAnswer ? true : false} value={answer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{ __html: answer }} />
                         </Button>
                     </Button>

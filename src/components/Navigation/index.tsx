@@ -39,11 +39,14 @@
 import React, { useState } from "react";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import Paper from "@material-ui/core/Paper";
+import { Paper } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Login from "./Login";
 import SignUp from "./Signup";
+import { NavLink } from "react-router-dom";
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -86,10 +89,15 @@ export default function AuthModal() {
             );
     return (
         <Paper>
-
+            <Button component={NavLink} to={'/scoreboard'}>
+                Scoreboard
+             </Button>
+            <Button component={NavLink} to={'/home'}>
+                Play Cool-Trivia
+             </Button>
             <Button className={classes.btn} onClick={handleOpen}>
                 Login
-      </Button>
+            </Button>
             <Dialog
                 className={classes.root}
                 open={open}
@@ -100,6 +108,6 @@ export default function AuthModal() {
                 <DialogTitle id="form-dialog-title">{title}</DialogTitle>
                 {formToDisplay}
             </Dialog>
-        </Paper>
+        </Paper >
     );
 }
