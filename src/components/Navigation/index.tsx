@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Login from "./Login";
 import SignUp from "./Signup";
+import { Link } from "react-router-dom";
 
 
 
@@ -48,20 +49,25 @@ export default function AuthModal() {
                 <SignUp handleClose={handleClose} set_modalForm={set_modalForm} />
             );
     return (
-        <Paper>
-            <Button className={classes.btn} onClick={handleOpen}>
-                Login
+        <div>
+            <Paper>
+                <Button className={classes.btn} onClick={handleOpen}>
+                    Login
             </Button>
-            <Dialog
-                className={classes.root}
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="auth-modal-login-signup"
-                aria-describedby="auth-modal-login-signup"
-            >
-                <DialogTitle id="form-dialog-title">{title}</DialogTitle>
-                {formToDisplay}
-            </Dialog>
-        </Paper >
+                <Dialog
+                    className={classes.root}
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="auth-modal-login-signup"
+                    aria-describedby="auth-modal-login-signup"
+                >
+                    <DialogTitle id="form-dialog-title">{title}</DialogTitle>
+                    {formToDisplay}
+                </Dialog>
+
+
+            </Paper>
+
+        </div>
     );
 }

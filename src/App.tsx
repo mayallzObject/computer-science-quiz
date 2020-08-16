@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 
 import Home from './pages/Home'
-
+import LoginPage from './pages/Login'
 import ScoreboardPage from './pages/Scoreboard'
 
 //? MUI components
@@ -90,7 +90,7 @@ const App = () => {
             {isLoading ? <Loading /> : null}
           </Container>
         </Paper>
-
+        <Route exact path="/login" component={LoginPage} />
         <Route path="/scoreboard" component={ScoreboardPage} />
         <Route exact path="/" component={Home} />
         {/* <Route path="/scoreboard" component={ScoreboardPage} />

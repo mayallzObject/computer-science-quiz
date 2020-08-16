@@ -3,8 +3,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@material-ui/core/Box";
+import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
 import Brightness2 from "@material-ui/icons/Brightness2";
@@ -12,7 +13,7 @@ import Brightness7 from "@material-ui/icons/Brightness7";
 import AuthModal from "./index"
 import Logout from "./Logout"
 import { selectUser } from "../../store/user/selectors";
-import ScoreboardPage from "../../pages/Scoreboard";
+
 // import GitHubIcon from '@material-ui/icons/GitHub';
 
 
@@ -104,10 +105,28 @@ const ClickAppBar = (props: any) => {
                         </Box>
                     </Box>
                 </Toolbar>
+                <Button
+                    component={Link}
+                    to="/"
+                    className={classes.darkButton}
+                >
+                    Play
+                    </Button>
+                <Button
+                    component={Link}
+                    to="/scoreboard"
+                    className={classes.darkButton}
+                >
+                    ScoreBoard
+                    </Button>
+                <Button
+                    component={Link}
+                    to="/login"
+                    className={classes.darkButton}
+                >
+                    About
+                    </Button>
             </AppBar>
-            <Box>
-                <ScoreboardPage />
-            </Box>
         </Paper>
     );
 }
