@@ -1,5 +1,5 @@
-
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signUp } from "../../store/user/actions";
 import { SignupData } from "../../types/userTypes";
@@ -7,26 +7,14 @@ import { OnClick, OnChange } from "../../types/eventType";
 import { showMessageWithTimeout } from "../../store/appState/actions";
 
 //? MUI Components
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
-
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
-import { Link } from "react-router-dom";
+
+import { useStyles } from "./mui"
 
 
-
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            '& > *': {
-                margin: theme.spacing(4),
-            },
-
-        },
-    }),
-)
 
 
 export default function SignupForm(props: any) {

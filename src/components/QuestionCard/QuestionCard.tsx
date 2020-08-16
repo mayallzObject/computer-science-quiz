@@ -1,20 +1,27 @@
 import React from 'react'
+import { Props } from "./types"
+import { Button, Typography, makeStyles, CardMedia, CardContent, Card, CardActions } from '@material-ui/core'
 
 
-import { Button } from '@material-ui/core'
-
-import { AnswerObject } from './index';
-
-
-type Props = {
-    question: string
-    answers: string[]
-    userAnswer: any,
-    callback: any
-    questionNr: number
-    totalQuestions: number
-}
-
+const useStyles = makeStyles({
+    root: {
+        minWidth: 300,
+        align: 'center',
+    },
+    bullet: {
+        display: 'inline-block',
+        margin: '0 2px',
+        transform: 'scale(0.8)',
+        align: 'center',
+    },
+    title: {
+        fontSize: 14,
+    },
+    pos: {
+        align: 'center',
+        marginBottom: 12,
+    },
+})
 
 const QuestionCard: React.FC<Props> = ({
     question,
@@ -23,25 +30,44 @@ const QuestionCard: React.FC<Props> = ({
     userAnswer,
     questionNr,
     totalQuestions,
-}) => (
-        <div>
-            <p className='number'>
-                Question: {questionNr} / {totalQuestions}
-            </p>
-            <p dangerouslySetInnerHTML={{ __html: question }} />
-            <div>
-                {answers.map((answer) => (
-                    <Button
-                        variant="contained"
-                        key={answer}>
-                        <Button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-                            <span dangerouslySetInnerHTML={{ __html: answer }} />
-                        </Button>
-                    </Button>
-                ))}
-            </div>
-        </div>
-    );
+}) => {
+    const classes = useStyles()
 
+    return (
+        <Card className={classes.root}>
+            <Typography align="center">
+                Question: {questionNr} / {totalQuestions}
+            </Typography>
+
+            <React.Fragment>
+                {question}
+            </React.Fragment>
+            <CardMedia
+                style={{ height: "150px" }}
+            />
+            <CardContent>
+                {answers.map((answer) => (
+                    <div
+                        key={answer}>
+                        <CardActions>
+                            <Button
+                                color="primary"
+                                variant="contained"
+                                disabled={userAnswer ? true : false}
+                                value={answer}
+                                onClick={callback}>
+                                <React.Fragment>
+                                    {answer}
+                                </React.Fragment>
+                            </Button>
+                        </CardActions>
+                    </div>
+                ))}
+            </CardContent>
+        </Card>
+    )
+
+}
 
 export default QuestionCard
+

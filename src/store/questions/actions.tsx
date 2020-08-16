@@ -21,7 +21,7 @@ const shuffleArray = (array: any[]) =>
 
 export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {
     try {
-        const res = await axios.get("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple");
+        const res = await axios.get("https://opentdb.com/api.php?amount=10&type=multiple");
 
 
         const data = res.data.results.map((question: Question) => ({

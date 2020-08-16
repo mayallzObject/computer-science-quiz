@@ -1,55 +1,96 @@
 import React, { useState, useEffect } from 'react'
 import { Route } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
 
 //? Components
-import NavBar from './components/Navigation'
-import Question from './components/QuestionCard/index'
+
 
 import Home from './pages/Home'
 import LoginPage from './pages/Login'
-import SingupPage from './pages/Signup'
 import ScoreboardPage from './pages/Scoreboard'
 
 //? MUI components
 import Paper from '@material-ui/core/Paper'
-import Switch from '@material-ui/core/Switch';
-import { ThemeProvider, Theme } from '@material-ui/core/styles'
-import { createMuiTheme } from "@material-ui/core/styles"
-import { useDispatch } from "react-redux"
+
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { Container, CssBaseline } from "@material-ui/core"
 
 import { loadUser } from './store/user/actions'
-const App = () => {
 
+import ClickAppBar from './components/Navigation/NavBar'
+import { selectAppLoading } from './store/appState/selectors'
+import MessageBox from './components/MessageBox'
+import Loading from './components/Loading/Loading'
+
+
+
+const App = () => {
+  const isLoading = useSelector(selectAppLoading);
   const dispatch = useDispatch()
+  const [darkMode, set_darkMode] = useState(false);
+
+
+
+  const lightTheme = createMuiTheme({
+    palette: {
+      primary: {
+
+        main: "#3b5998",
+        dark: "#890000", // button hovering color in light mode
+      },
+
+      type: "light",
+    },
+  })
+
+  const darkTheme = createMuiTheme({
+    palette: {
+      primary: {
+        light: "#DB6666",
+        main: "#AA0D00",
+        dark: "#242424", // button hovering color when in dark
+      },
+
+
+      type: "dark",
+      background: { paper: "#0000" },
+    },
+  })
+
 
   useEffect(() => {
 
     dispatch(loadUser())
-  }, [dispatch])
+  }, [dispatch, darkMode])
 
 
-
-  const [darkMode, setDarkMode] = useState(false)
-  const theme: Theme = createMuiTheme({
-    palette: {
-      type: darkMode ? "dark" : "light"
-    }
-  })
 
   return (
-    <ThemeProvider theme={theme}>
-      <Paper style={{ height: "100vh" }}>
-        <NavBar />
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Paper style={{ height: "100vh" }} >
 
-        <Route exact path="/scoreboard" component={ScoreboardPage} />
-        <Route exact path="/questions" component={Question} />
-        <Route exact path="/signup" component={SingupPage} />
+        <CssBaseline />
+        <ClickAppBar darkMode={darkMode} set_darkMode={set_darkMode} />
+        {/* <NavBar /> */}
+        <Paper>
+          <Container disableGutters={true} maxWidth="xs">
+
+            <MessageBox />
+
+            {isLoading ? <Loading /> : null}
+          </Container>
+        </Paper>
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/:me" component={Home} />
-        <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
+        <Route path="/scoreboard" component={ScoreboardPage} />
+        <Route exact path="/" component={Home} />
+        {/* <Route path="/scoreboard" component={ScoreboardPage} />
+        <Route path="/signup" component={SingupPage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/:me" component={Home} /> */}
       </Paper>
     </ThemeProvider>
   )
 }
 
 export default App
+
