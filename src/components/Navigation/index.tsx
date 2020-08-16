@@ -1,41 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// //? MUI Components
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Button from '@material-ui/core/Button';
-// import Switch from '@material-ui/core/Switch';
-
-
-// const NavBar = () => {
-//     return (
-//         <div>
-//             <AppBar position="static">
-//                 <Toolbar>
-//                     <Switch />
-//                     <Button component={Link}
-//                         color="inherit" to={'/'}>Home</Button>
-
-//                     <Button component={Link}
-//                         color="inherit" to={'/login'}>login</Button>
-
-//                     <Button component={Link}
-//                         color="inherit" to={'/signup'}>sing up</Button>
-
-//                     <Button component={Link}
-//                         color="inherit" to={'/scoreboard'}>Scoreboard</Button>
-
-//                     <Button component={Link}
-//                         color="inherit" to={'/questions'}>Game</Button>
-//                 </Toolbar>
-//             </AppBar>
-//         </div>
-//     )
-// }
-
-// export default NavBar
-
 import React, { useState } from "react";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -44,7 +6,6 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Login from "./Login";
 import SignUp from "./Signup";
-import { NavLink } from "react-router-dom";
 
 
 
@@ -63,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
-
 
 
 export default function AuthModal() {
@@ -89,12 +49,6 @@ export default function AuthModal() {
             );
     return (
         <Paper>
-            <Button component={NavLink} to={'/scoreboard'}>
-                Scoreboard
-             </Button>
-            <Button component={NavLink} to={'/home'}>
-                Play Cool-Trivia
-             </Button>
             <Button className={classes.btn} onClick={handleOpen}>
                 Login
             </Button>

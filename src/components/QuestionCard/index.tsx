@@ -13,7 +13,7 @@ import { fetchQuestions } from "../../store/questions/actions"
 //? Types
 import { AnswerObject, ID, QuestionsState } from "./types"
 import { Theme, makeStyles } from '@material-ui/core/styles'
-import { Button } from '@material-ui/core'
+import { Button, Box } from '@material-ui/core'
 
 
 
@@ -104,47 +104,55 @@ const Card: React.FC = () => {
 
 
 
-    return <>
+    return (
         <div>
-            <h1>REACT QUIZ</h1>
 
-            {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-                <Button className={classes.btn} onClick={startTrivia}>
-                    Start
-                </Button>
-            ) : null}
+            <Box>REACT QUIZ</Box>
 
-            {!gameOver ? <p className='score'>Score: {score}</p> : null}
 
-            {!gameOver && (
-                <QuestionCard
-                    questionNr={number + 1}
-                    totalQuestions={TOTAL_QUESTIONS}
-                    question={questions[number].question}
-                    answers={questions[number].answers}
-                    userAnswer={userAnswers ? userAnswers[number] : undefined}
-                    callback={checkAnswer}
-                />
-            )}
+            {
+                gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+                    <Button className={classes.btn} onClick={startTrivia}>
+                        Start New Game
+                    </Button>
+                ) : null
+            }
 
-            {!gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-                <Button className={classes.btn} onClick={nextQuestion}>
-                    Next Question
-                </Button>
-            ) : null}
+            {!gameOver ? <Box className='score'>Score: {score}</Box> : null}
 
-            {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-                <Button className={classes.btn} onClick={submitScore}>
-                    Submit Score
-                </Button>
-            ) : null}
+            {
+                !gameOver && (
+                    <QuestionCard
+                        questionNr={number + 1}
+                        totalQuestions={TOTAL_QUESTIONS}
+                        question={questions[number].question}
+                        answers={questions[number].answers}
+                        userAnswer={userAnswers ? userAnswers[number] : undefined}
+                        callback={checkAnswer}
+                    />
+                )
+            }
+
+            {
+                !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
+                    <Button className={classes.btn} onClick={nextQuestion}>
+                        Next Question
+                    </Button>
+                ) : null
+            }
+
+            {
+                number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+                    <Button className={classes.btn} onClick={submitScore}>
+                        Submit Score
+                    </Button>
+                ) : null
+            }
 
 
 
         </div>
-
-
-    </>
+    )
 }
 
 export default Card

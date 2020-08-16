@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Grid, Typography } from '@material-ui/core'
+import { Button, Grid, Typography, Container, Box } from '@material-ui/core'
 import { Props } from "./types"
 
 
@@ -11,35 +11,31 @@ const QuestionCard: React.FC<Props> = ({
     questionNr,
     totalQuestions,
 }) => (
-        <Grid spacing={5}>
-            <Typography align="center">
-                Question: {questionNr} / {totalQuestions}
-            </Typography>
-            {/* <p dangerouslySetInnerHTML={{ __html: question }} /> */}
-            <Typography align="center">
-                {question}
-            </Typography>
-            <div>
+        <div>
+            <Container maxWidth="xl">
+
+                <Typography align="center">
+                    Question: {questionNr} / {totalQuestions}
+                </Typography>
+
+                <p dangerouslySetInnerHTML={{ __html: question }} />
                 {answers.map((answer) => (
-                    <Button
-                        variant="contained"
+                    <div
                         key={answer}>
-                        <Button color="primary"
+                        <Button
+                            color="primary"
                             variant="contained"
                             disabled={userAnswer ? true : false}
                             value={answer}
                             onClick={callback}>
-                            {/* <span dangerouslySetInnerHTML={{ __html: answer }} /> */}
-                            <span>
-                                <Typography align="center">
-                                    {answers}
-                                </Typography>
-                            </span>
+                            <span dangerouslySetInnerHTML={{ __html: answer }} />
+
                         </Button>
-                    </Button>
+                    </div>
                 ))}
-            </div>
-        </Grid>
+
+            </Container>
+        </div>
     );
 
 

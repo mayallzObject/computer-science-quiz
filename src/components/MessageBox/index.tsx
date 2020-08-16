@@ -10,10 +10,7 @@ function Alert(props: any) {
 
 }
 
-type Message = string | null
-
-
-const MessageBox: React.FC<Message> = () => {
+const MessageBox = () => {
     const message = useSelector(selectMessage);
     const dispatch = useDispatch();
     const showMessage = message !== null;
