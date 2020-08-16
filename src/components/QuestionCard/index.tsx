@@ -12,30 +12,30 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 //? Types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Theme, makeStyles } from '@material-ui/core/styles'
-import { Button, Box } from '@material-ui/core'
+
+import { Button, Box, Grid } from '@material-ui/core'
 
 
 
-const useStyles = makeStyles((theme: Theme) => ({
-    root: {
-        margin: 0,
-        padding: theme.spacing(2),
-    },
-    btn: {
-        fontWeight: "bold",
-        color: "#aa0d00",
-        backgroundColor: "#ffffff",
-        "&:hover": {
-            color: "#000000",
-            backgroundColor: "#ffa000",
-        },
-    },
-}));
+// const useStyles = makeStyles((theme: Theme) => ({
+//     root: {
+//         margin: 0,
+//         padding: theme.spacing(2),
+//     },
+//     btn: {
+//         fontWeight: "bold",
+//         color: "#aa0d00",
+//         backgroundColor: "#ffffff",
+//         "&:hover": {
+//             color: "#000000",
+//             backgroundColor: "#ffa000",
+//         },
+//     },
+// }));
 
 
-const Card: React.FC = () => {
-    const classes = useStyles()
+const Questions: React.FC = () => {
+    // const classes = useStyles()
 
     const [TOTAL_QUESTIONS] = useState(10);
     const [questions, setQuestions] = useState<QuestionsState[]>([])
@@ -105,55 +105,46 @@ const Card: React.FC = () => {
 
 
     return (
-        <div>
-
-            <Box>REACT QUIZ</Box>
-
-
-            {
-                gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-                    <Button className={classes.btn} onClick={startTrivia}>
-                        Start New Game
-                    </Button>
-                ) : null
-            }
-
-            {!gameOver ? <Box className='score'>Score: {score}</Box> : null}
-
-            {
-                !gameOver && (
-                    <QuestionCard
-                        questionNr={number + 1}
-                        totalQuestions={TOTAL_QUESTIONS}
-                        question={questions[number].question}
-                        answers={questions[number].answers}
-                        userAnswer={userAnswers ? userAnswers[number] : undefined}
-                        callback={checkAnswer}
-                    />
-                )
-            }
-
-            {
-                !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-                    <Button className={classes.btn} onClick={nextQuestion}>
-                        Next Question
-                    </Button>
-                ) : null
-            }
-
-            {
-                number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-                    <Button className={classes.btn} onClick={submitScore}>
-                        Submit Score
-                    </Button>
-                ) : null
-            }
-
-
-
-        </div>
+        <Grid container spacing={2} alignItems="center">
+            <Grid item xs={12} sm={6}>
+                {
+                    gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+                        <Button onClick={startTrivia}>
+                            Start New Game
+                        </Button>
+                    ) : null
+                }
+                {!gameOver ? <Box className='score'>Score: {score}</Box> : null}
+                {
+                    !gameOver && (
+                        <QuestionCard
+                            questionNr={number + 1}
+                            totalQuestions={TOTAL_QUESTIONS}
+                            question={questions[number].question}
+                            answers={questions[number].answers}
+                            userAnswer={userAnswers ? userAnswers[number] : undefined}
+                            callback={checkAnswer}
+                        />
+                    )
+                }
+                {
+                    !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
+                        <Button onClick={nextQuestion}>
+                            Next Question
+                        </Button>
+                    ) : null
+                }
+                {
+                    number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+                        <Button onClick={submitScore}>
+                            Submit Score
+                        </Button>
+                    ) : null
+                }
+            </Grid>
+        </Grid>
     )
 }
 
-export default Card
+export default Questions
 

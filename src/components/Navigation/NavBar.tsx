@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
+
         marginLeft: theme.spacing(3),
     },
     title: {
@@ -29,10 +30,11 @@ const useStyles = makeStyles((theme) => ({
     },
     darkButton: {
         marginLeft: "2vw",
+        marginBottom: "1vw"
     },
 }));
 
-const ClickAppBar = (props: any) => {
+const NavBar = (props: any) => {
 
     const user = useSelector(selectUser);
     const classes = useStyles();
@@ -131,4 +133,4 @@ const ClickAppBar = (props: any) => {
     );
 }
 
-export default ClickAppBar
+export default NavBar

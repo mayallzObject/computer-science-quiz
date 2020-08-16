@@ -1,7 +1,27 @@
 import React from 'react'
-import { Button, Typography, Container } from '@material-ui/core'
 import { Props } from "./types"
+import { Button, Typography, makeStyles, CardHeader, CardMedia, CardContent, Card, CardActions } from '@material-ui/core'
 
+
+const useStyles = makeStyles({
+    root: {
+        minWidth: 300,
+        align: 'center',
+    },
+    bullet: {
+        display: 'inline-block',
+        margin: '0 2px',
+        transform: 'scale(0.8)',
+        align: 'center',
+    },
+    title: {
+        fontSize: 14,
+    },
+    pos: {
+        align: 'center',
+        marginBottom: 12,
+    },
+})
 
 const QuestionCard: React.FC<Props> = ({
     question,
@@ -10,34 +30,44 @@ const QuestionCard: React.FC<Props> = ({
     userAnswer,
     questionNr,
     totalQuestions,
-}) => (
-        <div>
-            <Container maxWidth="xl">
+}) => {
+    const classes = useStyles()
 
-                <Typography align="center">
-                    Question: {questionNr} / {totalQuestions}
-                </Typography>
+    return (
+        <Card className={classes.root}>
+            <Typography align="center">
+                Question: {questionNr} / {totalQuestions}
+            </Typography>
 
-                <p dangerouslySetInnerHTML={{ __html: question }} />
+            <React.Fragment>
+                {question}
+            </React.Fragment>
+            <CardMedia
+                style={{ height: "150px" }}
+            />
+            <CardContent>
                 {answers.map((answer) => (
                     <div
                         key={answer}>
-                        <Button
-                            color="primary"
-                            variant="contained"
-                            disabled={userAnswer ? true : false}
-                            value={answer}
-                            onClick={callback}>
-                            <span dangerouslySetInnerHTML={{ __html: answer }} />
-
-                        </Button>
+                        <CardActions>
+                            <Button
+                                color="primary"
+                                variant="contained"
+                                disabled={userAnswer ? true : false}
+                                value={answer}
+                                onClick={callback}>
+                                <React.Fragment>
+                                    {answer}
+                                </React.Fragment>
+                            </Button>
+                        </CardActions>
                     </div>
                 ))}
+            </CardContent>
+        </Card>
+    )
 
-            </Container>
-        </div>
-    );
-
+}
 
 export default QuestionCard
 

@@ -31,39 +31,29 @@ const App = () => {
 
 
 
-  const darkTheme = createMuiTheme({
-
+  const lightTheme = createMuiTheme({
     palette: {
       primary: {
-        light: "#00000",
-        main: "#ffa07a",
-        dark: "#00000", // button hovering color when in dark
-      },
-      secondary: {
-        light: "#00000",
-        main: "#B0B0B0",
-        dark: "#CBCACA",
+
+        main: "#3b5998",
+        dark: "#890000", // button hovering color in light mode
       },
 
-      type: "dark",
-      background: { paper: "#0000" },
+      type: "light",
     },
   })
 
-  const lightTheme = createMuiTheme({
-
+  const darkTheme = createMuiTheme({
     palette: {
       primary: {
-        light: "#ffa07a",
-        main: "#00000",
-        dark: "#ffa07a",
-      },
-      secondary: {
-        light: "#474747",
-        main: "#B0B0B0",
-        dark: "#CBCACA",
+        light: "#DB6666",
+        main: "#AA0D00",
+        dark: "#242424", // button hovering color when in dark
       },
 
+
+      type: "dark",
+      background: { paper: "#0000" },
     },
   })
 

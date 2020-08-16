@@ -20,20 +20,20 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         textAlign: "center",
     },
-}));
+}))
 
 const Login = (props: any) => {
     const classes = useStyles();
     const { set_modalForm } = props;
     const dispatch = useDispatch();
-    const initialState = { email: "", password: "" };
+    const initialState = { email: "", password: "" }
     const [credentials, set_credentials] = useState(initialState);
 
     function submitForm(event: OnClick): void {
         event.preventDefault();
-        dispatch(login(credentials));
+        dispatch(login(credentials))
 
-        set_credentials(initialState);
+        set_credentials(initialState)
     }
 
     return (
@@ -85,3 +85,4 @@ const Login = (props: any) => {
 }
 
 export default Login
+
