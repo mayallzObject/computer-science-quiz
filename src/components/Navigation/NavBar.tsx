@@ -13,7 +13,7 @@ import AuthModal from "./index"
 import Logout from "./Logout"
 import { selectUser } from "../../store/user/selectors";
 import ScoreboardPage from "../../pages/Scoreboard";
-import GitHubIcon from '@material-ui/icons/GitHub';
+// import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 const useStyles = makeStyles((theme) => ({

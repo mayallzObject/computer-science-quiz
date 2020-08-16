@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Grid, Typography, Container, Box } from '@material-ui/core'
+import { Button, Typography, Container } from '@material-ui/core'
 import { Props } from "./types"
 
 
