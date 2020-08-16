@@ -1,6 +1,6 @@
 import React from 'react'
 import { Props } from "./types"
-import { Button, Typography, makeStyles, CardHeader, CardMedia, CardContent, Card, CardActions } from '@material-ui/core'
+import { Button, Typography, makeStyles, CardMedia, CardContent, Card, CardActions } from '@material-ui/core'
 
 
 const useStyles = makeStyles({

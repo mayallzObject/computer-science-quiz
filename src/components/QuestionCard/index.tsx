@@ -115,36 +115,40 @@ const Questions: React.FC = () => {
                     ) : null
                 }
                 {!gameOver ? <Box className='score'>Score: {score}</Box> : null}
-                {
-                    !gameOver && (
-                        <QuestionCard
-                            questionNr={number + 1}
-                            totalQuestions={TOTAL_QUESTIONS}
-                            question={questions[number].question}
-                            answers={questions[number].answers}
-                            userAnswer={userAnswers ? userAnswers[number] : undefined}
-                            callback={checkAnswer}
-                        />
-                    )
-                }
-                {
-                    !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-                        <Button onClick={nextQuestion}>
-                            Next Question
-                        </Button>
-                    ) : null
-                }
-                <Box m={2} pt={5}>
+                <Grid item xs={12} sm={6}>
                     {
-                        number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-                            <Button onClick={submitScore}>
-                                Submit Score
+                        !gameOver && (
+                            <QuestionCard
+                                questionNr={number + 1}
+                                totalQuestions={TOTAL_QUESTIONS}
+                                question={questions[number].question}
+                                answers={questions[number].answers}
+                                userAnswer={userAnswers ? userAnswers[number] : undefined}
+                                callback={checkAnswer}
+                            />
+                        )
+                    }
+
+                    {
+                        !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
+                            <Button onClick={nextQuestion}>
+                                Next Question
                             </Button>
                         ) : null
                     }
-                </Box>
+                    <Box m={2} pt={5}>
+                        {
+                            number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+                                <Button onClick={submitScore}>
+                                    Submit Score
+                                </Button>
+                            ) : null
+                        }
+                    </Box>
+                </Grid>
             </Grid>
         </Grid>
+
     )
 }
 
