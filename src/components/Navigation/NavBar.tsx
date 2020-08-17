@@ -10,11 +10,12 @@ import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
 import Brightness2 from "@material-ui/icons/Brightness2";
 import Brightness7 from "@material-ui/icons/Brightness7";
-import AuthModal from "./index"
+import AuthForm from "./index"
 import Logout from "./Logout"
 import { selectUser } from "../../store/user/selectors";
 
-// import GitHubIcon from '@material-ui/icons/GitHub';
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
-
+        boarderRadius: "50px",
         marginLeft: theme.spacing(3),
     },
     title: {
@@ -32,12 +33,27 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "2vw",
         marginBottom: "1vw"
     },
+    btn2: {
+        fontWeight: "bold",
+        color: "#aa0d00",
+        backgroundColor: "#ffffff",
+        "&:hover": {
+            color: "#000000",
+            backgroundColor: "#ffff00",
+        },
+        scoreboard: {
+
+        }
+    },
 }));
+
+
 
 const NavBar = (props: any) => {
 
     const user = useSelector(selectUser);
     const classes = useStyles();
+
 
 
     function darkModeButton() {
@@ -72,63 +88,44 @@ const NavBar = (props: any) => {
         <Paper variant="elevation" color="primary">
             <AppBar position="static">
                 <Toolbar>
-                    <Box display="flex" alignItems="center" justifyContent="flex-end">
-                        {user.token ? <Logout user={user} /> : <AuthModal />}
+                    <Box display="flex" alignItems="center"
+                        justifyContent="flex-end">
+                        {user.token ? <Logout user={user} />
+                            : <AuthForm />}
                         {darkModeButton()}
                     </Box>
-                    <Box
-                        display="flex"
-                        alignItems="center"
+
+                    <Box display="flex" alignItems="center"
                         justifyContent="space-between"
-                        width="100%"
-                        marginX={4}
+                        width="100%" marginX={4}
                     >
                         <Box>
-                            <IconButton
-                                component={Link}
-                                to="/"
-                                className={classes.menuButton}
-                                edge="start"
-                                color="inherit"
+                            <IconButton className={classes.menuButton}
+                                component={Link} to="/"
+                                edge="start" color="inherit"
                                 aria-label="menu"
-                            >
-                            </IconButton>
-                        </Box>
-                        <Box>
-                            <IconButton
-                                component={Link}
-                                to="/https://github.com"
-                                className={classes.menuButton}
-                                edge="start"
-                                color="inherit"
-                                aria-label="menu"
-                            >
-                            </IconButton>
+                            ></IconButton>
                         </Box>
                     </Box>
+
+                    <Button className={classes.btn2}
+                        component={Link} to="/"
+                    > Play
+                    </Button>
+
+                    <Button className={classes.btn2}
+                        component={Link} to="/scoreboard"
+                    > ScoreBoard
+                    </Button>
+
+                    <Button className={classes.btn2}
+                        component={Link} to="/login"
+                    > About
+                </Button>
+
                 </Toolbar>
-                <Button
-                    component={Link}
-                    to="/"
-                    className={classes.darkButton}
-                >
-                    Play
-                    </Button>
-                <Button
-                    component={Link}
-                    to="/scoreboard"
-                    className={classes.darkButton}
-                >
-                    ScoreBoard
-                    </Button>
-                <Button
-                    component={Link}
-                    to="/login"
-                    className={classes.darkButton}
-                >
-                    About
-                    </Button>
             </AppBar>
+
         </Paper>
     );
 }

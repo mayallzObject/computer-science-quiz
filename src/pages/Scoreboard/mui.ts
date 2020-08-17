@@ -12,9 +12,11 @@ export const StyledTableCell = withStyles((theme: Theme) =>
         head: {
             backgroundColor: theme.palette.common.black,
             color: theme.palette.common.white,
+            fontSize: 30
         },
         body: {
-            fontSize: 14,
+            fontSize: 30,
+
         },
     }),
 )(TableCell)
@@ -31,6 +33,9 @@ export const StyledTableRow = withStyles((theme: Theme) =>
 
 export const useStyles = makeStyles({
     table: {
-        minWidth: 700,
+        maxWidth: 500,
+
+        margin: 200,
+
     },
 });

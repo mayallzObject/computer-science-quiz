@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         margin: 0,
         padding: theme.spacing(2),
+
     },
     btn: {
         fontWeight: "bold",
@@ -21,39 +22,43 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#ffffff",
         "&:hover": {
             color: "#000000",
-            backgroundColor: "#ffa000",
+            backgroundColor: "#ffff00",
         },
+        scoreboard: {
+
+        }
     },
-}));
+}))
 
-
-export default function AuthModal() {
+export default function AuthForm() {
     const [open, setOpen] = useState(false);
-    const [modalForm, set_modalForm] = useState("Login");
+    const [form, set_Form] = useState("Login");
     const classes = useStyles();
+
 
     const handleOpen = () => {
         setOpen(true);
     };
 
     const handleClose = () => {
-        set_modalForm("Login");
+        set_Form("Login");
         setOpen(false);
     };
 
-    const title = modalForm === "Login" ? "Login" : "Sign up";
+    const title = form === "Login" ? "Login" : "Sign up";
     const formToDisplay =
-        modalForm === "Login" ? (
-            <Login handleClose={handleClose} set_modalForm={set_modalForm} />
+        form === "Login" ? (
+            <Login handleClose={handleClose} set_Form={set_Form} />
         ) : (
-                <SignUp handleClose={handleClose} set_modalForm={set_modalForm} />
+                <SignUp handleClose={handleClose} set_Form={set_Form} />
             );
     return (
         <div>
             <Paper>
                 <Button className={classes.btn} onClick={handleOpen}>
-                    Login
+                    LOGIN
             </Button>
+
                 <Dialog
                     className={classes.root}
                     open={open}
@@ -66,7 +71,20 @@ export default function AuthModal() {
                 </Dialog>
 
 
+
+                <Dialog
+                    className={classes.root}
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="auth-modal-login-signup"
+                    aria-describedby="auth-modal-login-signup"
+                >
+                    <DialogTitle id="form-dialog-title">{title}</DialogTitle>
+                    {formToDisplay}
+                </Dialog>
+
             </Paper>
+
 
         </div>
     );

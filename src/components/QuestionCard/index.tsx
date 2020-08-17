@@ -13,30 +13,29 @@ import { fetchQuestions } from "../../store/questions/actions"
 //? Types
 import { AnswerObject, ID, QuestionsState } from "./types"
 
-import { Button, Box, Grid } from '@material-ui/core'
+import { Button, Box, Grid, makeStyles } from '@material-ui/core'
 
 
 
-// const useStyles = makeStyles((theme: Theme) => ({
-//     root: {
-//         margin: 0,
-//         padding: theme.spacing(2),
-//     },
-//     btn: {
-//         fontWeight: "bold",
-//         color: "#aa0d00",
-//         backgroundColor: "#ffffff",
-//         "&:hover": {
-//             color: "#000000",
-//             backgroundColor: "#ffa000",
-//         },
-//     },
-// }));
+export const useStyles = makeStyles({
+    table: {
+        minWidth: 500,
+
+        margin: 100,
+
+
+    },
+    button: {
+        marginLeft: 400
+
+
+    }
+
+});
 
 
 const Questions: React.FC = () => {
-    // const classes = useStyles()
-
+    const classes = useStyles()
     const [TOTAL_QUESTIONS] = useState(10);
     const [questions, setQuestions] = useState<QuestionsState[]>([])
     const [number, setNumber] = useState(0);
@@ -105,7 +104,7 @@ const Questions: React.FC = () => {
 
 
     return (
-        <Grid container spacing={2} alignItems="center">
+        <Grid className={classes.table} container spacing={2} alignItems="center">
             <Grid item xs={12} sm={6}>
                 {
                     gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
@@ -136,7 +135,7 @@ const Questions: React.FC = () => {
                             </Button>
                         ) : null
                     }
-                    <Box m={2} pt={5}>
+                    <Box className={classes.button}>
                         {
                             number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
                                 <Button onClick={submitScore}>
