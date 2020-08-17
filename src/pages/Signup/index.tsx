@@ -6,15 +6,13 @@ import { SignupData } from "../../types/userTypes";
 import { OnClick, OnChange } from "../../types/eventType";
 import { showMessageWithTimeout } from "../../store/appState/actions";
 
-//? MUI Components
+// Mui Components
 import FormControl from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 
 import { useStyles } from "./mui"
-
-
 
 
 export default function SignupForm(props: any) {

@@ -4,7 +4,6 @@ import {
     withStyles,
     Theme,
     createStyles,
-    makeStyles
 } from '@material-ui/core/styles'
 
 export const StyledTableCell = withStyles((theme: Theme) =>
@@ -31,11 +30,3 @@ export const StyledTableRow = withStyles((theme: Theme) =>
     }),
 )(TableRow)
 
-export const useStyles = makeStyles({
-    table: {
-        maxWidth: 500,
-
-        margin: 200,
-
-    },
-});

@@ -13,22 +13,16 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 //? Types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Button, Box, Grid, makeStyles } from '@material-ui/core'
+import { Button, Box } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
-export const useStyles = makeStyles({
-    table: {
-        minWidth: 500,
-        margin: 50,
-    },
-    button: {
-        marginLeft: 400,
-    }
 
-})
+
+
+
 
 const Questions: React.FC = () => {
-    const classes = useStyles()
+
     const [TOTAL_QUESTIONS] = useState(10)
     const [questions, setQuestions] = useState<QuestionsState[]>([])
     const [number, setNumber] = useState(0)
@@ -55,7 +49,6 @@ const Questions: React.FC = () => {
     }
 
     const checkAnswer = (e: OnClick) => {
-
         if (!gameOver) {
 
             const answer = e.currentTarget.value
@@ -67,18 +60,15 @@ const Questions: React.FC = () => {
                 answer,
                 correct,
                 correctAnswer: someQuestions[number].correct_answer,
-            };
+            }
             setUserAnswers((prev) => [...prev, answerObject])
         }
     }
-
     const nextQuestion = () => {
-        // Move on to the next question if not the last question
-        const nextQ = number + 1;
 
+        const nextQ = number + 1
         if (nextQ === TOTAL_QUESTIONS) {
             setGameOver(true);
-            //call the funciton here, which will pass the score and the user
         } else {
             setNumber(nextQ);
         }
@@ -90,50 +80,44 @@ const Questions: React.FC = () => {
     }
 
     return (
-        <Grid className={classes.table} container spacing={2} alignItems="center">
-            <Grid item xs={12} sm={6}>
+        <>
+            {
+                gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+                    <Button className="primary" onClick={startTrivia}>
+                        Start New Game
+                    </Button>
+                ) : null
+            }
+            {!gameOver ? <Box >Score: {score}</Box> : null}
+            {
+                !gameOver && (
+                    <QuestionCard
+                        questionNr={number + 1}
+                        totalQuestions={TOTAL_QUESTIONS}
+                        question={questions[number].question}
+                        answers={questions[number].answers}
+                        userAnswer={userAnswers ? userAnswers[number] : undefined}
+                        callback={checkAnswer}
+                    />
+                )
+            }
+            {
+                !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
+                    <Button onClick={nextQuestion}>
+                        Next Question
+                    </Button>
+                ) : null
+            }
+            <Box className="primary" m={2} pt={4}>
                 {
-                    gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-                        <Button onClick={startTrivia}>
-                            Start New Game
+                    number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+                        <Button onClick={submitScore}>
+                            Submit Score
                         </Button>
                     ) : null
                 }
-                {!gameOver ? <Box >Score: {score}</Box> : null}
-                <Grid item xs={12} sm={6}>
-                    {
-                        !gameOver && (
-                            <QuestionCard
-                                questionNr={number + 1}
-                                totalQuestions={TOTAL_QUESTIONS}
-                                question={questions[number].question}
-                                answers={questions[number].answers}
-                                userAnswer={userAnswers ? userAnswers[number] : undefined}
-                                callback={checkAnswer}
-                            />
-                        )
-                    }
-
-                    {
-                        !gameOver && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1 ? (
-                            <Button onClick={nextQuestion}>
-                                Next Question
-                            </Button>
-                        ) : null
-                    }
-                    <Box className={classes.button}>
-                        {
-                            number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-                                <Button onClick={submitScore}>
-                                    Submit Score
-                                </Button>
-                            ) : null
-                        }
-                    </Box>
-                </Grid>
-            </Grid>
-        </Grid>
-
+            </Box>
+        </>
     )
 }
 

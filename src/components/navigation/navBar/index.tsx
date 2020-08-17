@@ -1,22 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
+import AuthForm from "../navItem"
+import Logout from "../../Auth/Logout"
+
+import Brightness7 from "@material-ui/icons/Brightness7"
+import Brightness2 from "@material-ui/icons/Brightness2"
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Box from "@material-ui/core/Box";
+import IconButton from "@material-ui/core/IconButton";
+import { ButtonGroup } from "@material-ui/core";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
+import AppBar from "@material-ui/core/AppBar";
 import Paper from "@material-ui/core/Paper";
-import IconButton from "@material-ui/core/IconButton";
-import Brightness2 from "@material-ui/icons/Brightness2";
-import Brightness7 from "@material-ui/icons/Brightness7";
-import AuthForm from "./index"
-import Logout from "./Logout"
-import { selectUser } from "../../store/user/selectors";
-import { ButtonGroup } from "@material-ui/core";
+import Box from "@material-ui/core/Box";
 
-
-
+import { selectUser } from "../../../store/user/selectors";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
-        boarderRadius: "50px",
         marginLeft: theme.spacing(3),
     },
     title: {
@@ -43,20 +42,14 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: "#ffff00",
         },
         scoreboard: {
-
         }
     },
-}));
-
+}))
 
 
 const NavBar = (props: any) => {
-
     const user = useSelector(selectUser);
     const classes = useStyles();
-
-
-
     function darkModeButton() {
         if (props.darkMode) {
             return (
@@ -69,7 +62,7 @@ const NavBar = (props: any) => {
                 >
                     <Brightness7 fontSize="large" />
                 </IconButton>
-            );
+            )
         } else {
             return (
                 <IconButton
@@ -81,7 +74,7 @@ const NavBar = (props: any) => {
                 >
                     <Brightness2 fontSize="large" />
                 </IconButton>
-            );
+            )
         }
     }
 
@@ -125,9 +118,8 @@ const NavBar = (props: any) => {
                     </ButtonGroup>
                 </Toolbar>
             </AppBar>
-
         </Paper>
-    );
+    )
 }
 
 export default NavBar

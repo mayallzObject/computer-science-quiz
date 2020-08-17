@@ -7,7 +7,7 @@ import { ScoreBoard } from "./types"
 import { selectUser } from "../../store/user/selectors"
 
 //? MUI components
-import { StyledTableCell, StyledTableRow, useStyles } from "./mui"
+import { StyledTableCell, StyledTableRow, } from "./mui"
 import { Table, Box } from '@material-ui/core'
 import TableBody from '@material-ui/core/TableBody'
 import TableContainer from '@material-ui/core/TableContainer'
@@ -18,7 +18,7 @@ import Paper from '@material-ui/core/Paper'
 
 
 const ScoreboardPage = () => {
-    const classes = useStyles();
+
     const someUser = useSelector(selectUser)
     const [score, setScore] = useState<ScoreBoard[]>([])
 
@@ -33,32 +33,28 @@ const ScoreboardPage = () => {
 
 
     return (
-        <Box>
-            <TableContainer component={Paper}>
-                <Table className={classes.table} size="small" aria-label="customized table">
-                    <TableHead>
-                        <TableRow>
-                            <StyledTableCell align="left">Points</StyledTableCell>
-                            <StyledTableCell align="left">Name</StyledTableCell>
 
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
+        <TableContainer component={Paper}>
+            <Table size="small" aria-label="customized table">
+                <TableHead>
+                    <TableRow>
+                        <StyledTableCell align="left">Points</StyledTableCell>
+                        <StyledTableCell align="left">Name</StyledTableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {score.length > 0 && score.map((data, index) => (
+                        <StyledTableRow key={index}>
+                            <StyledTableCell component="th" scope="row">
+                                {data.score}
+                            </StyledTableCell>
+                            <StyledTableCell align="left">{data.user.name}</StyledTableCell>
+                        </StyledTableRow>
+                    ))}
+                </TableBody>
+            </Table>
+        </TableContainer>
 
-                        {score.length > 0 && score.map((data, index) => (
-                            <StyledTableRow key={index}>
-                                <StyledTableCell component="th" scope="row">
-                                    {data.score}
-                                </StyledTableCell>
-                                <StyledTableCell align="left">{data.user.name}</StyledTableCell>
-
-                            </StyledTableRow>
-
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-        </Box>
     )
 }
 

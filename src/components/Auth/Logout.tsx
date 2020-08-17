@@ -15,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: "#ffa000",
         },
     },
+    hello: {
+        fontSize: 25,
+        paddingLeft: 20,
+        fontWeight: "bold",
+    },
 }));
 
 const Logout = (props: any) => {
@@ -22,10 +27,10 @@ const Logout = (props: any) => {
     const dispatch = useDispatch()
     return (
         <>
-            <Typography>Hello, {props.user.name} </Typography>
             <Button className={classes.btn} onClick={() => dispatch(logOut())}>
                 Logout
-      </Button>
+            </Button>
+            <Typography className={classes.hello}>Hi, {props.user.name}!</Typography>
         </>
     )
 }
