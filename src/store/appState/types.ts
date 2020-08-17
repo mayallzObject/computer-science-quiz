@@ -19,6 +19,7 @@ export type clearMessage = {
     type: typeof CLEAR_MESSAGE
 };
 
+// TypeScritp 
 export type showMessageWithTimeout = (
     variant: string,
     dismissable: boolean,

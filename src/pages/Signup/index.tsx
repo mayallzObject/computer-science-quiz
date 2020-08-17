@@ -25,14 +25,14 @@ export default function SignupForm(props: any) {
 
     };
     // const { onClose, setForm } = props
-    const [signUpData, setSignUpData] = useState<SignupData>(initialState);
+    const [signUpData, setSignUpData] = useState<SignupData>(initialState)
 
     function submitHandler(event: OnClick) {
         event.preventDefault();
         const { name, email, password } = signUpData
         if (!name || !email || !password) {
             const message = "Please fill in all the required fields"
-            dispatch(showMessageWithTimeout("error", true, message, 3000));
+            dispatch(showMessageWithTimeout("error", true, message, 3000))
         } else {
             dispatch(signUp(signUpData))
             setSignUpData(initialState)
@@ -53,7 +53,9 @@ export default function SignupForm(props: any) {
                 />
             </FormControl>
             <FormControl variant="outlined">
-                <InputLabel htmlFor="component-outlined">Email</InputLabel>
+                <InputLabel htmlFor="component-outlined">
+                    Email
+                </InputLabel>
                 <OutlinedInput
                     type="email"
                     value={signUpData.email}
@@ -82,6 +84,6 @@ export default function SignupForm(props: any) {
         </Link>
 
         </form>
-    );
+    )
 }
 

@@ -1,4 +1,4 @@
-//? TypeScript types
+// TypeScript types
 import { User } from "../../types/userTypes"
 import {
     LOG_OUT,
@@ -34,6 +34,6 @@ export default (state = initialState, action: UserActionTypes) => {
             return { ...initialState, token: null }
 
         default:
-            return state;
+            return state
     }
 }

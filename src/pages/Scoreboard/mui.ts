@@ -1,5 +1,5 @@
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell'
+import TableRow from '@material-ui/core/TableRow'
 import {
     withStyles,
     Theme,
@@ -29,4 +29,3 @@ export const StyledTableRow = withStyles((theme: Theme) =>
         },
     }),
 )(TableRow)
-

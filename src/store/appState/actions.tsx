@@ -1,9 +1,9 @@
 import { Dispatch } from "redux"
 
-//? Timeout 
+// Timeout message 
 import { DEFAULT_MESSAGE_TIMEOUT } from "../../config/constants"
 
-//? TypeScript types
+// TypeScript types
 import { AppActions } from "../types"
 import {
     APP_LOADING,

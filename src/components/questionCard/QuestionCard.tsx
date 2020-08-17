@@ -1,12 +1,19 @@
 import React from 'react'
 import { Props } from "./types"
-import { Button, Typography, makeStyles, CardMedia, CardContent, Card, ButtonGroup } from '@material-ui/core'
+import {
+    Button,
+    Typography,
+    makeStyles,
+    CardMedia,
+    CardContent,
+    Card,
+    ButtonGroup
+} from '@material-ui/core'
 
 const useStyles = makeStyles({
     root: {
         blackgroundColor: '#29ab87',
     },
-
     card: {
 
         textAlign: "center",
@@ -16,11 +23,12 @@ const useStyles = makeStyles({
         backgroundColor: '#6BCAE2',
         textAlign: "center",
     },
-
     media: {
         height: 0,
     },
 })
+
+
 const QuestionCard: React.FC<Props> = ({
     question,
     answers,
@@ -49,21 +57,21 @@ const QuestionCard: React.FC<Props> = ({
                 title="Contemplative Reptile"
             />
             <CardContent className={classes.card}>
-                <ButtonGroup color="primary" aria-label="outlined primary button group">
-                    {answers.map((answer) => (
-                        <Button
-                            key={answer}
-                            color="primary"
-                            variant="contained"
-                            disabled={userAnswer ? true : false}
-                            value={answer}
-                            onClick={callback}>
-                            <React.Fragment>
-                                {answer}
-                            </React.Fragment>
-                        </Button>
-                    ))}
-                </ButtonGroup>
+
+                {answers.map((answer) => (
+                    <Button
+                        key={answer}
+                        color="primary"
+                        variant="contained"
+                        disabled={userAnswer ? true : false}
+                        value={answer}
+                        onClick={callback}>
+                        <React.Fragment>
+                            {answer}
+                        </React.Fragment>
+                    </Button>
+                ))}
+
             </CardContent>
             <Button className="SoundPlayer" />
         </Card>
@@ -73,4 +81,3 @@ const QuestionCard: React.FC<Props> = ({
 }
 
 export default QuestionCard
-

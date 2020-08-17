@@ -1,3 +1,4 @@
+// TypeScript types
 import { StoreState } from "../types";
 import { Question } from "../../types/questionTypes"
 

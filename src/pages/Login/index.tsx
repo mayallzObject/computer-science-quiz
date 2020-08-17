@@ -53,6 +53,7 @@ export default function LogInForm(props: any) {
             })
         }
     }
+
     return (
         <form className={classes.root} noValidate autoComplete="off">
             <FormControl variant="outlined">
@@ -100,3 +101,4 @@ export default function LogInForm(props: any) {
         </form>
     )
 }
+

@@ -43,8 +43,7 @@ export const login = (credentials: Credentials) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-        };
-
+        }
         const body = JSON.stringify({
             email,
             password,
@@ -71,7 +70,6 @@ export const login = (credentials: Credentials) => {
 
         } catch (error) {
             if (error.response) {
-
                 dispatch(setMessage("error", true, error.response.data.message))
             } else {
                 dispatch(setMessage("error", true, error.message))
@@ -85,7 +83,7 @@ export const signUp = (signUpData: SignupData) => {
     return async (dispatch: Dispatch, getState: GetState) => {
         dispatch(appLoading());
 
-        const data = { ...signUpData };
+        const data = { ...signUpData }
 
         const config = {
             headers: {
@@ -95,41 +93,35 @@ export const signUp = (signUpData: SignupData) => {
 
         const body = JSON.stringify(data)
         try {
-
-            const res = await axios.post(`${apiUrl}/signup`, body, config);
-
-            const message = `Welcome ${res.data.name}.`;
+            const res = await axios.post(`${apiUrl}/signup`, body, config)
+            const message = `Welcome ${res.data.name}.`
             dispatch(
                 // @ts-ignore
                 showMessageWithTimeout("success", false, message, 1500)
             );
-            dispatch(appDoneLoading());
+            dispatch(appDoneLoading())
         } catch (error) {
             if (error.response) {
-                console.log(error.response.data.message);
-                dispatch(setMessage("error", true, error.response.data.message));
+                console.log(error.response.data.message)
+                dispatch(setMessage("error", true, error.response.data.message))
             } else {
-                console.log(error.message);
-                dispatch(setMessage("error", true, error.message));
+                console.log(error.message)
+                dispatch(setMessage("error", true, error.message))
             }
-            dispatch(appDoneLoading());
+            dispatch(appDoneLoading())
         }
-    };
-};
-
-
-
+    }
+}
 
 
 export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => {
-    if (localStorage.token === undefined) return;
+
+    if (localStorage.token === undefined) return
 
     try {
         const res = await axios.get(`${apiUrl}/me`, {
             headers: { Authorization: `Bearer ${localStorage.token}` }
-        });
-
-
+        })
         dispatch(userFetched(res.data));
 
     } catch (error) {
@@ -142,22 +134,22 @@ export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => 
         }
         dispatch(appDoneLoading())
     }
-};
+}
 
-
-
-export const addScore = (score: number, userId: number) => async (dispatch: Dispatch, getState: GetState) => {
-
+export const addScore = (
+    score: number,
+    userId: number
+) => async (dispatch: Dispatch, getState: GetState) => {
     const config = {
         headers: {
             'Content-Type': 'application/json',
         },
-    };
+    }
     try {
 
-        await axios.post(`http://localhost:4000/score/addScoreBoard`, JSON.stringify({ score, userId }), config)
-
+        await axios.post(`http://localhost:4000/score`,
+            JSON.stringify({ score, userId }), config)
     } catch (error) {
-
+        console.log(error)
     }
 }

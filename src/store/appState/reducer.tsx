@@ -1,4 +1,4 @@
-//? Types
+// Types
 import {
     AppStateActionTypes,
     APP_LOADING,

@@ -3,7 +3,7 @@ import { Route } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
 // Components
-import MessageBox from './components/nessageBox'
+import MessageBox from './components/messageBox'
 import Loading from './components/loading/Loading'
 import NavBar from './components/navigation/navBar'
 import ScoreboardPage from './pages/Scoreboard'
@@ -29,7 +29,7 @@ const App = () => {
       primary: {
 
         main: "#3b5998",
-        dark: "#6BCAE2", // button hovering color in light mode
+        dark: "#6BCAE2",
       },
 
       type: "light",
@@ -40,7 +40,7 @@ const App = () => {
     palette: {
       primary: {
         main: "#6BCAE2",
-        dark: "#009900", // button hovering color when in dark
+        dark: "#009900",
       },
 
       type: "dark",
@@ -72,4 +72,3 @@ const App = () => {
 }
 
 export default App
-
