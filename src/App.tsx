@@ -17,17 +17,18 @@ import { Container, CssBaseline } from "@material-ui/core"
 
 import { loadUser } from './store/user/actions'
 
-import ClickAppBar from './components/Navigation/NavBar'
+
 import { selectAppLoading } from './store/appState/selectors'
 import MessageBox from './components/MessageBox'
 import Loading from './components/Loading/Loading'
+import NavBar from './components/Navigation/NavBar'
 
 
 
 const App = () => {
   const isLoading = useSelector(selectAppLoading);
   const dispatch = useDispatch()
-  const [darkMode, set_darkMode] = useState(false);
+  const [darkMode, set_darkMode] = useState(true);
 
 
 
@@ -46,9 +47,9 @@ const App = () => {
   const darkTheme = createMuiTheme({
     palette: {
       primary: {
-        light: "#DB6666",
-        main: "#AA0D00",
-        dark: "#242424", // button hovering color when in dark
+
+        main: "#f4a460",
+        dark: "#FF69B4", // button hovering color when in dark
       },
 
 
@@ -70,7 +71,7 @@ const App = () => {
       <Paper style={{ height: "100vh" }} >
 
         <CssBaseline />
-        <ClickAppBar darkMode={darkMode} set_darkMode={set_darkMode} />
+        <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
         {/* <NavBar /> */}
         <Paper>
           <Container disableGutters={true} maxWidth="xs">
