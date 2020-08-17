@@ -37,7 +37,7 @@ const App = () => {
       primary: {
 
         main: "#3b5998",
-        dark: "#890000", // button hovering color in light mode
+        dark: "#6BCAE2", // button hovering color in light mode
       },
 
       type: "light",
@@ -48,8 +48,8 @@ const App = () => {
     palette: {
       primary: {
 
-        main: "#FFFE6F",
-        dark: "#CCCC00", // button hovering color when in dark
+        main: "#FFD700",
+        dark: "#009900", // button hovering color when in dark
       },
 
 
@@ -84,10 +84,6 @@ const App = () => {
         <Route exact path="/login" component={LoginPage} />
         <Route path="/scoreboard" component={ScoreboardPage} />
         <Route exact path="/" component={Home} />
-        {/* <Route path="/scoreboard" component={ScoreboardPage} />
-        <Route path="/signup" component={SingupPage} />
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/:me" component={Home} /> */}
       </Paper>
     </ThemeProvider>
   )

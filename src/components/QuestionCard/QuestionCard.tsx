@@ -5,9 +5,11 @@ import { Button, Typography, makeStyles, CardMedia, CardContent, Card, CardActio
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 300,
+        marginLeft: 300,
         align: 'center',
-        blackgroundColor: '#8bd8c6'
+        blackgroundColor: '#8bd8c6',
+        minWidth: 500,
+        alignItems: 'center'
     },
     bullet: {
         display: 'inline-block',
@@ -16,17 +18,18 @@ const useStyles = makeStyles({
         align: 'center',
     },
     card: {
-        backgroundColor: '#8bd8c6'
-
-
+        backgroundColor: '#8bd8c6',
+        alignItems: "center"
 
     },
     title: {
-        fontSize: 14,
+        fontSize: 40,
+        backgroundColor: '#8bd8c6'
     },
     pos: {
         align: 'center',
         marginBottom: 12,
+
     },
     media: {
         height: 0,
@@ -45,21 +48,24 @@ const QuestionCard: React.FC<Props> = ({
     const classes = useStyles()
 
 
+
     return (
+
         <Card className={classes.root}>
             <Typography align="center">
                 Question: {questionNr} / {totalQuestions}
             </Typography>
 
             <React.Fragment>
-                {question}
+                <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
+                    {question}
+                </Typography>
             </React.Fragment>
-            {"hallo"}
             <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="140"
-                src="https://lh3.googleusercontent.com/cn_LeIsIdFNfNeyKQJINDn4fyzFuUljVML9wzOOgZAxhdC1O8fkVk-n7qNhHNo0qsbtT2Q=s47"
+                height="325"
+                src="https://lh3.googleusercontent.com/proxy/5qgHRi1Tw5xhmrUtgYGewXGAAohLl0EYBqleSZlZDyr4sdKVT1m91oG0iwhrypIp3VX4NFQI9Ctvzhe502b0wGyCWcIGvqwY7CQFpgZH1NhvILfFX-VHwCO0w9AvJMOFQ8xsu_8rCtKTnpRlngicF1OE-ve8"
                 title="Contemplative Reptile"
             />
             <CardContent className={classes.card}>
@@ -72,6 +78,7 @@ const QuestionCard: React.FC<Props> = ({
                                 variant="contained"
                                 disabled={userAnswer ? true : false}
                                 value={answer}
+
                                 onClick={callback}>
                                 <React.Fragment>
                                     {answer}
@@ -81,7 +88,9 @@ const QuestionCard: React.FC<Props> = ({
                     </div>
                 ))}
             </CardContent>
+            <Button className="SoundPlayer" />
         </Card>
+
     )
 
 }

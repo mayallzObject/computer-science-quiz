@@ -1,3 +1,4 @@
+//? React, react Redux components
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -12,22 +13,19 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 //? Types
 import { AnswerObject, ID, QuestionsState } from "./types"
-
 import { Button, Box, Grid, makeStyles } from '@material-ui/core'
-
-
+import { OnClick } from "../../types/eventType"
 
 export const useStyles = makeStyles({
     table: {
         minWidth: 500,
-        margin: 100,
+        margin: 50,
     },
     button: {
         marginLeft: 400,
     }
 
 })
-
 
 const Questions: React.FC = () => {
     const classes = useStyles()
@@ -38,7 +36,6 @@ const Questions: React.FC = () => {
     const [gameOver, setGameOver] = useState(true);
     const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([])
     const [id, setID] = useState<ID>(null)
-
     const dispatch = useDispatch()
     const someUser = useSelector(selectUser)
     const someQuestions = useSelector(selectQuestion)
@@ -49,16 +46,15 @@ const Questions: React.FC = () => {
     }, [dispatch, someUser, id])
 
     const startTrivia = async () => {
+
         setGameOver(false);
-
         setQuestions(someQuestions)
-
         setScore(0)
         setUserAnswers([])
         setNumber(0)
     }
 
-    const checkAnswer = (e: any) => {
+    const checkAnswer = (e: OnClick) => {
 
         if (!gameOver) {
 
@@ -82,8 +78,6 @@ const Questions: React.FC = () => {
 
         if (nextQ === TOTAL_QUESTIONS) {
             setGameOver(true);
-
-
             //call the funciton here, which will pass the score and the user
         } else {
             setNumber(nextQ);
@@ -95,9 +89,6 @@ const Questions: React.FC = () => {
         setNumber(0)
     }
 
-
-
-
     return (
         <Grid className={classes.table} container spacing={2} alignItems="center">
             <Grid item xs={12} sm={6}>
@@ -108,7 +99,7 @@ const Questions: React.FC = () => {
                         </Button>
                     ) : null
                 }
-                {!gameOver ? <Box className='score'>Score: {score}</Box> : null}
+                {!gameOver ? <Box >Score: {score}</Box> : null}
                 <Grid item xs={12} sm={6}>
                     {
                         !gameOver && (

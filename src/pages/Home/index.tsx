@@ -1,11 +1,13 @@
 import React from 'react'
-import Card from '../../components/QuestionCard'
+import QuestionCard from '../../components/QuestionCard'
+
 
 
 const Home = () => {
     return (
         <>
-            <Card />
+            <QuestionCard />
+
         </>
     )
 }

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 const SingUp = (props: any) => {
     const classes = useStyles();
-    const { handleClose, set_modalForm } = props
+    const { handleClose, set_ModalForm } = props
     const dispatch = useDispatch();
     const initialState = {
         name: "",
@@ -93,7 +93,7 @@ const SingUp = (props: any) => {
                 Already have an account? Login{" "}
                 <Typography
                     component="span"
-                    onClick={(e: OnClick) => set_modalForm("Login")}
+                    onClick={(e: OnClick) => set_ModalForm("Login")}
                     style={{ cursor: "pointer" }}
                 >
                     HERE

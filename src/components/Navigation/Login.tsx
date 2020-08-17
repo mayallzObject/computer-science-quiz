@@ -24,10 +24,12 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = (props: any) => {
     const classes = useStyles();
-    const { set_modalForm } = props;
+    const { set_ModalForm } = props;
     const dispatch = useDispatch();
     const initialState = { email: "", password: "" }
     const [credentials, set_credentials] = useState(initialState);
+
+    console.log("console log :", props)
 
     function submitForm(event: OnClick): void {
         event.preventDefault();
@@ -74,11 +76,11 @@ const Login = (props: any) => {
                 Don't have an account yet? Sign up{" "}
                 <Typography
                     component="span"
-                    onClick={(e: OnClick) => set_modalForm("Signup")}
+                    onClick={(e: OnClick) => set_ModalForm("Signup")}
                     style={{ cursor: "pointer" }}
                 >
                     HERE
-        </Typography>
+                </Typography>
             </DialogContentText>
         </DialogContent>
     )

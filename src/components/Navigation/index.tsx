@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AuthForm() {
     const [open, setOpen] = useState(false);
-    const [form, set_Form] = useState("Login");
+    const [form, set_ModalForm] = useState("Login");
     const classes = useStyles();
 
 
@@ -41,16 +41,16 @@ export default function AuthForm() {
     };
 
     const handleClose = () => {
-        set_Form("Login");
+        set_ModalForm("Login");
         setOpen(false);
     };
 
     const title = form === "Login" ? "Login" : "Sign up";
     const formToDisplay =
         form === "Login" ? (
-            <Login handleClose={handleClose} set_Form={set_Form} />
+            <Login handleClose={handleClose} set_ModalForm={set_ModalForm} />
         ) : (
-                <SignUp handleClose={handleClose} set_Form={set_Form} />
+                <SignUp handleClose={handleClose} set_ModalForm={set_ModalForm} />
             );
     return (
         <div>
@@ -72,16 +72,6 @@ export default function AuthForm() {
 
 
 
-                <Dialog
-                    className={classes.root}
-                    open={open}
-                    onClose={handleClose}
-                    aria-labelledby="auth-modal-login-signup"
-                    aria-describedby="auth-modal-login-signup"
-                >
-                    <DialogTitle id="form-dialog-title">{title}</DialogTitle>
-                    {formToDisplay}
-                </Dialog>
 
             </Paper>
 

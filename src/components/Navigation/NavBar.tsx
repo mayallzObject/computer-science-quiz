@@ -123,7 +123,6 @@ const NavBar = (props: any) => {
                         > About
                 </Button>
                     </ButtonGroup>
-
                 </Toolbar>
             </AppBar>
 
