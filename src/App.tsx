@@ -17,7 +17,7 @@ import { Container, CssBaseline } from "@material-ui/core"
 
 import { loadUser } from './store/user/actions'
 
-import ClickAppBar from './components/Navigation/NavBar'
+
 import { selectAppLoading } from './store/appState/selectors'
 import MessageBox from './components/MessageBox'
 import Loading from './components/Loading/Loading'
