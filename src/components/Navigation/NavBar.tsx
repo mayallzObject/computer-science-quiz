@@ -13,6 +13,7 @@ import Brightness7 from "@material-ui/icons/Brightness7";
 import AuthForm from "./index"
 import Logout from "./Logout"
 import { selectUser } from "../../store/user/selectors";
+import { ButtonGroup } from "@material-ui/core";
 
 
 
@@ -107,21 +108,21 @@ const NavBar = (props: any) => {
                             ></IconButton>
                         </Box>
                     </Box>
-
-                    <Button className={classes.btn2}
-                        component={Link} to="/"
-                    > Play
+                    <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
+                        <Button className={classes.btn2}
+                            component={Link} to="/"
+                        > Play
+                    </Button>
+                        <Button className={classes.btn2}
+                            component={Link} to="/scoreboard"
+                        > ScoreBoard
                     </Button>
 
-                    <Button className={classes.btn2}
-                        component={Link} to="/scoreboard"
-                    > ScoreBoard
-                    </Button>
-
-                    <Button className={classes.btn2}
-                        component={Link} to="/login"
-                    > About
+                        <Button className={classes.btn2}
+                            component={Link} to="/login"
+                        > About
                 </Button>
+                    </ButtonGroup>
 
                 </Toolbar>
             </AppBar>

@@ -7,6 +7,7 @@ const useStyles = makeStyles({
     root: {
         minWidth: 300,
         align: 'center',
+        blackgroundColor: '#8bd8c6'
     },
     bullet: {
         display: 'inline-block',
@@ -14,12 +15,22 @@ const useStyles = makeStyles({
         transform: 'scale(0.8)',
         align: 'center',
     },
+    card: {
+        backgroundColor: '#8bd8c6'
+
+
+
+    },
     title: {
         fontSize: 14,
     },
     pos: {
         align: 'center',
         marginBottom: 12,
+    },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
     },
 })
 
@@ -33,6 +44,7 @@ const QuestionCard: React.FC<Props> = ({
 }) => {
     const classes = useStyles()
 
+
     return (
         <Card className={classes.root}>
             <Typography align="center">
@@ -42,10 +54,15 @@ const QuestionCard: React.FC<Props> = ({
             <React.Fragment>
                 {question}
             </React.Fragment>
+            {"hallo"}
             <CardMedia
-                style={{ height: "150px" }}
+                component="img"
+                alt="Contemplative Reptile"
+                height="140"
+                src="https://lh3.googleusercontent.com/cn_LeIsIdFNfNeyKQJINDn4fyzFuUljVML9wzOOgZAxhdC1O8fkVk-n7qNhHNo0qsbtT2Q=s47"
+                title="Contemplative Reptile"
             />
-            <CardContent>
+            <CardContent className={classes.card}>
                 {answers.map((answer) => (
                     <div
                         key={answer}>
