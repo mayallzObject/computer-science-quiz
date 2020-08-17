@@ -20,26 +20,21 @@ import { Button, Box, Grid, makeStyles } from '@material-ui/core'
 export const useStyles = makeStyles({
     table: {
         minWidth: 500,
-
         margin: 100,
-
-
     },
     button: {
-        marginLeft: 400
-
-
+        marginLeft: 400,
     }
 
-});
+})
 
 
 const Questions: React.FC = () => {
     const classes = useStyles()
-    const [TOTAL_QUESTIONS] = useState(10);
+    const [TOTAL_QUESTIONS] = useState(10)
     const [questions, setQuestions] = useState<QuestionsState[]>([])
-    const [number, setNumber] = useState(0);
-    const [score, setScore] = useState(0);
+    const [number, setNumber] = useState(0)
+    const [score, setScore] = useState(0)
     const [gameOver, setGameOver] = useState(true);
     const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([])
     const [id, setID] = useState<ID>(null)

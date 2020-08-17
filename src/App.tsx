@@ -48,8 +48,8 @@ const App = () => {
     palette: {
       primary: {
 
-        main: "#f4a460",
-        dark: "#FF69B4", // button hovering color when in dark
+        main: "#FFFE6F",
+        dark: "#CCCC00", // button hovering color when in dark
       },
 
 
