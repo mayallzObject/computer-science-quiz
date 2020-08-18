@@ -1,10 +1,9 @@
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell'
+import TableRow from '@material-ui/core/TableRow'
 import {
     withStyles,
     Theme,
     createStyles,
-    makeStyles
 } from '@material-ui/core/styles'
 
 export const StyledTableCell = withStyles((theme: Theme) =>
@@ -12,10 +11,10 @@ export const StyledTableCell = withStyles((theme: Theme) =>
         head: {
             backgroundColor: theme.palette.common.black,
             color: theme.palette.common.white,
-            fontSize: 30
+            fontSize: 15,
         },
         body: {
-            fontSize: 30,
+            fontSize: 10,
 
         },
     }),
@@ -30,12 +29,3 @@ export const StyledTableRow = withStyles((theme: Theme) =>
         },
     }),
 )(TableRow)
-
-export const useStyles = makeStyles({
-    table: {
-        maxWidth: 500,
-
-        margin: 200,
-
-    },
-});

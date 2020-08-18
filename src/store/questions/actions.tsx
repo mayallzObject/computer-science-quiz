@@ -1,10 +1,11 @@
 import { Dispatch } from "redux"
-import { GetState } from '../types'
-import axios from 'axios'
 
-//? TypeScript types
+// TypeScript types
 import { Question } from "../../types/questionTypes"
 import { FETCH_QUESTION, QuestionActionTypes } from "./types"
+import { GetState } from '../types'
+
+import axios from 'axios'
 
 
 export const questionsFetched = (questions: Question[]): QuestionActionTypes => ({
@@ -12,16 +13,12 @@ export const questionsFetched = (questions: Question[]): QuestionActionTypes => 
     payload: questions,
 })
 
-
 const shuffleArray = (array: any[]) =>
     [...array].sort(() => Math.random() - 0.5);
 
-
-
-
 export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {
     try {
-        const res = await axios.get("https://opentdb.com/api.php?amount=10&type=multiple");
+        const res = await axios.get("https://opentdb.com/api.php?amount=10&type=multiple")
 
 
         const data = res.data.results.map((question: Question) => ({
@@ -33,11 +30,7 @@ export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetStat
 
         dispatch(questionsFetched(data))
 
-
-
     } catch (error) {
         console.log(error)
     }
 }
-
-

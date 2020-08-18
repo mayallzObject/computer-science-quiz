@@ -2,27 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { Route } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-//? Components
+// Components
+import MessageBox from './components/messageBox'
+import Loading from './components/loading'
+import NavBar from './components/navigation/navBar'
+import ScoreboardPage from './components/Scoreboard'
+import LoginPage from './pages/loginIn'
+import Home from './pages/homepage'
 
-
-import Home from './pages/Home'
-import LoginPage from './pages/Login'
-import ScoreboardPage from './pages/Scoreboard'
-
-//? MUI components
-import Paper from '@material-ui/core/Paper'
-
+// Mui components
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Container, CssBaseline } from "@material-ui/core"
-
 import { loadUser } from './store/user/actions'
+import Paper from '@material-ui/core/Paper'
 
-
+// Redux store 
 import { selectAppLoading } from './store/appState/selectors'
-import MessageBox from './components/MessageBox'
-import Loading from './components/Loading/Loading'
-import NavBar from './components/Navigation/NavBar'
-
 
 
 const App = () => {
@@ -35,9 +30,8 @@ const App = () => {
   const lightTheme = createMuiTheme({
     palette: {
       primary: {
-
-        main: "#3b5998",
-        dark: "#890000", // button hovering color in light mode
+        main: "#900603",
+        dark: "#3b5998", // button hovering color in light mode
       },
 
       type: "light",
@@ -47,51 +41,34 @@ const App = () => {
   const darkTheme = createMuiTheme({
     palette: {
       primary: {
-
-        main: "#FFFE6F",
+        main: "#3b5998",
         dark: "#CCCC00", // button hovering color when in dark
       },
-
-
       type: "dark",
-      background: { paper: "#0000" },
     },
   })
 
-
   useEffect(() => {
-
     dispatch(loadUser())
   }, [dispatch, darkMode])
 
-
-
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Paper style={{ height: "100vh" }} >
 
-        <CssBaseline />
-        <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        {/* <NavBar /> */}
-        <Paper>
-          <Container disableGutters={true} maxWidth="xs">
+      <CssBaseline />
+      <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
+      <Paper>
+        <Container disableGutters={true} maxWidth="xs">
+          <MessageBox />
+          {isLoading ? <Loading /> : null}
+        </Container>
 
-            <MessageBox />
-
-            {isLoading ? <Loading /> : null}
-          </Container>
-        </Paper>
-        <Route exact path="/login" component={LoginPage} />
         <Route path="/scoreboard" component={ScoreboardPage} />
-        <Route exact path="/" component={Home} />
-        {/* <Route path="/scoreboard" component={ScoreboardPage} />
-        <Route path="/signup" component={SingupPage} />
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/:me" component={Home} /> */}
+        <Route exact path="/" component={Home} />
       </Paper>
     </ThemeProvider>
   )
 }
 
 export default App
-

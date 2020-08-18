@@ -1,4 +1,6 @@
+// 
 import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
 import { login } from "../../store/user/actions";
 import { makeStyles } from "@material-ui/core/styles";
@@ -22,10 +24,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
+
+
+//! Props ANY !?!
 const Login = (props: any) => {
     const classes = useStyles();
-    const { set_modalForm } = props;
-    const dispatch = useDispatch();
+    const { set_ModalForm } = props
+    const dispatch = useDispatch()
     const initialState = { email: "", password: "" }
     const [credentials, set_credentials] = useState(initialState);
 
@@ -74,11 +79,11 @@ const Login = (props: any) => {
                 Don't have an account yet? Sign up{" "}
                 <Typography
                     component="span"
-                    onClick={(e: OnClick) => set_modalForm("Signup")}
+                    onClick={(e: OnClick) => set_ModalForm("Signup")}
                     style={{ cursor: "pointer" }}
                 >
                     HERE
-        </Typography>
+                </Typography>
             </DialogContentText>
         </DialogContent>
     )

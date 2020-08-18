@@ -1,4 +1,4 @@
-//? TypeScript types
+// TypeScript types
 import { FETCH_QUESTION, QuestionActionTypes } from "./types";
 import { Question } from "../../types/questionTypes"
 
