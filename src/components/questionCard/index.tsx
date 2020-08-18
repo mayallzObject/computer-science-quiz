@@ -16,9 +16,10 @@ import { AnswerObject, ID, QuestionsState } from "./types"
 import { Button, Box } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+
 
 const Questions: React.FC = () => {
-
     const [TOTAL_QUESTIONS] = useState(10)
     const [questions, setQuestions] = useState<QuestionsState[]>([])
     const [number, setNumber] = useState(0)
@@ -38,7 +39,7 @@ const Questions: React.FC = () => {
     }, [dispatch, someUser, id])
 
     const startTrivia = async () => {
-        setGameOver(false);
+        setGameOver(false)
         setQuestions(someQuestions)
         setScore(0)
         setUserAnswers([])
@@ -87,7 +88,9 @@ const Questions: React.FC = () => {
                     ) : null
             }
             {
-                !gameOver ? <Box >Score: {score}</Box> : null
+                !gameOver ?
+                    <Box> Score: {score}</Box>
+                    : null
             }
             {
                 !gameOver && (
@@ -96,8 +99,7 @@ const Questions: React.FC = () => {
                         totalQuestions={TOTAL_QUESTIONS}
                         question={questions[number].question}
                         answers={questions[number].answers}
-                        userAnswer={userAnswers
-                            ? userAnswers[number] : undefined}
+                        userAnswer={userAnswers ? userAnswers[number] : undefined}
                         callback={checkAnswer}
                     />
                 )
@@ -106,16 +108,21 @@ const Questions: React.FC = () => {
                 !gameOver && userAnswers.length
                     === number + 1 && number
                     !== TOTAL_QUESTIONS - 1 ? (
-                        <Button onClick={nextQuestion}>
-                            Next Question
+                        <Box className="primary">
+                            <Button onClick={nextQuestion}>
+                                Next Question
                         </Button>
+                        </Box>
                     ) : null
             }
-            <Box className="primary" m={2} pt={4}>
+            <Box className="primary" m={1} pt={1}>
                 {
                     number > 0 && userAnswers.length
                         === TOTAL_QUESTIONS ? (
-                            <Button onClick={submitScore}>
+                            <Button
+                                startIcon={<CloudUploadIcon />}
+                                onClick={submitScore}>
+
                                 Submit Score
                             </Button>
                         ) : null

@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 
 // Components
-import Login from "../../Auth/Login";
-import SignUp from "../../Auth/Signup";
+import Login from "../../auth/loginAuth";
+import SignUp from "../../auth/signupAuth";
 
-// MUI components
+// Mui components
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";

@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from "react-redux"
 
 // Components
 import MessageBox from './components/messageBox'
-import Loading from './components/loading/Loading'
+import Loading from './components/loading'
 import NavBar from './components/navigation/navBar'
-import ScoreboardPage from './pages/Scoreboard'
-import LoginPage from './pages/Login'
+import ScoreboardPage from './components/Scoreboard'
+import LoginPage from './pages/loginIn'
 import Home from './pages/homepage'
 
 // Mui components
@@ -24,12 +24,14 @@ const App = () => {
   const isLoading = useSelector(selectAppLoading);
   const dispatch = useDispatch()
   const [darkMode, set_darkMode] = useState(true);
+
+
+
   const lightTheme = createMuiTheme({
     palette: {
       primary: {
-
-        main: "#3b5998",
-        dark: "#6BCAE2",
+        main: "#900603",
+        dark: "#3b5998", // button hovering color in light mode
       },
 
       type: "light",
@@ -39,12 +41,10 @@ const App = () => {
   const darkTheme = createMuiTheme({
     palette: {
       primary: {
-        main: "#6BCAE2",
-        dark: "#009900",
+        main: "#3b5998",
+        dark: "#CCCC00", // button hovering color when in dark
       },
-
       type: "dark",
-      background: { paper: "#0000" },
     },
   })
 
@@ -54,15 +54,15 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Paper style={{ height: "100vh" }} >
-        <CssBaseline />
-        <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        <Paper>
-          <Container disableGutters={true} maxWidth="xs">
-            <MessageBox />
-            {isLoading ? <Loading /> : null}
-          </Container>
-        </Paper>
+
+      <CssBaseline />
+      <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
+      <Paper>
+        <Container disableGutters={true} maxWidth="xs">
+          <MessageBox />
+          {isLoading ? <Loading /> : null}
+        </Container>
+
         <Route path="/scoreboard" component={ScoreboardPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/" component={Home} />

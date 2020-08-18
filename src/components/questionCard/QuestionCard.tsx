@@ -7,25 +7,31 @@ import {
     CardMedia,
     CardContent,
     Card,
-    ButtonGroup
+    ButtonGroup,
 } from '@material-ui/core'
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 const useStyles = makeStyles({
     root: {
-        blackgroundColor: '#29ab87',
+        minWidth: 50,
+
+        align: "center"
     },
     card: {
-
-        textAlign: "center",
+        alignItems: "center",
+        backgroundColor: '#000000',
     },
     title: {
         fontSize: 20,
-        backgroundColor: '#6BCAE2',
         textAlign: "center",
     },
     media: {
-        height: 0,
+
+        height: -40,
+        paddingTop: '56.25%', // 16:9
     },
+
+
 })
 
 
@@ -41,7 +47,8 @@ const QuestionCard: React.FC<Props> = ({
 
     return (
         <Card className={classes.root}>
-            <Typography className={classes.title}>
+
+            <Typography color="primary" className={classes.title}>
                 Question: {questionNr} / {totalQuestions}
             </Typography>
             <React.Fragment>
@@ -49,31 +56,29 @@ const QuestionCard: React.FC<Props> = ({
                     {question}
                 </Typography>
             </React.Fragment>
-            <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="300"
-                src="https://lh3.googleusercontent.com/proxy/5qgHRi1Tw5xhmrUtgYGewXGAAohLl0EYBqleSZlZDyr4sdKVT1m91oG0iwhrypIp3VX4NFQI9Ctvzhe502b0wGyCWcIGvqwY7CQFpgZH1NhvILfFX-VHwCO0w9AvJMOFQ8xsu_8rCtKTnpRlngicF1OE-ve8"
-                title="Contemplative Reptile"
-            />
             <CardContent className={classes.card}>
-
-                {answers.map((answer) => (
-                    <Button
-                        key={answer}
-                        color="primary"
-                        variant="contained"
-                        disabled={userAnswer ? true : false}
-                        value={answer}
-                        onClick={callback}>
-                        <React.Fragment>
-                            {answer}
-                        </React.Fragment>
-                    </Button>
-                ))}
-
+                <CardMedia
+                    className={classes.media}
+                    image="https://media.nationalgeographic.org/assets/photos/000/343/custom/34332_610x343.jpg"
+                    title="Paella dish"
+                />
+                <ButtonGroup>
+                    {answers.map((answer) => (
+                        <Button
+                            key={answer}
+                            startIcon={<CloudUploadIcon />}
+                            color="primary"
+                            variant="contained"
+                            disabled={userAnswer ? true : false}
+                            value={answer}
+                            onClick={callback}>
+                            <React.Fragment>
+                                {answer}
+                            </React.Fragment>
+                        </Button>
+                    ))}
+                </ButtonGroup>
             </CardContent>
-            <Button className="SoundPlayer" />
         </Card>
 
     )

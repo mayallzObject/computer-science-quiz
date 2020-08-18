@@ -1,4 +1,6 @@
+// 
 import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
 import { login } from "../../store/user/actions";
 import { makeStyles } from "@material-ui/core/styles";
@@ -22,14 +24,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
+
+
+//! Props ANY !?!
 const Login = (props: any) => {
     const classes = useStyles();
-    const { set_ModalForm } = props;
-    const dispatch = useDispatch();
+    const { set_ModalForm } = props
+    const dispatch = useDispatch()
     const initialState = { email: "", password: "" }
     const [credentials, set_credentials] = useState(initialState);
-
-    console.log("console log :", props)
 
     function submitForm(event: OnClick): void {
         event.preventDefault();

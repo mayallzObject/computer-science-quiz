@@ -3,11 +3,18 @@ import React from 'react'
 
 //Components
 import QuestionCard from '../../components/questionCard'
-import ScoreboardPage from '../Scoreboard'
+
 
 //Mui components
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
+import RecipeReviewCard from '../../components/categoryTable'
+
+
+import { Box } from '@material-ui/core'
+
+import CategoryCart from '../../components/categoryTable/category'
+
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -16,26 +23,83 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
         },
         paper: {
-            padding: theme.spacing(20),
+            padding: theme.spacing(3),
             textAlign: 'center',
-            color: theme.palette.text.secondary,
         },
+
     }),
 )
 
 export default function Home() {
     const classes = useStyles()
+
     return (
-        <div className={classes.root}>
-            <Grid className={classes.paper} container spacing={4}>
-                <Grid item xs={12} sm={6}>
-                    <QuestionCard />
+
+
+        <Grid className={classes.paper} container spacing={2}>
+            <Grid item xs={12} sm={3}>
+                <RecipeReviewCard />
+                <RecipeReviewCard />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+                <QuestionCard />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+                <CategoryCart />
+            </Grid>
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="primary.main" color="primary.contrastText" p={2}>
+                        General Knowledge
+        </Box>
                 </Grid>
-                <Grid item className={classes.paper} xs={12} sm={6}>
-                    <ScoreboardPage />
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="primary.main" color="primary.contrastText" p={2}>
+                        Entertainment
+        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="primary.main" color="primary.contrastText" p={2}>
+                        Science
+        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="warning.main" color="warning.contrastText" p={2}>
+                        Mythology
+                        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="warning.main" color="warning.contrastText" p={2}>
+                        Geography
+        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="warning.main" color="warning.contrastText" p={2}>
+                        History
+        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="primary.main" color="primary.contrastText" p={2}>
+                        Politics
+        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="primary.main" color="primary.contrastText" p={2}>
+                        Art
+        </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box bgcolor="primary.main" color="primary.contrastText" p={2}>
+                        Animals
+        </Box>
+
                 </Grid>
             </Grid>
-        </div>
-    )
-}
 
+
+
+        </Grid>
+
+    );
+}

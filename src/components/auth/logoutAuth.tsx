@@ -30,7 +30,9 @@ const Logout = (props: any) => {
             <Button className={classes.btn} onClick={() => dispatch(logOut())}>
                 Logout
             </Button>
-            <Typography className={classes.hello}>Hi, {props.user.name}!</Typography>
+            <Typography className={classes.hello}>
+                Hi, {props.user.name}!
+            </Typography>
         </>
     )
 }

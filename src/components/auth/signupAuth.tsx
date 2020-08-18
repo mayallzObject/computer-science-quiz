@@ -21,18 +21,20 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         textAlign: "center",
     },
-}));
+}))
+
 
 const SingUp = (props: any) => {
-    const classes = useStyles();
+    const classes = useStyles()
     const { handleClose, set_ModalForm } = props
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
+
     const initialState = {
         name: "",
         email: "",
         password: "",
 
-    };
+    }
     const [signUpcredentials, set_signUpcredentials] = useState(initialState)
 
     function submitForm(event: OnClick): void {
@@ -89,7 +91,8 @@ const SingUp = (props: any) => {
                     Submit
         </Button>
             </DialogActions>
-            <DialogContentText className={classes.dialogFooter}>
+            <DialogContentText
+                className={classes.dialogFooter}>
                 Already have an account? Login{" "}
                 <Typography
                     component="span"
