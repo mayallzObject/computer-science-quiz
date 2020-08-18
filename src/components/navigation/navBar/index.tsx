@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import AuthForm from "../navItem"
-import Logout from "../../auth/logoutAuth"
+import Logout from "../../Auth/logoutAuth"
 import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,13 +26,14 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
-        marginLeft: theme.spacing(3),
+        marginLeft: theme.spacing(1),
+        size: 5
     },
     title: {
         flexGrow: 1,
     },
     darkButton: {
-        marginLeft: "2vw",
+        marginLeft: "1vw",
         marginBottom: "1vw"
     },
     icon: {
@@ -104,9 +105,6 @@ const NavBar = (props: any) => {
                         </Box>
                         <Box>
 
-                            <IconButton className={classes.icon}>
-                                <SwipeableTemporaryDrawer />
-                            </IconButton>
                             <IconButton className={classes.menuButton}
                                 component={Link} to="/"
                                 edge="start" color="inherit"
@@ -121,12 +119,12 @@ const NavBar = (props: any) => {
                     </Button>
 
                             <Button className={classes.btn2}
-                                component={Link} to="/login"
+                                component={Link} to="/weekly-race"
                             > Race
                 </Button>
 
                             <Button className={classes.btn2}
-                                component={Link} to="/login"
+                                component={Link} to="/about-me"
                             > Me
                 </Button>
                         </ButtonGroup>

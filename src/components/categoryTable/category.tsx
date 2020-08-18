@@ -15,6 +15,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 import RecipeReviewCard from '.';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -50,56 +51,57 @@ export default function CategoryCart() {
     }
 
     return (
-        <Card className={classes.root}>
-            <CardHeader
-                avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
-                        CT
+        <div>
+            <Card className={classes.root}>
+                <CardHeader
+                    avatar={
+                        <Avatar aria-label="recipe" className={classes.avatar}>
+                            CT
                     </Avatar>
-                }
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title="OMGGGG"
-                subheader="Latest Scores"
-            />
-            <CardMedia
-                className={classes.media}
-                image="https://www.sporcle.com/blog/wp-content/uploads/2018/10/1-69.jpg"
-                title="Paella dish"
-            />
-            <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    Category Score Tables : Here you can find all the tables and categories.
-        </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-
-                <IconButton
-                    className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
-                    })}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more"
-                >
-                    <ExpandMoreIcon />
-                </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    }
+                    action={
+                        <IconButton aria-label="settings">
+                            <MoreVertIcon />
+                        </IconButton>
+                    }
+                    title="OMGGGG"
+                    subheader="Latest Scores"
+                />
+                <CardMedia
+                    className={classes.media}
+                    image="https://www.sporcle.com/blog/wp-content/uploads/2018/10/1-69.jpg"
+                    title="Paella dish"
+                />
                 <CardContent>
-
-
-                    <Typography paragraph>
-                        <RecipeReviewCard />
-                    </Typography>
-                    <Typography paragraph>
-                        <RecipeReviewCard />
-                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Category Score Tables : Here you can find all the tables and categories.
+        </Typography>
                 </CardContent>
-            </Collapse>
-        </Card>
+                <CardActions disableSpacing>
+                    <IconButton
+                        className={clsx(classes.expand, {
+                            [classes.expandOpen]: expanded,
+                        })}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                        <Box>
+                            <RecipeReviewCard />
+                        </Box>
+
+
+
+
+
+                    </CardContent>
+                </Collapse>
+            </Card>
+        </div>
     );
 }

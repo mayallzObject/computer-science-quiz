@@ -1,13 +1,27 @@
-import React from "react";
-import Spinner from "react-bootstrap/Spinner";
-import "./spinners.css";
+
+
+import React from 'react';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            display: 'flex',
+            '& > * + *': {
+                marginLeft: theme.spacing(2),
+            },
+        },
+    }),
+);
 
 export default function Loading() {
+    const classes = useStyles();
+
     return (
-        <div className="loading_spinner">
-            <Spinner animation="border" role="status">
-                <span className="sr-only">Loading...</span>
-            </Spinner>
+        <div className={classes.root}>
+            <CircularProgress />
+            <CircularProgress color="secondary" />
         </div>
-    )
+    );
 }

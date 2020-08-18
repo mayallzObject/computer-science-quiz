@@ -6,9 +6,9 @@ import { useDispatch, useSelector } from "react-redux"
 import MessageBox from './components/messageBox'
 import Loading from './components/loading'
 import NavBar from './components/navigation/navBar'
-import ScoreboardPage from './components/Scoreboard'
-import LoginPage from './pages/loginIn'
-import Home from './pages/homepage'
+import AboutMe from './pages/AboutMe'
+import WeeklyRace from './pages/WeeklyRace'
+import Home from './pages/Homepage'
 
 // Mui components
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
@@ -18,6 +18,7 @@ import Paper from '@material-ui/core/Paper'
 
 // Redux store 
 import { selectAppLoading } from './store/appState/selectors'
+
 
 
 const App = () => {
@@ -63,8 +64,8 @@ const App = () => {
           {isLoading ? <Loading /> : null}
         </Container>
 
-        <Route path="/scoreboard" component={ScoreboardPage} />
-        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/about-me" component={AboutMe} />
+        <Route exact path="/weekly-race" component={WeeklyRace} />
         <Route exact path="/" component={Home} />
       </Paper>
     </ThemeProvider>
