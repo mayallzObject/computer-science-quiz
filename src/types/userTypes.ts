@@ -11,7 +11,7 @@ export type Credentials = {
     password: string
 }
 
-export type SignupData = {
+export type SignUpData = {
     name: string
     email: string
     password: string

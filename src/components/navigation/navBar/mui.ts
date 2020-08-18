@@ -7,7 +7,6 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     btn: {
-        fontWeight: "bold",
         color: "#aa0d00",
         backgroundColor: "#ffffff",
         "&:hover": {

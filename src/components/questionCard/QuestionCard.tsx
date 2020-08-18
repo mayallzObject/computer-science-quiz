@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 
 
 })
-
+const renderHTML = (rawHTML: string) => React.createElement("div", { dangerouslySetInnerHTML: { __html: rawHTML } })
 
 const QuestionCard: React.FC<Props> = ({
     question,
@@ -47,20 +47,17 @@ const QuestionCard: React.FC<Props> = ({
 
     return (
         <Card className={classes.root}>
-
             <Typography color="primary" className={classes.title}>
                 Question: {questionNr} / {totalQuestions}
             </Typography>
-            <React.Fragment>
-                <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
-                    {question}
-                </Typography>
-            </React.Fragment>
+            <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
+                {renderHTML(question)}
+            </Typography>
             <CardContent className={classes.card}>
                 <CardMedia
                     className={classes.media}
                     image="https://media.nationalgeographic.org/assets/photos/000/343/custom/34332_610x343.jpg"
-                    title="Paella dish"
+                    title="GameImage"
                 />
                 <ButtonGroup>
                     {answers.map((answer) => (
@@ -72,9 +69,7 @@ const QuestionCard: React.FC<Props> = ({
                             disabled={userAnswer ? true : false}
                             value={answer}
                             onClick={callback}>
-                            <React.Fragment>
-                                {answer}
-                            </React.Fragment>
+                            {renderHTML(answer)}
                         </Button>
                     ))}
                 </ButtonGroup>

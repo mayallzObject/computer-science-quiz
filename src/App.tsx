@@ -12,9 +12,10 @@ import Home from './pages/Homepage'
 
 // Mui components
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { Container, CssBaseline } from "@material-ui/core"
+import { Container, CssBaseline, IconButton, Icon } from "@material-ui/core"
 import { loadUser } from './store/user/actions'
 import Paper from '@material-ui/core/Paper'
+import DeckRoundedIcon from '@material-ui/icons/DeckRounded'
 
 // Redux store 
 import { selectAppLoading } from './store/appState/selectors'
@@ -55,19 +56,20 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-
-      <CssBaseline />
-      <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
       <Paper>
+        <CssBaseline />
+        <Icon>
+          {"Cool "}<DeckRoundedIcon fontSize="large" />{"Trivia"}
+        </Icon>
+        <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
         <Container disableGutters={true} maxWidth="xs">
           <MessageBox />
-          {isLoading ? <Loading /> : null}
         </Container>
-
-        <Route exact path="/about-me" component={AboutMe} />
-        <Route exact path="/weekly-race" component={WeeklyRace} />
-        <Route exact path="/" component={Home} />
+        {isLoading ? <Loading /> : null}
       </Paper>
+      <Route path="/about-me" component={AboutMe} />
+      <Route exact path="/weekly-race" component={WeeklyRace} />
+      <Route exact path="/" component={Home} />
     </ThemeProvider>
   )
 }

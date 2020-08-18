@@ -6,38 +6,36 @@ import MuiAlert from "@material-ui/lab/Alert";
 import { clearMessage } from "../../store/appState/actions";
 
 function Alert(props: any) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
 
 }
 
 const MessageBox = () => {
-    const message = useSelector(selectMessage);
-    const dispatch = useDispatch();
-    const showMessage = message !== null;
-    if (!showMessage) return null;
+  const message = useSelector(selectMessage);
+  const dispatch = useDispatch();
+  const showMessage = message !== null;
+  if (!showMessage) return null;
 
-    return (
-        <Snackbar
+  return (
+    <Snackbar
 
-            open={showMessage}
-            anchorOrigin={{ vertical: "top", horizontal: "center" }}
-            //@ts-ignore
-            onClose={message.dismissable ? () => dispatch(clearMessage()) : null}
-        >
-            <Alert
-                onClose={() => dispatch(clearMessage())}
-                //@ts-ignore
-                severity={message.variant}
-
-            >
-
-                {/* 
+      open={showMessage}
+      anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      //@ts-ignore
+      onClose={message.dismissable ? () => dispatch(clearMessage()) : null}
+    >
+      <Alert
+        onClose={() => dispatch(clearMessage())}
+        //@ts-ignore
+        severity={message.variant}
+      >
+        {/* 
                  // @ts-ignore */}
-                {message.text}
-
-            </Alert>
-        </Snackbar>
-    );
+        {message.text}
+      </Alert>
+    </Snackbar>
+  );
 }
 
 export default MessageBox
+

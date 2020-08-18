@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     hello: {
-        fontSize: 25,
-        paddingLeft: 20,
+        fontSize: 10,
+        paddingLeft: 10,
         fontWeight: "bold",
     },
 }));

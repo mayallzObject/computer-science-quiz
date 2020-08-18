@@ -18,8 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: theme.palette.text.secondary,
         },
     }),
-);
-
+)
 
 export default function AboutMe() {
     const classes = useStyles()
@@ -29,21 +28,21 @@ export default function AboutMe() {
 
     useEffect(() => {
         if (!user.token) {
-            history.push("/");
+            history.push("/")
         }
-    }, [user, history]);
+    }, [user, history])
 
     if (loading) {
-        return <Loading />;
+        return <Loading />
     } else {
-        if (!user.id) return null;
+        if (!user.id) return null
 
         return (
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>xs=12</Paper>
+                    <Paper className={classes.paper}>{user.name}</Paper>
                 </Grid>
             </Grid>
-        );
+        )
     }
 }

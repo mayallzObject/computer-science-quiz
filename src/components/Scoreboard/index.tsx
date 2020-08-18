@@ -27,7 +27,6 @@ const ScoreboardPage = () => {
     useEffect(() => {
         const getData = async () => {
             const res = await axios.get(`http://localhost:4000/score`)
-            console.log(res.data)
             setScore(res.data)
         }
         getData()

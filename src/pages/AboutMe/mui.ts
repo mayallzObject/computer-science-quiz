@@ -6,7 +6,6 @@ export const useStyles = makeStyles((theme: Theme) =>
             '& > *': {
                 margin: theme.spacing(4),
             },
-
         },
     }),
 )

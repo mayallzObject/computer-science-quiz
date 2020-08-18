@@ -1,9 +1,9 @@
 import axios from "axios"
 import { Dispatch } from "redux"
 import { apiUrl } from "../../config/constants"
-import { User, Credentials, SignupData, } from "../../types/userTypes"
+import { User, Credentials, SignUpData, } from "../../types/userTypes"
 
-//? Types
+// Types
 import { GetState } from "../types"
 import {
     AuthTypes,
@@ -12,7 +12,7 @@ import {
     LOG_OUT,
 } from "./types"
 
-//? Action Creators
+// Action Creators
 import {
     showMessageWithTimeout,
     setMessage,
@@ -79,7 +79,7 @@ export const login = (credentials: Credentials) => {
     }
 }
 
-export const signUp = (signUpData: SignupData) => {
+export const signUp = (signUpData: SignUpData) => {
     return async (dispatch: Dispatch, getState: GetState) => {
         dispatch(appLoading());
 

@@ -15,12 +15,13 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ScoreboardPage from '../Scoreboard';
+import { Box } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            maxWidth: 345,
+
         },
         media: {
             height: 0,
@@ -94,15 +95,10 @@ export default function RecipeReviewCard() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Typography paragraph>Easy</Typography>
-
-                    <Typography paragraph>
-                        <ScoreboardPage />
-                    </Typography>
-                    <Typography paragraph>Medium</Typography>
-                    <Typography paragraph>
-                        <ScoreboardPage />
-                    </Typography>
+                    <Box>Easy</Box>
+                    <ScoreboardPage />
+                    <Box>Medium</Box>
+                    <ScoreboardPage />
                     <Typography paragraph>Hard</Typography>
                 </CardContent>
             </Collapse>
