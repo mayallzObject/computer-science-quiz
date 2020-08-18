@@ -25,14 +25,8 @@ export default function Login() {
 
     return (
 
-
         <Grid className={classes.paper} container spacing={2}>
             <Grid item xs={12} sm={2}>
-
-                <RecipeReviewCard />
-            </Grid>
-
-            <Grid item xs={12} sm={2}>
                 <RecipeReviewCard />
             </Grid>
             <Grid item xs={12} sm={2}>
@@ -48,10 +42,11 @@ export default function Login() {
                 <RecipeReviewCard />
             </Grid>
             <Grid item xs={12} sm={2}>
-
                 <RecipeReviewCard />
             </Grid>
-
+            <Grid item xs={12} sm={2}>
+                <RecipeReviewCard />
+            </Grid>
             <Grid item xs={12} sm={2}>
                 <RecipeReviewCard />
             </Grid>
@@ -68,6 +63,5 @@ export default function Login() {
                 <RecipeReviewCard />
             </Grid>
         </Grid>
-
     );
 }
