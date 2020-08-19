@@ -18,6 +18,7 @@ import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
 
 import axios from 'axios';
+import { Avatar } from '@material-ui/core'
 
 const ScoreboardPage = () => {
 
@@ -42,7 +43,10 @@ const ScoreboardPage = () => {
                             Points
                             </StyledTableCell>
                         <StyledTableCell align="left">
-                            Name
+                            P.img
+                            </StyledTableCell>
+                        <StyledTableCell align="left">
+                            Player
                             </StyledTableCell>
                     </TableRow>
                 </TableHead>
@@ -55,6 +59,10 @@ const ScoreboardPage = () => {
                             <StyledTableCell
                                 align="left">
                                 {data.user.name}
+                                <Avatar aria-label="recipe"
+                                    src={data.user.userImg}
+                                >
+                                </Avatar>
                             </StyledTableCell>
                         </StyledTableRow>
                     ))}

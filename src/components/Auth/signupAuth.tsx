@@ -9,7 +9,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { OnClick } from "../../types/eventType";
-
+import { useForm } from "react-hook-form"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,10 +32,13 @@ const SingUp = (props: any) => {
     const initialState = {
         name: "",
         email: "",
+        userImg: "",
         password: "",
 
     }
     const [signUpcredentials, set_signUpcredentials] = useState(initialState)
+
+
 
     function submitForm(event: OnClick): void {
         event.preventDefault();
@@ -86,6 +89,8 @@ const SingUp = (props: any) => {
                 fullWidth
                 required
             />
+
+
             <DialogActions>
                 <Button variant="contained" color="primary" onClick={submitForm}>
                     Submit

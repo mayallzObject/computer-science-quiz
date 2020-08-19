@@ -1,8 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logOut } from "../../store/user/actions";
-import { Button, Typography } from "@material-ui/core";
+import { Button, Typography, Avatar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
     btn: {
@@ -20,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: 10,
         fontWeight: "bold",
     },
+    avatar: {
+        backgroundColor: red[500],
+
+    },
 }));
 
 const Logout = (props: any) => {
@@ -27,12 +32,18 @@ const Logout = (props: any) => {
     const dispatch = useDispatch()
     return (
         <>
+            <Avatar aria-label="recipe" className={classes.avatar}
+
+                src={props.user.userImg}
+            >
+            </Avatar>
+            <Typography className={classes.hello}>
+                Hi {props.user.name}, welcome back!
+            </Typography>
             <Button className={classes.btn} onClick={() => dispatch(logOut())}>
                 Logout
             </Button>
-            <Typography className={classes.hello}>
-                Hi, {props.user.name}!
-            </Typography>
+
         </>
     )
 }

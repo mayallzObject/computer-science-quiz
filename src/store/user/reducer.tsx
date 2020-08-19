@@ -13,6 +13,7 @@ const token = localStorage.getItem("token")
 const initialState: User = {
     id: null,
     name: null,
+    userImg: null,
     email: null,
     score: null,
     token: token,
