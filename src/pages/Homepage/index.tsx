@@ -1,5 +1,5 @@
 //HomePage/ react / redux imports 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 //Components
 import QuestionCard from '../../components/questionCard'
@@ -12,6 +12,9 @@ import RecipeReviewCard from '../../components/categoryTable'
 
 
 import { Box, Paper, Card, CardContent, CardMedia } from '@material-ui/core'
+
+
+
 
 import CategoryCart from '../../components/categoryTable/category'
 
@@ -31,7 +34,12 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 export default function Home() {
+
+
+
     const classes = useStyles()
+
+
 
     return (
         <Grid className={classes.paper} container spacing={2}>

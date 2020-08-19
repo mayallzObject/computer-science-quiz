@@ -10,6 +10,8 @@ import {
     FETCH_USER,
     TOKEN_STILL_VALID,
     LOG_OUT,
+    SET_SCORE,
+    UPDATE_SCORE
 } from "./types"
 
 // Action Creators
@@ -30,6 +32,17 @@ export const userFetched = (user: User): AuthTypes => ({
 export const tokenStillValid = (user: User): AuthTypes => ({
     type: TOKEN_STILL_VALID,
     user,
+})
+
+export const setScore = (score: number): AuthTypes => ({
+    type: SET_SCORE,
+    score,
+})
+
+
+export const updateScore = (updatedScore: number): AuthTypes => ({
+    type: UPDATE_SCORE,
+    updatedScore,
 })
 
 
@@ -124,6 +137,10 @@ export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => 
         })
         dispatch(userFetched(res.data));
 
+        const res1 = await axios.get(`${apiUrl}/users/${res.data.id}`)
+
+        dispatch(setScore(res1.data.scoreboards[0].score))
+
     } catch (error) {
         console.log('no user')
         if (error.response) {
@@ -143,13 +160,36 @@ export const addScore = (
     const config = {
         headers: {
             'Content-Type': 'application/json',
-        },
+        }
     }
     try {
+
 
         await axios.post(`http://localhost:4000/score`,
             JSON.stringify({ score, userId }), config)
     } catch (error) {
         console.log(error)
     }
+}
+
+
+
+export const updateScoree = (id: number) => async (dispatch: Dispatch, getState: GetState) => {
+    try {
+        console.log('runn')
+
+        const res = await axios.get(`http://localhost:4000/score`)
+
+
+        // @ts-ignore
+        const score = res.data.filter((data) => data.id === id)
+
+
+
+
+        dispatch(updateScore(score[0].score))
+    } catch (error) {
+        console.log(error)
+    }
+
 }

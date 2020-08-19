@@ -5,6 +5,8 @@ import {
     FETCH_USER,
     TOKEN_STILL_VALID,
     UserActionTypes,
+    SET_SCORE,
+    UPDATE_SCORE
 } from "./types"
 
 
@@ -33,6 +35,11 @@ export default (state = initialState, action: UserActionTypes) => {
         case LOG_OUT:
             localStorage.removeItem("token")
             return { ...initialState, token: null }
+
+        case SET_SCORE:
+            return { ...state, score: action.score }
+        case UPDATE_SCORE:
+            return { id: state.id, name: state.name, userImg: state.userImg, email: state.email, score: action.updatedScore, token: state.token }
 
         default:
             return state

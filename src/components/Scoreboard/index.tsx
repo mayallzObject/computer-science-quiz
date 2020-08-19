@@ -1,9 +1,11 @@
 // Scoreboard/ react / redux components
 import React, { useEffect, useState } from 'react'
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 // Redux Store
 import { selectUser } from "../../store/user/selectors"
+
+
 
 // TypeScript types
 import { ScoreBoard } from "./types"
@@ -21,6 +23,7 @@ import axios from 'axios';
 import { Avatar } from '@material-ui/core'
 
 const ScoreboardPage = () => {
+    const dispatch = useDispatch()
 
     const someUser = useSelector(selectUser)
     const [score, setScore] = useState<ScoreBoard[]>([])
@@ -31,6 +34,9 @@ const ScoreboardPage = () => {
             setScore(res.data)
         }
         getData()
+
+        // @ts-ignore
+        // dispatch(getScore(someUser.id))
     }, [someUser])
 
 

@@ -11,6 +11,8 @@ import AboutMe from './pages/AboutMe'
 import WeeklyRace from './pages/WeeklyRace'
 import Home from './pages/Homepage'
 
+import { ID } from "./components/questionCard/types"
+
 // Mui components
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Container, CssBaseline, IconButton, Icon } from "@material-ui/core"
@@ -20,13 +22,22 @@ import DeckRoundedIcon from '@material-ui/icons/DeckRounded'
 
 // Redux store 
 import { selectAppLoading } from './store/appState/selectors'
+
+
+
 import { blue } from '@material-ui/core/colors'
 
 
 
 const App = () => {
-  const isLoading = useSelector(selectAppLoading);
   const dispatch = useDispatch()
+
+  const isLoading = useSelector(selectAppLoading);
+
+
+
+
+
   const [darkMode, set_darkMode] = useState(true);
 
 
@@ -54,7 +65,11 @@ const App = () => {
 
   useEffect(() => {
     dispatch(loadUser())
+
+
   }, [dispatch, darkMode])
+
+
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>

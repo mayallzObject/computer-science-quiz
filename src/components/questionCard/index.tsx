@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import QuestionCard from "./QuestionCard"
 
 // Redux store 
-import { addScore } from "../../store/user/actions"
+import { addScore, updateScoree } from "../../store/user/actions"
 import { selectUser } from "../../store/user/selectors"
 import { selectQuestion } from "../../store/questions/selectors"
 import { fetchQuestions } from "../../store/questions/actions"
@@ -17,6 +17,7 @@ import { Button, Box, makeStyles } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+
 
 
 const Questions: React.FC = () => {
@@ -34,24 +35,40 @@ const Questions: React.FC = () => {
     const someQuestions = useSelector(selectQuestion)
 
     useEffect(() => {
-        dispatch(fetchQuestions())
         setID(someUser.id)
+        dispatch(fetchQuestions())
+
     }, [dispatch, someUser, id])
 
+
+
+
+
+
+
     const startTrivia = async () => {
+
+
         setGameOver(false)
         setQuestions(someQuestions)
         setScore(0)
         setUserAnswers([])
         setNumber(0)
+
+        // calling it here, so that it will get that score of that user into the store
+
     }
 
     const checkAnswer = (e: OnClick) => {
         if (!gameOver) {
             const answer = e.currentTarget.value
+            console.log(someQuestions)
             const correct = someQuestions[number].correct_answer === answer
 
-            if (correct) setScore((prev) => prev + 1);
+            if (correct) {
+                console.log('correct')
+                setScore((prev) => prev + 1)
+            };
             const answerObject = {
                 question: someQuestions[number].question,
                 answer,
@@ -74,7 +91,14 @@ const Questions: React.FC = () => {
     const submitScore = () => {
         dispatch(addScore(score, id))
         setNumber(0)
+
+        setTimeout(() => {
+            dispatch(updateScoree(id))
+
+        }, 1500)
+
     }
+
 
     return (
         <>
