@@ -13,7 +13,7 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Button, Box } from '@material-ui/core'
+import { Button, Box, makeStyles } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
@@ -81,7 +81,7 @@ const Questions: React.FC = () => {
             {
                 gameOver || userAnswers.length
                     === TOTAL_QUESTIONS ? (
-                        <Button className="primary"
+                        <Button variant="outlined"
                             onClick={startTrivia}>
                             Start New Game
                         </Button>
@@ -89,7 +89,7 @@ const Questions: React.FC = () => {
             }
             {
                 !gameOver ?
-                    <Box> Score: {score}</Box>
+                    <Box > Score: {score}</Box>
                     : null
             }
             {
@@ -108,8 +108,8 @@ const Questions: React.FC = () => {
                 !gameOver && userAnswers.length
                     === number + 1 && number
                     !== TOTAL_QUESTIONS - 1 ? (
-                        <Box className="primary">
-                            <Button onClick={nextQuestion}>
+                        <Box mt={5}>
+                            <Button variant="outlined" color="secondary" onClick={nextQuestion}>
                                 Next Question
                         </Button>
                         </Box>
@@ -119,7 +119,7 @@ const Questions: React.FC = () => {
                 {
                     number > 0 && userAnswers.length
                         === TOTAL_QUESTIONS ? (
-                            <Button
+                            <Button variant="outlined" color="secondary"
                                 startIcon={<CloudUploadIcon />}
                                 onClick={submitScore}>
 

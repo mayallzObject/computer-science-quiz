@@ -4,10 +4,12 @@ import {
     Button,
     Typography,
     makeStyles,
-    CardMedia,
+
     CardContent,
     Card,
-    ButtonGroup,
+
+    Paper,
+    Box,
 } from '@material-ui/core'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
@@ -19,17 +21,14 @@ const useStyles = makeStyles({
     },
     card: {
         alignItems: "center",
-        backgroundColor: '#000000',
+        backgroundColor: '#3b5998',
     },
     title: {
-        fontSize: 20,
+        padding: 20,
+        fontSize: 40,
         textAlign: "center",
     },
-    media: {
 
-        height: -40,
-        paddingTop: '56.25%', // 16:9
-    },
 
 
 })
@@ -47,19 +46,18 @@ const QuestionCard: React.FC<Props> = ({
 
     return (
         <Card className={classes.root}>
-            <Typography color="primary" className={classes.title}>
-                Question: {questionNr} / {totalQuestions}
-            </Typography>
-            <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
-                {renderHTML(question)}
-            </Typography>
             <CardContent className={classes.card}>
-                <CardMedia
-                    className={classes.media}
-                    image="https://media.nationalgeographic.org/assets/photos/000/343/custom/34332_610x343.jpg"
-                    title="GameImage"
-                />
-                <ButtonGroup>
+                <Typography color="primary" className={classes.title}>
+                    Question: {questionNr} / {totalQuestions}
+                </Typography>
+                <Paper>
+                    <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
+                        {renderHTML(question)}
+                    </Typography>
+
+                </Paper>
+                <Box pt={5} pl={2}>
+
                     {answers.map((answer) => (
                         <Button
                             key={answer}
@@ -72,7 +70,8 @@ const QuestionCard: React.FC<Props> = ({
                             {renderHTML(answer)}
                         </Button>
                     ))}
-                </ButtonGroup>
+
+                </Box>
             </CardContent>
         </Card>
 

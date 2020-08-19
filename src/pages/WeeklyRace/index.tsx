@@ -25,43 +25,19 @@ export default function WeeklyRace() {
 
     return (
 
+
+
+
+
         <Grid className={classes.paper} container spacing={2}>
-            <Grid item xs={12} sm={2}>
+            <Grid item xs={12} sm={6}>
                 <RecipeReviewCard />
             </Grid>
-            <Grid item xs={12} sm={2}>
+
+            <Grid item xs={12} sm={6}>
                 <RecipeReviewCard />
             </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={12} sm={2}>
-                <RecipeReviewCard />
-            </Grid>
+
         </Grid>
     );
 }

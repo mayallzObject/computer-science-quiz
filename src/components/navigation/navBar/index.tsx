@@ -1,3 +1,4 @@
+
 import React from "react";
 
 import { useSelector } from "react-redux";
@@ -6,7 +7,8 @@ import { Link } from "react-router-dom";
 import AuthForm from "../navItem"
 import Logout from "../../Auth/logoutAuth"
 
-
+//@ts-ignore
+import { Banner, StaticBanner } from 'material-ui-banner';
 
 import BeachAccessIcon from '@material-ui/icons/BeachAccess'
 import makeStyles from "@material-ui/core/styles/makeStyles"
@@ -19,7 +21,8 @@ import Paper from "@material-ui/core/Paper"
 import Box from "@material-ui/core/Box"
 import { selectUser } from "../../../store/user/selectors"
 import WbSunnySharpIcon from '@material-ui/icons/WbSunnySharp'
-
+import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
+import { Card } from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -91,6 +94,9 @@ const NavBar = (props: Props) => {
         <Paper variant="elevation" color="primary">
             <AppBar position="static">
                 <Toolbar>
+                    <IconButton>
+                        {"Cool "}<DeckRoundedIcon fontSize="large" />{"Trivia"}
+                    </IconButton>
 
                     <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
                         <Button className={classes.btn}
@@ -125,6 +131,13 @@ const NavBar = (props: Props) => {
                     </Box>
                 </Toolbar>
             </AppBar>
+            {/* <Banner
+                icon={<Card>
+
+                </Card>}
+                label="Text goes here"
+                open
+            /> */}
         </Paper>
     )
 }

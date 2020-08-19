@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid'
 import RecipeReviewCard from '../../components/categoryTable'
 
 
-import { Box } from '@material-ui/core'
+import { Box, Paper, Card, CardContent, CardMedia } from '@material-ui/core'
 
 import CategoryCart from '../../components/categoryTable/category'
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
         },
         paper: {
-            padding: theme.spacing(3),
+            padding: theme.spacing(4),
             textAlign: 'center',
         },
 
@@ -34,14 +34,22 @@ export default function Home() {
     const classes = useStyles()
 
     return (
-
-
         <Grid className={classes.paper} container spacing={2}>
+            <Grid item xs={12}>
+                <Card>
+                    <CardContent>
+                        <CardMedia
+
+                            image="https://media.nationalgeographic.org/assets/photos/000/343/custom/34332_610x343.jpg"
+                            title="GameImage"
+                        />
+                    </CardContent>
+                </Card>
+            </Grid>
             <Grid item xs={12} sm={3}>
                 <RecipeReviewCard />
                 <RecipeReviewCard />
             </Grid>
-
             <Grid item xs={12} sm={6}>
                 <QuestionCard />
             </Grid>

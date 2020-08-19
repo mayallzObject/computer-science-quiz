@@ -1,23 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
 import { selectAppLoading } from "../../store/appState/selectors";
 import Loading from "../../components/loading";
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ScoreboardPage from "../../components/Scoreboard";
+import { Grid, Paper } from "@material-ui/core";
 
 
 
@@ -30,23 +24,21 @@ const useStyles = makeStyles((theme: Theme) =>
             height: 0,
             paddingTop: '56.25%', // 16:9
         },
-        expand: {
-            transform: 'rotate(0deg)',
-            marginLeft: 'auto',
-            transition: theme.transitions.create('transform', {
-                duration: theme.transitions.duration.shortest,
-            }),
-        },
-        expandOpen: {
-            transform: 'rotate(180deg)',
-        },
+
         avatar: {
             backgroundColor: red[500],
+        },
+        paper: {
+            padding: theme.spacing(2),
+            textAlign: 'center',
+            color: theme.palette.text.secondary,
         },
     }),
 );
 
+
 export default function AboutMe() {
+
     const classes = useStyles()
     const history = useHistory();
     const user = useSelector(selectUser);
@@ -57,6 +49,7 @@ export default function AboutMe() {
         if (!user.token) {
             history.push("/")
         }
+        console.log(user.score)
     }, [user, history])
 
     if (loading) {
@@ -65,44 +58,53 @@ export default function AboutMe() {
         if (!user.id) return null
 
         return (
-            <Card className={classes.root}>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe" className={classes.avatar}
-                            //@ts-ignore
-                            src={user.userImg}
-                        >
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>xs=12</Paper>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Paper className={classes.paper}>
+                        <Card className={classes.root}>
+                            <CardHeader
+                                avatar={
+                                    <Avatar aria-label="recipe" className={classes.avatar}
+                                        //@ts-ignore
+                                        src={user.userImg}
+                                    >
+                                    </Avatar>
+                                }
+                                title={user.name}
 
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton aria-label="settings">
+                                //? There will be a conrol
+                                subheader={user.score}
+                            />
+                            <CardContent>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                </Typography>
+                            </CardContent>
 
-                        </IconButton>
-                    }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
-                />
-                <CardMedia
-                    component="img"
-                    //@ts-ignore
-                    src={user.userImg}
-                    className={classes.media}
-                    title="Paella dish"
-                />
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
-                </CardActions>
-            </Card>
-        )
+                        </Card></Paper>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Paper className={classes.paper}>xs=12 sm=6</Paper>
+                </Grid>
+            </Grid>
+        );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

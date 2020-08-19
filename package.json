@@ -20,6 +20,7 @@
     "@types/redux-thunk": "^2.1.0",
     "axios": "^0.19.2",
     "howler": "^2.2.0",
+    "material-ui-banner": "^1.4.3",
     "moment": "^2.27.0",
     "notistack": "^0.9.17",
     "react": "^16.13.1",

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Route } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-
+//@ts-ignore
+import { Banner, StaticBanner } from 'material-ui-banner';
 // Components
 import MessageBox from './components/messageBox'
 import Loading from './components/loading'
@@ -19,6 +20,7 @@ import DeckRoundedIcon from '@material-ui/icons/DeckRounded'
 
 // Redux store 
 import { selectAppLoading } from './store/appState/selectors'
+import { blue } from '@material-ui/core/colors'
 
 
 
@@ -32,7 +34,7 @@ const App = () => {
   const lightTheme = createMuiTheme({
     palette: {
       primary: {
-        main: "#900603",
+        main: "#b19cd9",
         dark: "#3b5998", // button hovering color in light mode
       },
 
@@ -58,10 +60,8 @@ const App = () => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Paper>
         <CssBaseline />
-        <Icon>
-          {"Cool "}<DeckRoundedIcon fontSize="large" />{"Trivia"}
-        </Icon>
         <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
+        <StaticBanner />
         <Container disableGutters={true} maxWidth="xs">
           <MessageBox />
         </Container>
