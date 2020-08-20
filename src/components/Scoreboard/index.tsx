@@ -61,6 +61,7 @@ const ScoreboardPage = () => {
                             <StyledTableCell
                                 align="center">
                                 {data.user.name}
+
                                 {data.user.userImg}
                             </StyledTableCell>
                         </StyledTableRow>

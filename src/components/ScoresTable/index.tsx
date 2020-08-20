@@ -13,7 +13,7 @@ import clsx from 'clsx';
 import IconButton from '@material-ui/core/IconButton';
 import { blue } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Box, CardHeader, Avatar } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -51,15 +51,6 @@ export default function ScoreTable() {
     return (
         <div>
             <Card className={classes.root}>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe"
-                            //@ts-ignore
-                            src={user.userImg}
-                        >
-                        </Avatar>
-                    }
-                />
 
                 <CardActions disableSpacing>
                     <IconButton
