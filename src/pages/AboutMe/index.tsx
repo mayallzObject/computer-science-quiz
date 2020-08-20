@@ -15,8 +15,10 @@ import { Grid, Paper } from "@material-ui/core";
 import Banner from "../../components/Banner";
 import BannerControls from "../../components/BannerControls";
 import { useStyles } from "./mui"
-import RulesTable from '../../components/ScoresTable'
-import ScoresTable from "../../components/Leaderboards/scoresTable";
+
+import ScoresTable from "../../components/TableCards/ScoresTable";
+import Leaderboards from "../../components/TableCards/Leaderboards";
+import RulesCard from "../../components/TableCards/RulesCard";
 
 
 
@@ -73,7 +75,8 @@ export default function AboutMe() {
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <ScoresTable />
+                    <Leaderboards />
+                    <RulesCard />
                 </Grid>
 
 

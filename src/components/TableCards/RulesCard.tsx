@@ -7,15 +7,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
+
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import ScoreboardPage from '../Scoreboard';
-import { Box } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -43,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 )
 
-export default function RecipeReviewCard() {
+export default function RulesCard() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -54,33 +52,20 @@ export default function RecipeReviewCard() {
     return (
         <Card className={classes.root}>
             <CardHeader
-                avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
-                        G
-                    </Avatar>
-                }
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title="Geography"
-                subheader="Latest Scores"
+                title="Rules and Scoring system"
+                subheader="Everything you need to know"
             />
             <CardMedia
                 className={classes.media}
-                image="https://media.nationalgeographic.org/assets/photos/000/343/custom/34332_610x343.jpg"
-                title="Paella dish"
+                image="https://s18670.pcdn.co/wp-content/uploads/classroom-rules.jpg"
+                title="Rules and Scoring system"
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    Geography (from Greek: γεωγραφία, geographia, literally "earth description") is a field of science devoted to the study of the lands, features, inhabitants, and phenomena of the Earth and planets. The first person to use the word γεωγραφία was Eratosthenes (276–194 BC).
-        </Typography>
+
+                </Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                </IconButton>
 
                 <IconButton
                     className={clsx(classes.expand, {
@@ -95,11 +80,7 @@ export default function RecipeReviewCard() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Box></Box>
-                    <ScoreboardPage />
-                    <Box>Medium</Box>
-                    <ScoreboardPage />
-                    <Typography paragraph>Hard</Typography>
+
                 </CardContent>
             </Collapse>
         </Card>

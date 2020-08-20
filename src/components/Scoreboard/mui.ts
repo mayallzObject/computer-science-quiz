@@ -11,11 +11,11 @@ export const StyledTableCell = withStyles((theme: Theme) =>
         head: {
             backgroundColor: theme.palette.common.black,
             color: theme.palette.common.white,
-            fontSize: 20,
-            padding: 20,
+            fontSize: 15,
+            padding: 15,
         },
         body: {
-            fontSize: 30,
+            fontSize: 15,
 
         },
     }),

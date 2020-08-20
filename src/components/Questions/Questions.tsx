@@ -13,12 +13,12 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Button, Box } from '@material-ui/core'
+import { Button, Box, Icon } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
 //MUI components
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-
+import PlayArrowOutlinedIcon from '@material-ui/icons/PlayArrowOutlined';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -107,10 +107,14 @@ const Questions: React.FC = () => {
             {
                 gameOver || userAnswers.length
                     === TOTAL_QUESTIONS ? (
-                        <Button variant="outlined" color="primary"
-                            onClick={startTrivia}>
-                            Start New Game
+                        <Box mb={4}>
+                            <Button variant="outlined"
+                                color="primary"
+                                startIcon={<PlayArrowOutlinedIcon />}
+                                onClick={startTrivia}>
+                                Start New Game
                         </Button>
+                        </Box>
                     ) : null
             }
             {
@@ -134,14 +138,14 @@ const Questions: React.FC = () => {
                 !gameOver && userAnswers.length
                     === number + 1 && number
                     !== TOTAL_QUESTIONS - 1 ? (
-                        <Box mb={10}>
-                            <Button variant="outlined" color="inherit" onClick={nextQuestion}>
+                        <Box mt={2}>
+                            <Button variant="outlined" color="primary" onClick={nextQuestion}>
                                 Next Question
                         </Button>
                         </Box>
                     ) : null
             }
-            <Box className="primary" mb={1} pt={1}>
+            <Box className="primary" mt={2}>
                 {
                     number > 0 && userAnswers.length
                         === TOTAL_QUESTIONS ? (

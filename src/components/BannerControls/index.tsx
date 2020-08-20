@@ -13,25 +13,25 @@ import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        padding: 10,
+
+        padding: 18,
         backgroundColor: "#353839",
-        alignItems: "center",
+
 
     },
 
     btn: {
         marginTop: theme.spacing(1),
         fontWeight: "bold",
-        color: "#aa0d00",
-        backgroundColor: "#ffffff",
+
+        backgroundColor: "#00000",
         "&:hover": {
-            color: "#000000",
-            backgroundColor: "#ffff00",
+            color: "#fdfff5",
+            backgroundColor: "#a7adba",
         },
     },
     pallete: {
-        alignItems: "center",
+
     }
 }))
 
@@ -40,21 +40,20 @@ export default function BannerControls() {
 
     return (
         <Paper className={classes.root}>
-            <IconButton color="primary">
-                {"Cool"}<DeckRoundedIcon fontSize="large" />{"rivia"}
-            </IconButton>
+
             <ButtonGroup variant="outlined" color="primary" aria-label="contained primary button group">
                 <Button className={classes.btn}
+                    color="primary"
                     component={NavLink} to="/"
                 > Play
                     </Button>
                 <Button className={classes.btn}
                     component={NavLink} to="/weekly-race"
-                > Leaderboards
+                > Race
                     </Button>
                 <Button className={classes.btn}
                     component={NavLink} to="/about-me"
-                > My page
+                > Me
                     </Button>
             </ButtonGroup>
         </Paper >

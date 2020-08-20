@@ -13,7 +13,10 @@ import Grid from '@material-ui/core/Grid'
 
 import Banner from '../../components/Banner'
 import BannerControls from '../../components/BannerControls'
-import ScoresTable from '../../components/ScoresTable'
+import ScoresTable from "../../components/TableCards/ScoresTable";
+import Leaderboards from "../../components/TableCards/Leaderboards";
+import RulesCard from '../../components/TableCards/RulesCard';
+
 
 export default function Home() {
     const classes = useStyles()
@@ -34,10 +37,10 @@ export default function Home() {
                 <QuestionCard />
             </Grid>
             <Grid item xs={12} sm={4}>
-                <ScoresTable />
+
+                <Leaderboards />
+                <RulesCard />
             </Grid>
-
         </Grid>
-
     );
 }

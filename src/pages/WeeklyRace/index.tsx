@@ -11,8 +11,9 @@ import BannerControls from '../../components/BannerControls'
 
 import Banner from '../../components/Banner'
 import { useStyles } from './mui'
-import ScoresTable from '../../components/ScoresTable'
-
+import ScoresTable from '../../components/TableCards/ScoresTable'
+import Leaderboards from '../../components/TableCards/Leaderboards'
+import RulesCard from '../../components/TableCards/RulesCard'
 
 
 export default function WeeklyRace() {
@@ -34,11 +35,11 @@ export default function WeeklyRace() {
                 <ScoresTable />
             </Grid>
             <Grid item xs={12} sm={4}>
-                <ScoresTable />
+                <Leaderboards />
 
             </Grid>
             <Grid item xs={12} sm={4}>
-                <ScoresTable />
+                <RulesCard />
             </Grid>
 
         </Grid>

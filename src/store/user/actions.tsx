@@ -106,7 +106,7 @@ export const signUp = (signUpData: SignUpData) => {
         const body = JSON.stringify(data)
         try {
             const res = await axios.post(`${apiUrl}/signup`, body, config)
-            const message = `Welcome ${res.data.name}.`
+            const message = `Welcome ${res.data.name}, you can now login and save your score.`
             dispatch(
                 // @ts-ignore
                 showMessageWithTimeout("success", false, message, 1500)
