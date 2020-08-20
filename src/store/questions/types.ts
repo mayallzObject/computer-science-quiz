@@ -10,4 +10,18 @@ export type fetchQuestion = {
     payload: Question[]
 }
 
+export const questionsFetched = (questions: Question[]): QuestionActionTypes => ({
+    type: FETCH_QUESTION,
+    payload: questions,
+})
+
+export enum Difficulty {
+    EASY = "easy",
+    MEDIUM = "medium",
+    HARD = "hard",
+}
+
 export type QuestionActionTypes = fetchQuestion
+
+export const shuffleArray = (array: any[]) =>
+    [...array].sort(() => Math.random() - 0.5);

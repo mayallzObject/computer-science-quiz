@@ -1,9 +1,11 @@
 // Scoreboard/ react / redux components
 import React, { useEffect, useState } from 'react'
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 // Redux Store
 import { selectUser } from "../../store/user/selectors"
+
+
 
 // TypeScript types
 import { ScoreBoard } from "./types"
@@ -18,8 +20,10 @@ import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
 
 import axios from 'axios';
+import { Avatar } from '@material-ui/core'
 
 const ScoreboardPage = () => {
+
 
     const someUser = useSelector(selectUser)
     const [score, setScore] = useState<ScoreBoard[]>([])
@@ -27,10 +31,11 @@ const ScoreboardPage = () => {
     useEffect(() => {
         const getData = async () => {
             const res = await axios.get(`http://localhost:4000/score`)
-            console.log(res.data)
+
             setScore(res.data)
         }
         getData()
+
     }, [someUser])
 
 
@@ -43,7 +48,7 @@ const ScoreboardPage = () => {
                             Points
                             </StyledTableCell>
                         <StyledTableCell align="left">
-                            Name
+                            Player
                             </StyledTableCell>
                     </TableRow>
                 </TableHead>
@@ -54,7 +59,7 @@ const ScoreboardPage = () => {
                                 {data.score}
                             </StyledTableCell>
                             <StyledTableCell
-                                align="left">
+                                align="center">
                                 {data.user.name}
                             </StyledTableCell>
                         </StyledTableRow>

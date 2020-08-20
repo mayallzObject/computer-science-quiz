@@ -1,20 +1,11 @@
 import { Dispatch } from "redux"
+import axios from 'axios'
 
 // TypeScript types
 import { Question } from "../../types/questionTypes"
-import { FETCH_QUESTION, QuestionActionTypes } from "./types"
 import { GetState } from '../types'
+import { shuffleArray, questionsFetched } from "./types"
 
-import axios from 'axios'
-
-
-export const questionsFetched = (questions: Question[]): QuestionActionTypes => ({
-    type: FETCH_QUESTION,
-    payload: questions,
-})
-
-const shuffleArray = (array: any[]) =>
-    [...array].sort(() => Math.random() - 0.5);
 
 export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {
     try {
@@ -34,3 +25,7 @@ export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetStat
         console.log(error)
     }
 }
+
+
+
+
