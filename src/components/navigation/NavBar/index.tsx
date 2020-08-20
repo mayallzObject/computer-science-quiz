@@ -94,7 +94,7 @@ const NavBar = (props: Props) => {
             <AppBar position="static">
                 <Toolbar>
                     <IconButton>
-                        {"Cool-"}<DeckRoundedIcon fontSize="large" />{"rivia"}
+                        {"Cool"}<DeckRoundedIcon fontSize="large" />{"rivia"}
                     </IconButton>
                     <Box display="flex" alignItems="center"
                         justifyContent="space-between"
