@@ -21,24 +21,27 @@ export default function WeeklyRace() {
 
     return (
         <Grid className={classes.paper} container spacing={2}>
-            <Grid item xs={12} sm={8}>
+            <Grid item xs={12} sm={12}>
                 <Paper>
                     <Banner />
-                </Paper>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-                <Paper>
                     <BannerControls />
                 </Paper>
             </Grid>
-            <Grid item xs={12} sm={4}>
+
+            <Grid item xs={12} sm={3}>
+
+
                 <ScoresTable />
+
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={3}>
                 <Leaderboards />
 
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={3}>
+                <RulesCard />
+            </Grid>
+            <Grid item xs={12} sm={3}>
                 <RulesCard />
             </Grid>
 

@@ -9,6 +9,7 @@ import {
     Paper,
     Box,
     Icon,
+    ButtonGroup,
 } from '@material-ui/core'
 
 
@@ -30,8 +31,9 @@ const useStyles = makeStyles({
         textAlign: "center",
     },
     content: {
+        padding: 20,
         spacing: 5,
-        fontSize: 13,
+        fontSize: 30,
         fontWeight: "bold",
     }
 
@@ -57,23 +59,25 @@ const QuestionCard: React.FC<Props> = ({
                     Question: {questionNr} / {totalQuestions}
                 </Typography>
                 <Paper>
-                    <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
-                        {renderHTML(question)}
+                    <Typography className={classes.title} variant="body2" color="textSecondary" component="div">
+                        <div>{renderHTML(question)}</div>
                     </Typography>
                 </Paper>
                 <Box pt={8}>
-                    {answers.map((answer) => (
-                        <Button
-                            key={answer}
-                            color="primary"
-                            variant="outlined"
-                            className={classes.content}
-                            disabled={userAnswer ? true : false}
-                            value={answer}
-                            onClick={callback}>
-                            <p dangerouslySetInnerHTML={{ __html: answer }} />
-                        </Button>
-                    ))}
+                    <ButtonGroup>
+                        {answers.map((answer) => (
+                            <Button
+                                key={answer}
+                                color="primary"
+                                variant="outlined"
+                                className={classes.content}
+                                disabled={userAnswer ? true : false}
+                                value={answer}
+                                onClick={callback}>
+                                <p dangerouslySetInnerHTML={{ __html: answer }} />
+                            </Button>
+                        ))}
+                    </ButtonGroup>
                 </Box>
 
             </CardContent>

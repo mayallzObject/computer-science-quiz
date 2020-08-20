@@ -12,25 +12,25 @@ import Home from './pages/Homepage'
 
 // Redux store 
 import { selectAppLoading } from './store/appState/selectors'
-import Footer from './components/Footer';
+
 
 // Mui components
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Container, CssBaseline, } from "@material-ui/core"
 import { loadUser } from './store/user/actions'
 import Paper from '@material-ui/core/Paper'
-import Banner from './components/BannerControls'
-
 
 
 
 const lightTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#32CD32",
-      dark: "#3b5998",
+      main: "#f3ca20",
+      dark: "#6BCAE2",
     },
     type: "light",
+    background: { paper: "#eddbf4" }
+
   },
 })
 
@@ -38,7 +38,7 @@ const darkTheme = createMuiTheme({
   palette: {
     primary: {
       main: "#6BCAE2",
-      dark: "#32CD32",
+      dark: "#f3ca20",
     },
     type: "dark",
   },
@@ -59,7 +59,6 @@ const App = () => {
       <Paper>
         <CssBaseline />
         <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-
         <Container disableGutters={true} maxWidth="xs">
           <MessageBox />
         </Container>
@@ -70,7 +69,7 @@ const App = () => {
         <Route exact path="/weekly-race" component={WeeklyRace} />
         <Route exact path="/" component={Home} />
       </Switch>
-      <Footer />
+
     </ThemeProvider>
 
   )

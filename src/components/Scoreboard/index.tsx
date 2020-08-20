@@ -40,14 +40,18 @@ const ScoreboardPage = () => {
 
 
     return (
+
         <TableContainer component={Paper}>
             <Table size="small" aria-label="customized table">
                 <TableHead>
                     <TableRow>
                         <StyledTableCell align="left">
+                            Place
+                            </StyledTableCell>
+                        <StyledTableCell align="left">
                             Points
                             </StyledTableCell>
-                        <StyledTableCell align="center">
+                        <StyledTableCell align="left">
                             Player
                             </StyledTableCell>
                     </TableRow>
@@ -55,14 +59,14 @@ const ScoreboardPage = () => {
                 <TableBody>
                     {score.length > 0 && score.map((data, index) => (
                         <StyledTableRow key={index}>
+                            <StyledTableCell>
+                                {index}
+                            </StyledTableCell>
                             <StyledTableCell component="th" scope="row">
                                 {data.score}
                             </StyledTableCell>
-                            <StyledTableCell
-                                align="center">
+                            <StyledTableCell component="th" scope="row">
                                 {data.user.name}
-
-                                {data.user.userImg}
                             </StyledTableCell>
                         </StyledTableRow>
                     ))}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
@@ -16,15 +16,16 @@ import Banner from "../../components/Banner";
 import BannerControls from "../../components/BannerControls";
 import { useStyles } from "./mui"
 
-import ScoresTable from "../../components/TableCards/ScoresTable";
-import Leaderboards from "../../components/TableCards/Leaderboards";
-import RulesCard from "../../components/TableCards/RulesCard";
+
 
 
 
 
 
 export default function AboutMe() {
+    const [name, set_name] = useState("");
+    const [description, set_description] = useState("");
+
     const classes = useStyles()
     const history = useHistory();
     const user = useSelector(selectUser);
@@ -45,15 +46,35 @@ export default function AboutMe() {
 
         return (
             <Grid className={classes.paper} container spacing={2}>
-                <Grid item xs={12} sm={8}>
+                <Grid item xs={12} sm={4}>
                     <Paper>
                         <Banner />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={8}>
                     <Paper>
                         <BannerControls />
                     </Paper>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Card>
+                        <CardHeader
+                            avatar={
+                                <Avatar aria-label="recipe"
+                                    //@ts-ignore
+                                    src={user.userImg}
+                                >
+                                </Avatar>
+                            }
+                            title={user.name}
+                            subheader={user.score}
+                        />
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                About: My name is Putin. I the best trivia player! Do you disagree with Putin?
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 </Grid>
                 <Grid item xs={12} sm={8}>
                     <Card>
@@ -70,13 +91,10 @@ export default function AboutMe() {
                         />
                         <CardContent>
                             <Typography variant="body2" color="textSecondary" component="p">
+                                About: My name is Putin. I the best trivia player! Do you disagree with Putin?
                             </Typography>
                         </CardContent>
                     </Card>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Leaderboards />
-                    <RulesCard />
                 </Grid>
 
 
