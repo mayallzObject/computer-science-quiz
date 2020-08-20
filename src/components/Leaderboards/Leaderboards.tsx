@@ -1,26 +1,29 @@
 import React from 'react';
+
+//Components
+import ScoreBoard from '../Scoreboard';
+
+//Mui components
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
+import clsx from 'clsx';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
-import RecipeReviewCard from '.';
 import { Box } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            maxWidth: 345,
         },
         media: {
             height: 0,
@@ -42,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 )
 
-export default function CategoryCart() {
+export default function Leaderboards() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -53,30 +56,7 @@ export default function CategoryCart() {
     return (
         <div>
             <Card className={classes.root}>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe" className={classes.avatar}>
-                            CT
-                    </Avatar>
-                    }
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                        </IconButton>
-                    }
-                    title="OMGGGG"
-                    subheader="Latest Scores"
-                />
-                <CardMedia
-                    className={classes.media}
-                    image="https://www.sporcle.com/blog/wp-content/uploads/2018/10/1-69.jpg"
-                    title="Paella dish"
-                />
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Category Score Tables : Here you can find all the tables and categories.
-        </Typography>
-                </CardContent>
+
                 <CardActions disableSpacing>
                     <IconButton
                         className={clsx(classes.expand, {
@@ -92,13 +72,8 @@ export default function CategoryCart() {
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
                         <Box>
-                            <RecipeReviewCard />
+                            <ScoreBoard />
                         </Box>
-
-
-
-
-
                     </CardContent>
                 </Collapse>
             </Card>

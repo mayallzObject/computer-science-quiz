@@ -38,8 +38,9 @@ export default (state = initialState, action: UserActionTypes) => {
 
         case SET_SCORE:
             return { ...state, score: action.score }
+        //! Temporary salution...
         case UPDATE_SCORE:
-            return { id: state.id, name: state.name, userImg: state.userImg, email: state.email, score: action.updatedScore, token: state.token }
+            return { id: state.id, name: state.name, email: state.email, score: action.updatedScore, token: state.token }
 
         default:
             return state

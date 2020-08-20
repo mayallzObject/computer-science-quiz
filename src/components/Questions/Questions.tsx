@@ -13,14 +13,29 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Button, Box, makeStyles } from '@material-ui/core'
+import { Button, Box } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
+//MUI components
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            ...theme.typography.button,
+            backgroundColor: theme.palette.background.paper,
+            padding: theme.spacing(1),
+        },
+    }),
+);
 
 
 
 const Questions: React.FC = () => {
+    const classes = useStyles()
+
     const [TOTAL_QUESTIONS] = useState(10)
     const [questions, setQuestions] = useState<QuestionsState[]>([])
     const [number, setNumber] = useState(0)
@@ -28,7 +43,6 @@ const Questions: React.FC = () => {
     const [gameOver, setGameOver] = useState(true);
     const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([])
     const [id, setID] = useState<ID>(null)
-
 
     const dispatch = useDispatch()
     const someUser = useSelector(selectUser)
@@ -40,22 +54,12 @@ const Questions: React.FC = () => {
 
     }, [dispatch, someUser, id])
 
-
-
-
-
-
-
     const startTrivia = async () => {
-
-
         setGameOver(false)
         setQuestions(someQuestions)
         setScore(0)
         setUserAnswers([])
         setNumber(0)
-
-        // calling it here, so that it will get that score of that user into the store
 
     }
 
@@ -82,9 +86,9 @@ const Questions: React.FC = () => {
     const nextQuestion = () => {
         const nextQ = number + 1
         if (nextQ === TOTAL_QUESTIONS) {
-            setGameOver(true);
+            setGameOver(true)
         } else {
-            setNumber(nextQ);
+            setNumber(nextQ)
         }
     }
 
@@ -96,16 +100,14 @@ const Questions: React.FC = () => {
             dispatch(updateScoree(id))
 
         }, 1500)
-
     }
-
 
     return (
         <>
             {
                 gameOver || userAnswers.length
                     === TOTAL_QUESTIONS ? (
-                        <Button variant="outlined"
+                        <Button variant="outlined" color="primary"
                             onClick={startTrivia}>
                             Start New Game
                         </Button>
@@ -113,7 +115,7 @@ const Questions: React.FC = () => {
             }
             {
                 !gameOver ?
-                    <Box > Score: {score}</Box>
+                    <div className={classes.root}> Score: {score}</div>
                     : null
             }
             {
@@ -132,14 +134,14 @@ const Questions: React.FC = () => {
                 !gameOver && userAnswers.length
                     === number + 1 && number
                     !== TOTAL_QUESTIONS - 1 ? (
-                        <Box mt={5}>
-                            <Button variant="outlined" color="secondary" onClick={nextQuestion}>
+                        <Box mb={10}>
+                            <Button variant="outlined" color="inherit" onClick={nextQuestion}>
                                 Next Question
                         </Button>
                         </Box>
                     ) : null
             }
-            <Box className="primary" m={1} pt={1}>
+            <Box className="primary" mb={1} pt={1}>
                 {
                     number > 0 && userAnswers.length
                         === TOTAL_QUESTIONS ? (

@@ -23,7 +23,6 @@ import {
 } from "../appState/actions"
 
 
-
 export const userFetched = (user: User): AuthTypes => ({
     type: FETCH_USER,
     user,
@@ -126,7 +125,6 @@ export const signUp = (signUpData: SignUpData) => {
     }
 }
 
-
 export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => {
 
     if (localStorage.token === undefined) return
@@ -172,20 +170,14 @@ export const addScore = (
     }
 }
 
-
-
-export const updateScoree = (id: number) => async (dispatch: Dispatch, getState: GetState) => {
+export const updateScoree = (id: number,) => async (dispatch: Dispatch, getState: GetState) => {
     try {
         console.log('runn')
 
         const res = await axios.get(`http://localhost:4000/score`)
 
-
-        // @ts-ignore
+        //@ts-ignore
         const score = res.data.filter((data) => data.id === id)
-
-
-
 
         dispatch(updateScore(score[0].score))
     } catch (error) {

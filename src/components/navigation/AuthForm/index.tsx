@@ -39,6 +39,7 @@ const AuthForm = () => {
                     LOGIN
             </Button>
 
+
                 <Dialog
                     className={classes.root}
                     open={open}

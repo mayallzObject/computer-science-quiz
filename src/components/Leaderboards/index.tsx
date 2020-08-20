@@ -95,7 +95,7 @@ export default function RecipeReviewCard() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Box>Easy</Box>
+                    <Box></Box>
                     <ScoreboardPage />
                     <Box>Medium</Box>
                     <ScoreboardPage />

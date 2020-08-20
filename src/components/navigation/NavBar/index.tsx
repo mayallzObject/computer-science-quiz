@@ -4,7 +4,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import AuthForm from "../navItem"
+import AuthForm from "../AuthForm"
 import Logout from "../../Auth/logoutAuth"
 
 //@ts-ignore
@@ -22,7 +22,6 @@ import Box from "@material-ui/core/Box"
 import { selectUser } from "../../../store/user/selectors"
 import WbSunnySharpIcon from '@material-ui/icons/WbSunnySharp'
 import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
-import { Card } from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
-        marginLeft: theme.spacing(1),
+        marginLeft: theme.spacing(5),
     },
     title: {
-        flexGrow: 2,
+        flexGrow: 1,
     },
     darkButton: {
         marginLeft: "1vw",
@@ -95,49 +94,21 @@ const NavBar = (props: Props) => {
             <AppBar position="static">
                 <Toolbar>
                     <IconButton>
-                        {"Cool "}<DeckRoundedIcon fontSize="large" />{"Trivia"}
+                        {"Cool-"}<DeckRoundedIcon fontSize="large" />{"rivia"}
                     </IconButton>
-
-                    <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-                        <Button className={classes.btn}
-                            component={Link} to="/"
-                        > Play
-                    </Button>
-                        <Button className={classes.btn}
-                            component={Link} to="/weekly-race"
-                        > Race
-                    </Button>
-                        <Button className={classes.btn}
-                            component={Link} to="/About-me"
-                        > Me
-                    </Button>
-                    </ButtonGroup>
                     <Box display="flex" alignItems="center"
                         justifyContent="space-between"
                         width="100%" marginX={4}
                     >
-                        <Box display="flex" alignItems="center"
-                            justifyContent="flex-end">
-                            {user.token ? <Logout user={user} />
-                                : <AuthForm />}
-                            {darkModeButton()}
-                        </Box>
-                        <IconButton className={classes.menuButton}
-                            component={Link} to="/"
-                            edge="start" color="inherit"
-                            aria-label="menu"
-                        >
-                        </IconButton>
+                    </Box>
+                    <Box display="flex" alignItems="center"
+                        justifyContent="flex-end">
+                        {user.token ? <Logout user={user} />
+                            : <AuthForm />}
+                        {darkModeButton()}
                     </Box>
                 </Toolbar>
             </AppBar>
-            {/* <Banner
-                icon={<Card>
-
-                </Card>}
-                label="Text goes here"
-                open
-            /> */}
         </Paper>
     )
 }

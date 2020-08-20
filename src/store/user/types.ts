@@ -8,7 +8,6 @@ export const SET_SCORE = "SET_SCORE"
 export const UPDATE_SCORE = "UPDATE_SCORE"
 
 
-
 export type fetchUser = {
     type: typeof FETCH_USER
     user: User;

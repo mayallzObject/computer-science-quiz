@@ -4,14 +4,12 @@ import {
     Button,
     Typography,
     makeStyles,
-
     CardContent,
     Card,
-
     Paper,
     Box,
 } from '@material-ui/core'
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+
 
 const useStyles = makeStyles({
     root: {
@@ -20,14 +18,21 @@ const useStyles = makeStyles({
         align: "center"
     },
     card: {
+        padding: 20,
         alignItems: "center",
-        backgroundColor: '#3b5998',
+        backgroundColor: '#232b2b',
     },
     title: {
-        padding: 20,
-        fontSize: 40,
+        padding: 30,
+        fontSize: 20,
+        fontWeight: "bold",
         textAlign: "center",
     },
+    content: {
+        spacing: 5,
+        fontSize: 13,
+        fontWeight: "bold",
+    }
 
 
 
@@ -54,26 +59,24 @@ const QuestionCard: React.FC<Props> = ({
                     <Typography className={classes.title} variant="body2" color="textSecondary" component="p">
                         {renderHTML(question)}
                     </Typography>
-
                 </Paper>
-                <Box pt={5} pl={2}>
-
+                <Box pt={8}>
                     {answers.map((answer) => (
                         <Button
                             key={answer}
-                            startIcon={<CloudUploadIcon />}
                             color="primary"
-                            variant="contained"
+                            variant="outlined"
+                            className={classes.content}
                             disabled={userAnswer ? true : false}
                             value={answer}
                             onClick={callback}>
-                            {renderHTML(answer)}
+                            <p dangerouslySetInnerHTML={{ __html: answer }} />
                         </Button>
                     ))}
-
                 </Box>
+
             </CardContent>
-        </Card>
+        </Card >
 
     )
 

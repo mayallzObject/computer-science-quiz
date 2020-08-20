@@ -23,7 +23,7 @@ import axios from 'axios';
 import { Avatar } from '@material-ui/core'
 
 const ScoreboardPage = () => {
-    const dispatch = useDispatch()
+
 
     const someUser = useSelector(selectUser)
     const [score, setScore] = useState<ScoreBoard[]>([])
@@ -31,12 +31,11 @@ const ScoreboardPage = () => {
     useEffect(() => {
         const getData = async () => {
             const res = await axios.get(`http://localhost:4000/score`)
+
             setScore(res.data)
         }
         getData()
 
-        // @ts-ignore
-        // dispatch(getScore(someUser.id))
     }, [someUser])
 
 
@@ -47,9 +46,6 @@ const ScoreboardPage = () => {
                     <TableRow>
                         <StyledTableCell align="left">
                             Points
-                            </StyledTableCell>
-                        <StyledTableCell align="left">
-                            P.img
                             </StyledTableCell>
                         <StyledTableCell align="left">
                             Player
@@ -63,12 +59,8 @@ const ScoreboardPage = () => {
                                 {data.score}
                             </StyledTableCell>
                             <StyledTableCell
-                                align="left">
+                                align="center">
                                 {data.user.name}
-                                <Avatar aria-label="recipe"
-                                    src={data.user.userImg}
-                                >
-                                </Avatar>
                             </StyledTableCell>
                         </StyledTableRow>
                     ))}

@@ -12,8 +12,6 @@ export default (state = initialState, action: QuestionActionTypes) => {
         case FETCH_QUESTION:
             return [...action.payload]
 
-
-
         default:
             return state
     }

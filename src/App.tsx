@@ -1,92 +1,80 @@
 import React, { useState, useEffect } from 'react'
-import { Route } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-//@ts-ignore
-import { Banner, StaticBanner } from 'material-ui-banner';
+
 // Components
-import MessageBox from './components/messageBox'
+import MessageBox from './components/MessageBox'
 import Loading from './components/loading'
-import NavBar from './components/navigation/navBar'
+import NavBar from './components/navigation/NavBar'
 import AboutMe from './pages/AboutMe'
 import WeeklyRace from './pages/WeeklyRace'
 import Home from './pages/Homepage'
 
-import { ID } from "./components/questionCard/types"
+// Redux store 
+import { selectAppLoading } from './store/appState/selectors'
+import Footer from './components/Footer';
 
 // Mui components
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { Container, CssBaseline, IconButton, Icon } from "@material-ui/core"
+import { Container, CssBaseline, } from "@material-ui/core"
 import { loadUser } from './store/user/actions'
 import Paper from '@material-ui/core/Paper'
-import DeckRoundedIcon from '@material-ui/icons/DeckRounded'
-
-// Redux store 
-import { selectAppLoading } from './store/appState/selectors'
+import Banner from './components/BannerControls'
 
 
 
-import { blue } from '@material-ui/core/colors'
 
+const lightTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#32CD32",
+      dark: "#3b5998",
+    },
+    type: "light",
+  },
+})
 
+const darkTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#6BCAE2",
+      dark: "#32CD32",
+    },
+    type: "dark",
+  },
+})
 
 const App = () => {
   const dispatch = useDispatch()
-
   const isLoading = useSelector(selectAppLoading);
-
-
-
-
-
   const [darkMode, set_darkMode] = useState(true);
-
-
-
-  const lightTheme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#b19cd9",
-        dark: "#3b5998", // button hovering color in light mode
-      },
-
-      type: "light",
-    },
-  })
-
-  const darkTheme = createMuiTheme({
-    palette: {
-      primary: {
-        main: "#3b5998",
-        dark: "#CCCC00", // button hovering color when in dark
-      },
-      type: "dark",
-    },
-  })
 
   useEffect(() => {
     dispatch(loadUser())
 
-
   }, [dispatch, darkMode])
-
-
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Paper>
         <CssBaseline />
         <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        <StaticBanner />
+
         <Container disableGutters={true} maxWidth="xs">
           <MessageBox />
         </Container>
         {isLoading ? <Loading /> : null}
       </Paper>
-      <Route path="/about-me" component={AboutMe} />
-      <Route exact path="/weekly-race" component={WeeklyRace} />
-      <Route exact path="/" component={Home} />
+      <Switch>
+        <Route path="/about-me" component={AboutMe} />
+        <Route exact path="/weekly-race" component={WeeklyRace} />
+        <Route exact path="/" component={Home} />
+      </Switch>
+      <Footer />
     </ThemeProvider>
+
   )
 }
 
 export default App
+

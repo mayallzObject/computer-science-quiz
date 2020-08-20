@@ -3,27 +3,8 @@ import axios from 'axios'
 
 // TypeScript types
 import { Question } from "../../types/questionTypes"
-
 import { GetState } from '../types'
-
-
 import { shuffleArray, questionsFetched } from "./types"
-
-
-// export const questionsFetched = (questions: Question[]): QuestionActionTypes => ({
-//     type: FETCH_QUESTION,
-//     payload: questions,
-// })
-
-// export enum Difficulty {
-//     EASY = "easy",
-//     MEDIUM = "medium",
-//     HARD = "hard",
-// }
-
-
-// const shuffleArray = (array: any[]) =>
-//     [...array].sort(() => Math.random() - 0.5);
 
 
 export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {

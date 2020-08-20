@@ -9,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         marginLeft: "1vw",
         fontWeight: "bold",
-        color: "#aa0d00",
+        color: "#3b5998",
         backgroundColor: "#ffffff",
         "&:hover": {
             color: "#000000",
-            backgroundColor: "#ffa000",
+            backgroundColor: "#ff7f7f",
         },
     },
     hello: {

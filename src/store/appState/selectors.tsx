@@ -1,4 +1,4 @@
-// TypeScript import
+// Types
 import { StoreState } from "../types"
 
 export const selectAppLoading = (state: StoreState) => state.appState.loading

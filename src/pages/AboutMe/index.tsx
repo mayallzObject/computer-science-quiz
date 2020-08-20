@@ -1,44 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
 import { selectAppLoading } from "../../store/appState/selectors";
 import Loading from "../../components/loading";
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
+
 import { Grid, Paper } from "@material-ui/core";
+import Banner from "../../components/Banner";
+import BannerControls from "../../components/BannerControls";
+import { useStyles } from "./mui"
+import RulesTable from '../../components/ScoresTable'
+import ScoresTable from "../../components/Leaderboards/scoresTable";
 
 
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            maxWidth: 345,
-        },
-        media: {
-            height: 0,
-            paddingTop: '56.25%', // 16:9
-        },
-
-        avatar: {
-            backgroundColor: red[500],
-        },
-        paper: {
-            padding: theme.spacing(2),
-            textAlign: 'center',
-            color: theme.palette.text.secondary,
-        },
-    }),
-);
 
 
 export default function AboutMe() {
-
     const classes = useStyles()
     const history = useHistory();
     const user = useSelector(selectUser);
@@ -58,37 +42,42 @@ export default function AboutMe() {
         if (!user.id) return null
 
         return (
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <Paper className={classes.paper}>xs=12</Paper>
+            <Grid className={classes.paper} container spacing={2}>
+                <Grid item xs={12} sm={8}>
+                    <Paper>
+                        <Banner />
+                    </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                    <Paper className={classes.paper}>
-                        <Card className={classes.root}>
-                            <CardHeader
-                                avatar={
-                                    <Avatar aria-label="recipe" className={classes.avatar}
-                                        //@ts-ignore
-                                        src={user.userImg}
-                                    >
-                                    </Avatar>
-                                }
-                                title={user.name}
+                <Grid item xs={12} sm={4}>
+                    <Paper>
+                        <BannerControls />
+                    </Paper>
+                </Grid>
+                <Grid item xs={12} sm={8}>
+                    <Card>
+                        <CardHeader
+                            avatar={
+                                <Avatar aria-label="recipe"
+                                    //@ts-ignore
+                                    src={user.userImg}
+                                >
+                                </Avatar>
+                            }
+                            title={user.name}
+                            subheader={user.score}
+                        />
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <ScoresTable />
+                </Grid>
 
-                                //? There will be a conrol
-                                subheader={user.score}
-                            />
-                            <CardContent>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                </Typography>
-                            </CardContent>
 
-                        </Card></Paper>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <Paper className={classes.paper}>xs=12 sm=6</Paper>
-                </Grid>
-            </Grid>
+            </Grid >
         );
     }
 }
