@@ -24,9 +24,11 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            ...theme.typography.button,
+
+            fontSize: 20,
             backgroundColor: theme.palette.background.paper,
             padding: theme.spacing(1),
+
         },
     }),
 );
@@ -97,7 +99,9 @@ const Questions: React.FC = () => {
         setNumber(0)
 
         setTimeout(() => {
-            dispatch(updateScoree(id))
+
+            dispatch(updateScoree(id, score))
+
 
         }, 1500)
     }

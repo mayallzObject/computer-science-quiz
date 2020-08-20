@@ -10,30 +10,28 @@ import {
     Box,
     Icon,
     ButtonGroup,
+    IconButton,
 } from '@material-ui/core'
-
+import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 50,
-
         align: "center"
     },
     card: {
-        padding: 20,
+        padding: 30,
         alignItems: "center",
         backgroundColor: '#232b2b',
     },
     title: {
-        padding: 30,
+        padding: 20,
         fontSize: 20,
         fontWeight: "bold",
         textAlign: "center",
     },
     content: {
-        padding: 20,
-        spacing: 5,
-        fontSize: 30,
+        padding: 10,
+        fontSize: 10,
         fontWeight: "bold",
     }
 
@@ -54,12 +52,15 @@ const QuestionCard: React.FC<Props> = ({
 
     return (
         <Card className={classes.root}>
-            <CardContent className={classes.card}>
+            <Paper className={classes.root}>
+
                 <Typography color="primary" className={classes.title}>
-                    Question: {questionNr} / {totalQuestions}
                 </Typography>
+            </Paper >
+            <CardContent className={classes.card}>
                 <Paper>
                     <Typography className={classes.title} variant="body2" color="textSecondary" component="div">
+                        Question: {questionNr} / {totalQuestions}
                         <div>{renderHTML(question)}</div>
                     </Typography>
                 </Paper>

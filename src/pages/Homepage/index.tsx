@@ -13,10 +13,7 @@ import Grid from '@material-ui/core/Grid'
 
 import Banner from '../../components/Banner'
 import BannerControls from '../../components/BannerControls'
-
-import Leaderboards from "../../components/TableCards/Leaderboards";
-import RulesCard from '../../components/TableCards/RulesCard';
-import ScoreTable from '../../components/ScoresTable';
+import ScoreTable from '../../components/ScoresTable'
 
 
 export default function Home() {

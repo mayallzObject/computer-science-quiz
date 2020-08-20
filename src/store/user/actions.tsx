@@ -135,9 +135,19 @@ export const loadUser = () => async (dispatch: Dispatch, getState: GetState) => 
         })
         dispatch(userFetched(res.data));
 
+
         const res1 = await axios.get(`${apiUrl}/users/${res.data.id}`)
 
-        dispatch(setScore(res1.data.scoreboards[0].score))
+        if (res1.data.scoreboards.length > 0) {
+
+            dispatch(setScore(res1.data.scoreboards[0].score))
+        }
+        else {
+
+            dispatch(setScore(0))
+
+        }
+
 
     } catch (error) {
         console.log('no user')
@@ -170,7 +180,7 @@ export const addScore = (
     }
 }
 
-export const updateScoree = (id: number,) => async (dispatch: Dispatch, getState: GetState) => {
+export const updateScoree = (id: number, newScore: number) => async (dispatch: Dispatch, getState: GetState) => {
     try {
         console.log('runn')
 
@@ -178,8 +188,26 @@ export const updateScoree = (id: number,) => async (dispatch: Dispatch, getState
 
         //@ts-ignore
         const score = res.data.filter((data) => data.id === id)
+        console.log(score)
 
-        dispatch(updateScore(score[0].score))
+        if (score.length > 0) {
+            dispatch(updateScore(score[0].score))
+        }
+        else {
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            }
+            const ress = await axios.post(`http://localhost:4000/score`,
+                JSON.stringify({ score: newScore, userId: id }), config)
+            dispatch(updateScore(ress.data.score))
+            console.log(ress.data.score)
+
+
+
+        }
+
     } catch (error) {
         console.log(error)
     }
