@@ -25,11 +25,11 @@ import Paper from '@material-ui/core/Paper'
 const lightTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#f3ca20",
-      dark: "#6BCAE2",
+      main: "#6BCAE2",
+      dark: "#f3ca20",
     },
     type: "light",
-    background: { paper: "#eddbf4" }
+    background: { paper: "#d3d3d3" }
 
   },
 })
@@ -37,10 +37,14 @@ const lightTheme = createMuiTheme({
 const darkTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#6BCAE2",
-      dark: "#f3ca20",
+      main: "#f4a460",
+      dark: "#6BCAE2",
     },
     type: "dark",
+
+
+
+
   },
 })
 
@@ -62,8 +66,8 @@ const App = () => {
         <Container disableGutters={true} maxWidth="xs">
           <MessageBox />
         </Container>
-        {isLoading ? <Loading /> : null}
       </Paper>
+      {isLoading ? <Loading /> : null}
       <Switch>
         <Route path="/about-me" component={AboutMe} />
         <Route exact path="/weekly-race" component={WeeklyRace} />

@@ -52,13 +52,14 @@ export default function RulesCard() {
     return (
         <Card className={classes.root}>
             <CardHeader
-                title="Rules and Scoring system"
-                subheader="Everything you need to know"
+
+                title="All about the game"
+                subheader="Fun days with internet"
             />
             <CardMedia
                 className={classes.media}
-                image="https://s18670.pcdn.co/wp-content/uploads/classroom-rules.jpg"
-                title="Rules and Scoring system"
+
+                image="https://cdn5.vectorstock.com/i/1000x1000/36/59/retro-pastel-color-smile-pink-brain-with-vector-10373659.jpg"
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
@@ -80,7 +81,22 @@ export default function RulesCard() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-
+                    <Typography>
+                        an accepted principle or instruction that states the way things are or should be done, and tells you what you are allowed or are not allowed to do:
+                        A referee must know all the rules of the game.
+                        The first/most important rule in life is always to appear confident.
+                        Before you start your own business you should be familiar with the government's rules and regulations.
+                        You must follow/obey/observe the rules.
+                        You must not break the rules.
+                        In special cases the manager will bend/stretch the rules (= allow the rules to be broken slightly).
+                        You can trust Ruth because she always plays (it) by/goes by/does things by the rules (= follows instructions, standards, or rules).
+                        [ + to infinitive ] It's against the rules (of/in boxing) to hit below the belt.
+                        [ + that ] It's a club rule that new members must sing a song.
+                        More examples
+                        There are exceptions to every rule.
+                        There's an unwritten rule that you don't wear jeans to work.
+                        They made an ineffective attempt to get the rules changed.
+</Typography>
                 </CardContent>
             </Collapse>
         </Card>

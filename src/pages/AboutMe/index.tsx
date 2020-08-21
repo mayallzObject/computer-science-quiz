@@ -11,14 +11,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, CardMedia } from "@material-ui/core";
 import Banner from "../../components/Banner";
-import BannerControls from "../../components/BannerControls";
+
 import { useStyles } from "./mui"
+import Leaderboards from "../../components/TableCards/Leaderboards";
 
-
-
-
+import ScoreTable from "../../components/ScoresTable";
 
 
 
@@ -46,17 +45,16 @@ export default function AboutMe() {
 
         return (
             <Grid className={classes.paper} container spacing={2}>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={6}>
                     <Paper>
                         <Banner />
+
+                        <ScoreTable />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={8}>
-                    <Paper>
-                        <BannerControls />
-                    </Paper>
-                </Grid>
-                <Grid item xs={12} sm={4}>
+
+                <Grid item xs={12} sm={6}>
+
                     <Card>
                         <CardHeader
                             avatar={
@@ -68,6 +66,7 @@ export default function AboutMe() {
                             }
                             title={user.name}
                             subheader={user.score}
+
                         />
                         <CardContent>
                             <Typography variant="body2" color="textSecondary" component="p">
@@ -75,27 +74,9 @@ export default function AboutMe() {
                             </Typography>
                         </CardContent>
                     </Card>
+
                 </Grid>
-                <Grid item xs={12} sm={8}>
-                    <Card>
-                        <CardHeader
-                            avatar={
-                                <Avatar aria-label="recipe"
-                                    //@ts-ignore
-                                    src={user.userImg}
-                                >
-                                </Avatar>
-                            }
-                            title={user.name}
-                            subheader={user.score}
-                        />
-                        <CardContent>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                About: My name is Putin. I the best trivia player! Do you disagree with Putin?
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+
 
 
             </Grid >

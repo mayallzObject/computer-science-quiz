@@ -18,7 +18,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { blue } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { Box } from '@material-ui/core';
+import { Box, CardMedia } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -57,8 +57,13 @@ export default function Leaderboards() {
         <div>
             <Card className={classes.root}>
                 <CardHeader
-                    title="Leaderbord"
-                    subheader="King of the hill"
+                    title="Leaderboard"
+                    subheader="year race leaders"
+
+                />
+                <CardMedia
+                    className={classes.media}
+                    image="https://bojanzimmermann.com/wp-content/uploads/2018/03/Increase-Brain-Power-1024x677.png"
                 />
 
                 <CardActions disableSpacing>

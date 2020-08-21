@@ -100,7 +100,7 @@ const Login = (props: any) => {
                 </Button>
             </DialogActions>
             <DialogContentText className={classes.dialogFooter}>
-                Don't have an account yet? Sign up{" "}
+                No account yet? Sign up{" "}
                 <Typography
                     component="span"
                     onClick={(e: OnClick) => set_ModalForm("Signup")}

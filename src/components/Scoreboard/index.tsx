@@ -60,7 +60,7 @@ const ScoreboardPage = () => {
                     {score.length > 0 && score.map((data, index) => (
                         <StyledTableRow key={index}>
                             <StyledTableCell>
-                                {index}
+                                {data.id}
                             </StyledTableCell>
                             <StyledTableCell component="th" scope="row">
                                 {data.score}

@@ -7,13 +7,14 @@ import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
     btn: {
-        marginLeft: "1vw",
+        padding: 10,
+        marginLeft: "5vw",
         fontWeight: "bold",
-        color: "#3b5998",
-        backgroundColor: "#ffffff",
+        color: "#000000",
+        backgroundColor: "#f4a460",
         "&:hover": {
-            color: "#000000",
-            backgroundColor: "#ff7f7f",
+            color: "#3b5998",
+            backgroundColor: "#00000",
         },
     },
     hello: {

@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         fontWeight: "bold",
         color: "#aa0d00",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#000000",
         "&:hover": {
             color: "#000000",
             backgroundColor: "#ffff00",
@@ -91,19 +91,17 @@ const NavBar = (props: Props) => {
         <Paper variant="elevation" color="primary">
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton>
-                        {"Cool"}<DeckRoundedIcon fontSize="large" />{"rivia"}
-                    </IconButton>
-                    <Box display="flex" alignItems="center"
-                        justifyContent="space-between"
-                        width="100%" marginX={4}
-                    >
-                    </Box>
                     <Box display="flex" alignItems="center"
                         justifyContent="flex-end">
                         {user.token ? <Logout user={user} />
                             : <AuthForm />}
                         {darkModeButton()}
+                    </Box>
+
+                    <Box display="flex" alignItems="center"
+                        justifyContent="space-between"
+                        width="100%" marginX={4}
+                    >
                     </Box>
                 </Toolbar>
             </AppBar>
