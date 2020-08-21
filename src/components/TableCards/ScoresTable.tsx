@@ -14,12 +14,13 @@ import IconButton from '@material-ui/core/IconButton';
 import { blue } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { Box } from '@material-ui/core';
+import { Box, CardHeader, Paper, CardMedia } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
+            fontSize: 10,
         },
         media: {
             height: 0,
@@ -52,7 +53,15 @@ export default function ScoresTable() {
     return (
         <div>
             <Card className={classes.root}>
+                <CardHeader
+                    title="King of the hill"
+                    subheader="montly pints race"
+                />
+                <CardMedia
+                    className={classes.media}
 
+                    image="https://us.123rf.com/450wm/wowomnom/wowomnom1607/wowomnom160700014/60106421-vector-illustration-of-retro-pastel-color-smile-pink-brain-with-glasses-riding-skateboard-on-gray-ba.jpg?ver=6"
+                />
                 <CardActions disableSpacing>
                     <IconButton
                         className={clsx(classes.expand, {
@@ -67,9 +76,12 @@ export default function ScoresTable() {
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
-                        <Box>
-                            <ScoreBoard />
-                        </Box>
+                        <Paper>
+                            <Box>
+                                <ScoreBoard />
+                            </Box>
+                        </Paper>
+
 
                     </CardContent>
                 </Collapse>

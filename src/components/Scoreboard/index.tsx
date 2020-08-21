@@ -20,7 +20,7 @@ import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
 
 import axios from 'axios';
-import { Avatar } from '@material-ui/core'
+
 
 const ScoreboardPage = () => {
 
@@ -40,10 +40,14 @@ const ScoreboardPage = () => {
 
 
     return (
+
         <TableContainer component={Paper}>
             <Table size="small" aria-label="customized table">
                 <TableHead>
                     <TableRow>
+                        <StyledTableCell align="left">
+                            Place
+                            </StyledTableCell>
                         <StyledTableCell align="left">
                             Points
                             </StyledTableCell>
@@ -55,11 +59,13 @@ const ScoreboardPage = () => {
                 <TableBody>
                     {score.length > 0 && score.map((data, index) => (
                         <StyledTableRow key={index}>
+                            <StyledTableCell>
+                                {data.id}
+                            </StyledTableCell>
                             <StyledTableCell component="th" scope="row">
                                 {data.score}
                             </StyledTableCell>
-                            <StyledTableCell
-                                align="center">
+                            <StyledTableCell component="th" scope="row">
                                 {data.user.name}
                             </StyledTableCell>
                         </StyledTableRow>

@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         paper: {
 
-            padding: theme.spacing(7),
+            padding: theme.spacing(15),
             textAlign: 'center',
         },
     }),

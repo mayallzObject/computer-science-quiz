@@ -13,9 +13,7 @@ import { Banner, StaticBanner } from 'material-ui-banner';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess'
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import IconButton from "@material-ui/core/IconButton"
-import ButtonGroup from "@material-ui/core/ButtonGroup"
 import Toolbar from "@material-ui/core/Toolbar"
-import Button from "@material-ui/core/Button"
 import AppBar from "@material-ui/core/AppBar"
 import Paper from "@material-ui/core/Paper"
 import Box from "@material-ui/core/Box"
@@ -35,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     darkButton: {
-        marginLeft: "1vw",
+        marginLeft: "2vw",
         marginBottom: "1vw"
     },
     icon: {
@@ -45,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         fontWeight: "bold",
         color: "#aa0d00",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#000000",
         "&:hover": {
             color: "#000000",
             backgroundColor: "#ffff00",
@@ -93,19 +91,17 @@ const NavBar = (props: Props) => {
         <Paper variant="elevation" color="primary">
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton>
-                        {"Cool"}<DeckRoundedIcon fontSize="large" />{"rivia"}
-                    </IconButton>
-                    <Box display="flex" alignItems="center"
-                        justifyContent="space-between"
-                        width="100%" marginX={4}
-                    >
-                    </Box>
                     <Box display="flex" alignItems="center"
                         justifyContent="flex-end">
                         {user.token ? <Logout user={user} />
                             : <AuthForm />}
                         {darkModeButton()}
+                    </Box>
+
+                    <Box display="flex" alignItems="center"
+                        justifyContent="space-between"
+                        width="100%" marginX={4}
+                    >
                     </Box>
                 </Toolbar>
             </AppBar>

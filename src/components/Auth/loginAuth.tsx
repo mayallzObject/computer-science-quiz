@@ -1,5 +1,5 @@
 // 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useDispatch } from "react-redux";
 
@@ -13,6 +13,8 @@ import DialogActions from "@material-ui/core/DialogActions";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { OnClick } from "../../types/eventType";
+import { loadUser } from '../../store/user/actions'
+
 
 
 
@@ -39,6 +41,11 @@ const Login = (props: any) => {
 
     const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(loadUser())
+
+    }, [dispatch])
+
 
 
 
@@ -50,6 +57,8 @@ const Login = (props: any) => {
 
     function submitForm(event: OnClick): void {
         event.preventDefault();
+        dispatch(loadUser())
+
         dispatch(login(credentials))
 
         set_credentials(initialState)
@@ -91,7 +100,7 @@ const Login = (props: any) => {
                 </Button>
             </DialogActions>
             <DialogContentText className={classes.dialogFooter}>
-                Don't have an account yet? Sign up{" "}
+                No account yet? Sign up{" "}
                 <Typography
                     component="span"
                     onClick={(e: OnClick) => set_ModalForm("Signup")}

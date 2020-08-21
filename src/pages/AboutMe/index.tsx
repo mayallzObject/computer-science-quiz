@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
@@ -11,18 +11,20 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, CardMedia } from "@material-ui/core";
 import Banner from "../../components/Banner";
-import BannerControls from "../../components/BannerControls";
+
 import { useStyles } from "./mui"
-import RulesTable from '../../components/ScoresTable'
-import ScoresTable from "../../components/Leaderboards/scoresTable";
+import Leaderboards from "../../components/TableCards/Leaderboards";
 
-
+import ScoreTable from "../../components/ScoresTable";
 
 
 
 export default function AboutMe() {
+    const [name, set_name] = useState("");
+    const [description, set_description] = useState("");
+
     const classes = useStyles()
     const history = useHistory();
     const user = useSelector(selectUser);
@@ -43,17 +45,16 @@ export default function AboutMe() {
 
         return (
             <Grid className={classes.paper} container spacing={2}>
-                <Grid item xs={12} sm={8}>
+                <Grid item xs={12} sm={6}>
                     <Paper>
                         <Banner />
+
+                        <ScoreTable />
                     </Paper>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Paper>
-                        <BannerControls />
-                    </Paper>
-                </Grid>
-                <Grid item xs={12} sm={8}>
+
+                <Grid item xs={12} sm={6}>
+
                     <Card>
                         <CardHeader
                             avatar={
@@ -65,16 +66,17 @@ export default function AboutMe() {
                             }
                             title={user.name}
                             subheader={user.score}
+
                         />
                         <CardContent>
                             <Typography variant="body2" color="textSecondary" component="p">
+                                About: My name is Putin. I the best trivia player! Do you disagree with Putin?
                             </Typography>
                         </CardContent>
                     </Card>
+
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <ScoresTable />
-                </Grid>
+
 
 
             </Grid >

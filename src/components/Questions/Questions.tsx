@@ -13,24 +13,15 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Button, Box } from '@material-ui/core'
+import { Button, Box, Icon, Paper, Typography } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
 //MUI components
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            ...theme.typography.button,
-            backgroundColor: theme.palette.background.paper,
-            padding: theme.spacing(1),
-        },
-    }),
-);
-
+import { useStyles } from './mui'
+import SkipNextRoundedIcon from '@material-ui/icons/SkipNextRounded';
 
 
 const Questions: React.FC = () => {
@@ -97,7 +88,9 @@ const Questions: React.FC = () => {
         setNumber(0)
 
         setTimeout(() => {
-            dispatch(updateScoree(id))
+
+            dispatch(updateScoree(id, score))
+
 
         }, 1500)
     }
@@ -107,17 +100,40 @@ const Questions: React.FC = () => {
             {
                 gameOver || userAnswers.length
                     === TOTAL_QUESTIONS ? (
-                        <Button variant="outlined" color="primary"
-                            onClick={startTrivia}>
-                            Start New Game
+                        <Box mb={4}>
+                            <Button
+                                variant="contained"
+                                className={classes.button}
+                                color="primary"
+                                startIcon={<PlayArrowIcon />}
+                                onClick={startTrivia}>
+                                Start New Game
                         </Button>
+                        </Box>
                     ) : null
             }
-            {
-                !gameOver ?
-                    <div className={classes.root}> Score: {score}</div>
-                    : null
-            }
+            <Box className="primary" mt={1}>
+                {
+                    number > 0 && userAnswers.length
+                        === TOTAL_QUESTIONS ? (
+                            <Button variant="contained"
+                                color="secondary"
+                                className={classes.button}
+                                startIcon={<CloudUploadIcon />}
+                                onClick={submitScore}>
+
+                                Submit Score
+                            </Button>
+                        ) : null
+                }
+            </Box>
+            <Typography component="div">
+                {
+                    !gameOver ?
+                        <div > Score: {score}</div>
+                        : null
+                }
+            </Typography>
             {
                 !gameOver && (
                     <QuestionCard
@@ -134,26 +150,19 @@ const Questions: React.FC = () => {
                 !gameOver && userAnswers.length
                     === number + 1 && number
                     !== TOTAL_QUESTIONS - 1 ? (
-                        <Box mb={10}>
-                            <Button variant="outlined" color="inherit" onClick={nextQuestion}>
+                        <Box mt={2}>
+                            <Button
+                                size="large"
+                                className={classes.button}
+                                startIcon={<SkipNextRoundedIcon />}
+                                variant="contained"
+                                color="primary" onClick={nextQuestion}
+                            >
                                 Next Question
                         </Button>
                         </Box>
                     ) : null
             }
-            <Box className="primary" mb={1} pt={1}>
-                {
-                    number > 0 && userAnswers.length
-                        === TOTAL_QUESTIONS ? (
-                            <Button variant="outlined" color="secondary"
-                                startIcon={<CloudUploadIcon />}
-                                onClick={submitScore}>
-
-                                Submit Score
-                            </Button>
-                        ) : null
-                }
-            </Box>
         </>
     )
 }

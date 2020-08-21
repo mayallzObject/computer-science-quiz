@@ -1,21 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
-import { IconButton, Paper } from '@material-ui/core';
+import { IconButton, Paper, Button } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
+import FaceRoundedIcon from '@material-ui/icons/FaceRounded';
+import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded';
+import { useStyles } from "../Questions/mui"
+import AirplanemodeActiveIcon from "@material-ui/icons/AirplanemodeActive";
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-        padding: 10,
-        backgroundColor: "#353839",
-        alignItems: "center",
 
-    },
-
-    pallete: {
-        alignItems: "center",
-    }
-}))
 
 export default function Banner() {
     const classes = useStyles();
@@ -25,6 +18,34 @@ export default function Banner() {
             <IconButton color="primary">
                 {"Cool"}<DeckRoundedIcon fontSize="large" />{"rivia"}
             </IconButton>
+
+            <Button
+
+                className={classes.button}
+                startIcon={<PlayCircleOutlineRoundedIcon />}
+                variant="contained"
+                color="primary"
+                component={NavLink} to="/"
+            > Play
+        </Button>
+            <Button
+                className={classes.button}
+                startIcon={<AirplanemodeActiveIcon />}
+                color="primary"
+                variant="contained"
+                component={NavLink} to="/weekly-race"
+            > Race
+        </Button>
+            <Button
+                className={classes.button}
+                startIcon={<FaceRoundedIcon />}
+                color="primary"
+                variant="contained"
+                component={NavLink} to="/about-me"
+            > Me
+        </Button>
+
+
         </Paper >
     );
 }

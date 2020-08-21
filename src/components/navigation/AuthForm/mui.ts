@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     btn: {
         fontWeight: "bold",
-        color: "#aa0d00",
+        color: "#6BCAE2",
         backgroundColor: "#ffffff",
         "&:hover": {
             color: "#000000",
