@@ -2,24 +2,28 @@
 import React from "react";
 
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import AuthForm from "../AuthForm"
 import Logout from "../../Auth/logoutAuth"
 
-//@ts-ignore
-import { Banner, StaticBanner } from 'material-ui-banner';
+
 
 import BeachAccessIcon from '@material-ui/icons/BeachAccess'
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import IconButton from "@material-ui/core/IconButton"
 import Toolbar from "@material-ui/core/Toolbar"
 import AppBar from "@material-ui/core/AppBar"
-import Paper from "@material-ui/core/Paper"
 import Box from "@material-ui/core/Box"
 import { selectUser } from "../../../store/user/selectors"
 import WbSunnySharpIcon from '@material-ui/icons/WbSunnySharp'
-import DeckRoundedIcon from '@material-ui/icons/DeckRounded';
+import { Button } from "@material-ui/core";
+
+import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded';
+
+import AirplanemodeActiveIcon from "@material-ui/icons/AirplanemodeActive";
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,26 +31,29 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
-        marginLeft: theme.spacing(5),
+
     },
     title: {
         flexGrow: 1,
     },
     darkButton: {
-        marginLeft: "2vw",
-        marginBottom: "1vw"
+
+
     },
     icon: {
         alignSelf: "center",
         textAlign: "center"
     },
-    btn: {
+    button: {
+        margin: 4,
+        fontSize: 30,
         fontWeight: "bold",
-        color: "#aa0d00",
-        backgroundColor: "#000000",
+        color: "#6BCAE2",
+        backgroundImage: "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
         "&:hover": {
+            blurRadius: "true",
             color: "#000000",
-            backgroundColor: "#ffff00",
+            backgroundColor: "url(https://scx1.b-cdn.net/csz/news/800/2018/space.jpg)"
         },
     },
 }))
@@ -70,7 +77,7 @@ const NavBar = (props: Props) => {
                     color="inherit"
                     aria-label="menu"
                 >
-                    <WbSunnySharpIcon fontSize="large" />
+                    <WbSunnySharpIcon fontSize="small" />
                 </IconButton>
             )
         } else {
@@ -82,30 +89,44 @@ const NavBar = (props: Props) => {
                     color="inherit"
                     aria-label="menu"
                 >
-                    <BeachAccessIcon fontSize="large" />
+                    <BeachAccessIcon fontSize="small" />
                 </IconButton>
             )
         }
     }
     return (
-        <Paper variant="elevation" color="primary">
-            <AppBar position="static">
-                <Toolbar>
-                    <Box display="flex" alignItems="center"
-                        justifyContent="flex-end">
-                        {user.token ? <Logout user={user} />
-                            : <AuthForm />}
-                        {darkModeButton()}
-                    </Box>
 
-                    <Box display="flex" alignItems="center"
-                        justifyContent="space-between"
-                        width="100%" marginX={4}
-                    >
-                    </Box>
-                </Toolbar>
-            </AppBar>
-        </Paper>
+        <AppBar >
+            <Toolbar style={{ height: 100, marginTop: 10 }}>
+
+                <Box display="flex" alignItems="center"
+                    justifyContent="flex-end">
+                    {user.token ? <Logout user={user} />
+                        : <AuthForm />}
+                </Box>
+
+                <Button
+                    startIcon={<PlayCircleOutlineRoundedIcon fontSize="large" />}
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                    component={NavLink} to="/"
+                >
+                </Button>
+                <Button
+                    startIcon={<AirplanemodeActiveIcon fontSize="large" />}
+                    className={classes.button}
+                    color="primary"
+                    variant="contained"
+                    component={NavLink} to="/weekly-race"
+                >
+                </Button>
+                <Box ml={2}>
+                    {darkModeButton()}
+                </Box>
+            </Toolbar>
+        </AppBar>
+
     )
 }
 

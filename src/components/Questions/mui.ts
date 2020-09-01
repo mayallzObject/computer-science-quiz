@@ -8,41 +8,55 @@ export const useStyles = makeStyles({
         width: "100%",
     },
     card: {
-        padding: 30,
+
         alignItems: "center",
 
         square: "false",
     },
     title: {
-
         padding: 10,
-        marginBottom: 10,
-        fontSize: 20,
+        fontSize: 15,
+        fontStyle: "italic",
         fontWeight: "bold",
+        color: "#6BCAE2",
         textAlign: "center",
-
-
+        alignItems: "center",
     },
     content: {
-        backgroundColor: "#353839",
+        fontSize: 25,
+        padding: 10,
+        fontWeight: "bold",
+        color: "#ffff00",
+
     },
 
     button: {
-
+        borderRadius: "50%",
+        fontSize: 12,
+        minWidth: 250,
         margin: 5,
-        marginTop: 5,
-        fontSize: 10,
+        padding: 2,
         fontWeight: "bold",
-    }
+    },
+    buttonStart: {
+        borderRadius: "30%",
+        fontSize: 50,
+        minWidth: 100,
+        margin: 10,
+        padding: 10,
+        fontWeight: "bold",
 
-
-
+        "&:hover": {
+            color: "#f3ca20",
+            backgroundImage: "url(https://image.freepik.com/free-photo/microprocessor-chipset-central-processor-unit-illumination-circuit_34645-889.jpg)",
+        },
+    },
 })
 
 export const defaultProps = {
     bgcolor: 'background.paper',
-    borderColor: 'text.primary',
+    borderColor: 'text.secondary',
     m: 1,
-    border: 10,
-    style: { width: '20rem', height: '100rem' },
+    border: 1,
+    style: { width: '5rem', height: '5rem' },
 };

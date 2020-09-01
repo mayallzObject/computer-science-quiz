@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Props } from "./types"
 import {
     Button,
     Typography,
 
-    Paper,
     Box,
+    Grid,
+    ButtonGroup,
+    IconButton,
+    Paper,
 
 } from '@material-ui/core'
 
 import { useStyles } from "./mui"
-
-import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 
 
 const renderHTML = (rawHTML: string) => React.createElement("div", { dangerouslySetInnerHTML: { __html: rawHTML } })
@@ -26,35 +27,43 @@ const QuestionCard: React.FC<Props> = ({
 }) => {
     const classes = useStyles()
 
+
+
+
     return (
-        <Paper>
-            <Typography className={classes.title} variant="body2" color="textSecondary" component="div">
 
-                Question: {questionNr} / {totalQuestions}
-            </Typography>
-            <Typography className={classes.title} variant="body2" color="textSecondary" component="div">
 
-                <div >{renderHTML(question)}</div>
-            </Typography>
-            <Box mt={10} mb={1}>
+        <Grid container spacing={2}>
+            <Grid item xs={12}>
+                <Paper>
+                    <Typography variant="body2" color="textPrimary" component="div">
 
-                {answers.map((answer) => (
-                    <Button
-                        key={answer}
+                        <div>Question: {questionNr} / {totalQuestions}</div>
+                    </Typography>
+                    <Typography className={classes.title} variant="body2" color="textSecondary" component="div">
 
-                        color="primary"
-                        variant="contained"
-                        startIcon={<CheckCircleOutlineRoundedIcon />}
-                        className={classes.button}
-                        disabled={userAnswer ? true : false}
-                        value={answer}
-                        onClick={callback}>
-                        <p dangerouslySetInnerHTML={{ __html: answer }} />
-                    </Button>
-                ))}
+                        <div className={classes.content} >{renderHTML(question)}</div>
+                    </Typography>
+                </Paper>
+            </Grid>
+            <Grid item xs={12}>
+                <ButtonGroup orientation="vertical">
+                    {answers.map((answer) => (
+                        <Button
+                            key={answer}
+                            color="primary"
+                            variant="contained"
+                            className={classes.button}
+                            disabled={userAnswer ? true : false}
+                            value={answer}
+                            onClick={callback}>
+                            <p dangerouslySetInnerHTML={{ __html: answer }} />
 
-            </Box>
-        </Paper >
+                        </Button>
+                    ))}
+                </ButtonGroup>
+            </Grid>
+        </Grid >
 
     )
 

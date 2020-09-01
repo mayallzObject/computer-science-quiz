@@ -13,16 +13,14 @@ import { fetchQuestions } from "../../store/questions/actions"
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types"
-import { Button, Box, Icon, Paper, Typography } from '@material-ui/core'
+import { Button, Box, Typography } from '@material-ui/core'
 import { OnClick } from "../../types/eventType"
 
 //MUI components
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { useStyles } from './mui'
 import SkipNextRoundedIcon from '@material-ui/icons/SkipNextRounded';
-
+import PlayCircleOutlineRoundedIcon from '@material-ui/icons/PlayCircleOutlineRounded';
 
 const Questions: React.FC = () => {
     const classes = useStyles()
@@ -97,40 +95,10 @@ const Questions: React.FC = () => {
 
     return (
         <>
-            {
-                gameOver || userAnswers.length
-                    === TOTAL_QUESTIONS ? (
-                        <Box mb={4}>
-                            <Button
-                                variant="contained"
-                                className={classes.button}
-                                color="primary"
-                                startIcon={<PlayArrowIcon />}
-                                onClick={startTrivia}>
-                                Start New Game
-                        </Button>
-                        </Box>
-                    ) : null
-            }
-            <Box className="primary" mt={1}>
-                {
-                    number > 0 && userAnswers.length
-                        === TOTAL_QUESTIONS ? (
-                            <Button variant="contained"
-                                color="secondary"
-                                className={classes.button}
-                                startIcon={<CloudUploadIcon />}
-                                onClick={submitScore}>
-
-                                Submit Score
-                            </Button>
-                        ) : null
-                }
-            </Box>
-            <Typography component="div">
+            <Typography className={classes.button} component="div">
                 {
                     !gameOver ?
-                        <div > Score: {score}</div>
+                        <div className={classes.button}  > Score: {score}</div>
                         : null
                 }
             </Typography>
@@ -146,23 +114,60 @@ const Questions: React.FC = () => {
                     />
                 )
             }
-            {
-                !gameOver && userAnswers.length
-                    === number + 1 && number
-                    !== TOTAL_QUESTIONS - 1 ? (
-                        <Box mt={2}>
+
+
+            <Box className="primary" mt={1}>
+                {
+                    gameOver || userAnswers.length
+                        === TOTAL_QUESTIONS ? (
+
+                            <Button
+                                startIcon={<PlayCircleOutlineRoundedIcon />}
+                                variant="contained"
+                                className={classes.button}
+                                color="primary"
+
+                                onClick={startTrivia}>
+                                Play
+
+                            </Button>
+
+                        ) : null
+                }
+                {
+                    number > 0 && userAnswers.length
+                        === TOTAL_QUESTIONS ? (
+                            <Button variant="contained"
+                                color="secondary"
+                                className={classes.button}
+                                startIcon={<CloudUploadIcon />}
+                                onClick={submitScore}>
+                                Submit Score
+                            </Button>
+                        ) : null
+                }
+            </Box>
+            <Box >
+                {
+                    !gameOver && userAnswers.length
+                        === number + 1 && number
+                        !== TOTAL_QUESTIONS - 1 ? (
+
                             <Button
                                 size="large"
-                                className={classes.button}
+                                className={classes.title}
                                 startIcon={<SkipNextRoundedIcon />}
                                 variant="contained"
-                                color="primary" onClick={nextQuestion}
+                                color="primary"
+                                onClick={nextQuestion}
+
                             >
                                 Next Question
-                        </Button>
-                        </Box>
-                    ) : null
-            }
+                            </Button>
+
+                        ) : null
+                }
+            </Box>
         </>
     )
 }
