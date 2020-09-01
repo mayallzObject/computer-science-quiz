@@ -9,7 +9,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { OnClick } from "../../types/eventType";
-import { useForm } from "react-hook-form"
+
 
 const useStyles = makeStyles((theme) => ({
     root: {

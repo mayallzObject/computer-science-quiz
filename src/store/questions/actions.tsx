@@ -1,31 +1,32 @@
-import { Dispatch } from "redux"
-import axios from 'axios'
+import { Dispatch } from "redux";
+import axios from "axios";
 
 // TypeScript types
-import { Question } from "../../types/questionTypes"
-import { GetState } from '../types'
-import { shuffleArray, questionsFetched } from "./types"
+import { Question } from "../../types/questionTypes";
+import { GetState } from "../types";
+import { shuffleArray, questionsFetched } from "./types";
 
+export const fetchQuestions = () => async (
+  dispatch: Dispatch,
+  getState: GetState
+) => {
+  try {
+    const res = await axios.get(
+      "https://opentdb.com/api.php?amount=10&category=18"
+    );
 
-export const fetchQuestions = () => async (dispatch: Dispatch, getState: GetState) => {
-    try {
-        const res = await axios.get("https://opentdb.com/api.php?amount=10&type=multiple")
+    const data = res.data.results.map((question: Question) => ({
+      ...question,
+      answers: shuffleArray([
+        ...question.incorrect_answers,
+        question.correct_answer,
+      ]),
+    }));
 
+    console.log(data);
 
-        const data = res.data.results.map((question: Question) => ({
-            ...question,
-            answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
-        }))
-
-        console.log(data)
-
-        dispatch(questionsFetched(data))
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-
-
-
+    dispatch(questionsFetched(data));
+  } catch (error) {
+    console.log(error);
+  }
+};

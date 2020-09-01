@@ -25,26 +25,23 @@ import Paper from '@material-ui/core/Paper'
 const lightTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#6BCAE2",
+      main: '#3b5998',
       dark: "#f3ca20",
     },
     type: "light",
-    background: { paper: "#d3d3d3" }
+    background: { paper: "#000000" }
 
   },
+
 })
 
 const darkTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#f4a460",
+      main: "#f3ca20",
       dark: "#6BCAE2",
     },
     type: "dark",
-
-
-
-
   },
 })
 

@@ -14,38 +14,15 @@ export default function Banner() {
     const classes = useStyles();
 
     return (
-        <Paper className={classes.root}>
-            <IconButton color="primary">
-                {"Cool"}<DeckRoundedIcon fontSize="large" />{"rivia"}
+        <div className={classes.button}>
+            <IconButton >
+                {"Cool"}{"Trivia"}
             </IconButton>
 
-            <Button
-
-                className={classes.button}
-                startIcon={<PlayCircleOutlineRoundedIcon />}
-                variant="contained"
-                color="primary"
-                component={NavLink} to="/"
-            > Play
-        </Button>
-            <Button
-                className={classes.button}
-                startIcon={<AirplanemodeActiveIcon />}
-                color="primary"
-                variant="contained"
-                component={NavLink} to="/weekly-race"
-            > Race
-        </Button>
-            <Button
-                className={classes.button}
-                startIcon={<FaceRoundedIcon />}
-                color="primary"
-                variant="contained"
-                component={NavLink} to="/about-me"
-            > Me
-        </Button>
 
 
-        </Paper >
+
+
+        </div >
     );
 }

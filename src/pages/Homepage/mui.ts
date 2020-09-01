@@ -8,9 +8,16 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         paper: {
 
-            padding: theme.spacing(10),
+            padding: theme.spacing(5),
             textAlign: 'center',
         },
     }),
 )
 
+export const defaultProps = {
+    bgcolor: 'background.paper',
+    borderColor: 'text.primary',
+    m: 1,
+    border: 1,
+    style: { width: '5rem', height: '5rem' },
+};
