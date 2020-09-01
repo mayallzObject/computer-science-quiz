@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function Leaderboards() {
+export default function RulezCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -53,11 +53,11 @@ export default function Leaderboards() {
 
   return (
     <Paper elevation={23}>
-      <Card>
+      <Card className={classes.root}>
         <CardHeader title="Leaderboard" subheader="year race leaders" />
         <CardMedia
           className={classes.media}
-          image="https://bojanzimmermann.com/wp-content/uploads/2018/03/Increase-Brain-Power-1024x677.png"
+          image="https://cdn5.vectorstock.com/i/1000x1000/36/59/retro-pastel-color-smile-pink-brain-with-vector-10373659.jpg"
         />
 
         <CardActions disableSpacing>

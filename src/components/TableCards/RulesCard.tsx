@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Mui components
 import { makeStyles, createStyles } from "@material-ui/core/styles";
@@ -17,6 +17,7 @@ import {
   CardActions,
   withStyles,
   Paper,
+  Box,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FaceIcon from "@material-ui/icons/Face";
@@ -28,8 +29,6 @@ const useStyles = makeStyles((theme) =>
     root: {},
     media: {
       paddingTop: "56.25%", // 16:9
-      minHeight: 400,
-      minWidth: 380,
       alignItems: "center",
       borderRadius: 10,
     },
@@ -65,8 +64,12 @@ function SlideTransition(props: any) {
 }
 
 export default function PremierFounder(props: any) {
-  const classes = useStyles();
   const user = useSelector(selectUser);
+  const token = user.token;
+  const [change, setChange] = useState(false);
+
+  const classes = useStyles();
+
   const [state, setState] = React.useState({
     open: false,
     Transition: Fade,
@@ -86,12 +89,41 @@ export default function PremierFounder(props: any) {
     });
   };
 
+  const score = user.score;
+  const [level, setLevel] = useState("");
+
+  useEffect(() => {
+    //@ts-ignore
+    if (score === null && score <= 100) {
+      setLevel("noob");
+      //@ts-ignore
+    } else if (score > 10 && score <= 15) {
+      //@ts-ignore
+      setLevel("hamster");
+      //@ts-ignore
+    } else if (score > 15 && score <= 20) {
+      setLevel("chihuahua");
+      //@ts-ignore
+    } else if (score > 20 && score <= 30) {
+      setLevel("boar");
+      //@ts-ignore
+    } else if (score > 30 && score <= 50) {
+      setLevel("tiger");
+      //@ts-ignore
+    } else if (score > 50 && score <= 1999) {
+      setLevel("elephant");
+      //@ts-ignore
+    } else if (score > 2000) {
+      setLevel("mammoth");
+    }
+  }, [score, setLevel]);
+
   return (
-    <Card elevation={23} className={classes.root}>
-      <Paper>
+    <Card className={classes.root}>
+      <Paper elevation={23}>
         <CardHeader
-          title={user.name}
-          subheader="Codaisseur Academy Graduate"
+          title={<h1>{user.name}</h1>}
+          subheader={<h1>{`Score: ${user.score} Level:${level}`}</h1>}
           action={
             <Tooltip
               color="primary"
@@ -116,11 +148,23 @@ export default function PremierFounder(props: any) {
           />
         </Typography>
 
+        <Box
+          style={{
+            width: `${score}%`,
+            backgroundColor: "darkgreen",
+            alignItems: "center",
+            borderRadius: 100,
+            marginRight: 10,
+          }}
+          p={2}
+          right={10}
+        ></Box>
+
         <CardMedia
           className={classes.media}
           //@ts-ignore
           image={user.userImg}
-          title={props.name}
+          title={user.name}
         />
         <CardContent>
           <Typography paragraph>About me: {props.aboutMe}</Typography>
