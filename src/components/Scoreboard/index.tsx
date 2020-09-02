@@ -1,6 +1,6 @@
-// Scoreboard/ react / redux components
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 // Redux Store
 import { selectUser } from "../../store/user/selectors";
@@ -17,15 +17,13 @@ import TableHead from "@material-ui/core/TableHead";
 import TableBody from "@material-ui/core/TableBody";
 import TableRow from "@material-ui/core/TableRow";
 
-import axios from "axios";
-
-const ScoreboardPage = () => {
+const Scoreboard = () => {
   const someUser = useSelector(selectUser);
   const [score, setScore] = useState<ScoreBoard[]>([]);
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(`http://localhost:4000/score`);
+      const res = await axios.get(`https://cooltrivia.herokuapp.com/score`);
 
       setScore(res.data);
     };
@@ -63,4 +61,4 @@ const ScoreboardPage = () => {
   );
 };
 
-export default ScoreboardPage;
+export default Scoreboard;

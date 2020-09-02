@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Props } from "./types";
 import {
   Button,
@@ -6,7 +6,6 @@ import {
   Box,
   Grid,
   ButtonGroup,
-  IconButton,
   Paper,
 } from "@material-ui/core";
 

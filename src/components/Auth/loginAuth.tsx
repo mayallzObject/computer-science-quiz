@@ -1,19 +1,21 @@
-//
 import React, { useState, useEffect } from "react";
-
 import { useDispatch } from "react-redux";
 
+// Redux Store
 import { login } from "../../store/user/actions";
-import { makeStyles } from "@material-ui/core/styles";
-
-import Button from "@material-ui/core/Button";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogActions from "@material-ui/core/DialogActions";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import { OnClick } from "../../types/eventType";
 import { loadUser } from "../../store/user/actions";
+
+// Types
+import { OnClick } from "../../types/eventType";
+
+//Mui components
+import { makeStyles } from "@material-ui/core/styles";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
+import Typography from "@material-ui/core/Typography";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,10 +29,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-//! Props ANY !?!
 const Login = (props: any) => {
   const dispatch = useDispatch();
-  console.log("WHATATATTA", props);
+
   useEffect(() => {
     dispatch(loadUser());
   }, [dispatch]);

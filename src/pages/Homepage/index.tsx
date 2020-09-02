@@ -8,9 +8,10 @@ import QuestionCard from "../../components/Questions/Questions";
 import { useStyles } from "./mui";
 
 import Grid from "@material-ui/core/Grid";
-import { Paper, Box } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import Leaderboards from "../../components/TableCards/Leaderboards";
 import RulezCard from "../../components/TableCards/RulezCard";
+import Scoreboard from "../../components/Scoreboard";
 type Props = {
   darkMode: boolean;
   set_darkMode: (value: boolean) => void;
@@ -31,6 +32,9 @@ export default function Home(props: Props) {
       </Grid>
       <Grid item xs={12} sm={3}>
         <Leaderboards />
+      </Grid>
+      <Grid item xs={12} sm={3}>
+        <Scoreboard />
       </Grid>
     </Grid>
   );

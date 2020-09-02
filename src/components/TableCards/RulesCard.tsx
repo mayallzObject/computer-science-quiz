@@ -65,8 +65,6 @@ function SlideTransition(props: any) {
 
 export default function PremierFounder(props: any) {
   const user = useSelector(selectUser);
-  const token = user.token;
-  const [change, setChange] = useState(false);
 
   const classes = useStyles();
 

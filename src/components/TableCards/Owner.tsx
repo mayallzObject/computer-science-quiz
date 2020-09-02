@@ -17,7 +17,6 @@ import {
   Tooltip,
   CardActions,
   withStyles,
-  Paper,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FaceIcon from "@material-ui/icons/Face";
@@ -100,7 +99,7 @@ export default function OwnerCard(props: any) {
           >
             {/* 
           //@ts-ignore */}
-            <Link href={props.gitUrl} target="_blank" isExternal>
+            <Link href={props.gitUrl} target="_blank">
               <Button variant="contained" color="primary" aria-label="settings">
                 <GitHubIcon fontSize="small" />
               </Button>

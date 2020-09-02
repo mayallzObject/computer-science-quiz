@@ -2,20 +2,13 @@
 import React from "react";
 
 //Components
-import QuestionCard from "../../components/Questions/Questions";
+import OwnerCard from "../../components/TableCards/Owner";
 
 //Mui components
 import { useStyles } from "./mui";
 import { Paper, Box, Snackbar, Button } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Slide, { SlideProps } from "@material-ui/core/Slide";
-
-import Banner from "../../components/Banner";
-
-import Leaderboards from "../../components/TableCards/Leaderboards";
-import RulesCard from "../../components/TableCards/RulesCard";
-import ScoreboardPage from "../../components/Scoreboard";
-import OwnerCard from "../../components/TableCards/Owner";
 
 const premierFounders = [
   {
@@ -32,9 +25,6 @@ const premierFounders = [
 
 type TransitionProps = Omit<SlideProps, "direction">;
 
-function TransitionDown(props: TransitionProps) {
-  return <Slide {...props} direction="down" />;
-}
 function TransitionLeft(props: TransitionProps) {
   return <Slide {...props} direction="left" />;
 }
@@ -102,11 +92,26 @@ export default function Home() {
               TransitionComponent={transition}
               message={
                 <Box>
-                  <img src="https://img.icons8.com/color/96/000000/javascript.png" />
-                  <img src="https://img.icons8.com/color/96/000000/typescript.png" />
-                  <img src="https://img.icons8.com/nolan/96/react-native.png" />
-                  <img src="https://img.icons8.com/color/96/000000/redux.png" />
-                  <img src="https://img.icons8.com/color/96/000000/material-ui.png" />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/javascript.png"
+                    alt="JS"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/typescript.png"
+                    alt="react"
+                  />
+                  <img
+                    src="https://img.icons8.com/nolan/96/react-native.png"
+                    alt="native"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/redux.png"
+                    alt="redux"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/material-ui.png"
+                    alt="mui"
+                  />
                 </Box>
               }
               key={transition ? transition.name : ""}

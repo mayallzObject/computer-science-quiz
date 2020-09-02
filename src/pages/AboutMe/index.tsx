@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectUser } from "../../store/user/selectors";
-import { selectAppLoading } from "../../store/appState/selectors";
+
 import Loading from "../../components/loading";
-
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardContent from "@material-ui/core/CardContent";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-
-import { Grid, Paper, CardMedia, Box } from "@material-ui/core";
-import Banner from "../../components/Banner";
-
-import { useStyles } from "./mui";
-import Leaderboards from "../../components/TableCards/Leaderboards";
-
 import PremierFounder from "../../components/TableCards/RulesCard";
 
-export default function AboutMe() {
-  const [name, set_name] = useState("");
-  const [description, set_description] = useState("");
+//Redux store
+import { selectUser } from "../../store/user/selectors";
+import { selectAppLoading } from "../../store/appState/selectors";
 
+//Mui components
+import { Grid, Paper } from "@material-ui/core";
+import { useStyles } from "./mui";
+
+export default function AboutMe() {
   const classes = useStyles();
   const history = useHistory();
   const user = useSelector(selectUser);

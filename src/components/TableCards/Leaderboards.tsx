@@ -53,6 +53,7 @@ export default function Leaderboards() {
 
   return (
     <Paper elevation={23}>
+      <ScoreBoard />
       <Card>
         <CardHeader title="Leaderboard" subheader="year race leaders" />
         <CardMedia
