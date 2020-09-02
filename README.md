@@ -1,5 +1,5 @@
 ### Cool-trivia-front
-1. Cool-Trivia Diary
+1. Cool-Trivia 
 2. Table of contents 
 3. Introduction
 4. Traveler's Diary
