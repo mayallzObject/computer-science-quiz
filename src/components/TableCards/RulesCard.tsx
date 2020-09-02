@@ -119,81 +119,87 @@ export default function PremierFounder(props: any) {
   }, [score, setLevel]);
 
   return (
-    <Card className={classes.root}>
-      <Paper elevation={23}>
-        <CardHeader
-          title={<h1>{user.name}</h1>}
-          subheader={<h1>{`Score: ${user.score} Level:${level}`}</h1>}
-          action={
-            <Tooltip
-              color="primary"
-              TransitionComponent={Fade}
-              TransitionProps={{ timeout: 600 }}
-              title={<h2>{`Go to ${user.name}'s GitHub `}</h2>}
-            >
-              <Button variant="contained" color="primary" aria-label="settings">
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Tooltip>
-          }
-        />
-
-        <Typography paragraph>
-          <Snackbar
-            open={state.open}
-            onClose={handleClose}
-            TransitionComponent={state.Transition}
-            message={<h1>{user.score}</h1>}
-            key={state.Transition.name}
-          />
-        </Typography>
-
-        <Box
-          style={{
-            width: `${score}%`,
-            backgroundColor: "darkgreen",
-            alignItems: "center",
-            borderRadius: 100,
-            marginRight: 10,
-          }}
-          p={2}
-          right={10}
-        ></Box>
-
-        <CardMedia
-          className={classes.media}
-          //@ts-ignore
-          image={user.userImg}
-          title={user.name}
-        />
-        <CardContent>
-          <Typography paragraph>About me: {props.aboutMe}</Typography>
-        </CardContent>
-        <CardActions>
-          {/* 
-    //@ts-ignore           */}
-          <Button
-            elevation={23}
-            endIcon={<FaceIcon />}
-            variant="contained"
-            color="primary"
-            onClick={handleClick(SlideTransition)}
-          >
-            About
-          </Button>
-          <HtmlTooltip
-            title={
-              <React.Fragment>
-                <Typography color="inherit">Contact</Typography>
-                <p> email: {props.email}</p>
-                <p> LinkedIn: {props.linkedIn} </p>
-              </React.Fragment>
+    <Box mt={20}>
+      <Card>
+        <Paper elevation={23}>
+          <CardHeader
+            title={<h1>{user.name}</h1>}
+            subheader={<h1>{`Score: ${user.score} Level:${level}`}</h1>}
+            action={
+              <Tooltip
+                color="primary"
+                TransitionComponent={Fade}
+                TransitionProps={{ timeout: 600 }}
+                title={<h2>{`Go to ${user.name}'s GitHub `}</h2>}
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  aria-label="settings"
+                >
+                  <GitHubIcon fontSize="small" />
+                </Button>
+              </Tooltip>
             }
-          >
-            <Button>Contact</Button>
-          </HtmlTooltip>
-        </CardActions>
-      </Paper>
-    </Card>
+          />
+
+          <Typography paragraph>
+            <Snackbar
+              open={state.open}
+              onClose={handleClose}
+              TransitionComponent={state.Transition}
+              message={<h1>{user.score}</h1>}
+              key={state.Transition.name}
+            />
+          </Typography>
+
+          <Box
+            style={{
+              width: `${score}%`,
+              backgroundColor: "darkgreen",
+              alignItems: "center",
+              borderRadius: 100,
+              marginRight: 10,
+            }}
+            p={2}
+            right={10}
+          ></Box>
+
+          <CardMedia
+            className={classes.media}
+            //@ts-ignore
+            image={user.userImg}
+            title={user.name}
+          />
+          <CardContent>
+            <Typography paragraph>About me: {props.aboutMe}</Typography>
+          </CardContent>
+          <CardActions>
+            {/* 
+    //@ts-ignore           */}
+            <Button
+              elevation={23}
+              endIcon={<FaceIcon />}
+              variant="contained"
+              color="primary"
+              onClick={handleClick(SlideTransition)}
+            >
+              About
+            </Button>
+            <HtmlTooltip
+              title={
+                <React.Fragment>
+                  <Typography color="inherit">Contact</Typography>
+                  <p> email: {props.email}</p>
+                  <p> LinkedIn: {props.linkedIn} </p>
+                </React.Fragment>
+              }
+            >
+              <Button>Contact</Button>
+            </HtmlTooltip>
+          </CardActions>
+        </Paper>
+      </Card>
+    </Box>
   );
 }

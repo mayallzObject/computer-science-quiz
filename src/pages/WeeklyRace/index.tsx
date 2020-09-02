@@ -35,6 +35,9 @@ type TransitionProps = Omit<SlideProps, "direction">;
 function TransitionDown(props: TransitionProps) {
   return <Slide {...props} direction="down" />;
 }
+function TransitionLeft(props: TransitionProps) {
+  return <Slide {...props} direction="left" />;
+}
 
 export default function Home() {
   const classes = useStyles();
@@ -54,7 +57,10 @@ export default function Home() {
   return (
     <Box mt={10}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={4}>
+          <Paper className={classes.paper} elevation={23}></Paper>
+        </Grid>
+        <Grid item xs={12} sm={4}>
           <Paper className={classes.paper} elevation={23}>
             {premierFounders.map((founder) => {
               return (
@@ -72,37 +78,39 @@ export default function Home() {
             })}
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6}>
+
+        <Grid item xs={12} sm={4}>
           <Paper className={classes.paper} elevation={23}>
-            <Grid item xs={12}>
-              <h1 style={{ fontFamily: "Courier New" }}>Portfolio Project</h1>
-              <h2>Why cool trivia?</h2>
-              <Button
-                color="primary"
-                variant="contained"
-                onClick={handleClick(TransitionDown)}
-              >
-                Technologies
-              </Button>
-            </Grid>
-            <Grid item xs={12}>
-              <Snackbar
-                style={{ fontSize: 10 }}
-                open={open}
-                onClose={handleClose}
-                TransitionComponent={transition}
-                message={
-                  <Box>
-                    <img src="https://img.icons8.com/color/96/000000/javascript.png" />
-                    <img src="https://img.icons8.com/color/96/000000/typescript.png" />
-                    <img src="https://img.icons8.com/nolan/96/react-native.png" />
-                    <img src="https://img.icons8.com/color/96/000000/redux.png" />
-                    <img src="https://img.icons8.com/color/96/000000/material-ui.png" />
-                  </Box>
-                }
-                key={transition ? transition.name : ""}
-              />
-            </Grid>
+            <h1 style={{ fontFamily: "Courier New" }}>Portfolio Project</h1>
+            <h2>Why cool trivia?</h2>
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={handleClick(TransitionLeft)}
+            >
+              Technologies
+            </Button>
+          </Paper>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Paper>
+            <Snackbar
+              style={{ fontSize: 10 }}
+              open={open}
+              onClose={handleClose}
+              TransitionComponent={transition}
+              message={
+                <Box>
+                  <img src="https://img.icons8.com/color/96/000000/javascript.png" />
+                  <img src="https://img.icons8.com/color/96/000000/typescript.png" />
+                  <img src="https://img.icons8.com/nolan/96/react-native.png" />
+                  <img src="https://img.icons8.com/color/96/000000/redux.png" />
+                  <img src="https://img.icons8.com/color/96/000000/material-ui.png" />
+                </Box>
+              }
+              key={transition ? transition.name : ""}
+            />
           </Paper>
         </Grid>
       </Grid>

@@ -6,17 +6,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      margin: theme.spacing(20),
+      marginTop: theme.spacing(10),
       padding: theme.spacing(5),
       textAlign: "center",
     },
   })
 );
-
-export const defaultProps = {
-  bgcolor: "background.paper",
-  borderColor: "text.primary",
-  m: 1,
-  border: 1,
-  style: { width: "5rem", height: "5rem" },
-};

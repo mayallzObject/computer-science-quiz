@@ -4,21 +4,20 @@ export const useStyles = makeStyles({
   root: {
     align: "center",
     width: "100%",
-    minHeight: 900,
+
     borderRadius: "50%",
   },
   card: {
     alignItems: "center",
-    borderRadius: "50%",
+
     square: "false",
-    minHeight: 500,
   },
   title: {
     padding: 10,
     fontSize: 15,
     fontStyle: "italic",
     fontWeight: "bold",
-    color: "#6BCAE2",
+
     textAlign: "center",
     alignItems: "center",
   },
@@ -26,7 +25,6 @@ export const useStyles = makeStyles({
     fontSize: 25,
     padding: 10,
     fontWeight: "bold",
-    color: "#ffffff",
   },
 
   button: {

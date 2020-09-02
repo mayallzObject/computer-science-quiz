@@ -106,12 +106,12 @@ const Questions: React.FC = () => {
         />
       )}
 
-      <Box className="primary" mt={1}>
+      <Box className="primary" m={4} pb={5}>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <Button
             startIcon={<PlayCircleOutlineRoundedIcon />}
             variant="contained"
-            className={classes.button}
+            className={classes.title}
             color="primary"
             onClick={startTrivia}
           >
@@ -121,8 +121,8 @@ const Questions: React.FC = () => {
         {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
           <Button
             variant="contained"
-            color="secondary"
-            className={classes.button}
+            color="primary"
+            className={classes.title}
             startIcon={<CloudUploadIcon />}
             onClick={submitScore}
           >
@@ -130,7 +130,7 @@ const Questions: React.FC = () => {
           </Button>
         ) : null}
       </Box>
-      <Box>
+      <Box className="primary" m={4} pb={5}>
         {!gameOver &&
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (

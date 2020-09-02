@@ -24,12 +24,13 @@ import FaceIcon from "@material-ui/icons/Face";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {},
+    root: {
+      flexGrow: 1,
+    },
     media: {
       paddingTop: "56.25%", // 16:9
 
       alignItems: "center",
-      borderRadius: 10,
     },
     expand: {
       transform: "rotate(0deg)",
@@ -90,11 +91,21 @@ export default function OwnerCard(props: any) {
         subheader="Codaisseur Academy Graduate"
         action={
           //@ts-ignore
-          <Link href={props.gitUrl} target="_blank" isExternal>
-            <Button variant="contained" color="primary" aria-label="settings">
-              <GitHubIcon fontSize="small" />
-            </Button>
-          </Link>
+          <Tooltip
+            color="primary"
+            size="medium"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
+          >
+            {/* 
+          //@ts-ignore */}
+            <Link href={props.gitUrl} target="_blank" isExternal>
+              <Button variant="contained" color="primary" aria-label="settings">
+                <GitHubIcon fontSize="small" />
+              </Button>
+            </Link>
+          </Tooltip>
         }
       />
 
@@ -120,7 +131,6 @@ export default function OwnerCard(props: any) {
         {/* 
               //@ts-ignore */}
         <Button
-          elevation={23}
           endIcon={<FaceIcon />}
           variant="contained"
           color="primary"

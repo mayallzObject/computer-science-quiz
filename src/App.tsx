@@ -22,12 +22,12 @@ import Paper from "@material-ui/core/Paper";
 const lightTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#CFDBC5",
-      paper: "#efdf70",
+      default: "#E9E6D5",
+      paper: "#C5B358",
     },
     primary: {
       main: "#006400", // here you can change the NavBar and Button color ("primary")
-      dark: "#003267", // change the hover effect background color
+      dark: "#002800", // change the hover effect background color
     },
     type: "light",
   },
@@ -36,12 +36,12 @@ const lightTheme = createMuiTheme({
 const darkTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#1b2b5e",
-      paper: "#00688B",
+      default: "#00688B",
+      paper: "#1c1c26",
     },
     primary: {
-      main: "#ff69b4", // here you can change the NavBar and Button color ("primary")
-      dark: "#D21404 ", // change the hover effect background color"
+      main: "#584f3f", // here you can change the NavBar and Button color ("primary")
+      dark: "#00688B ", // change the hover effect background color"2b2926
     },
     type: "dark",
   },
@@ -49,7 +49,7 @@ const darkTheme = createMuiTheme({
 const App = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectAppLoading);
-  const [darkMode, set_darkMode] = useState(true);
+  const [darkMode, set_darkMode] = useState(false);
 
   useEffect(() => {
     dispatch(loadUser());
@@ -60,7 +60,7 @@ const App = () => {
       <Paper>
         <CssBaseline />
         <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        <Container disableGutters={true} maxWidth="xs">
+        <Container disableGutters={true} maxWidth="xl">
           <MessageBox />
         </Container>
       </Paper>

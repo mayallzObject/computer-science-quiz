@@ -41,10 +41,14 @@ export default function AboutMe() {
     if (!user.id) return null;
 
     return (
-      <Grid container className={classes.paper}>
-        <Grid item xs={12} sm={3}>
-          <PremierFounder />
+      <Grid container>
+        <Grid item xs={12} sm={2}></Grid>
+        <Grid item xs={12} sm={8}>
+          <Paper className={classes.paper} elevation={23}>
+            <PremierFounder />
+          </Paper>
         </Grid>
+        <Grid item xs={12} sm={2}></Grid>
       </Grid>
     );
   }

@@ -26,17 +26,10 @@ const QuestionCard: React.FC<Props> = ({
   const classes = useStyles();
 
   return (
-    <Box style={{ borderRadius: 150 }}>
+    <Box>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Paper
-            elevation={23}
-            style={{
-              borderRadius: 150,
-              backgroundImage:
-                "url(https://image.freepik.com/free-photo/microprocessor-chipset-central-processor-unit-illumination-circuit_34645-889.jpg)",
-            }}
-          >
+          <Paper elevation={23}>
             <Typography variant="body2" color="textPrimary" component="div">
               <div>
                 Question: {questionNr} / {totalQuestions}
@@ -53,21 +46,23 @@ const QuestionCard: React.FC<Props> = ({
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <ButtonGroup orientation="vertical">
-            {answers.map((answer) => (
-              <Button
-                key={answer}
-                color="primary"
-                variant="contained"
-                className={classes.button}
-                disabled={userAnswer ? true : false}
-                value={answer}
-                onClick={callback}
-              >
-                <p dangerouslySetInnerHTML={{ __html: answer }} />
-              </Button>
-            ))}
-          </ButtonGroup>
+          <Paper elevation={23}>
+            <ButtonGroup orientation="vertical">
+              {answers.map((answer) => (
+                <Button
+                  key={answer}
+                  color="primary"
+                  variant="contained"
+                  className={classes.button}
+                  disabled={userAnswer ? true : false}
+                  value={answer}
+                  onClick={callback}
+                >
+                  <p dangerouslySetInnerHTML={{ __html: answer }} />
+                </Button>
+              ))}
+            </ButtonGroup>
+          </Paper>
         </Grid>
       </Grid>
     </Box>

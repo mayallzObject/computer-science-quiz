@@ -24,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.8rem",
     width: "100%",
     textAlign: "center",
-    backgroundImage:
-      "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
   },
 }));
 
@@ -68,7 +66,7 @@ const Login = (props: any) => {
         required
       />
       <TextField
-        color="secondary"
+        color="primary"
         value={credentials.password}
         onChange={(event) =>
           set_credentials({
