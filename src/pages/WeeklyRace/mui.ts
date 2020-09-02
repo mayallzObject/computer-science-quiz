@@ -1,15 +1,14 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            flexGrow: 1,
-        },
-        paper: {
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    paper: {
+      margin: theme.spacing(5),
 
-            padding: theme.spacing(10),
-            textAlign: 'center',
-        },
-    }),
-)
+      textAlign: "center",
+    },
+  })
+);

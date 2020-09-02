@@ -1,66 +1,66 @@
-import React, { useState, useEffect } from 'react'
-import { Route, Switch } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
+import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 // Components
-import MessageBox from './components/MessageBox'
-import Loading from './components/loading'
-import NavBar from './components/navigation/NavBar'
-import AboutMe from './pages/AboutMe'
-import WeeklyRace from './pages/WeeklyRace'
-import Home from './pages/Homepage'
+import MessageBox from "./components/MessageBox";
+import Loading from "./components/loading";
+import NavBar from "./components/navigation/NavBar";
+import AboutMe from "./pages/AboutMe";
+import WeeklyRace from "./pages/WeeklyRace";
+import Home from "./pages/Homepage";
 
-// Redux store 
-import { selectAppLoading } from './store/appState/selectors'
-
+// Redux store
+import { selectAppLoading } from "./store/appState/selectors";
 
 // Mui components
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { Container, CssBaseline, } from "@material-ui/core"
-import { loadUser } from './store/user/actions'
-import Paper from '@material-ui/core/Paper'
-
-
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { Container, CssBaseline } from "@material-ui/core";
+import { loadUser } from "./store/user/actions";
+import Paper from "@material-ui/core/Paper";
 
 const lightTheme = createMuiTheme({
   palette: {
+    background: {
+      default: "#E9E6D5",
+      paper: "#C5B358",
+    },
     primary: {
-      main: '#3b5998',
-      dark: "#f3ca20",
+      main: "#006400", // here you can change the NavBar and Button color ("primary")
+      dark: "#002800", // change the hover effect background color
     },
     type: "light",
-    background: { paper: "#000000" }
-
   },
-
-})
+});
 
 const darkTheme = createMuiTheme({
   palette: {
+    background: {
+      default: "#00688B",
+      paper: "#1c1c26",
+    },
     primary: {
-      main: "#f3ca20",
-      dark: "#6BCAE2",
+      main: "#584f3f", // here you can change the NavBar and Button color ("primary")
+      dark: "#00688B ", // change the hover effect background color"2b2926
     },
     type: "dark",
   },
-})
-
+});
 const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const isLoading = useSelector(selectAppLoading);
-  const [darkMode, set_darkMode] = useState(true);
+  const [darkMode, set_darkMode] = useState(false);
 
   useEffect(() => {
-    dispatch(loadUser())
-
-  }, [dispatch, darkMode])
+    dispatch(loadUser());
+  }, [dispatch, darkMode]);
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Paper>
         <CssBaseline />
         <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        <Container disableGutters={true} maxWidth="xs">
+        <Container disableGutters={true} maxWidth="xl">
           <MessageBox />
         </Container>
       </Paper>
@@ -70,11 +70,8 @@ const App = () => {
         <Route exact path="/weekly-race" component={WeeklyRace} />
         <Route exact path="/" component={Home} />
       </Switch>
-
     </ThemeProvider>
+  );
+};
 
-  )
-}
-
-export default App
-
+export default App;

@@ -1,81 +1,66 @@
 // Scoreboard/ react / redux components
-import React, { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from "react-redux"
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 // Redux Store
-import { selectUser } from "../../store/user/selectors"
-
-
+import { selectUser } from "../../store/user/selectors";
 
 // TypeScript types
-import { ScoreBoard } from "./types"
+import { ScoreBoard } from "./types";
 
 // Mui components
-import { StyledTableCell, StyledTableRow, } from "./mui"
-import Paper from '@material-ui/core/Paper'
-import Table from '@material-ui/core/Table'
-import TableContainer from '@material-ui/core/TableContainer'
-import TableHead from '@material-ui/core/TableHead'
-import TableBody from '@material-ui/core/TableBody'
-import TableRow from '@material-ui/core/TableRow'
+import { StyledTableCell, StyledTableRow } from "./mui";
+import Paper from "@material-ui/core/Paper";
+import Table from "@material-ui/core/Table";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableBody from "@material-ui/core/TableBody";
+import TableRow from "@material-ui/core/TableRow";
 
-import axios from 'axios';
-
+import axios from "axios";
 
 const ScoreboardPage = () => {
+  const someUser = useSelector(selectUser);
+  const [score, setScore] = useState<ScoreBoard[]>([]);
 
+  useEffect(() => {
+    const getData = async () => {
+      const res = await axios.get(`http://localhost:4000/score`);
 
-    const someUser = useSelector(selectUser)
-    const [score, setScore] = useState<ScoreBoard[]>([])
+      setScore(res.data);
+    };
+    getData();
+  }, [someUser]);
 
-    useEffect(() => {
-        const getData = async () => {
-            const res = await axios.get(`http://localhost:4000/score`)
+  return (
+    <Paper elevation={23}>
+      <TableContainer component={Paper}>
+        <Table size="small" aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell align="left">Place</StyledTableCell>
+              <StyledTableCell align="left">Points</StyledTableCell>
+              <StyledTableCell align="left">Player</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {score.length > 0 &&
+              score.map((data, index) => (
+                <StyledTableRow key={index}>
+                  <StyledTableCell>{data.id}</StyledTableCell>
+                  <StyledTableCell component="th" scope="row">
+                    {data.score}
+                  </StyledTableCell>
+                  <StyledTableCell component="th" scope="row">
+                    {data.user.name}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Paper>
+  );
+};
 
-            setScore(res.data)
-        }
-        getData()
-
-    }, [someUser])
-
-
-    return (
-
-        <TableContainer component={Paper}>
-            <Table size="small" aria-label="customized table">
-                <TableHead>
-                    <TableRow>
-                        <StyledTableCell align="left">
-                            Place
-                            </StyledTableCell>
-                        <StyledTableCell align="left">
-                            Points
-                            </StyledTableCell>
-                        <StyledTableCell align="left">
-                            Player
-                            </StyledTableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {score.length > 0 && score.map((data, index) => (
-                        <StyledTableRow key={index}>
-                            <StyledTableCell>
-                                {data.id}
-                            </StyledTableCell>
-                            <StyledTableCell component="th" scope="row">
-                                {data.score}
-                            </StyledTableCell>
-                            <StyledTableCell component="th" scope="row">
-                                {data.user.name}
-                            </StyledTableCell>
-                        </StyledTableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
-
-    )
-}
-
-export default ScoreboardPage
-
+export default ScoreboardPage;

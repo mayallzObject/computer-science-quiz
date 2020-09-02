@@ -11,6 +11,7 @@ import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import { useStyles } from "./mui";
+import { Fade, Tooltip } from "@material-ui/core";
 
 const AuthForm = () => {
   const [open, setOpen] = useState(false);
@@ -34,9 +35,16 @@ const AuthForm = () => {
   return (
     <div>
       <Paper>
-        <Button className={classes.button} onClick={handleOpen}>
-          LOGIN
-        </Button>
+        <Tooltip
+          color="primary"
+          TransitionComponent={Fade}
+          TransitionProps={{ timeout: 600 }}
+          title={<h2>Login/ SingUp</h2>}
+        >
+          <Button className={classes.button} onClick={handleOpen}>
+            LOGIN
+          </Button>
+        </Tooltip>
         <Dialog
           className={classes.root}
           open={open}
