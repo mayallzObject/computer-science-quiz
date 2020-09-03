@@ -7,7 +7,7 @@ import MessageBox from "./components/MessageBox";
 import Loading from "./components/loading";
 import NavBar from "./components/navigation/NavBar";
 import AboutMe from "./pages/AboutMe";
-import WeeklyRace from "./pages/WeeklyRace";
+import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Homepage";
 
 // Redux store
@@ -66,7 +66,7 @@ const App = () => {
         </Paper>
         <Switch>
           <Route path="/about-me" component={AboutMe} />
-          <Route exact path="/weekly-race" component={WeeklyRace} />
+          <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/" component={Home} />
         </Switch>
       </Container>

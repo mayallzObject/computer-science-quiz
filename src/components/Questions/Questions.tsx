@@ -53,7 +53,7 @@ const Questions: React.FC = () => {
   const checkAnswer = (e: OnClick) => {
     if (!gameOver) {
       const answer = e.currentTarget.value;
-      console.log(someQuestions);
+
       const correct = someQuestions[number].correct_answer === answer;
 
       if (correct) {

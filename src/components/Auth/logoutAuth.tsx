@@ -8,7 +8,7 @@ import { logOut } from "../../store/user/actions";
 //Mui components
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
-import { Button, Avatar } from "@material-ui/core";
+import { Button, Avatar, Tooltip, Fade } from "@material-ui/core";
 import ExitToAppRoundedIcon from "@material-ui/icons/ExitToAppRounded";
 import FaceRoundedIcon from "@material-ui/icons/FaceRounded";
 
@@ -40,21 +40,33 @@ const Logout = (props: any) => {
         className={classes.avatar}
         src={props.user.userImg}
       ></Avatar>
-      <Button
-        startIcon={<ExitToAppRoundedIcon />}
-        className={classes.button}
-        variant="contained"
-        color="primary"
-        onClick={() => dispatch(logOut())}
-      ></Button>
-      <Button
-        className={classes.button}
-        startIcon={<FaceRoundedIcon />}
-        color="primary"
-        variant="contained"
-        component={NavLink}
-        to="/about-me"
-      ></Button>
+      <Tooltip
+        TransitionComponent={Fade}
+        TransitionProps={{ timeout: 600 }}
+        title={<h1>LOGOUT</h1>}
+      >
+        <Button
+          startIcon={<ExitToAppRoundedIcon />}
+          className={classes.button}
+          variant="contained"
+          color="primary"
+          onClick={() => dispatch(logOut())}
+        ></Button>
+      </Tooltip>
+      <Tooltip
+        TransitionComponent={Fade}
+        TransitionProps={{ timeout: 600 }}
+        title={<h2>My Page</h2>}
+      >
+        <Button
+          className={classes.button}
+          startIcon={<FaceRoundedIcon />}
+          color="primary"
+          variant="contained"
+          component={NavLink}
+          to="/about-me"
+        ></Button>
+      </Tooltip>
     </>
   );
 };

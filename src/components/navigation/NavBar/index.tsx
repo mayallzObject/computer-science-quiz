@@ -119,7 +119,7 @@ const NavBar = (props: Props) => {
             color="primary"
             variant="contained"
             component={NavLink}
-            to="/weekly-race"
+            to="/about-us"
           ></Button>
         </Tooltip>
         <Box>{darkModeButton()}</Box>

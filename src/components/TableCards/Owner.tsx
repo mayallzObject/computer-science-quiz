@@ -6,7 +6,6 @@ import { red } from "@material-ui/core/colors";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import {
   Link,
@@ -173,7 +172,7 @@ export default function OwnerCard(props: any) {
           </CardActions>
         </Box>
 
-        <Typography paragraph>
+        <Typography paragraph component="h1">
           <Snackbar
             open={state.open}
             onClose={handleClose}
