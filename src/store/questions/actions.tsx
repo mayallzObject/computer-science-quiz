@@ -23,8 +23,6 @@ export const fetchQuestions = () => async (
       ]),
     }));
 
-    console.log(data);
-
     dispatch(questionsFetched(data));
   } catch (error) {
     console.log(error);

@@ -15,20 +15,18 @@ export const useStyles = makeStyles({
   title: {
     padding: 10,
     fontSize: 15,
-    fontStyle: "italic",
     fontWeight: "bold",
-
-    textAlign: "center",
     alignItems: "center",
   },
   content: {
     fontSize: 25,
-    padding: 10,
+    padding: 5,
     fontWeight: "bold",
+    fontFamily: "Courier New",
   },
 
   button: {
-    borderRadius: "50%",
+    borderRadius: 260,
     fontSize: 12,
     minWidth: 250,
     margin: 5,
@@ -40,7 +38,7 @@ export const useStyles = makeStyles({
     fontSize: 50,
     minWidth: 100,
     margin: 10,
-    padding: 10,
+    padding: 2,
     fontWeight: "bold",
 
     "&:hover": {

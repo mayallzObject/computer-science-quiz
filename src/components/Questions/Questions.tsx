@@ -53,7 +53,7 @@ const Questions: React.FC = () => {
   const checkAnswer = (e: OnClick) => {
     if (!gameOver) {
       const answer = e.currentTarget.value;
-      console.log(someQuestions);
+
       const correct = someQuestions[number].correct_answer === answer;
 
       if (correct) {
@@ -130,7 +130,7 @@ const Questions: React.FC = () => {
           </Button>
         ) : null}
       </Box>
-      <Box className="primary" m={4} pb={5}>
+      <Box className="primary" pb={5}>
         {!gameOver &&
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (

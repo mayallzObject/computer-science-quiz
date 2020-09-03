@@ -1,4 +1,3 @@
-// navItem react/ redux imports
 import React, { useState } from "react";
 
 // Components

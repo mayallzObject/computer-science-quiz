@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Props } from "./types";
 import {
   Button,
@@ -6,7 +6,6 @@ import {
   Box,
   Grid,
   ButtonGroup,
-  IconButton,
   Paper,
 } from "@material-ui/core";
 
@@ -26,10 +25,10 @@ const QuestionCard: React.FC<Props> = ({
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box style={{ borderRadius: 150 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Paper elevation={23}>
+          <Paper elevation={23} style={{ borderRadius: 150 }}>
             <Typography variant="body2" color="textPrimary" component="div">
               <div>
                 Question: {questionNr} / {totalQuestions}
@@ -46,7 +45,7 @@ const QuestionCard: React.FC<Props> = ({
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper elevation={23}>
+          <Paper style={{ borderRadius: 150 }} elevation={23}>
             <ButtonGroup orientation="vertical">
               {answers.map((answer) => (
                 <Button

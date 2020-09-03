@@ -1,13 +1,16 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+
+//Redux Store
 import { selectMessage } from "../../store/appState/selectors";
+import { clearMessage } from "../../store/appState/actions";
+
+//Mui components
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-import { clearMessage } from "../../store/appState/actions";
 
 function Alert(props: any) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
-
 }
 
 const MessageBox = () => {
@@ -18,7 +21,6 @@ const MessageBox = () => {
 
   return (
     <Snackbar
-
       open={showMessage}
       anchorOrigin={{ vertical: "top", horizontal: "center" }}
       //@ts-ignore
@@ -31,11 +33,10 @@ const MessageBox = () => {
       >
         {/* 
                  // @ts-ignore */}
-        {message.text}
+        <h1>{message.text}</h1>
       </Alert>
     </Snackbar>
   );
-}
+};
 
-export default MessageBox
-
+export default MessageBox;

@@ -1,12 +1,12 @@
 import React from "react";
-
 import { useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import AuthForm from "../AuthForm";
 import Logout from "../../Auth/logoutAuth";
 
-import BeachAccessIcon from "@material-ui/icons/BeachAccess";
+//Mui components
+import Brightness2SharpIcon from "@material-ui/icons/Brightness2Sharp";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -14,13 +14,13 @@ import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
 import { selectUser } from "../../../store/user/selectors";
 import WbSunnySharpIcon from "@material-ui/icons/WbSunnySharp";
-import { Button, Tooltip, Fade } from "@material-ui/core";
+import { Button, Tooltip, Fade, Theme } from "@material-ui/core";
 
 import PlayCircleOutlineRoundedIcon from "@material-ui/icons/PlayCircleOutlineRounded";
 
 import AirplanemodeActiveIcon from "@material-ui/icons/AirplanemodeActive";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
   },
@@ -57,7 +57,7 @@ type Props = {
 const NavBar = (props: Props) => {
   const user = useSelector(selectUser);
   const classes = useStyles();
-  console.log("This are the props :", props);
+
   function darkModeButton() {
     if (props.darkMode) {
       return (
@@ -80,7 +80,7 @@ const NavBar = (props: Props) => {
           color="inherit"
           aria-label="menu"
         >
-          <BeachAccessIcon fontSize="small" />
+          <Brightness2SharpIcon fontSize="small" />
         </IconButton>
       );
     }
@@ -119,10 +119,10 @@ const NavBar = (props: Props) => {
             color="primary"
             variant="contained"
             component={NavLink}
-            to="/weekly-race"
+            to="/about-us"
           ></Button>
         </Tooltip>
-        <Box ml={2}>{darkModeButton()}</Box>
+        <Box>{darkModeButton()}</Box>
       </Toolbar>
     </AppBar>
   );
