@@ -1,12 +1,11 @@
 ### Cool-trivia-front
-1. Cool-Trivia 
+1. Cool-Trivia - https://cool-trivia.netlify.app
 2. Table of contents 
-3. Introduction
-4. Traveler's Diary
-5. Goals of this project
-6. Technologies used 
-7. Demo
-8. Server repository
+3. Introduction 
+4. Goals of this project
+5. Technologies used 
+6. Demo
+7. Server repository - https://github.com/mayallzObject/cool-trivia-back
 
 
 
@@ -45,7 +44,7 @@ The front end was made with React, Redux and Material-UI.
 - cd into the project directory
 - on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start;
 afterwards simply run npm run start which will run the script npx nodemon index.js or node index.js
-server runs on port 5000 by default
+server runs on port 4000 by default.
 
 
 #### Client setup
@@ -59,16 +58,15 @@ client runs on localhost:3000 by default;
 
 
 #### Back end
-
 Express
 REST
 Sequelize
 Postgres
 NodeJS
 Postman
-Front end
 
-#### Typescript
+#### Front end
+Typescript
 React
 Redux
 Axios
