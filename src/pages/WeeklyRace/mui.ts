@@ -10,5 +10,8 @@ export const useStyles = makeStyles((theme: Theme) =>
 
       textAlign: "center",
     },
+    button: {
+      margin: 24,
+    },
   })
 );

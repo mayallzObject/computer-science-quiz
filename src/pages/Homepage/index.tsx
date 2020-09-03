@@ -22,14 +22,14 @@ export default function Home(props: Props) {
 
   return (
     <Grid className={classes.paper} container spacing={2}>
-      <Grid item xs={12} sm={9}>
+      <Grid item xs={12} sm={8}>
         <Paper elevation={23}>
           <QuestionCard />
         </Paper>
       </Grid>
 
-      <Grid item xs={12} sm={3}>
-        <Scoreboard />
+      <Grid item xs={12} sm={4}>
+        <RulezCard />
       </Grid>
     </Grid>
   );

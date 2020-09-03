@@ -18,11 +18,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
+    backgroundImage:
+      "url(https://www.f-covers.com/cover/looks-high-tech-facebook-cover-timeline-banner-for-fb.jpg)",
   },
   dialogFooter: {
     fontSize: "0.8rem",
     width: "100%",
     textAlign: "center",
+    backgroundImage:
+      "url(https://www.f-covers.com/cover/looks-high-tech-facebook-cover-timeline-banner-for-fb.jpg)",
   },
 }));
 
@@ -47,7 +51,7 @@ const SingUp = (props: any) => {
   }
 
   return (
-    <DialogContent>
+    <DialogContent className={classes.dialogFooter}>
       <TextField
         value={signUpcredentials.name}
         onChange={(event) =>

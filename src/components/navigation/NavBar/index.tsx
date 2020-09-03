@@ -6,7 +6,7 @@ import AuthForm from "../AuthForm";
 import Logout from "../../Auth/logoutAuth";
 
 //Mui components
-import BeachAccessIcon from "@material-ui/icons/BeachAccess";
+import Brightness2SharpIcon from "@material-ui/icons/Brightness2Sharp";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -80,7 +80,7 @@ const NavBar = (props: Props) => {
           color="inherit"
           aria-label="menu"
         >
-          <BeachAccessIcon fontSize="small" />
+          <Brightness2SharpIcon fontSize="small" />
         </IconButton>
       );
     }

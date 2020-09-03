@@ -22,6 +22,7 @@ export const useStyles = makeStyles({
     fontSize: 25,
     padding: 5,
     fontWeight: "bold",
+    fontFamily: "Courier New",
   },
 
   button: {

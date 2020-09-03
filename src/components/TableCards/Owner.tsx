@@ -17,17 +17,22 @@ import {
   Tooltip,
   CardActions,
   withStyles,
+  Box,
+  Paper,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FaceIcon from "@material-ui/icons/Face";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      alignItems: "center",
     },
     media: {
       paddingTop: "56.25%", // 16:9
+      minHeight: 500,
 
       alignItems: "center",
     },
@@ -84,71 +89,106 @@ export default function OwnerCard(props: any) {
   };
 
   return (
-    <Card className={classes.root}>
-      <CardHeader
-        title={props.name}
-        subheader="Codaisseur Academy Graduate"
-        action={
-          //@ts-ignore
-          <Tooltip
-            color="primary"
-            size="medium"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
-          >
-            {/* 
-          //@ts-ignore */}
-            <Link href={props.gitUrl} target="_blank">
-              <Button variant="contained" color="primary" aria-label="settings">
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-        }
-      />
-
-      <Typography paragraph>
-        <Snackbar
-          open={state.open}
-          onClose={handleClose}
-          TransitionComponent={state.Transition}
-          message={<h1>{props.description}</h1>}
-          key={state.Transition.name}
-        />
-      </Typography>
-
-      <CardMedia
-        className={classes.media}
-        image={props.imageUrl}
-        title={props.name}
-      />
-      <CardContent>
-        <Typography paragraph>About me: {props.aboutMe}</Typography>
-      </CardContent>
-      <CardActions>
-        {/* 
-              //@ts-ignore */}
-        <Button
-          endIcon={<FaceIcon />}
-          variant="contained"
-          color="primary"
-          onClick={handleClick(SlideTransition)}
-        >
-          About
-        </Button>
-        <HtmlTooltip
-          title={
-            <React.Fragment>
-              <Typography color="inherit">Contact</Typography>
-              <p> email: {props.email}</p>
-              <p> LinkedIn: {props.linkedIn} </p>
-            </React.Fragment>
+    <Paper elevation={23}>
+      <Card className={classes.root}>
+        <CardHeader
+          style={{ fontFamily: "Courier New" }}
+          title={<h1 style={{ fontFamily: "Courier New" }}>{props.name}</h1>}
+          subheader={
+            <h2 style={{ fontFamily: "Courier New" }}>
+              Codaisseur Academy Graduate
+            </h2>
           }
-        >
-          <Button>Contact</Button>
-        </HtmlTooltip>
-      </CardActions>
-    </Card>
+          action={
+            //@ts-ignore
+            <Button
+              endIcon={<FaceIcon fontSize="small" />}
+              variant="contained"
+              color="primary"
+              onClick={handleClick(SlideTransition)}
+            >
+              About
+            </Button>
+          }
+        />
+        <Box>
+          <CardActions>
+            {/* 
+        //@ts-ignore */}
+            <Tooltip
+              color="primary"
+              size="medium"
+              TransitionComponent={Fade}
+              TransitionProps={{ timeout: 600 }}
+              title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
+            >
+              {/* 
+          //@ts-ignore */}
+              <Link href={props.gitUrl} target="_blank">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  aria-label="settings"
+                >
+                  <GitHubIcon fontSize="small" />
+                </Button>
+              </Link>
+            </Tooltip>
+
+            {/* 
+        //@ts-ignore */}
+            <Tooltip
+              color="primary"
+              size="medium"
+              TransitionComponent={Fade}
+              TransitionProps={{ timeout: 600 }}
+              title={<h2>{`Go to ${props.name}'s LinkedIn profile `}</h2>}
+            >
+              {/* 
+          //@ts-ignore */}
+              <Link
+                href="https://www.linkedin.com/in/ivo-yankov/"
+                target="_blank"
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  aria-label="settings"
+                >
+                  <LinkedInIcon fontSize="small" />
+                </Button>
+              </Link>
+            </Tooltip>
+            <HtmlTooltip
+              title={
+                <React.Fragment>
+                  <Typography color="inherit">Contact</Typography>
+                  <h1> e-mail: {props.email}</h1>
+                  <h1> location: {props.location} </h1>
+                </React.Fragment>
+              }
+            >
+              <Button>Contact</Button>
+            </HtmlTooltip>
+          </CardActions>
+        </Box>
+
+        <Typography paragraph>
+          <Snackbar
+            open={state.open}
+            onClose={handleClose}
+            TransitionComponent={state.Transition}
+            message={<h1>{props.description}</h1>}
+            key={state.Transition.name}
+          />
+        </Typography>
+
+        <CardMedia
+          className={classes.media}
+          image={props.imageUrl}
+          title={props.name}
+        />
+      </Card>
+    </Paper>
   );
 }
