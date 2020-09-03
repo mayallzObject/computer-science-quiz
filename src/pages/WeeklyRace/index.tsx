@@ -10,10 +10,11 @@ import { Paper, Box, Snackbar, Button } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Slide, { SlideProps } from "@material-ui/core/Slide";
 
-const premierFounders = [
+const founder = [
   {
     name: "Ivo",
-    description: "Loves coffee!",
+    description:
+      " 𝐉𝐒 ➧ 𝐓𝐲𝐩𝐞𝐒𝐜𝐫𝐢𝐩𝐭 ➧ 𝐍𝐨𝐝𝐞𝐉𝐒  ➧ 𝐑𝐞𝐚𝐜𝐭  ➧ 𝐑𝐞𝐝𝐮𝐱 𝐄𝐱𝐩𝐫𝐞𝐬𝐬   ➧ 𝐀𝐱𝐢𝐨𝐬 ➧ 𝐏𝐨𝐬𝐭𝐠𝐫𝐞𝐒𝐐𝐋 ➧ 𝐒𝐞𝐪𝐮𝐞𝐥𝐢𝐳𝐞 ➧ 𝐌𝐚𝐭𝐞𝐫𝐢𝐚𝐥-𝐔𝐈 ➧ 𝐆𝐢𝐭𝐇𝐮𝐛 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐜𝐨𝐧𝐭𝐫𝐨𝐥",
     imageUrl:
       "https://avatars0.githubusercontent.com/u/66206483?s=400&u=c2a444fe4defb6454d8f0876bb6538ed653c2111&v=4",
     gitUrl: "https://github.com/mayallzObject",
@@ -47,29 +48,26 @@ export default function Home() {
   return (
     <Box mt={10}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
-          <Paper className={classes.paper} elevation={23}></Paper>
-        </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={6}>
           <Paper className={classes.paper} elevation={23}>
-            {premierFounders.map((founder) => {
+            {founder.map((f) => {
               return (
                 <OwnerCard
                   key={Math.random()}
-                  name={founder.name}
-                  description={founder.description}
-                  imageUrl={founder.imageUrl}
-                  gitUrl={founder.gitUrl}
-                  email={founder.email}
-                  linkedIn={founder.linkedIn}
-                  aboutMe={founder.aboutMe}
+                  name={f.name}
+                  description={f.description}
+                  imageUrl={f.imageUrl}
+                  gitUrl={f.gitUrl}
+                  email={f.email}
+                  linkedIn={f.linkedIn}
+                  aboutMe={f.aboutMe}
                 />
               );
             })}
           </Paper>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={6}>
           <Paper className={classes.paper} elevation={23}>
             <h1 style={{ fontFamily: "Courier New" }}>Portfolio Project</h1>
             <h2>Why cool trivia?</h2>

@@ -188,13 +188,12 @@ export const updateScoree = (id: number, newScore: number) => async (
           "Content-Type": "application/json",
         },
       };
-      const ress = await axios.post(
+      const res1 = await axios.post(
         `https://cooltrivia.herokuapp.com/score`,
         JSON.stringify({ score: newScore, userId: id }),
         config
       );
-      dispatch(updateScore(ress.data.score));
-      console.log(ress.data.score);
+      dispatch(updateScore(res1.data.score));
     }
   } catch (error) {
     console.log(error);

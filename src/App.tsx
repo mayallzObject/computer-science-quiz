@@ -22,7 +22,7 @@ import Paper from "@material-ui/core/Paper";
 const lightTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#E9E6D5",
+      default: "#ccd0d1",
       paper: "#C5B358",
     },
     primary: {
@@ -36,11 +36,11 @@ const lightTheme = createMuiTheme({
 const darkTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#00688B",
-      paper: "#1c1c26",
+      default: "#584f3f",
+      paper: "#00688B",
     },
     primary: {
-      main: "#584f3f",
+      main: "#e0115f",
       dark: "#00688B ",
     },
     type: "dark",
@@ -49,7 +49,7 @@ const darkTheme = createMuiTheme({
 const App = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectAppLoading);
-  const [darkMode, set_darkMode] = useState(false);
+  const [darkMode, set_darkMode] = useState(true);
 
   useEffect(() => {
     dispatch(loadUser());
@@ -57,19 +57,19 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Paper>
-        <CssBaseline />
-        <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        <Container disableGutters={true} maxWidth="xl">
+      <Container disableGutters={true} maxWidth="lg">
+        <Paper>
+          <CssBaseline />
+          <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
           <MessageBox />
-        </Container>
-      </Paper>
-      {isLoading ? <Loading /> : null}
-      <Switch>
-        <Route path="/about-me" component={AboutMe} />
-        <Route exact path="/weekly-race" component={WeeklyRace} />
-        <Route exact path="/" component={Home} />
-      </Switch>
+          {isLoading ? <Loading /> : null}
+        </Paper>
+        <Switch>
+          <Route path="/about-me" component={AboutMe} />
+          <Route exact path="/weekly-race" component={WeeklyRace} />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Container>
     </ThemeProvider>
   );
 };
