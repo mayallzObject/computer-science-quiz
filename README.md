@@ -4,8 +4,9 @@
 3. Introduction 
 4. Goals of this project
 5. Technologies used 
-6. Demo
-7. Server repository - https://github.com/mayallzObject/cool-trivia-back
+6. Wireframe - https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687
+7. DB Model - https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5
+8. Server repository - https://github.com/mayallzObject/cool-trivia-back
 
 
 
