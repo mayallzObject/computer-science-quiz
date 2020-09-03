@@ -40,7 +40,6 @@ The front end was made with React, Redux and Material-UI.
    There is a lot to improve ,but thankfully during my team-    project I had the opportunity to make do it better.
    
 #### Server setup
-
 - clone the repository; 
 - cd into the project directory
 - on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start;
@@ -50,27 +49,27 @@ server runs on port 4000 by default.
 
 #### Client setup
 
-clone the repository;
-cd into the project directory;
-on first run, run the script npm run initialize, this will run npm install && react-scripts start;
-afterwards first run just run the script npm run start to start development;
-client runs on localhost:3000 by default;
+- clone the repository;
+- cd into the project directory;
+- on first run, run the script npm run initialize, this will run npm install && react-scripts start;
+- afterwards first run just run the script npm run start to start development;
+- client runs on localhost:3000 by default;
    
 
 
 #### Back end
-Express
-REST
-Sequelize
-Postgres
-NodeJS
-Postman
+- Express
+- REST
+- Sequelize
+- PostgreSQL
+- NodeJS
+- Postman
 
 #### Front end
-Typescript
-React
-Redux
-Axios
-External API's
-Material-UI
+- Typescript
+- React
+- Redux
+- Axios
+- External API's
+- Material-UI
 
