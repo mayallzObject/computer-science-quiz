@@ -71,7 +71,6 @@ Typescript
 React
 Redux
 Axios
-Material-UI
-Geocode-Geolocation
-React-google-maps
 External API's
+Material-UI
+
