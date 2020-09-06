@@ -5,7 +5,7 @@ import React from "react";
 import OwnerCard from "../../components/OwnerCard/Owner";
 
 //Mui components
-import { useStyles } from "./mui";
+import { useStyles } from "./styles";
 import { Paper, Box, Snackbar, Button, Link } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Slide, { SlideProps } from "@material-ui/core/Slide";

@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import { Fade, Snackbar, Paper, Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
-import { useStyles } from "./mui";
+import { useStyles } from "./styles";
 
 export default function UserCard() {
   const user = useSelector(selectUser);

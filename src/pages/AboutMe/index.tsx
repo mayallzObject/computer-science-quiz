@@ -11,7 +11,7 @@ import { selectAppLoading } from "../../store/appState/selectors";
 
 //Mui components
 import { Grid, Paper } from "@material-ui/core";
-import { useStyles } from "./mui";
+import { useStyles } from "./styles";
 import RulezCard from "../../components/RulesCard";
 import Leaderboards from "../LeaderBoards/Leaderboards";
 

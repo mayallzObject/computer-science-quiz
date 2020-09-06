@@ -9,7 +9,7 @@ import { selectUser } from "../../store/user/selectors";
 import { ScoreBoard } from "./types";
 
 // Mui components
-import { StyledTableCell, StyledTableRow } from "./mui";
+import { StyledTableCell, StyledTableRow } from "./styles";
 import Paper from "@material-ui/core/Paper";
 import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
