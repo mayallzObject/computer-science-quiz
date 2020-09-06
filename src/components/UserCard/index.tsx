@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 // Mui components
-import { makeStyles, createStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -10,41 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import { Fade, Snackbar, Paper, Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {},
-    media: {
-      paddingTop: "56.25%", // 16:9
-      alignItems: "center",
-      borderRadius: 10,
-    },
-    expand: {
-      transform: "rotate(0deg)",
-      marginLeft: "auto",
-      transition: theme.transitions.create("transform", {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: "rotate(180deg)",
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-  })
-);
-
-// const HtmlTooltip = withStyles((theme) => ({
-//   tooltip: {
-//     backgroundColor: "#f5f5f9",
-//     color: "rgba(0, 0, 0, 0.87)",
-//     minWidth: 400,
-//     fontSize: theme.typography.pxToRem(14),
-//     border: "1px solid #dadde9",
-//     textColor: "#000000",
-//   },
-// }))(Tooltip);
+import { useStyles } from "./mui";
 
 export default function UserCard() {
   const user = useSelector(selectUser);

@@ -5,54 +5,21 @@ import { NavLink } from "react-router-dom";
 import AuthForm from "../AuthForm";
 import Logout from "../../Auth/logoutAuth";
 
+// TypeScript
+import { Props } from "./types";
+
 //Mui components
 import Brightness2SharpIcon from "@material-ui/icons/Brightness2Sharp";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
 import { selectUser } from "../../../store/user/selectors";
 import WbSunnySharpIcon from "@material-ui/icons/WbSunnySharp";
-import { Button, Tooltip, Fade, Theme } from "@material-ui/core";
-
+import { Button, Tooltip, Fade } from "@material-ui/core";
+import { useStyles } from "./styles";
 import PlayCircleOutlineRoundedIcon from "@material-ui/icons/PlayCircleOutlineRounded";
-
 import AirplanemodeActiveIcon from "@material-ui/icons/AirplanemodeActive";
-
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {},
-  title: {
-    flexGrow: 1,
-  },
-  darkButton: {},
-  icon: {
-    alignSelf: "center",
-    textAlign: "center",
-  },
-  button: {
-    margin: 4,
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#6BCAE2",
-    backgroundImage:
-      "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
-    "&:hover": {
-      blurRadius: "true",
-      color: "#000000",
-      backgroundColor:
-        "url(https://scx1.b-cdn.net/csz/news/800/2018/space.jpg)",
-    },
-  },
-}));
-
-type Props = {
-  darkMode: boolean;
-  set_darkMode: (value: boolean) => void;
-};
 
 const NavBar = (props: Props) => {
   const user = useSelector(selectUser);

@@ -2,7 +2,7 @@
 import React from "react";
 
 //Components
-import OwnerCard from "../../components/TableCards/Owner";
+import OwnerCard from "../../components/OwnerCard/Owner";
 
 //Mui components
 import { useStyles } from "./mui";

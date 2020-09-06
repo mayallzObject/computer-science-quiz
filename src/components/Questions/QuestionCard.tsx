@@ -9,7 +9,7 @@ import {
   Paper,
 } from "@material-ui/core";
 
-import { useStyles } from "./mui";
+import { useStyles } from "./styles";
 
 const renderHTML = (rawHTML: string) =>
   React.createElement("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
