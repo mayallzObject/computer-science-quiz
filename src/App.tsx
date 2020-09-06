@@ -62,8 +62,8 @@ const App = () => {
           <CssBaseline />
           <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
           <MessageBox />
-          {isLoading ? <Loading /> : null}
         </Paper>
+        {isLoading ? <Loading /> : null}
         <Switch>
           <Route path="/about-me" component={AboutMe} />
           <Route exact path="/about-us" component={AboutUs} />
