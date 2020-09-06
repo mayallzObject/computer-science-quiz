@@ -9,7 +9,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
-import { useStyles } from "./mui";
+import { useStyles } from "./styles";
 import { Fade, Tooltip } from "@material-ui/core";
 
 const AuthForm = () => {

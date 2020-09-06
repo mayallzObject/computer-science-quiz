@@ -1,49 +1,20 @@
 import React from "react";
 
-//Components
-import ScoreBoard from "../Scoreboard";
-
 //Mui components
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import clsx from "clsx";
-
 import IconButton from "@material-ui/core/IconButton";
 
-import { blue } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Box, CardMedia, Paper, TextField } from "@material-ui/core";
+import { useStyles } from "./styles";
 
-import { Box, CardMedia, Paper } from "@material-ui/core";
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {},
-    media: {
-      height: 0,
-      paddingTop: "56.25%", // 16:9
-    },
-    expand: {
-      transform: "rotate(0deg)",
-      marginLeft: "auto",
-      transition: theme.transitions.create("transform", {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: "rotate(180deg)",
-    },
-    avatar: {
-      backgroundColor: blue[500],
-    },
-  })
-);
-
-export default function Leaderboards() {
+export default function RulezCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -53,11 +24,11 @@ export default function Leaderboards() {
 
   return (
     <Paper elevation={23}>
-      <Card>
-        <CardHeader title="Leaderboard" subheader="year race leaders" />
+      <Card className={classes.root}>
+        <CardHeader title="My best results" subheader="result of all races" />
         <CardMedia
           className={classes.media}
-          image="https://bojanzimmermann.com/wp-content/uploads/2018/03/Increase-Brain-Power-1024x677.png"
+          image="https://cdn5.vectorstock.com/i/1000x1000/36/59/retro-pastel-color-smile-pink-brain-with-vector-10373659.jpg"
         />
 
         <CardActions disableSpacing>
@@ -75,7 +46,14 @@ export default function Leaderboards() {
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Box>
-              <ScoreBoard />
+              <TextField
+                id="outlined-multiline-static"
+                label="Multiline"
+                multiline
+                rows={4}
+                defaultValue="Default Value"
+                variant="outlined"
+              />
             </Box>
           </CardContent>
         </Collapse>

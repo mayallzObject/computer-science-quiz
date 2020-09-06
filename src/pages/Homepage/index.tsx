@@ -5,10 +5,10 @@ import React from "react";
 import QuestionCard from "../../components/Questions/Questions";
 
 //Mui components
-import { useStyles } from "./mui";
+import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
 import { Paper } from "@material-ui/core";
-import Leaderboards from "../../components/TableCards/Leaderboards";
+import Leaderboards from "../LeaderBoards/Leaderboards";
 
 type Props = {
   darkMode: boolean;

@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Loading from "../../components/loading";
-import PremierFounder from "../../components/TableCards/UserCard";
+import PremierFounder from "../../components/UserCard";
 
 //Redux store
 import { selectUser } from "../../store/user/selectors";
@@ -11,9 +11,9 @@ import { selectAppLoading } from "../../store/appState/selectors";
 
 //Mui components
 import { Grid, Paper } from "@material-ui/core";
-import { useStyles } from "./mui";
-import RulezCard from "../../components/TableCards/RulezCard";
-import Leaderboards from "../../components/TableCards/Leaderboards";
+import { useStyles } from "./styles";
+import RulezCard from "../../components/RulesCard";
+import Leaderboards from "../LeaderBoards/Leaderboards";
 
 export default function AboutMe() {
   const classes = useStyles();
