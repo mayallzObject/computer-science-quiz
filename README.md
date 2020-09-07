@@ -1,4 +1,4 @@
-### Cool-trivia-front
+###👨‍💻Cool-trivia-front 👩‍💻 Cool-trivia-front
 1. [App](https://cool-trivia-quiz.netlify.app)
 2. Introduction 
 3. Goals of this project
