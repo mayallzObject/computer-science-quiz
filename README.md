@@ -53,17 +53,14 @@ server runs on port 4000 by default.
    
 
 
-#### Back end
-
-Express
-REST
-Sequelize
-PostgreSQL
-NodeJS
-Postman
-  <img src="https://img.icons8.com/nolan/96/api-settings.png"/>
-  <img src="https://img.icons8.com/color/96/000000/nodejs.png"/>
-  <img
+#### Back end -Express || SequelizeORM
+  <img            
+           src="https://img.icons8.com/nolan/96/api-settings.png"
+          />
+                  <img 
+                    src="https://img.icons8.com/color/96/000000/nodejs.png"
+                  />
+                  <img
                     src="https://img.icons8.com/color/96/000000/javascript.png"
                     alt="JS"
                   />
