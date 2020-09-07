@@ -17,11 +17,14 @@ import {
   CardActions,
   withStyles,
   Box,
+  Grid,
   Paper,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import FaceIcon from "@material-ui/icons/Face";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { TransitionProps } from "@material-ui/core/transitions/transition";
+import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
+import SentimentSatisfiedOutlinedIcon from "@material-ui/icons/SentimentSatisfiedOutlined";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -48,6 +51,9 @@ const useStyles = makeStyles((theme) =>
     avatar: {
       backgroundColor: red[500],
     },
+    button: {
+      margin: 7,
+    },
   })
 );
 
@@ -66,18 +72,36 @@ function SlideTransition(props: any) {
   return <Slide {...props} direction="up" />;
 }
 
+function TransitionLeft(props: TransitionProps) {
+  return <Slide {...props} direction="left" />;
+}
+
 export default function OwnerCard(props: any) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     open: false,
     Transition: Fade,
   });
+  const [open, setOpen] = React.useState(false);
+
+  const [transition, setTransition] = React.useState<
+    React.ComponentType<TransitionProps> | undefined
+  >(undefined);
 
   const handleClick = (Transition: any) => () => {
     setState({
       open: true,
       Transition,
     });
+  };
+
+  const handleClickTwo = (Transition: any) => () => {
+    setTransition(() => Transition);
+    setOpen(true);
+  };
+
+  const handleCloseTwo = () => {
+    setOpen(false);
   };
 
   const handleClose = () => {
@@ -88,30 +112,71 @@ export default function OwnerCard(props: any) {
   };
 
   return (
-    <Paper elevation={23}>
-      <Card className={classes.root}>
-        <CardHeader
-          style={{ fontFamily: "Courier New" }}
-          title={<h1 style={{ fontFamily: "Courier New" }}>{props.name}</h1>}
-          subheader={
-            <h2 style={{ fontFamily: "Courier New" }}>
-              Codaisseur Academy Graduate
-            </h2>
-          }
-          action={
-            //@ts-ignore
-            <Button
-              endIcon={<FaceIcon fontSize="small" />}
-              variant="contained"
-              color="primary"
-              onClick={handleClick(SlideTransition)}
+    <Card>
+      <CardActions>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <h1 style={{ fontFamily: "New Courier" }}>Cool Trivia </h1>
+          </Grid>
+          <Grid item xs={12}>
+            {"App."}
+            <Link
+              href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+              target="_blank"
             >
-              About
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                aria-label="settings"
+              >
+                <GitHubIcon fontSize="small" />
+              </Button>
+            </Link>
+            {"Stack"}
+            <Button
+              className={classes.button}
+              color="primary"
+              variant="contained"
+              onClick={handleClickTwo(TransitionLeft)}
+            >
+              <InfoOutlinedIcon fontSize="small" />
             </Button>
-          }
-        />
-        <Box>
-          <CardActions>
+
+            <Snackbar
+              style={{ fontSize: 10 }}
+              open={open}
+              onClose={handleCloseTwo}
+              TransitionComponent={transition}
+              message={
+                <Box>
+                  <img
+                    src="https://img.icons8.com/color/96/000000/javascript.png"
+                    alt="JS"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/typescript.png"
+                    alt="react"
+                  />
+                  <img
+                    src="https://img.icons8.com/nolan/96/react-native.png"
+                    alt="native"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/redux.png"
+                    alt="redux"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/material-ui.png"
+                    alt="mui"
+                  />
+                </Box>
+              }
+              key={transition ? transition.name : ""}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            {"Dev."}
             {/* 
         //@ts-ignore */}
             <Tooltip
@@ -125,6 +190,7 @@ export default function OwnerCard(props: any) {
           //@ts-ignore */}
               <Link href={props.gitUrl} target="_blank">
                 <Button
+                  className={classes.button}
                   variant="contained"
                   color="primary"
                   aria-label="settings"
@@ -150,6 +216,7 @@ export default function OwnerCard(props: any) {
                 target="_blank"
               >
                 <Button
+                  className={classes.button}
                   variant="contained"
                   color="primary"
                   aria-label="settings"
@@ -158,36 +225,35 @@ export default function OwnerCard(props: any) {
                 </Button>
               </Link>
             </Tooltip>
-            <HtmlTooltip
-              title={
-                <React.Fragment>
-                  <Typography color="inherit">Contact</Typography>
-                  <h1> e-mail: {props.email}</h1>
-                  <h1> location: {props.location} </h1>
-                </React.Fragment>
-              }
+
+            <Tooltip
+              color="primary"
+              TransitionComponent={Fade}
+              TransitionProps={{ timeout: 600 }}
+              title={<h2>{`${props.name}'s info`}</h2>}
             >
-              <Button>Contact</Button>
-            </HtmlTooltip>
-          </CardActions>
-        </Box>
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                onClick={handleClick(SlideTransition)}
+              >
+                <SentimentSatisfiedOutlinedIcon fontSize="small" />
+              </Button>
+            </Tooltip>
+          </Grid>
+        </Grid>
+      </CardActions>
 
-        <Typography paragraph component="h1">
-          <Snackbar
-            open={state.open}
-            onClose={handleClose}
-            TransitionComponent={state.Transition}
-            message={<h1>{props.description}</h1>}
-            key={state.Transition.name}
-          />
-        </Typography>
-
-        <CardMedia
-          className={classes.media}
-          image={props.imageUrl}
-          title={props.name}
+      <Typography paragraph component="h3">
+        <Snackbar
+          open={state.open}
+          onClose={handleClose}
+          TransitionComponent={state.Transition}
+          message={<h2>{props.description}</h2>}
+          key={state.Transition.name}
         />
-      </Card>
-    </Paper>
+      </Typography>
+    </Card>
   );
 }

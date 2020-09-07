@@ -15,7 +15,7 @@ import FaceRoundedIcon from "@material-ui/icons/FaceRounded";
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: 4,
-    fontSize: 45,
+    fontSize: 10,
     fontWeight: "bold",
     color: "#6BCAE2",
     backgroundImage:
@@ -65,7 +65,9 @@ const Logout = (props: any) => {
           variant="contained"
           component={NavLink}
           to="/about-me"
-        ></Button>
+        >
+          mypage
+        </Button>
       </Tooltip>
     </>
   );

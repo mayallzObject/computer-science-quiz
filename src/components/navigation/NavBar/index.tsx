@@ -66,29 +66,17 @@ const NavBar = (props: Props) => {
           title={<h2>Trivia Quiz</h2>}
         >
           <Button
-            startIcon={<PlayCircleOutlineRoundedIcon fontSize="large" />}
+            startIcon={<PlayCircleOutlineRoundedIcon fontSize="small" />}
             className={classes.button}
             variant="contained"
             color="primary"
             component={NavLink}
             to="/"
-          ></Button>
+          >
+            Play
+          </Button>
         </Tooltip>
-        <Tooltip
-          color="primary"
-          TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
-          title={<h2>About us</h2>}
-        >
-          <Button
-            startIcon={<AirplanemodeActiveIcon fontSize="large" />}
-            className={classes.button}
-            color="primary"
-            variant="contained"
-            component={NavLink}
-            to="/about-us"
-          ></Button>
-        </Tooltip>
+
         <Box>{darkModeButton()}</Box>
       </Toolbar>
     </AppBar>

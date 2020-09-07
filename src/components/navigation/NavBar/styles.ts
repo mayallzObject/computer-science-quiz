@@ -14,8 +14,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center",
   },
   button: {
-    margin: 4,
-    fontSize: 30,
+    margin: 10,
+    fontSize: 10,
     fontWeight: "bold",
     color: "#6BCAE2",
     backgroundImage:

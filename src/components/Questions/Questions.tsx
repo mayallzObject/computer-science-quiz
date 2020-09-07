@@ -111,7 +111,7 @@ const Questions: React.FC = () => {
           <Button
             startIcon={<PlayCircleOutlineRoundedIcon />}
             variant="contained"
-            className={classes.title}
+            className={classes.button}
             color="primary"
             onClick={startTrivia}
           >
@@ -122,7 +122,7 @@ const Questions: React.FC = () => {
           <Button
             variant="contained"
             color="primary"
-            className={classes.title}
+            className={classes.button}
             startIcon={<CloudUploadIcon />}
             onClick={submitScore}
           >
@@ -130,22 +130,20 @@ const Questions: React.FC = () => {
           </Button>
         ) : null}
       </Box>
-      <Box className="primary" pb={5}>
-        {!gameOver &&
-        userAnswers.length === number + 1 &&
-        number !== TOTAL_QUESTIONS - 1 ? (
-          <Button
-            size="large"
-            className={classes.title}
-            startIcon={<SkipNextRoundedIcon />}
-            variant="contained"
-            color="primary"
-            onClick={nextQuestion}
-          >
-            Next Question
-          </Button>
-        ) : null}
-      </Box>
+
+      {!gameOver &&
+      userAnswers.length === number + 1 &&
+      number !== TOTAL_QUESTIONS - 1 ? (
+        <Button
+          size="small"
+          startIcon={<SkipNextRoundedIcon />}
+          variant="contained"
+          color="primary"
+          onClick={nextQuestion}
+        >
+          Next Question
+        </Button>
+      ) : null}
     </>
   );
 };

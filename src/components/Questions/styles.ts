@@ -4,8 +4,6 @@ export const useStyles = makeStyles({
   root: {
     align: "center",
     width: "100%",
-
-    borderRadius: "50%",
   },
   card: {
     alignItems: "center",
@@ -19,7 +17,7 @@ export const useStyles = makeStyles({
     alignItems: "center",
   },
   content: {
-    fontSize: 25,
+    fontSize: 17,
     padding: 5,
     fontWeight: "bold",
     fontFamily: "Courier New",
@@ -27,10 +25,10 @@ export const useStyles = makeStyles({
 
   button: {
     borderRadius: 260,
-    fontSize: 12,
-    minWidth: 250,
+    fontSize: 10,
+    minWidth: 210,
     margin: 5,
-    padding: 2,
+    padding: 4,
     fontWeight: "bold",
   },
   buttonStart: {
