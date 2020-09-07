@@ -4,10 +4,11 @@ export const useStyles = makeStyles({
   root: {
     align: "center",
     width: "100%",
+    fontFamily: "Kaushan Script",
   },
   card: {
     alignItems: "center",
-
+    fontFamily: "Kaushan Script",
     square: "false",
   },
   title: {
@@ -15,35 +16,22 @@ export const useStyles = makeStyles({
     fontSize: 15,
     fontWeight: "bold",
     alignItems: "center",
+    fontFamily: "Kaushan Script",
   },
   content: {
-    fontSize: 17,
+    fontSize: 23,
     padding: 5,
     fontWeight: "bold",
-    fontFamily: "Courier New",
+    fontFamily: "Kaushan Script",
   },
-
   button: {
     borderRadius: 260,
-    fontSize: 10,
-    minWidth: 210,
+    fontSize: 12,
+    minWidth: 240,
     margin: 5,
     padding: 4,
     fontWeight: "bold",
-  },
-  buttonStart: {
-    borderRadius: "30%",
-    fontSize: 50,
-    minWidth: 100,
-    margin: 10,
-    padding: 2,
-    fontWeight: "bold",
-
-    "&:hover": {
-      color: "#f3ca20",
-      backgroundImage:
-        "url(https://image.freepik.com/free-photo/microprocessor-chipset-central-processor-unit-illumination-circuit_34645-889.jpg)",
-    },
+    fontFamily: "Kaushan Script",
   },
 });
 

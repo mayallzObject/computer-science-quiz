@@ -92,7 +92,16 @@ const Questions: React.FC = () => {
     <>
       <Typography className={classes.button} component="div">
         {!gameOver ? (
-          <div className={classes.button}> Score: {score}</div>
+          <div
+            style={{
+              fontFamily: "Kaushan Script",
+              fontSize: 30,
+              color: "gold",
+            }}
+          >
+            {" "}
+            Score: {score}
+          </div>
         ) : null}
       </Typography>
       {!gameOver && (

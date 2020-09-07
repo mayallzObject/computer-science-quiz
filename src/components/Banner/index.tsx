@@ -112,10 +112,9 @@ export default function Banner(props: any) {
       <CardActions>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <h1 style={{ fontFamily: "New Courier" }}>Cool Trivia </h1>
+            <h1 style={{ fontFamily: "Kaushan Script" }}>Cool Trivia </h1>
           </Grid>
           <Grid item xs={12}>
-            {"App."}
             <Link
               href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
               target="_blank"
@@ -127,18 +126,26 @@ export default function Banner(props: any) {
                 aria-label="settings"
               >
                 <GitHubIcon fontSize="small" />
+                <h5
+                  style={{
+                    fontFamily: "Kaushan Script",
+                  }}
+                >
+                  Project Repository
+                </h5>
               </Button>
             </Link>
-            {"Stack"}
             <Button
               className={classes.button}
               color="primary"
               variant="contained"
               onClick={handleClickTwo(TransitionLeft)}
             >
-              <InfoOutlinedIcon fontSize="small" />
+              <h5 style={{ fontFamily: "Kaushan Script" }}>
+                {" "}
+                Project Technologies
+              </h5>
             </Button>
-
             <Snackbar
               style={{ fontSize: 10 }}
               open={open}
@@ -172,18 +179,14 @@ export default function Banner(props: any) {
             />
           </Grid>
           <Grid item xs={12}>
-            {"Dev."}
-            {/* 
-        //@ts-ignore */}
+            <h3 style={{ fontFamily: "Kaushan Script" }}> Developer</h3>
+
             <Tooltip
               color="primary"
-              size="medium"
               TransitionComponent={Fade}
               TransitionProps={{ timeout: 600 }}
               title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
             >
-              {/* 
-          //@ts-ignore */}
               <Link href={props.gitUrl} target="_blank">
                 <Button
                   className={classes.button}
@@ -196,17 +199,12 @@ export default function Banner(props: any) {
               </Link>
             </Tooltip>
 
-            {/* 
-        //@ts-ignore */}
             <Tooltip
               color="primary"
-              size="medium"
               TransitionComponent={Fade}
               TransitionProps={{ timeout: 600 }}
               title={<h2>{`Go to ${props.name}'s LinkedIn profile `}</h2>}
             >
-              {/* 
-          //@ts-ignore */}
               <Link
                 href="https://www.linkedin.com/in/ivo-yankov/"
                 target="_blank"
@@ -235,6 +233,13 @@ export default function Banner(props: any) {
                 onClick={handleClick(SlideTransition)}
               >
                 <SentimentSatisfiedOutlinedIcon fontSize="small" />
+                <h5
+                  style={{
+                    fontFamily: "Kaushan Script",
+                  }}
+                >
+                  About
+                </h5>
               </Button>
             </Tooltip>
           </Grid>
