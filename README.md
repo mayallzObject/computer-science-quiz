@@ -1,12 +1,11 @@
 ### Cool-trivia-front
-1. Cool-Trivia - <a https://cool-trivia-quiz.netlify.app
-2. Table of contents 
-3. Introduction 
-4. Goals of this project
-5. Technologies used 
-6. ![Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
-7. DB Model - https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5
-8. Server repository - https://github.com/mayallzObject/cool-trivia-back
+1. [App](https://cool-trivia-quiz.netlify.app)
+2. Introduction 
+3. Goals of this project
+4. [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
+5. [DB-Model](https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5)
+6. Technologies 
+7. [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
 
 
@@ -14,13 +13,12 @@
 Hi, my name is Ivaylo, and this is my 1sr portfolio project.
 The Cool Trivia web application is in MVP status, with the plan of adding more functionality and styling. 
 
-### Cool Trivia
-
 
 ### Goals of this project
 The main goal of this project is to gain experience developing a full-stack app and learn new Technologies. 
 My idea was to have one day of research in TypeScript and Material-UI then adjust on the fly.
-Due to the restricted time frame and some unexpected hardware issues I decided to keep the database very simple.My original plan was to use TypeORM and TypeScript for the backend.
+Due to the restricted time frame and some unexpected hardware issues I decided to keep the database very simple.
+My original plan was to use TypeORM and TypeScript for the backend.
 The front end was made with React, Redux and Material-UI.
 
 #### Objectives 
