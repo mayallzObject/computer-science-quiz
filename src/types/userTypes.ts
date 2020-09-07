@@ -14,7 +14,7 @@ export type Credentials = {
 
 export type SignUpData = {
   name: string;
-  userImg: string;
   email: string;
   password: string;
+  userImg: string | null;
 };

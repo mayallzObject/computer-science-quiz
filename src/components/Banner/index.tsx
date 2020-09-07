@@ -4,8 +4,6 @@ import React from "react";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import {
   Link,
@@ -15,10 +13,8 @@ import {
   Snackbar,
   Tooltip,
   CardActions,
-  withStyles,
   Box,
   Grid,
-  Paper,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -57,16 +53,16 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-const HtmlTooltip = withStyles((theme) => ({
-  tooltip: {
-    backgroundColor: "#f5f5f9",
-    color: "rgba(0, 0, 0, 0.87)",
-    minWidth: 400,
-    fontSize: theme.typography.pxToRem(14),
-    border: "1px solid #dadde9",
-    textColor: "#000000",
-  },
-}))(Tooltip);
+// const HtmlTooltip = withStyles((theme) => ({
+//   tooltip: {
+//     backgroundColor: "#f5f5f9",
+//     color: "rgba(0, 0, 0, 0.87)",
+//     minWidth: 400,
+//     fontSize: theme.typography.pxToRem(14),
+//     border: "1px solid #dadde9",
+//     textColor: "#000000",
+//   },
+// }))(Tooltip);
 
 function SlideTransition(props: any) {
   return <Slide {...props} direction="up" />;
@@ -76,7 +72,7 @@ function TransitionLeft(props: TransitionProps) {
   return <Slide {...props} direction="left" />;
 }
 
-export default function OwnerCard(props: any) {
+export default function Banner(props: any) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     open: false,
