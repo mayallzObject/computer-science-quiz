@@ -1,5 +1,5 @@
 ### Cool-trivia-front
-1. Cool-Trivia - cool-trivia-quiz.netlify.app
+1. Cool-Trivia - https://cool-trivia-quiz.netlify.app
 2. Table of contents 
 3. Introduction 
 4. Goals of this project
