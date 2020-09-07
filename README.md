@@ -53,7 +53,7 @@ server runs on port 4000 by default.
    
 
 
-#### Back end -Express || SequelizeORM
+##### Back end -Express || SequelizeORM
   <img            
            src="https://img.icons8.com/nolan/96/api-settings.png"
           />
