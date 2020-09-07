@@ -14,42 +14,89 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { OnClick } from "../../types/eventType";
 
+import { storage } from "../../FIrebase";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
     backgroundImage:
-      "url(https://www.f-covers.com/cover/looks-high-tech-facebook-cover-timeline-banner-for-fb.jpg)",
+      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
   dialogFooter: {
     fontSize: "0.8rem",
     width: "100%",
     textAlign: "center",
     backgroundImage:
-      "url(https://www.f-covers.com/cover/looks-high-tech-facebook-cover-timeline-banner-for-fb.jpg)",
+      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
 }));
 
 const SingUp = (props: any) => {
   const classes = useStyles();
   const { handleClose, set_ModalForm } = props;
+  const [image, setImage] = useState("");
+  const [url, setUrl] = useState("");
+  const [progress, setProgress] = useState(0);
+
   const dispatch = useDispatch();
 
+  console.log(progress);
   const initialState = {
     name: "",
     email: "",
-    userImg: "",
     password: "",
+    userImg: "",
   };
   const [signUpcredentials, set_signUpcredentials] = useState(initialState);
 
+  const uploadImage = async () => {
+    try {
+      //@ts-ignore
+      const uploadTask = storage.ref(`images/${image.name}`).put(image);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+          setProgress(progress);
+        },
+        (error) => {
+          console.log(error);
+        },
+        () => {
+          storage
+            .ref("images")
+            //@ts-ignore
+            .child(image.name)
+            .getDownloadURL()
+            .then((url) => {
+              setUrl(url);
+            });
+        }
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const handleChange = (e: any) => {
+    if (e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
+
+  console.log("image: ", image);
+
   function submitForm(event: OnClick): void {
     event.preventDefault();
-    dispatch(signUp(signUpcredentials));
+    console.log(`image: ${url}`);
+    //@ts-ignore
+    dispatch(signUp(signUpcredentials, url));
     handleClose();
     set_signUpcredentials(initialState);
   }
-
   return (
     <DialogContent className={classes.dialogFooter}>
       <TextField
@@ -91,6 +138,16 @@ const SingUp = (props: any) => {
         label="Password"
         fullWidth
         required
+      />
+      <Button type="button" onClick={uploadImage}>
+        Upload
+      </Button>
+
+      <input type="file" onChange={handleChange} />
+      <img
+        src={url || "http://via.placeholder.com/300"}
+        alt="firebaseimage"
+        style={{ width: "300px" }}
       />
 
       <DialogActions>

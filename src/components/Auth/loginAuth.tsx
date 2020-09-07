@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
 
     backgroundImage:
-      "url(https://www.f-covers.com/cover/looks-high-tech-facebook-cover-timeline-banner-for-fb.jpg)",
+      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
   dialogFooter: {
     fontSize: "0.8rem",
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     textAlign: "center",
     backgroundImage:
-      "url(https://www.f-covers.com/cover/looks-high-tech-facebook-cover-timeline-banner-for-fb.jpg)",
+      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
 }));
 

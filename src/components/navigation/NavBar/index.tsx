@@ -19,7 +19,6 @@ import WbSunnySharpIcon from "@material-ui/icons/WbSunnySharp";
 import { Button, Tooltip, Fade } from "@material-ui/core";
 import { useStyles } from "./styles";
 import PlayCircleOutlineRoundedIcon from "@material-ui/icons/PlayCircleOutlineRounded";
-import AirplanemodeActiveIcon from "@material-ui/icons/AirplanemodeActive";
 
 const NavBar = (props: Props) => {
   const user = useSelector(selectUser);

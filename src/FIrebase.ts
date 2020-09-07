@@ -1,8 +1,5 @@
-//This is an endpoint set up with Firebase to upload images and get a URL right back
-
 import firebase from "firebase/app";
 import "firebase/storage";
-
 const firebaseConfig = {
   apiKey: "AIzaSyBw7os02jecHU1DQ3ExGuxsZtEX9T7pisM",
   authDomain: "react-image-upload-f0fc2.firebaseapp.com",

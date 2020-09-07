@@ -11,10 +11,9 @@ import { selectUser } from "../../store/user/selectors";
 import { useStyles } from "./styles";
 
 export default function UserCard() {
-  const user = useSelector(selectUser);
-
   const classes = useStyles();
 
+  const user = useSelector(selectUser);
   const [state, setState] = React.useState({
     open: false,
     Transition: Fade,
@@ -32,7 +31,7 @@ export default function UserCard() {
 
   useEffect(() => {
     //@ts-ignore
-    if (score === null && score <= 100) {
+    if (score > 5 && score <= 10) {
       setLevel("noob");
       //@ts-ignore
     } else if (score > 10 && score <= 15) {
@@ -52,7 +51,7 @@ export default function UserCard() {
       setLevel("master");
       //@ts-ignore
     } else if (score > 2000) {
-      setLevel("mammoth");
+      setLevel("wizard");
     }
   }, [score, setLevel]);
 
@@ -61,17 +60,27 @@ export default function UserCard() {
       <Paper elevation={23}>
         <CardHeader
           title={<h2>{user.name}</h2>}
-          subheader={<h2>{`Score: ${user.score} Level:${level}`}</h2>}
+          subheader={<h2>{`Score: ${user.score} >>> Level: ${level}`}</h2>}
+        />
+
+        <CardMedia
+          className={classes.media}
+          //@ts-ignore
+
+          src={user.userImg}
+          title={user.name}
         />
 
         <Box
           style={{
             width: `${score}%`,
-            backgroundColor: "darkgreen",
+            backgroundColor: "gray",
           }}
           p={1}
-          right={0}
-        ></Box>
+          margin={10}
+        >
+          progressbar
+        </Box>
         <Typography paragraph>
           <Snackbar
             open={state.open}
@@ -81,13 +90,6 @@ export default function UserCard() {
             key={state.Transition.name}
           />
         </Typography>
-
-        <CardMedia
-          className={classes.media}
-          //@ts-ignore
-          image={user.userImg}
-          title={user.name}
-        />
       </Paper>
     </Card>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 
 //Components
-import ScoreBoard from "../../components/Scoreboard";
+import ScoreBoard from "../Scoreboard";
 
 //Mui components
 import Card from "@material-ui/core/Card";
@@ -26,7 +26,7 @@ export default function Leaderboards() {
   return (
     <Paper elevation={23}>
       <Card>
-        <CardHeader title="Leaderboard" subheader="year race leaders" />
+        <CardHeader title="Leaderboard" />
         <CardMedia
           className={classes.media}
           image="https://bojanzimmermann.com/wp-content/uploads/2018/03/Increase-Brain-Power-1024x677.png"
