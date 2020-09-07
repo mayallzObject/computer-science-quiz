@@ -1,4 +1,4 @@
-###👨‍💻Cool-trivia-front 👩‍💻 Cool-trivia-front
+### 👨‍💻Cool-trivia-front 👩‍💻 
 1. [App](https://cool-trivia-quiz.netlify.app)
 2. Introduction 
 3. Goals of this project
@@ -17,25 +17,23 @@ The Cool Trivia web application is in MVP status, with the plan of adding more f
 ### Goals of this project
 The main goal of this project is to gain experience developing a full-stack app and learn new Technologies. 
 My idea was to have one day of research in TypeScript and Material-UI then adjust on the fly.
-Due to the restricted time frame and some unexpected hardware issues I decided to keep the database very simple.
-My original plan was to use TypeORM and TypeScript for the backend.
 The front end was made with React, Redux and Material-UI.
 
 #### Objectives 
    - Practical applications of learned skills.
-   - Implementation of new technologies on the fly.
+   - Implementation of new technologies.
    - Creating user stories, database models and wireframes.
    - Practice with version control - branching and pull requests.
   
   
  #### Objectives that I did good. 
    1. Succeslly implemetned part of the required skills.
-   2. A function TypeScript app with Material-UI styling.
+   2. A functional TypeScript app with Material-UI styling.
    
    
  #### Objectives that I could do better 
    1. The git hub commits and pull requests went pretty bad.
-   There is a lot to improve ,but thankfully during my team-    project I had the opportunity to make do it better.
+   There is a lot to improve ,but thankfully during my team-project I had the opportunity to make do it better.
    
 #### Server setup
 - clone the repository; 
@@ -64,10 +62,26 @@ server runs on port 4000 by default.
 - Postman
 
 #### Front end
-- Typescript
-- React
-- Redux
-- Axios
-- External API's
-- Material-UI
+
+  <img
+                    src="https://img.icons8.com/color/96/000000/javascript.png"
+                    alt="JS"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/typescript.png"
+                    alt="react"
+                  />
+                  <img
+                    src="https://img.icons8.com/nolan/96/react-native.png"
+                    alt="native"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/redux.png"
+                    alt="redux"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/96/000000/material-ui.png"
+                    alt="mui"
+                  />
+
 
