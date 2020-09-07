@@ -69,12 +69,12 @@ Postman
                   />
                   <img src="https://img.icons8.com/color/96/000000/postgreesql.png"/>
 
+
 #### Front end
-            <img 
-                src="https://img.icons8.com/color/96/000000/nodejs.png"
-              />
-  
-           <img
+ <img 
+           src="https://img.icons8.com/color/96/000000/nodejs.png"
+          />
+                  <img
                     src="https://img.icons8.com/color/96/000000/javascript.png"
                     alt="JS"
                   />
@@ -94,5 +94,6 @@ Postman
                     src="https://img.icons8.com/color/96/000000/material-ui.png"
                     alt="mui"
                   />
+      
 
 
