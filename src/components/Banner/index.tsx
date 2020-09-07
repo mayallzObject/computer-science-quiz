@@ -15,6 +15,7 @@ import {
   CardActions,
   Box,
   Grid,
+  Paper,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -108,15 +109,105 @@ export default function Banner(props: any) {
   };
 
   return (
-    <Card>
-      <CardActions>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <h1 style={{ fontFamily: "Kaushan Script" }}>Cool Trivia </h1>
-          </Grid>
-          <Grid item xs={12}>
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <h1 style={{ fontFamily: "Kaushan Script", fontSize: 60 }}>
+          Cool Trivia{" "}
+        </h1>
+
+        <Link
+          href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+          target="_blank"
+        >
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+            aria-label="settings"
+          >
+            <GitHubIcon fontSize="small" />
+            <h5
+              style={{
+                fontFamily: "Kaushan Script",
+              }}
+            >
+              Project Repository
+            </h5>
+          </Button>
+        </Link>
+        <Button
+          className={classes.button}
+          color="primary"
+          variant="contained"
+          onClick={handleClickTwo(TransitionLeft)}
+        >
+          <h5 style={{ fontFamily: "Kaushan Script" }}>
+            {" "}
+            Project Technologies
+          </h5>
+        </Button>
+        <Snackbar
+          style={{ fontSize: 10 }}
+          open={open}
+          onClose={handleCloseTwo}
+          TransitionComponent={transition}
+          message={
+            <Box>
+              <img
+                src="https://img.icons8.com/color/96/000000/javascript.png"
+                alt="JS"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/typescript.png"
+                alt="react"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/react-native.png"
+                alt="native"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/redux.png"
+                alt="redux"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/material-ui.png"
+                alt="mui"
+              />
+            </Box>
+          }
+          key={transition ? transition.name : ""}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Paper elevation={23}>
+          <h1 style={{ fontFamily: "Kaushan Script" }}> Developer</h1>
+
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
+          >
+            <Link href={props.gitUrl} target="_blank">
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                aria-label="settings"
+              >
+                <GitHubIcon fontSize="small" />
+              </Button>
+            </Link>
+          </Tooltip>
+
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={<h2>{`Go to ${props.name}'s LinkedIn profile `}</h2>}
+          >
             <Link
-              href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+              href="https://www.linkedin.com/in/ivo-yankov/"
               target="_blank"
             >
               <Button
@@ -125,126 +216,28 @@ export default function Banner(props: any) {
                 color="primary"
                 aria-label="settings"
               >
-                <GitHubIcon fontSize="small" />
-                <h5
-                  style={{
-                    fontFamily: "Kaushan Script",
-                  }}
-                >
-                  Project Repository
-                </h5>
+                <LinkedInIcon fontSize="small" />
               </Button>
             </Link>
+          </Tooltip>
+
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={<h2>{`${props.name}'s info`}</h2>}
+          >
             <Button
               className={classes.button}
-              color="primary"
               variant="contained"
-              onClick={handleClickTwo(TransitionLeft)}
+              color="primary"
+              onClick={handleClick(SlideTransition)}
             >
-              <h5 style={{ fontFamily: "Kaushan Script" }}>
-                {" "}
-                Project Technologies
-              </h5>
+              <SentimentSatisfiedOutlinedIcon fontSize="small" />
             </Button>
-            <Snackbar
-              style={{ fontSize: 10 }}
-              open={open}
-              onClose={handleCloseTwo}
-              TransitionComponent={transition}
-              message={
-                <Box>
-                  <img
-                    src="https://img.icons8.com/color/96/000000/javascript.png"
-                    alt="JS"
-                  />
-                  <img
-                    src="https://img.icons8.com/color/96/000000/typescript.png"
-                    alt="react"
-                  />
-                  <img
-                    src="https://img.icons8.com/nolan/96/react-native.png"
-                    alt="native"
-                  />
-                  <img
-                    src="https://img.icons8.com/color/96/000000/redux.png"
-                    alt="redux"
-                  />
-                  <img
-                    src="https://img.icons8.com/color/96/000000/material-ui.png"
-                    alt="mui"
-                  />
-                </Box>
-              }
-              key={transition ? transition.name : ""}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <h3 style={{ fontFamily: "Kaushan Script" }}> Developer</h3>
-
-            <Tooltip
-              color="primary"
-              TransitionComponent={Fade}
-              TransitionProps={{ timeout: 600 }}
-              title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
-            >
-              <Link href={props.gitUrl} target="_blank">
-                <Button
-                  className={classes.button}
-                  variant="contained"
-                  color="primary"
-                  aria-label="settings"
-                >
-                  <GitHubIcon fontSize="small" />
-                </Button>
-              </Link>
-            </Tooltip>
-
-            <Tooltip
-              color="primary"
-              TransitionComponent={Fade}
-              TransitionProps={{ timeout: 600 }}
-              title={<h2>{`Go to ${props.name}'s LinkedIn profile `}</h2>}
-            >
-              <Link
-                href="https://www.linkedin.com/in/ivo-yankov/"
-                target="_blank"
-              >
-                <Button
-                  className={classes.button}
-                  variant="contained"
-                  color="primary"
-                  aria-label="settings"
-                >
-                  <LinkedInIcon fontSize="small" />
-                </Button>
-              </Link>
-            </Tooltip>
-
-            <Tooltip
-              color="primary"
-              TransitionComponent={Fade}
-              TransitionProps={{ timeout: 600 }}
-              title={<h2>{`${props.name}'s info`}</h2>}
-            >
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                onClick={handleClick(SlideTransition)}
-              >
-                <SentimentSatisfiedOutlinedIcon fontSize="small" />
-                <h5
-                  style={{
-                    fontFamily: "Kaushan Script",
-                  }}
-                >
-                  About
-                </h5>
-              </Button>
-            </Tooltip>
-          </Grid>
-        </Grid>
-      </CardActions>
+          </Tooltip>
+        </Paper>
+      </Grid>
 
       <Typography paragraph component="h3">
         <Snackbar
@@ -255,6 +248,6 @@ export default function Banner(props: any) {
           key={state.Transition.name}
         />
       </Typography>
-    </Card>
+    </Grid>
   );
 }

@@ -19,7 +19,7 @@ export const useStyles = makeStyles({
     fontFamily: "Kaushan Script",
   },
   content: {
-    fontSize: 23,
+    fontSize: 35,
     padding: 5,
     fontWeight: "bold",
     fontFamily: "Kaushan Script",
@@ -27,6 +27,15 @@ export const useStyles = makeStyles({
   button: {
     borderRadius: 260,
     fontSize: 12,
+    minWidth: 200,
+    margin: 10,
+    padding: 5,
+    fontWeight: "bold",
+    fontFamily: "Kaushan Script",
+  },
+  startButton: {
+    borderRadius: 260,
+    fontSize: 30,
     minWidth: 240,
     margin: 5,
     padding: 4,

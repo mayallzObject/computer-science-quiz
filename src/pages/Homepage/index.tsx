@@ -51,6 +51,7 @@ export default function Home(props: Props) {
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
+        sm={4}
       >
         {founder.map((f) => {
           return (
