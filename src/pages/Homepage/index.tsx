@@ -76,7 +76,7 @@ export default function Home(props: Props) {
             borderRadius: 100,
             minHeight: 570,
             backgroundImage:
-              "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+              "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
           }}
         >
           <QuestionCard />
