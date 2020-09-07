@@ -7,7 +7,6 @@ import MessageBox from "./components/MessageBox";
 import Loading from "./components/loading";
 import NavBar from "./components/navigation/NavBar";
 import AboutMe from "./pages/AboutMe";
-import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Homepage";
 
 // Redux store
@@ -26,8 +25,8 @@ const lightTheme = createMuiTheme({
       paper: "#978d58",
     },
     primary: {
-      main: "#0b5269",
-      dark: "#002800",
+      main: "#3c4f65",
+      dark: "#33313b",
     },
     type: "light",
   },
@@ -36,11 +35,11 @@ const lightTheme = createMuiTheme({
 const darkTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#3b5249",
-      paper: "#1a2f4b",
+      default: "#3c4f65",
+      paper: "#33313b",
     },
     primary: {
-      main: "#902424",
+      main: "#834c69",
       dark: "#00688B ",
     },
     type: "dark",
@@ -62,11 +61,11 @@ const App = () => {
           <CssBaseline />
           <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
           <MessageBox />
+          {isLoading ? <Loading /> : null}
         </Paper>
-        {isLoading ? <Loading /> : null}
         <Switch>
           <Route path="/about-me" component={AboutMe} />
-          <Route exact path="/about-us" component={AboutUs} />
+
           <Route exact path="/" component={Home} />
         </Switch>
       </Container>

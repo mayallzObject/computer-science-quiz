@@ -25,7 +25,7 @@ export default function RulezCard() {
   return (
     <Paper elevation={23}>
       <Card className={classes.root}>
-        <CardHeader title="My best results" subheader="result of all races" />
+        <CardHeader title="Rules" subheader="Rules and Information" />
         <CardMedia
           className={classes.media}
           image="https://cdn5.vectorstock.com/i/1000x1000/36/59/retro-pastel-color-smile-pink-brain-with-vector-10373659.jpg"

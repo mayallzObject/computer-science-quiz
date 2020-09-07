@@ -35,7 +35,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = (props: any) => {
+type Props = {
+  handleClose: (value: string) => void;
+  set_ModalForm: (value: string) => void;
+};
+
+const Login = (props: Props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {

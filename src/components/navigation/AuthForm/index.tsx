@@ -40,7 +40,12 @@ const AuthForm = () => {
           TransitionProps={{ timeout: 600 }}
           title={<h2>Login/ SingUp</h2>}
         >
-          <Button className={classes.button} onClick={handleOpen}>
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+            onClick={handleOpen}
+          >
             LOGIN
           </Button>
         </Tooltip>
