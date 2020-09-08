@@ -28,7 +28,7 @@ export const useStyles = makeStyles({
     borderRadius: 260,
     fontSize: 13,
     minWidth: 120,
-    margin: 2,
+    margin: 3,
     fontWeight: "bold",
     fontFamily: "Kaushan Script",
   },

@@ -3,16 +3,12 @@ import React, { useEffect, useState } from "react";
 // Mui components
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Fade, Snackbar, Paper, Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
-import { useStyles } from "./styles";
 
 export default function UserCard() {
-  const classes = useStyles();
-
   const user = useSelector(selectUser);
   const [state, setState] = React.useState({
     open: false,

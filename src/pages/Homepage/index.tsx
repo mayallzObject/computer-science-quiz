@@ -10,7 +10,7 @@ import Scoreboard from "../../components/Scoreboard";
 import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
 import { Paper, Box } from "@material-ui/core";
-import SwipeableTextMobileStepper from "../../components/CoolPlaces";
+import CoolPlaces from "../../components/CoolPlaces";
 
 type Props = {
   darkMode: boolean;
@@ -96,7 +96,7 @@ export default function Home(props: Props) {
       >
         <Paper>
           <h2 style={{ fontFamily: "Kaushan Script" }}>Cool Places</h2>
-          <SwipeableTextMobileStepper />
+          <CoolPlaces />
         </Paper>
         <Box mt={6}>
           <Paper>

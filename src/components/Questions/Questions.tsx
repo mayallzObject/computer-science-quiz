@@ -20,7 +20,6 @@ import { OnClick } from "../../types/eventType";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import { useStyles } from "./styles";
 import SkipNextRoundedIcon from "@material-ui/icons/SkipNextRounded";
-import PlayCircleOutlineRoundedIcon from "@material-ui/icons/PlayCircleOutlineRounded";
 
 const Questions: React.FC = () => {
   const classes = useStyles();

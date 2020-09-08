@@ -20,7 +20,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import SentimentSatisfiedOutlinedIcon from "@material-ui/icons/SentimentSatisfiedOutlined";
-import Leaderboards from "../UserManual";
+import UserManual from "../UserManual";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -140,7 +140,7 @@ export default function Banner(props: any) {
               color="primary"
               aria-label="settings"
             >
-              <GitHubIcon fontSize="small" />
+              <GitHubIcon />
             </Button>
           </Link>
         </Tooltip>
@@ -160,7 +160,7 @@ export default function Banner(props: any) {
             variant="contained"
             onClick={handleClickTwo(TransitionLeft)}
           >
-            <InfoOutlinedIcon fontSize="small" />
+            <InfoOutlinedIcon />
           </Button>
         </Tooltip>
         <Snackbar
@@ -198,7 +198,7 @@ export default function Banner(props: any) {
           <Paper>
             <h1 style={{ fontFamily: "Kaushan Script" }}>User Maunal</h1>
 
-            <Leaderboards />
+            <UserManual />
           </Paper>
         </Box>
       </Grid>

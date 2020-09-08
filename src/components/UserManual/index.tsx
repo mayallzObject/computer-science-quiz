@@ -1,13 +1,10 @@
 import React from "react";
 
-//Components
-
 //Mui components
 import Card from "@material-ui/core/Card";
 import { Paper, CardContent, Typography } from "@material-ui/core";
-import { useStyles } from "./styles";
 
-export default function AboutCard() {
+export default function UserManual() {
   return (
     <Paper elevation={23}>
       <Card>
