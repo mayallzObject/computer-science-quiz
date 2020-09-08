@@ -98,6 +98,8 @@ function CoolPlaces() {
         activeStep={activeStep}
         nextButton={
           <Button
+            color="primary"
+            variant="contained"
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
@@ -111,7 +113,13 @@ function CoolPlaces() {
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button
+            color="primary"
+            variant="contained"
+            size="small"
+            onClick={handleBack}
+            disabled={activeStep === 0}
+          >
             {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (

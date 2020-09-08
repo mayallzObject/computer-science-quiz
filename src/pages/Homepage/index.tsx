@@ -48,10 +48,13 @@ export default function Home(props: Props) {
       <Grid
         item
         style={{
+          marginTop: 30,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+          maxHeight: 600,
         }}
         xs={12}
+        sm={3}
       >
         {founder.map((f) => {
           return (
@@ -69,10 +72,24 @@ export default function Home(props: Props) {
           );
         })}
       </Grid>
+      <Grid item xs={12} sm={6}>
+        <Paper
+          elevation={23}
+          style={{
+            borderRadius: 100,
+            minHeight: 750,
+            backgroundImage:
+              "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+          }}
+        >
+          <QuestionCard />
+        </Paper>
+      </Grid>
       <Grid
         item
         style={{
-          marginTop: 50,
+          maxHeight: 600,
+          marginTop: 30,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
@@ -80,28 +97,13 @@ export default function Home(props: Props) {
         sm={3}
       >
         <Paper>
-          <h1 style={{ fontFamily: "Kaushan Script", borderRadius: "50%" }}>
+          <h1 style={{ fontFamily: "Kaushan Script", fontSize: 50 }}>
             Cool Places
           </h1>
         </Paper>
-        <SwipeableTextMobileStepper />
-        <Paper>
-          <h1 style={{ fontFamily: "Kaushan Script" }}>Scoreboard</h1>
-        </Paper>
-        <Scoreboard />
-      </Grid>
-      <Grid item xs={12} sm={9}>
-        <Paper
-          elevation={23}
-          style={{
-            borderRadius: 100,
-            minHeight: 750,
-            backgroundImage:
-              "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
-          }}
-        >
-          <QuestionCard />
-        </Paper>
+        <Box mt={10}>
+          <SwipeableTextMobileStepper />
+        </Box>
       </Grid>
     </Grid>
   );

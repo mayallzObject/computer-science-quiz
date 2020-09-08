@@ -17,9 +17,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     margin: 10,
     fontSize: 10,
     fontWeight: "bold",
-    color: "#6BCAE2",
+
     backgroundImage:
-      "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
+      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
     "&:hover": {
       blurRadius: "true",
       color: "#000000",

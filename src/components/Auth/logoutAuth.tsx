@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
     margin: 4,
     fontSize: 10,
     fontWeight: "bold",
-    color: "#6BCAE2",
+
     backgroundImage:
-      "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
+      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
     "&:hover": {
       color: "#000000",
       backgroundColor: "#ffff00",
