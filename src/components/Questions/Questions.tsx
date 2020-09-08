@@ -20,7 +20,6 @@ import { OnClick } from "../../types/eventType";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import { useStyles } from "./styles";
 import SkipNextRoundedIcon from "@material-ui/icons/SkipNextRounded";
-import PlayCircleOutlineRoundedIcon from "@material-ui/icons/PlayCircleOutlineRounded";
 
 const Questions: React.FC = () => {
   const classes = useStyles();
@@ -92,7 +91,17 @@ const Questions: React.FC = () => {
     <>
       <Typography className={classes.button} component="div">
         {!gameOver ? (
-          <div className={classes.button}> Score: {score}</div>
+          <div
+            style={{
+              fontWeight: "bold",
+              fontFamily: "Kaushan Script",
+              fontSize: 30,
+              color: "sandybrown",
+            }}
+          >
+            {" "}
+            Score: {score}
+          </div>
         ) : null}
       </Typography>
       {!gameOver && (
@@ -109,7 +118,6 @@ const Questions: React.FC = () => {
       <Box className="primary" m={4} pb={5}>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <Button
-            startIcon={<PlayCircleOutlineRoundedIcon />}
             variant="contained"
             className={classes.button}
             color="primary"
@@ -129,21 +137,20 @@ const Questions: React.FC = () => {
             Submit Score
           </Button>
         ) : null}
+        {!gameOver &&
+        userAnswers.length === number + 1 &&
+        number !== TOTAL_QUESTIONS - 1 ? (
+          <Button
+            className={classes.button}
+            startIcon={<SkipNextRoundedIcon />}
+            variant="contained"
+            color="primary"
+            onClick={nextQuestion}
+          >
+            Next Question
+          </Button>
+        ) : null}
       </Box>
-
-      {!gameOver &&
-      userAnswers.length === number + 1 &&
-      number !== TOTAL_QUESTIONS - 1 ? (
-        <Button
-          size="small"
-          startIcon={<SkipNextRoundedIcon />}
-          variant="contained"
-          color="primary"
-          onClick={nextQuestion}
-        >
-          Next Question
-        </Button>
-      ) : null}
     </>
   );
 };

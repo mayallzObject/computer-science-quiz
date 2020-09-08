@@ -3,16 +3,12 @@ import React, { useEffect, useState } from "react";
 // Mui components
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Fade, Snackbar, Paper, Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
-import { useStyles } from "./styles";
 
 export default function UserCard() {
-  const classes = useStyles();
-
   const user = useSelector(selectUser);
   const [state, setState] = React.useState({
     open: false,
@@ -59,16 +55,12 @@ export default function UserCard() {
     <Card>
       <Paper elevation={23}>
         <CardHeader
-          title={<h2>{user.name}</h2>}
-          subheader={<h2>{`Score: ${user.score} >>> Level: ${level}`}</h2>}
-        />
-
-        <CardMedia
-          className={classes.media}
-          //@ts-ignore
-
-          src={user.userImg}
-          title={user.name}
+          title={<h2 style={{ fontFamily: "Kaushan Script" }}>{user.name}</h2>}
+          subheader={
+            <h2
+              style={{ fontFamily: "Kaushan Script" }}
+            >{`Score: ${user.score}  Level: ${level}`}</h2>
+          }
         />
 
         <Box
@@ -77,7 +69,6 @@ export default function UserCard() {
             backgroundColor: "gray",
           }}
           p={1}
-          margin={10}
         >
           progressbar
         </Box>

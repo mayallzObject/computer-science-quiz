@@ -21,12 +21,12 @@ import Paper from "@material-ui/core/Paper";
 const lightTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#eae1e1",
+      default: "#9c968b",
       paper: "#978d58",
     },
     primary: {
       main: "#3c4f65",
-      dark: "#33313b",
+      dark: "#978d58",
     },
     type: "light",
   },
@@ -40,7 +40,7 @@ const darkTheme = createMuiTheme({
     },
     primary: {
       main: "#834c69",
-      dark: "#00688B ",
+      dark: "#3c4f65 ",
     },
     type: "dark",
   },
@@ -56,16 +56,15 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Container disableGutters={true} maxWidth="lg">
+      <Container disableGutters={true}>
         <Paper>
           <CssBaseline />
           <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
           <MessageBox />
-          {isLoading ? <Loading /> : null}
         </Paper>
+        {isLoading ? <Loading /> : null}
         <Switch>
           <Route path="/about-me" component={AboutMe} />
-
           <Route exact path="/" component={Home} />
         </Switch>
       </Container>

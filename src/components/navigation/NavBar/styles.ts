@@ -13,18 +13,17 @@ export const useStyles = makeStyles((theme: Theme) => ({
     alignSelf: "center",
     textAlign: "center",
   },
+
   button: {
-    margin: 10,
-    fontSize: 10,
+    margin: 5,
+    padding: 5,
+    iconSize: 10,
     fontWeight: "bold",
-    color: "#6BCAE2",
-    backgroundImage:
-      "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
+    fontFamily: "Kaushan Script",
+    backgrounColor: "navy",
     "&:hover": {
-      blurRadius: "true",
       color: "#000000",
-      backgroundColor:
-        "url(https://scx1.b-cdn.net/csz/news/800/2018/space.jpg)",
+      backgroundColor: "#ffff00",
     },
   },
 }));

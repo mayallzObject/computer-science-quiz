@@ -24,7 +24,6 @@ const Scoreboard = () => {
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get(`https://cooltrivia.herokuapp.com/score`);
-
       setScore(res.data);
     };
     getData();
@@ -36,20 +35,45 @@ const Scoreboard = () => {
         <Table size="small" aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell align="left">Place</StyledTableCell>
-              <StyledTableCell align="left">Points</StyledTableCell>
-              <StyledTableCell align="left">Player</StyledTableCell>
+              <StyledTableCell
+                align="left"
+                style={{ fontFamily: "Kaushan Script" }}
+              >
+                Place
+              </StyledTableCell>
+              <StyledTableCell
+                align="left"
+                style={{ fontFamily: "Kaushan Script" }}
+              >
+                Points
+              </StyledTableCell>
+              <StyledTableCell
+                align="left"
+                style={{ fontFamily: "Kaushan Script" }}
+              >
+                Player
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {score.length > 0 &&
               score.map((data, index) => (
                 <StyledTableRow key={index}>
-                  <StyledTableCell>{data.id}</StyledTableCell>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell style={{ fontFamily: "Kaushan Script" }}>
+                    {data.id}
+                  </StyledTableCell>
+                  <StyledTableCell
+                    component="th"
+                    scope="row"
+                    style={{ fontFamily: "Kaushan Script" }}
+                  >
                     {data.score}
                   </StyledTableCell>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell
+                    component="th"
+                    scope="row"
+                    style={{ fontFamily: "Kaushan Script" }}
+                  >
                     {data.user.name}
                   </StyledTableCell>
                 </StyledTableRow>

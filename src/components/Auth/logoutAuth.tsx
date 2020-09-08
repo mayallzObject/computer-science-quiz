@@ -14,12 +14,12 @@ import FaceRoundedIcon from "@material-ui/icons/FaceRounded";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: 4,
-    fontSize: 10,
+    margin: 5,
+    padding: 5,
+    iconSize: 10,
     fontWeight: "bold",
-    color: "#6BCAE2",
-    backgroundImage:
-      "url(https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-740x463.jpg)",
+    fontFamily: "Kaushan Script",
+    backgrounColor: "navy",
     "&:hover": {
       color: "#000000",
       backgroundColor: "#ffff00",
@@ -43,7 +43,7 @@ const Logout = (props: any) => {
       <Tooltip
         TransitionComponent={Fade}
         TransitionProps={{ timeout: 600 }}
-        title={<h1>LOGOUT</h1>}
+        title={<h1 style={{ fontFamily: "Kaushan Script" }}>LOGOUT</h1>}
       >
         <Button
           startIcon={<ExitToAppRoundedIcon />}
@@ -51,12 +51,14 @@ const Logout = (props: any) => {
           variant="contained"
           color="primary"
           onClick={() => dispatch(logOut())}
-        ></Button>
+        >
+          Out
+        </Button>
       </Tooltip>
       <Tooltip
         TransitionComponent={Fade}
         TransitionProps={{ timeout: 600 }}
-        title={<h2>My Page</h2>}
+        title={<h1 style={{ fontFamily: "Kaushan Script" }}>My Page</h1>}
       >
         <Button
           className={classes.button}
