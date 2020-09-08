@@ -20,15 +20,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
-    backgroundImage:
-      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
   dialogFooter: {
     fontSize: "0.8rem",
     width: "100%",
     textAlign: "center",
-    backgroundImage:
-      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
 }));
 

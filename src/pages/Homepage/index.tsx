@@ -51,7 +51,6 @@ export default function Home(props: Props) {
           marginTop: 30,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
-          maxHeight: 600,
         }}
         xs={12}
         sm={3}
@@ -72,7 +71,7 @@ export default function Home(props: Props) {
           );
         })}
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} sm={5}>
         <Paper
           elevation={23}
           style={{
@@ -88,21 +87,22 @@ export default function Home(props: Props) {
       <Grid
         item
         style={{
-          maxHeight: 600,
           marginTop: 30,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
-        sm={3}
+        sm={4}
       >
         <Paper>
-          <h1 style={{ fontFamily: "Kaushan Script", fontSize: 50 }}>
-            Cool Places
-          </h1>
-        </Paper>
-        <Box mt={10}>
+          <h2 style={{ fontFamily: "Kaushan Script" }}>Cool Places</h2>
           <SwipeableTextMobileStepper />
+        </Paper>
+        <Box mt={6}>
+          <Paper>
+            <h2 style={{ fontFamily: "Kaushan Script" }}>Leaderboard</h2>
+            <Scoreboard />
+          </Paper>
         </Box>
       </Grid>
     </Grid>

@@ -21,17 +21,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
-
-    backgroundImage:
-      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
   dialogFooter: {
     fontSize: "0.8rem",
 
     width: "100%",
     textAlign: "center",
-    backgroundImage:
-      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
   },
 }));
 
@@ -96,7 +91,7 @@ const Login = (props: Props) => {
           Log in
         </Button>
       </DialogActions>
-      <DialogContentText className={classes.dialogFooter} color="secondary">
+      <DialogContentText className={classes.dialogFooter}>
         No account yet? Sign up{" "}
         <Typography
           component="span"

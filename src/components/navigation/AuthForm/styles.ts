@@ -10,9 +10,8 @@ export const useStyles = makeStyles((theme) => ({
     padding: 5,
     iconSize: 10,
     fontWeight: "bold",
-
-    backgroundImage:
-      "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+    fontFamily: "Kaushan Script",
+    backgrounColor: "navy",
     "&:hover": {
       color: "#000000",
       backgroundColor: "#ffff00",

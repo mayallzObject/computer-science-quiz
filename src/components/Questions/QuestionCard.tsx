@@ -30,7 +30,7 @@ const QuestionCard: React.FC<Props> = ({
         <Grid item xs={12}>
           <Paper elevation={23} style={{ borderRadius: 150 }}>
             <Typography variant="body2" color="textPrimary" component="div">
-              <div>
+              <div style={{ fontFamily: "Kaushan Script", fontWeight: "bold" }}>
                 Question: {questionNr} / {totalQuestions}
               </div>
             </Typography>

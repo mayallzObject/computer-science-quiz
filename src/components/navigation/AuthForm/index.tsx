@@ -38,7 +38,9 @@ const AuthForm = () => {
           color="primary"
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
-          title={<h2>Login/ SingUp</h2>}
+          title={
+            <h1 style={{ fontFamily: "Kaushan Script" }}>Login and Singup</h1>
+          }
         >
           <Button
             className={classes.button}

@@ -21,5 +21,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     avatar: {
       backgroundColor: blue[500],
     },
+    button: {
+      fontFamily: "Kaushan Script",
+    },
   })
 );

@@ -96,8 +96,8 @@ const Questions: React.FC = () => {
             style={{
               fontWeight: "bold",
               fontFamily: "Kaushan Script",
-              fontSize: 50,
-              color: "#ffffff",
+              fontSize: 30,
+              color: "sandybrown",
             }}
           >
             {" "}

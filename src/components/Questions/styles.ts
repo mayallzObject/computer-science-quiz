@@ -26,8 +26,8 @@ export const useStyles = makeStyles({
   },
   button: {
     borderRadius: 260,
-    fontSize: 12,
-    minWidth: 150,
+    fontSize: 13,
+    minWidth: 120,
     margin: 2,
     fontWeight: "bold",
     fontFamily: "Kaushan Script",

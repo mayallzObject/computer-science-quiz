@@ -3,7 +3,6 @@ import React from "react";
 // Mui components
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
-import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
 import {
   Link,
@@ -12,7 +11,6 @@ import {
   Fade,
   Snackbar,
   Tooltip,
-  CardActions,
   Box,
   Grid,
   Paper,
@@ -22,6 +20,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import SentimentSatisfiedOutlinedIcon from "@material-ui/icons/SentimentSatisfiedOutlined";
+import Leaderboards from "../UserManual";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -110,89 +109,112 @@ export default function Banner(props: any) {
 
   return (
     <Grid container spacing={2}>
-      <Grid
-        item
-        xs={12}
-        style={{
-          fontFamily: "Kaushan Script",
-          fontSize: 30,
-
-          color: "gold",
-        }}
-      >
-        <Paper>
-          <h1 style={{ fontFamily: "Kaushan Script", fontSize: 50 }}>
+      <Grid item xs={12}>
+        <Paper elevation={23}>
+          <h1
+            style={{
+              fontFamily: "Kaushan Script",
+              fontSize: 45,
+              fontWeight: "bold",
+            }}
+          >
             Cool Trivia
           </h1>
         </Paper>
-      </Grid>
 
-      <Grid item xs={12}>
-        <Box mt={10}>
-          <Paper>
-            <h1 style={{ fontFamily: "Kaushan Script" }}> Project</h1>
-            <Link
-              href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
-              target="_blank"
-            >
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Link>
+        <Tooltip
+          color="primary"
+          TransitionComponent={Fade}
+          TransitionProps={{ timeout: 600 }}
+          title={
+            <h1 style={{ fontFamily: "Kaushan Script" }}>Project Repository</h1>
+          }
+        >
+          <Link
+            href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+            target="_blank"
+          >
             <Button
               className={classes.button}
-              color="primary"
               variant="contained"
-              onClick={handleClickTwo(TransitionLeft)}
+              color="primary"
+              aria-label="settings"
             >
-              <InfoOutlinedIcon fontSize="small" />
+              <GitHubIcon fontSize="small" />
             </Button>
-            <Snackbar
-              style={{ fontSize: 10 }}
-              open={open}
-              onClose={handleCloseTwo}
-              TransitionComponent={transition}
-              message={
-                <Box>
-                  <img
-                    src="https://img.icons8.com/color/96/000000/javascript.png"
-                    alt="JS"
-                  />
-                  <img
-                    src="https://img.icons8.com/color/96/000000/typescript.png"
-                    alt="react"
-                  />
-                  <img
-                    src="https://img.icons8.com/nolan/96/react-native.png"
-                    alt="native"
-                  />
-                  <img
-                    src="https://img.icons8.com/color/96/000000/redux.png"
-                    alt="redux"
-                  />
-                  <img
-                    src="https://img.icons8.com/color/96/000000/material-ui.png"
-                    alt="mui"
-                  />
-                </Box>
-              }
-              key={transition ? transition.name : ""}
-            />
+          </Link>
+        </Tooltip>
+        <Tooltip
+          color="primary"
+          TransitionComponent={Fade}
+          TransitionProps={{ timeout: 600 }}
+          title={
+            <h1 style={{ fontFamily: "Kaushan Script" }}>
+              Project Technologies
+            </h1>
+          }
+        >
+          <Button
+            className={classes.button}
+            color="primary"
+            variant="contained"
+            onClick={handleClickTwo(TransitionLeft)}
+          >
+            <InfoOutlinedIcon fontSize="small" />
+          </Button>
+        </Tooltip>
+        <Snackbar
+          style={{ fontSize: 10 }}
+          open={open}
+          onClose={handleCloseTwo}
+          TransitionComponent={transition}
+          message={
+            <Box>
+              <img
+                src="https://img.icons8.com/color/96/000000/javascript.png"
+                alt="JS"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/typescript.png"
+                alt="react"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/react-native.png"
+                alt="native"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/redux.png"
+                alt="redux"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/material-ui.png"
+                alt="mui"
+              />
+            </Box>
+          }
+          key={transition ? transition.name : ""}
+        />
+        <Box mt={10}>
+          <Paper>
+            <h1 style={{ fontFamily: "Kaushan Script" }}>User Maunal</h1>
+
+            <Leaderboards />
           </Paper>
-
+        </Box>
+      </Grid>
+      <Grid item xs={12}>
+        <Box mt={10}>
           <Paper elevation={23}>
-            <h1 style={{ fontFamily: "Kaushan Script" }}> Developer</h1>
-
+            <h1 style={{ fontFamily: "Kaushan Script" }}> Developer Info.</h1>
             <Tooltip
               color="primary"
               TransitionComponent={Fade}
               TransitionProps={{ timeout: 600 }}
-              title={<h2>{`Go to ${props.name}'s GitHub `}</h2>}
+              title={
+                <h1
+                  style={{ fontFamily: "Kaushan Script" }}
+                >{`Go to ${props.name}'s GitHub `}</h1>
+              }
             >
               <Link href={props.gitUrl} target="_blank">
                 <Button
@@ -210,7 +232,11 @@ export default function Banner(props: any) {
               color="primary"
               TransitionComponent={Fade}
               TransitionProps={{ timeout: 600 }}
-              title={<h2>{`Go to ${props.name}'s LinkedIn profile `}</h2>}
+              title={
+                <h1
+                  style={{ fontFamily: "Kaushan Script" }}
+                >{`Go to ${props.name}'s LinkedIn profile `}</h1>
+              }
             >
               <Link
                 href="https://www.linkedin.com/in/ivo-yankov/"
@@ -231,7 +257,11 @@ export default function Banner(props: any) {
               color="primary"
               TransitionComponent={Fade}
               TransitionProps={{ timeout: 600 }}
-              title={<h2>{`${props.name}'s info`}</h2>}
+              title={
+                <h1
+                  style={{ fontFamily: "Kaushan Script" }}
+                >{`${props.name}'s info`}</h1>
+              }
             >
               <Button
                 className={classes.button}

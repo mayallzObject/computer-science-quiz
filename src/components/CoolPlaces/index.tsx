@@ -13,19 +13,39 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
+    label: "Amsterdam, The Netherlands",
+    imgPath:
+      "https://static.vueling.com/blog/media/1063/004-20-amsterdam-kiribatis.jpg",
+  },
+  {
     label: "San Francisco – Oakland Bay Bridge, United States",
     imgPath:
       "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
   },
   {
-    label: "Bird",
+    label: "The Denmark Strait, The Biggest waterfall on the planet",
     imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://steemitimages.com/DQmNdMQaxK5JV6V5vKeUaMhc7F9NmzXEt3f31cPo68uwcSD/1_49zcmrM3PFvChMut-fazCw.jpeg",
   },
   {
     label: "Bali, Indonesia",
     imgPath:
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80",
+  },
+  {
+    label: "The Piraminds, Egypt",
+    imgPath:
+      "https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2018/11/12/3185811003.jpg",
+  },
+  {
+    label: "The Seychelles Islands, Indian Ocean",
+    imgPath:
+      "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Africa/Seychelles/AP78907278_Seychelles_Trave.jpg?imwidth=1400",
+  },
+  {
+    label: "Bermuda Triangle",
+    imgPath:
+      "https://resize.indiatvnews.com/en/resize/newbucket/715_-/2016/10/bermudatriangl-1477104012.jpg",
   },
 ];
 
@@ -47,6 +67,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     overflow: "hidden",
     width: "100%",
+  },
+  button: {
+    fontFamily: "Kaushan Script",
+    fontWeight: "bold",
   },
 }));
 
@@ -71,7 +95,11 @@ function CoolPlaces() {
   return (
     <div className={classes.root}>
       <Paper square elevation={23} className={classes.header}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
+        <Typography
+          style={{ fontFamily: "Kaushan Script", alignContent: "center" }}
+        >
+          {tutorialSteps[activeStep].label}
+        </Typography>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -98,6 +126,7 @@ function CoolPlaces() {
         activeStep={activeStep}
         nextButton={
           <Button
+            className={classes.button}
             color="primary"
             variant="contained"
             size="small"
@@ -114,6 +143,7 @@ function CoolPlaces() {
         }
         backButton={
           <Button
+            className={classes.button}
             color="primary"
             variant="contained"
             size="small"

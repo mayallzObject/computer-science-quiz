@@ -62,7 +62,7 @@ const NavBar = (props: Props) => {
           color="primary"
           TransitionComponent={Fade}
           TransitionProps={{ timeout: 600 }}
-          title={<h2>Trivia Quiz</h2>}
+          title={<h1 style={{ fontFamily: "Kaushan Script" }}>Trivia Quiz</h1>}
         >
           <Button
             startIcon={<PlayCircleOutlineRoundedIcon fontSize="small" />}
