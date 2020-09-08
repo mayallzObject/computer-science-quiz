@@ -35,18 +35,6 @@ export default function AboutMe() {
 
     return (
       <Grid className={classes.paper} container spacing={2}>
-        <Grid
-          style={{
-            backgroundImage:
-              "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
-          }}
-          item
-          xs={12}
-        >
-          <Paper elevation={23}>
-            <Banner />
-          </Paper>
-        </Grid>
         <Grid item xs={12} sm={8}>
           <Paper elevation={23}>
             <UserCard />
@@ -54,7 +42,7 @@ export default function AboutMe() {
         </Grid>
         <Grid item xs={12} sm={4}>
           <Paper elevation={23}>
-            <Leaderboards />
+            Change details to be implemented in the next update
           </Paper>
         </Grid>
       </Grid>

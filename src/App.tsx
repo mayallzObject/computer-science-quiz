@@ -21,7 +21,7 @@ import Paper from "@material-ui/core/Paper";
 const lightTheme = createMuiTheme({
   palette: {
     background: {
-      default: "#eae1e1",
+      default: "#9c968b",
       paper: "#978d58",
     },
     primary: {

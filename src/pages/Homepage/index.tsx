@@ -44,12 +44,12 @@ export default function Home(props: Props) {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.paper} container spacing={2}>
+    <Grid className={classes.paper} container spacing={5}>
       <Grid
         item
         style={{
           backgroundImage:
-            "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
+            "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
       >
@@ -69,26 +69,12 @@ export default function Home(props: Props) {
           );
         })}
       </Grid>
-      <Grid item xs={12} sm={9}>
-        <Paper
-          elevation={23}
-          style={{
-            borderRadius: 100,
-            minHeight: 700,
-            backgroundImage:
-              "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
-          }}
-        >
-          <QuestionCard />
-        </Paper>
-      </Grid>
-
       <Grid
         item
         style={{
           marginTop: 50,
           backgroundImage:
-            "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
+            "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
         sm={3}
@@ -103,6 +89,19 @@ export default function Home(props: Props) {
           <h1 style={{ fontFamily: "Kaushan Script" }}>Scoreboard</h1>
         </Paper>
         <Scoreboard />
+      </Grid>
+      <Grid item xs={12} sm={9}>
+        <Paper
+          elevation={23}
+          style={{
+            borderRadius: 100,
+            minHeight: 750,
+            backgroundImage:
+              "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+          }}
+        >
+          <QuestionCard />
+        </Paper>
       </Grid>
     </Grid>
   );

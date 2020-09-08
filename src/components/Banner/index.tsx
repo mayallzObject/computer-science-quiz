@@ -111,16 +111,17 @@ export default function Banner(props: any) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={9}>
-        <h1
+        <Paper
           style={{
             fontFamily: "Kaushan Script",
-            fontSize: 90,
-            // backgroundColor: "red",
-            color: "navy",
+            fontSize: 30,
+            borderRadius: 150,
+            maxWidth: 600,
+            color: "#834c69",
           }}
         >
-          Cool Trivia{" "}
-        </h1>
+          <h1>Cool Trivia </h1>
+        </Paper>
       </Grid>
 
       <Grid item xs={12} sm={3}>

@@ -94,9 +94,10 @@ const Questions: React.FC = () => {
         {!gameOver ? (
           <div
             style={{
+              fontWeight: "bold",
               fontFamily: "Kaushan Script",
-              fontSize: 30,
-              color: "gold",
+              fontSize: 50,
+              color: "#ffffff",
             }}
           >
             {" "}
@@ -119,7 +120,7 @@ const Questions: React.FC = () => {
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <Button
             variant="contained"
-            className={classes.startButton}
+            className={classes.button}
             color="primary"
             onClick={startTrivia}
           >
@@ -141,7 +142,6 @@ const Questions: React.FC = () => {
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (
           <Button
-            size="large"
             className={classes.button}
             startIcon={<SkipNextRoundedIcon />}
             variant="contained"

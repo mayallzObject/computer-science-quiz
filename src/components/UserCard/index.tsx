@@ -59,16 +59,12 @@ export default function UserCard() {
     <Card>
       <Paper elevation={23}>
         <CardHeader
-          title={<h2>{user.name}</h2>}
-          subheader={<h2>{`Score: ${user.score} >>> Level: ${level}`}</h2>}
-        />
-
-        <CardMedia
-          className={classes.media}
-          //@ts-ignore
-
-          src={user.userImg}
-          title={user.name}
+          title={<h2 style={{ fontFamily: "Kaushan Script" }}>{user.name}</h2>}
+          subheader={
+            <h2
+              style={{ fontFamily: "Kaushan Script" }}
+            >{`Score: ${user.score}  Level: ${level}`}</h2>
+          }
         />
 
         <Box
@@ -77,7 +73,6 @@ export default function UserCard() {
             backgroundColor: "gray",
           }}
           p={1}
-          margin={10}
         >
           progressbar
         </Box>
