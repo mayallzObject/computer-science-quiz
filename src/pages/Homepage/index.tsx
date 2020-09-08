@@ -3,7 +3,7 @@ import React from "react";
 
 //Components
 import QuestionCard from "../../components/Questions/Questions";
-import OwnerCard from "../../components/Banner";
+
 import Scoreboard from "../../components/Scoreboard";
 
 //Mui components
@@ -11,6 +11,7 @@ import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
 import { Paper, Box } from "@material-ui/core";
 import CoolPlaces from "../../components/CoolPlaces";
+import Banner from "../../components/Banner";
 
 type Props = {
   darkMode: boolean;
@@ -19,7 +20,7 @@ type Props = {
 
 const founder = [
   {
-    name: "Ivo",
+    name: "Developer",
     description: ` ℍ𝕚, 𝕥𝕙𝕖𝕣𝕖.✌ 
     
     𝕄𝕪 𝕟𝕒𝕞𝕖 𝕚𝕤 𝕀𝕧𝕒𝕪𝕝𝕠 𝕐𝕒𝕟𝕜𝕠𝕧. 🌞 𝕀 𝕒𝕞 𝕒 𝕁𝕣. 𝔽𝕦𝕝𝕝 𝕊𝕥𝕒𝕔𝕜 𝕎𝕖𝕓 𝔻𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕣.
@@ -57,7 +58,7 @@ export default function Home(props: Props) {
       >
         {founder.map((f) => {
           return (
-            <OwnerCard
+            <Banner
               key={Math.random()}
               name={f.name}
               description={f.description}
@@ -71,7 +72,7 @@ export default function Home(props: Props) {
           );
         })}
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6}>
         <Paper
           elevation={23}
           style={{
@@ -92,7 +93,7 @@ export default function Home(props: Props) {
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
-        sm={4}
+        sm={3}
       >
         <Paper>
           <h2 style={{ fontFamily: "Kaushan Script" }}>Cool Places</h2>
