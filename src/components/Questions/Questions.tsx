@@ -118,9 +118,8 @@ const Questions: React.FC = () => {
       <Box className="primary" m={4} pb={5}>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <Button
-            startIcon={<PlayCircleOutlineRoundedIcon />}
             variant="contained"
-            className={classes.button}
+            className={classes.startButton}
             color="primary"
             onClick={startTrivia}
           >
@@ -138,21 +137,21 @@ const Questions: React.FC = () => {
             Submit Score
           </Button>
         ) : null}
+        {!gameOver &&
+        userAnswers.length === number + 1 &&
+        number !== TOTAL_QUESTIONS - 1 ? (
+          <Button
+            size="large"
+            className={classes.button}
+            startIcon={<SkipNextRoundedIcon />}
+            variant="contained"
+            color="primary"
+            onClick={nextQuestion}
+          >
+            Next Question
+          </Button>
+        ) : null}
       </Box>
-
-      {!gameOver &&
-      userAnswers.length === number + 1 &&
-      number !== TOTAL_QUESTIONS - 1 ? (
-        <Button
-          size="small"
-          startIcon={<SkipNextRoundedIcon />}
-          variant="contained"
-          color="primary"
-          onClick={nextQuestion}
-        >
-          Next Question
-        </Button>
-      ) : null}
     </>
   );
 };

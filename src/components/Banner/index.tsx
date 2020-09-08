@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) =>
       backgroundColor: red[500],
     },
     button: {
-      margin: 7,
+      margin: 4,
     },
   })
 );
@@ -110,75 +110,76 @@ export default function Banner(props: any) {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <h1 style={{ fontFamily: "Kaushan Script", fontSize: 60 }}>
+      <Grid item xs={12} sm={9}>
+        <h1
+          style={{
+            fontFamily: "Kaushan Script",
+            fontSize: 90,
+            // backgroundColor: "red",
+            color: "navy",
+          }}
+        >
           Cool Trivia{" "}
         </h1>
+      </Grid>
 
-        <Link
-          href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
-          target="_blank"
-        >
+      <Grid item xs={12} sm={3}>
+        <Paper>
+          <h1 style={{ fontFamily: "Kaushan Script" }}> Project</h1>
+          <Link
+            href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+            target="_blank"
+          >
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="primary"
+              aria-label="settings"
+            >
+              <GitHubIcon fontSize="small" />
+            </Button>
+          </Link>
           <Button
             className={classes.button}
-            variant="contained"
             color="primary"
-            aria-label="settings"
+            variant="contained"
+            onClick={handleClickTwo(TransitionLeft)}
           >
             <GitHubIcon fontSize="small" />
-            <h5
-              style={{
-                fontFamily: "Kaushan Script",
-              }}
-            >
-              Project Repository
-            </h5>
           </Button>
-        </Link>
-        <Button
-          className={classes.button}
-          color="primary"
-          variant="contained"
-          onClick={handleClickTwo(TransitionLeft)}
-        >
-          <h5 style={{ fontFamily: "Kaushan Script" }}>
-            {" "}
-            Project Technologies
-          </h5>
-        </Button>
-        <Snackbar
-          style={{ fontSize: 10 }}
-          open={open}
-          onClose={handleCloseTwo}
-          TransitionComponent={transition}
-          message={
-            <Box>
-              <img
-                src="https://img.icons8.com/color/96/000000/javascript.png"
-                alt="JS"
-              />
-              <img
-                src="https://img.icons8.com/color/96/000000/typescript.png"
-                alt="react"
-              />
-              <img
-                src="https://img.icons8.com/nolan/96/react-native.png"
-                alt="native"
-              />
-              <img
-                src="https://img.icons8.com/color/96/000000/redux.png"
-                alt="redux"
-              />
-              <img
-                src="https://img.icons8.com/color/96/000000/material-ui.png"
-                alt="mui"
-              />
-            </Box>
-          }
-          key={transition ? transition.name : ""}
-        />
-      </Grid>
-      <Grid item xs={12}>
+          <Snackbar
+            style={{ fontSize: 10 }}
+            open={open}
+            onClose={handleCloseTwo}
+            TransitionComponent={transition}
+            message={
+              <Box>
+                <img
+                  src="https://img.icons8.com/color/96/000000/javascript.png"
+                  alt="JS"
+                />
+                <img
+                  src="https://img.icons8.com/color/96/000000/typescript.png"
+                  alt="react"
+                />
+                <img
+                  src="https://img.icons8.com/nolan/96/react-native.png"
+                  alt="native"
+                />
+                <img
+                  src="https://img.icons8.com/color/96/000000/redux.png"
+                  alt="redux"
+                />
+                <img
+                  src="https://img.icons8.com/color/96/000000/material-ui.png"
+                  alt="mui"
+                />
+              </Box>
+            }
+            key={transition ? transition.name : ""}
+          />
+        </Paper>
+
         <Paper elevation={23}>
           <h1 style={{ fontFamily: "Kaushan Script" }}> Developer</h1>
 

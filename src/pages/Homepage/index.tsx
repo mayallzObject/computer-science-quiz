@@ -9,7 +9,8 @@ import Scoreboard from "../../components/Scoreboard";
 //Mui components
 import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
-import { Paper } from "@material-ui/core";
+import { Paper, Box } from "@material-ui/core";
+import SwipeableTextMobileStepper from "../../components/CoolPlaces";
 
 type Props = {
   darkMode: boolean;
@@ -20,14 +21,14 @@ const founder = [
   {
     name: "Ivo",
     description: ` ℍ𝕚, 𝕥𝕙𝕖𝕣𝕖.✌ 
-
+    
     𝕄𝕪 𝕟𝕒𝕞𝕖 𝕚𝕤 𝕀𝕧𝕒𝕪𝕝𝕠 𝕐𝕒𝕟𝕜𝕠𝕧. 🌞 𝕀 𝕒𝕞 𝕒 𝕁𝕣. 𝔽𝕦𝕝𝕝 𝕊𝕥𝕒𝕔𝕜 𝕎𝕖𝕓 𝔻𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕣.
     𝕀 𝕒𝕞 𝕖𝕒𝕘𝕖𝕣 𝕥𝕠 𝕝𝕖𝕒𝕣𝕟 𝕒𝕟𝕕 𝕕𝕖𝕧𝕖𝕝𝕠𝕡 𝕞𝕪 𝕔𝕠𝕕𝕚𝕟𝕘 𝕤𝕜𝕚𝕝𝕝𝕤, 𝕨𝕠𝕣𝕜 𝕙𝕒𝕣𝕕 𝕓𝕦𝕥 𝕒𝕝𝕤𝕠 𝕖𝕟𝕛𝕠𝕪 𝕥𝕙𝕖 𝕛𝕠𝕦𝕣𝕟𝕖𝕪.🔥
     
     𝕄𝕪 𝕡𝕒𝕤𝕤𝕚𝕠𝕟𝕤 𝕒𝕣𝕖 𝕡𝕣𝕠𝕓𝕝𝕖𝕞-𝕤𝕠𝕝𝕧𝕚𝕟𝕘, 𝕔𝕠𝕕𝕚𝕟𝕘, 𝕒𝕟𝕕 𝕖𝕩𝕥𝕣𝕖𝕞𝕖 𝕤𝕡𝕠𝕣𝕥𝕤.💙
     🌞🅲🅾🆁🅴 🆂🅺🅸🅻🅻🆂🌞
     𝕁𝕒𝕧𝕒𝕊𝕔𝕣𝕚𝕡𝕥 || 𝕋𝕪𝕡𝕖𝕊𝕔𝕣𝕚𝕡𝕥 || ℕ𝕠𝕕𝕖𝕁𝕊 || ℝ𝕖𝕒𝕔𝕥 || ℝ𝕖𝕕𝕦𝕩 || 𝔼𝕩𝕡𝕣𝕖𝕤𝕤 || 𝔸𝕩𝕚𝕠𝕤 || ℝ𝔼𝕊𝕋 || 𝕊𝕖𝕢𝕦𝕖𝕝𝕚𝕫𝕖 || 𝕋𝕪𝕡𝕖𝕆ℝ𝕄 || ℍ𝕋𝕄𝕃𝟝 || 𝕊𝔸𝕊𝕊 || 𝕄𝔸𝕋𝔼ℝ𝕀𝔸𝕃-𝕌𝕀
-
+    
     `,
     imageUrl:
       "https://avatars0.githubusercontent.com/u/66206483?s=400&u=c2a444fe4defb6454d8f0876bb6538ed653c2111&v=4",
@@ -43,15 +44,14 @@ export default function Home(props: Props) {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.paper} container spacing={3}>
+    <Grid className={classes.paper} container spacing={2}>
       <Grid
         item
         style={{
           backgroundImage:
-            "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+            "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
         }}
         xs={12}
-        sm={4}
       >
         {founder.map((f) => {
           return (
@@ -69,12 +69,12 @@ export default function Home(props: Props) {
           );
         })}
       </Grid>
-      <Grid item xs={12} sm={8}>
+      <Grid item xs={12} sm={9}>
         <Paper
           elevation={23}
           style={{
             borderRadius: 100,
-            minHeight: 570,
+            minHeight: 700,
             backgroundImage:
               "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
           }}
@@ -82,7 +82,26 @@ export default function Home(props: Props) {
           <QuestionCard />
         </Paper>
       </Grid>
-      <Grid item xs={12} sm={4}>
+
+      <Grid
+        item
+        style={{
+          marginTop: 50,
+          backgroundImage:
+            "url(https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg)",
+        }}
+        xs={12}
+        sm={3}
+      >
+        <Paper>
+          <h1 style={{ fontFamily: "Kaushan Script", borderRadius: "50%" }}>
+            Cool Places
+          </h1>
+        </Paper>
+        <SwipeableTextMobileStepper />
+        <Paper>
+          <h1 style={{ fontFamily: "Kaushan Script" }}>Scoreboard</h1>
+        </Paper>
         <Scoreboard />
       </Grid>
     </Grid>

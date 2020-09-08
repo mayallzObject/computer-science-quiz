@@ -45,21 +45,23 @@ const QuestionCard: React.FC<Props> = ({
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <ButtonGroup orientation="vertical">
-            {answers.map((answer) => (
-              <Button
-                key={answer}
-                color="primary"
-                variant="contained"
-                className={classes.button}
-                disabled={userAnswer ? true : false}
-                value={answer}
-                onClick={callback}
-              >
-                <p dangerouslySetInnerHTML={{ __html: answer }} />
-              </Button>
-            ))}
-          </ButtonGroup>
+          <Paper style={{ borderRadius: 150 }}>
+            <ButtonGroup orientation="vertical">
+              {answers.map((answer) => (
+                <Button
+                  key={answer}
+                  color="primary"
+                  variant="contained"
+                  className={classes.button}
+                  disabled={userAnswer ? true : false}
+                  value={answer}
+                  onClick={callback}
+                >
+                  <p dangerouslySetInnerHTML={{ __html: answer }} />
+                </Button>
+              ))}
+            </ButtonGroup>
+          </Paper>
         </Grid>
       </Grid>
     </Box>
