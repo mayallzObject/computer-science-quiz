@@ -40,6 +40,8 @@ const Scoreboard = () => {
                 style={{
                   fontFamily: "Kaushan Script",
                   backgroundColor: "#3c4f65",
+                  fontWeight: "bold",
+                  fontSize: 20,
                 }}
               >
                 Place
@@ -49,6 +51,8 @@ const Scoreboard = () => {
                 style={{
                   fontFamily: "Kaushan Script",
                   backgroundColor: "#3c4f65",
+                  fontWeight: "bold",
+                  fontSize: 20,
                 }}
               >
                 Points
@@ -58,6 +62,8 @@ const Scoreboard = () => {
                 style={{
                   fontFamily: "Kaushan Script",
                   backgroundColor: "#3c4f65",
+                  fontWeight: "bold",
+                  fontSize: 20,
                 }}
               >
                 Player

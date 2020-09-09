@@ -48,7 +48,7 @@ const darkTheme = createMuiTheme({
 const App = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectAppLoading);
-  const [darkMode, set_darkMode] = useState(true);
+  const [darkMode, set_darkMode] = useState(false);
 
   useEffect(() => {
     dispatch(loadUser());
