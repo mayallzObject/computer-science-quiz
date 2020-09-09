@@ -13,7 +13,7 @@
 - [Setup](#Setup)
 - [Technologies](#Technologies)
 - [Screen Shots](#Screen-Shots)
-- [DB-diagram](#DB-diagram)
+- [DB Model](#DB-model)
 
 
 [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
