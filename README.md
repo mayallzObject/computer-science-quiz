@@ -1,6 +1,9 @@
 # Cool Trivia
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
+![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
+
+
 
 [Development Application](https://cool-trivia-quiz.netlify.app)
 
@@ -15,6 +18,7 @@
 [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
 [DB-Model](https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5)
 [Server repository](https://github.com/mayallzObject/cool-trivia-back)
+
 
 
 
