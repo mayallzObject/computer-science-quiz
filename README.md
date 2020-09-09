@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
 
-[App](https://cool-trivia-quiz.netlify.app)
+[Development Application](https://cool-trivia-quiz.netlify.app)
 
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
