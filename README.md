@@ -6,7 +6,7 @@
 
 ##  Table of Content
 ##### I. Screen Shots
-##### II. Introduction
+## II. Introduction
 ##### III. Goals of this project
 ##### IV. Setup
 ##### V. Techologies
