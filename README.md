@@ -11,21 +11,22 @@
 6. Technologies 
 7. [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
-### Screen shots
+### App Screen shots
 ![captured (2)](https://user-images.githubusercontent.com/66206483/92603911-252b9300-f2b0-11ea-9e0d-0a34ab7ddc74.png)
 ![captured](https://user-images.githubusercontent.com/66206483/92603889-1f35b200-f2b0-11ea-9781-6e4117c6f14e.png)
 
 
 
-### Introduction
+### 2. Introduction
 Hi, my name is Ivaylo, and this is my 1sr portfolio project.
-The Cool Trivia web application is in MVP status, with the plan of adding more functionality and styling. 
+The Cool Trivia web application is in MVP status, with the plan of adding more functionality and styling.
 
 
-### Goals of this project
+### 3. Goals of this project
 The main goal of this project is to gain experience developing a full-stack app and learn new Technologies. 
 My idea was to have one day of research in TypeScript and Material-UI then adjust on the fly.
-The front end was made with React, Redux and Material-UI.
+The front end was made with React, Redux and Material-UI.The app is fully responsive
+New scoring system and category picker, will be added in the new feature
 
 #### Objectives 
    - Practical applications of learned skills.
@@ -34,12 +35,12 @@ The front end was made with React, Redux and Material-UI.
    - Practice with version control - branching and pull requests.
   
   
- #### Objectives that I did good. 
+#### Objectives that I did good. 
    1. Succeslly implemetned part of the required skills.
    2. A functional TypeScript app with Material-UI styling.
    
    
- #### Objectives that I could do better 
+#### Objectives that I could do better 
    1. The git hub commits and pull requests went pretty bad.
    There is a lot to improve ,but thankfully during my team-project I had the opportunity to make do it better.
    
@@ -100,6 +101,6 @@ server runs on port 4000 by default.
                     alt="mui"
                   />
       
-![simplescreenrecorder-2020-09-09_14 51 38](https://user-images.githubusercontent.com/66206483/92601448-1abbca00-f2ad-11ea-915c-919072b82941.gif)
+
 
 
