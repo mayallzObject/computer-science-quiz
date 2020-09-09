@@ -4,7 +4,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {},
+  menuButton: {
+    marginLeft: 10,
+  },
   title: {
     flexGrow: 1,
   },

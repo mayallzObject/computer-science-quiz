@@ -19,8 +19,8 @@ export const useStyles = makeStyles({
     fontFamily: "Kaushan Script",
   },
   content: {
-    fontSize: 35,
-    padding: 20,
+    fontSize: 28,
+    padding: 15,
 
     fontFamily: "Kaushan Script",
   },

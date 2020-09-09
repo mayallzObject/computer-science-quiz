@@ -33,7 +33,7 @@ const NavBar = (props: Props) => {
           color="inherit"
           aria-label="menu"
         >
-          <WbSunnySharpIcon fontSize="small" />
+          <WbSunnySharpIcon fontSize="large" />
         </IconButton>
       );
     } else {
@@ -45,7 +45,7 @@ const NavBar = (props: Props) => {
           color="inherit"
           aria-label="menu"
         >
-          <Brightness2SharpIcon fontSize="small" />
+          <Brightness2SharpIcon fontSize="large" />
         </IconButton>
       );
     }
