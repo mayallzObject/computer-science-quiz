@@ -60,10 +60,9 @@ const useStyles = makeStyles((theme) => ({
     padding: 20,
     height: 70,
     paddingLeft: theme.spacing(4),
-    backgroundColor: "#33313b",
   },
   img: {
-    height: 225,
+    height: 250,
     display: "block",
     maxWidth: 400,
     overflow: "hidden",

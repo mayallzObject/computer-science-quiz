@@ -116,7 +116,7 @@ export default function Banner(props: any) {
               fontFamily: "Kaushan Script",
               fontSize: 50,
               fontWeight: "bold",
-              color: "sandybrown",
+              color: "#ffffff",
               backgroundColor: "#3c4f65",
               padding: 20,
             }}
@@ -297,7 +297,7 @@ export default function Banner(props: any) {
             key={state.Transition.name}
           />
         </Typography>
-        <Box mt={10}>
+        <Box mt={3}>
           <Paper elevation={23}>
             <UserManual />
           </Paper>

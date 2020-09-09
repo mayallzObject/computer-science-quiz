@@ -34,8 +34,7 @@ export const useStyles = makeStyles({
     fontWeight: "bold",
     fontFamily: "Kaushan Script",
     "&:hover": {
-      color: "#33313b",
-      backgroundColor: "#ffc045",
+      color: "gold",
     },
   },
   startButton: {
