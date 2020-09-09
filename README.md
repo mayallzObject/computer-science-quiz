@@ -5,25 +5,15 @@
 [App](https://cool-trivia-quiz.netlify.app)
 
 - [Introduction](#Introduction)
+- [Goals of this project](#Goals-of-this-project)
 - [Setup](#Setup)
-- [Goals of this project](#Goals of this project)
 - [Technologies](#Technologies)
-- [Screen Shots](#Screen Shots)
+- [Screen Shots](#Screen-Shots)
 
 
 [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
 [DB-Model](https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5)
 [Server repository](https://github.com/mayallzObject/cool-trivia-back)
-
-## **Screen Shots**
-![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
-![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
-![Webp net-resizeimage](https://user-images.githubusercontent.com/66206483/92654815-aefb5080-f2f0-11ea-9894-b1fda98b2c9f.png)
-![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/66206483/92654481-2977a080-f2f0-11ea-8a83-3d67f5c97b0e.jpg)
-![Webp net-resizeimage (14)](https://user-images.githubusercontent.com/66206483/92657434-1b784e80-f2f5-11ea-8065-8182d7224626.png)
-![Webp net-resizeimage (17)](https://user-images.githubusercontent.com/66206483/92657602-685c2500-f2f5-11ea-95f3-b48faa2903cc.png)
-
-
 
 
 
@@ -117,7 +107,14 @@ server runs on port 4000 by default.
                     src="https://img.icons8.com/color/96/000000/material-ui.png"
                     alt="mui"
                   />
-      
+ ## **Screen Shots**
+![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
+![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
+![Webp net-resizeimage](https://user-images.githubusercontent.com/66206483/92654815-aefb5080-f2f0-11ea-9894-b1fda98b2c9f.png)
+![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/66206483/92654481-2977a080-f2f0-11ea-8a83-3d67f5c97b0e.jpg)
+![Webp net-resizeimage (14)](https://user-images.githubusercontent.com/66206483/92657434-1b784e80-f2f5-11ea-8065-8182d7224626.png)
+![Webp net-resizeimage (17)](https://user-images.githubusercontent.com/66206483/92657602-685c2500-f2f5-11ea-95f3-b48faa2903cc.png)
+
 
 
 
