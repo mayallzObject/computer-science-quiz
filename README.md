@@ -14,8 +14,8 @@
 ## App Screen shots
 ![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
 ![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
-![Screenshot from 2020-09-09 16-57-06](https://user-images.githubusercontent.com/66206483/92615623-99b8fe80-f2bd-11ea-8623-8fa777290cb7.png)
-![Screenshot from 2020-09-09 16-56-39](https://user-images.githubusercontent.com/66206483/92615633-9b82c200-f2bd-11ea-96a8-544db3f98680.png)
+![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/66206483/92654481-2977a080-f2f0-11ea-8a83-3d67f5c97b0e.jpg)
+![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/66206483/92654481-2977a080-f2f0-11ea-8a83-3d67f5c97b0e.jpg)
 ![Webp net-resizeimage](https://user-images.githubusercontent.com/66206483/92654276-e9b0b900-f2ef-11ea-8ed4-0b203e1968f3.jpg)
 
 
