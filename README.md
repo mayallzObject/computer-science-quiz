@@ -116,7 +116,9 @@ server runs on port 4000 by default.
                   
 ## **DB model**                  
 ![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
-                
+![Screenshot from 2020-09-10 01-07-45](https://user-images.githubusercontent.com/66206483/92663729-57fe7700-f302-11ea-8ce1-45513aa541af.png)
+
+              
                   
  ## **Screen Shots**
 ![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
