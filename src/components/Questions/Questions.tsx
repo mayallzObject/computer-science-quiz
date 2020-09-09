@@ -89,7 +89,7 @@ const Questions: React.FC = () => {
 
   return (
     <>
-      <Typography className={classes.button} component="div">
+      <Typography component="div">
         {!gameOver ? (
           <div
             style={{

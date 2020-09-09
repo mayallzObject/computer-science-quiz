@@ -19,7 +19,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import SentimentSatisfiedOutlinedIcon from "@material-ui/icons/SentimentSatisfiedOutlined";
+import FaceIcon from "@material-ui/icons/Face";
 import UserManual from "../UserManual";
 
 const useStyles = makeStyles((theme) =>
@@ -116,53 +116,58 @@ export default function Banner(props: any) {
               fontFamily: "Kaushan Script",
               fontSize: 45,
               fontWeight: "bold",
+              color: "sandybrown",
+              backgroundColor: "#3c4f65",
             }}
           >
             Cool Trivia
           </h1>
-        </Paper>
 
-        <Tooltip
-          color="primary"
-          TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
-          title={
-            <h1 style={{ fontFamily: "Kaushan Script" }}>Project Repository</h1>
-          }
-        >
-          <Link
-            href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
-            target="_blank"
+          <h3 style={{ fontFamily: "Kaushan Script" }}>Portfolio Project</h3>
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={
+              <h1 style={{ fontFamily: "Kaushan Script" }}>
+                Project Repository
+              </h1>
+            }
+          >
+            <Link
+              href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+              target="_blank"
+            >
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                aria-label="settings"
+              >
+                <GitHubIcon />
+              </Button>
+            </Link>
+          </Tooltip>
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={
+              <h1 style={{ fontFamily: "Kaushan Script" }}>
+                Project Technologies
+              </h1>
+            }
           >
             <Button
               className={classes.button}
-              variant="contained"
               color="primary"
-              aria-label="settings"
+              variant="contained"
+              onClick={handleClickTwo(TransitionLeft)}
             >
-              <GitHubIcon />
+              <InfoOutlinedIcon />
             </Button>
-          </Link>
-        </Tooltip>
-        <Tooltip
-          color="primary"
-          TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
-          title={
-            <h1 style={{ fontFamily: "Kaushan Script" }}>
-              Project Technologies
-            </h1>
-          }
-        >
-          <Button
-            className={classes.button}
-            color="primary"
-            variant="contained"
-            onClick={handleClickTwo(TransitionLeft)}
-          >
-            <InfoOutlinedIcon />
-          </Button>
-        </Tooltip>
+          </Tooltip>
+        </Paper>
         <Snackbar
           style={{ fontSize: 10 }}
           open={open}
@@ -171,12 +176,16 @@ export default function Banner(props: any) {
           message={
             <Box>
               <img
-                src="https://img.icons8.com/color/96/000000/javascript.png"
-                alt="JS"
+                src="https://img.icons8.com/color/96/000000/typescript.png"
+                alt="typescript"
               />
               <img
-                src="https://img.icons8.com/color/96/000000/typescript.png"
-                alt="react"
+                src="https://img.icons8.com/color/96/000000/nodejs.png"
+                alt="nodejs"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/javascript.png"
+                alt="JS"
               />
               <img
                 src="https://img.icons8.com/nolan/96/react-native.png"
@@ -189,6 +198,14 @@ export default function Banner(props: any) {
               <img
                 src="https://img.icons8.com/color/96/000000/material-ui.png"
                 alt="mui"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/api-settings.png"
+                alt="rest"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/postgreesql.png"
+                alt="postgreesql"
               />
             </Box>
           }
@@ -269,7 +286,7 @@ export default function Banner(props: any) {
                 color="primary"
                 onClick={handleClick(SlideTransition)}
               >
-                <SentimentSatisfiedOutlinedIcon fontSize="small" />
+                <FaceIcon fontSize="small" />
               </Button>
             </Tooltip>
           </Paper>
