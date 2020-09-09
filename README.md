@@ -11,8 +11,9 @@
 6. Technologies 
 7. [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
-![captured](https://user-images.githubusercontent.com/66206483/92603889-1f35b200-f2b0-11ea-9781-6e4117c6f14e.png)
+### Screen shots
 ![captured (2)](https://user-images.githubusercontent.com/66206483/92603911-252b9300-f2b0-11ea-9e0d-0a34ab7ddc74.png)
+![captured](https://user-images.githubusercontent.com/66206483/92603889-1f35b200-f2b0-11ea-9781-6e4117c6f14e.png)
 
 
 
