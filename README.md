@@ -14,6 +14,7 @@
 - [Technologies](#Technologies)
 - [Screen Shots](#Screen-Shots)
 - [DB Model](#DB-model)
+- [Wire Frame](#Wire-frame)
 
 
 [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
@@ -116,9 +117,10 @@ server runs on port 4000 by default.
                   
 ## **DB model**                  
 ![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
-![Screenshot from 2020-09-10 01-07-45](https://user-images.githubusercontent.com/66206483/92663729-57fe7700-f302-11ea-8ce1-45513aa541af.png)
 
-              
+## **Wire frame** 
+![Screenshot from 2020-09-10 01-17-50](https://user-images.githubusercontent.com/66206483/92664147-816bd280-f303-11ea-82bb-0b90c98ebaa3.png)
+             
                   
  ## **Screen Shots**
 ![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
