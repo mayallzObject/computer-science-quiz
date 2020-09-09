@@ -33,19 +33,19 @@ The front end was made with React, Redux and Material-UI.
 The app is fully responsive but styling is not final. 
 New scoring system and category picker, will be added in the new feature
 
-#### Objectives 
+### Objectives 
    - Practical applications of learned skills: react, redux, REST, 
    - Implementation of new technologies.
    - Creating user stories, database models and wireframes.
    - Practice with version control - branching and pull requests.
   
   
-### Objectives that I did good. 
+###### Objectives that I did good. 
    1. Succeslly implemetned part of the required skills.
    2. A functional TypeScript app with Material-UI styling.
    
    
-### Objectives that I could do better 
+###### Objectives that I could do better 
    1. The git hub commits and pull requests went pretty bad.
    There is a lot to improve ,but thankfully during my team-project I had the opportunity to make do it better.
 
