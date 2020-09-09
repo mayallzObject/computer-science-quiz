@@ -4,6 +4,7 @@
 
 [Development Application](https://cool-trivia-quiz.netlify.app)
 
+## **Table of content**
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
 - [Setup](#Setup)
