@@ -1,7 +1,7 @@
 # Cool Trivia
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
-![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
+
 
 
 
@@ -13,6 +13,7 @@
 - [Setup](#Setup)
 - [Technologies](#Technologies)
 - [Screen Shots](#Screen-Shots)
+- [DB-diagram](#DB-diagram)
 
 
 [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
@@ -112,6 +113,11 @@ server runs on port 4000 by default.
                     src="https://img.icons8.com/color/96/000000/material-ui.png"
                     alt="mui"
                   />
+                  
+## **DB model**                  
+![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
+                
+                  
  ## **Screen Shots**
 ![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
 ![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
