@@ -19,18 +19,25 @@ export const useStyles = makeStyles({
     fontFamily: "Kaushan Script",
   },
   content: {
-    fontSize: 30,
+    fontSize: 35,
     padding: 20,
-    fontWeight: "bold",
+
     fontFamily: "Kaushan Script",
   },
   button: {
-    borderRadius: 260,
-    fontSize: 13,
-    minWidth: 120,
-    margin: 3,
+    borderRadius: 20,
+    padding: 5,
+    fontSize: 14,
+    minWidth: 140,
+    margin: 1,
+    color: "#ffc045",
+    backgroundColor: "#33313b",
     fontWeight: "bold",
     fontFamily: "Kaushan Script",
+    "&:hover": {
+      color: "#33313b",
+      backgroundColor: "#ffc045",
+    },
   },
   startButton: {
     borderRadius: 120,

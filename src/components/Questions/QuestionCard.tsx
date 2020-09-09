@@ -29,39 +29,35 @@ const QuestionCard: React.FC<Props> = ({
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Paper elevation={23} style={{ borderRadius: 150 }}>
-            <Typography variant="body2" color="textPrimary" component="div">
-              <div style={{ fontFamily: "Kaushan Script", fontWeight: "bold" }}>
-                Question: {questionNr} / {totalQuestions}
-              </div>
-            </Typography>
             <Typography
               className={classes.title}
               variant="body2"
               color="textSecondary"
               component="div"
             >
+              <div style={{ fontFamily: "Kaushan Script", fontWeight: "bold" }}>
+                Question: {questionNr} / {totalQuestions}
+              </div>
               <div className={classes.content}>{renderHTML(question)}</div>
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
-          <Paper style={{ borderRadius: 150 }}>
-            <ButtonGroup orientation="vertical">
-              {answers.map((answer) => (
-                <Button
-                  key={answer}
-                  color="primary"
-                  variant="contained"
-                  className={classes.button}
-                  disabled={userAnswer ? true : false}
-                  value={answer}
-                  onClick={callback}
-                >
-                  <p dangerouslySetInnerHTML={{ __html: answer }} />
-                </Button>
-              ))}
-            </ButtonGroup>
-          </Paper>
+        <Grid item xs={12} className={classes.content}>
+          <ButtonGroup orientation="vertical">
+            {answers.map((answer) => (
+              <Button
+                key={answer}
+                color="primary"
+                variant="contained"
+                className={classes.button}
+                disabled={userAnswer ? true : false}
+                value={answer}
+                onClick={callback}
+              >
+                <p dangerouslySetInnerHTML={{ __html: answer }} />
+              </Button>
+            ))}
+          </ButtonGroup>
         </Grid>
       </Grid>
     </Box>

@@ -26,7 +26,7 @@ const lightTheme = createMuiTheme({
     },
     primary: {
       main: "#3c4f65",
-      dark: "#978d58",
+      dark: "#834c69",
     },
     type: "light",
   },
@@ -56,7 +56,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Container disableGutters={true}>
+      <Container disableGutters={true} maxWidth="lg">
         <Paper>
           <CssBaseline />
           <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />

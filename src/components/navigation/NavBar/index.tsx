@@ -18,7 +18,6 @@ import { selectUser } from "../../../store/user/selectors";
 import WbSunnySharpIcon from "@material-ui/icons/WbSunnySharp";
 import { Button, Tooltip, Fade } from "@material-ui/core";
 import { useStyles } from "./styles";
-import PlayCircleOutlineRoundedIcon from "@material-ui/icons/PlayCircleOutlineRounded";
 
 const NavBar = (props: Props) => {
   const user = useSelector(selectUser);
@@ -65,7 +64,6 @@ const NavBar = (props: Props) => {
           title={<h1 style={{ fontFamily: "Kaushan Script" }}>Trivia Quiz</h1>}
         >
           <Button
-            startIcon={<PlayCircleOutlineRoundedIcon fontSize="small" />}
             className={classes.button}
             variant="contained"
             color="primary"
