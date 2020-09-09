@@ -12,13 +12,10 @@
 7. [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
 ### App Screen shots
-![captured (2)](https://user-images.githubusercontent.com/66206483/92603911-252b9300-f2b0-11ea-9e0d-0a34ab7ddc74.png)
-
-![captured](https://user-images.githubusercontent.com/66206483/92603889-1f35b200-f2b0-11ea-9781-6e4117c6f14e.png)
-
-![Screenshot from 2020-09-09 16-34-23](https://user-images.githubusercontent.com/66206483/92613337-26ae8880-f2bb-11ea-851d-d038f30e81c1.png)
-
-![Screenshot from 2020-09-09 16-34-47](https://user-images.githubusercontent.com/66206483/92613343-27dfb580-f2bb-11ea-935a-4193b6962dd9.png)
+![Screenshot from 2020-09-09 16-57-06](https://user-images.githubusercontent.com/66206483/92615623-99b8fe80-f2bd-11ea-8623-8fa777290cb7.png)
+![Screenshot from 2020-09-09 16-56-39](https://user-images.githubusercontent.com/66206483/92615633-9b82c200-f2bd-11ea-96a8-544db3f98680.png)
+![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
+![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
 
 ### 2. Introduction
 Hi, my name is Ivaylo, and this is my 1sr portfolio project.
