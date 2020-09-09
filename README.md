@@ -11,7 +11,7 @@
 6. Technologies 
 7. [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
-## App Screen shots
+## Screen Shots
 ![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
 ![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
 ![Webp net-resizeimage](https://user-images.githubusercontent.com/66206483/92654815-aefb5080-f2f0-11ea-9894-b1fda98b2c9f.png)
@@ -24,14 +24,19 @@
 
 
 ## 2. Introduction
-Hi, my name is Ivaylo, and this is my 1sr portfolio project.
+Hello! My name is Ivaylo, and this is my 1st portfolio project.
+I made this portfolio project because I like to learn in a fun way. Being part of the Philosophy club in University 
+I learned the value of questions.    
 The Cool Trivia web application is in MVP status, with the plan of adding more functionality and styling.
+It's a fairly simple application made with the emphasis on learning new technologies and applying the skils thatI required in the past 
+few months.
 
 
 ## 3. Goals of this project
 The main goal of this project is to gain experience developing a full-stack app and learn new Technologies. 
 My idea was to have one day of research in TypeScript and Material-UI then adjust on the fly.
-The front end was made with React, Redux and Material-UI.The app is fully responsive
+The front end was made with React, Redux and Material-UI.
+The app is fully responsive but styling is not final. 
 New scoring system and category picker, will be added in the new feature
 
 #### Objectives 
