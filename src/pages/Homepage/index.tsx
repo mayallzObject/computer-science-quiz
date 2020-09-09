@@ -96,12 +96,9 @@ export default function Home(props: Props) {
         sm={3}
       >
         <Paper>
-          <h1 style={{ fontFamily: "Kaushan Script", paddingTop: 10 }}>
-            Cool Places
-          </h1>
           <CoolPlaces />
         </Paper>
-        <Box mt={12}>
+        <Box mt={9}>
           <Scoreboard />
         </Box>
       </Grid>

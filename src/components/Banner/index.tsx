@@ -219,16 +219,17 @@ export default function Banner(props: any) {
         </Box>
       </Grid>
       <Grid item xs={12}>
-        <Box mt={5}>
+        <Box mt={2}>
           <Paper elevation={23}>
-            <h1
+            <h3
               style={{
                 fontFamily: "Kaushan Script",
+                paddingTop: 20,
               }}
             >
               {" "}
               Developer Info
-            </h1>
+            </h3>
             <Tooltip
               color="primary"
               TransitionComponent={Fade}

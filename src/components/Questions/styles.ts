@@ -30,8 +30,7 @@ export const useStyles = makeStyles({
     fontSize: 14,
     minWidth: 140,
     margin: 1,
-    color: "#ffc045",
-    backgroundColor: "#33313b",
+
     fontWeight: "bold",
     fontFamily: "Kaushan Script",
     "&:hover": {
