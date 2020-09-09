@@ -77,7 +77,7 @@ export default function Home(props: Props) {
           elevation={23}
           style={{
             borderRadius: 100,
-            minHeight: 700,
+            minHeight: 720,
             backgroundImage:
               "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
           }}
@@ -96,10 +96,12 @@ export default function Home(props: Props) {
         sm={3}
       >
         <Paper>
-          <h2 style={{ fontFamily: "Kaushan Script" }}>Cool Places</h2>
+          <h1 style={{ fontFamily: "Kaushan Script", paddingTop: 10 }}>
+            Cool Places
+          </h1>
           <CoolPlaces />
         </Paper>
-        <Box mt={20}>
+        <Box mt={12}>
           <Scoreboard />
         </Box>
       </Grid>

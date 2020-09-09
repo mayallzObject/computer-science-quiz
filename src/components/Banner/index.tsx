@@ -114,10 +114,11 @@ export default function Banner(props: any) {
           <h1
             style={{
               fontFamily: "Kaushan Script",
-              fontSize: 45,
+              fontSize: 50,
               fontWeight: "bold",
               color: "sandybrown",
               backgroundColor: "#3c4f65",
+              padding: 20,
             }}
           >
             Cool Trivia
@@ -144,7 +145,7 @@ export default function Banner(props: any) {
                 color="primary"
                 aria-label="settings"
               >
-                <GitHubIcon />
+                <GitHubIcon fontSize="small" />
               </Button>
             </Link>
           </Tooltip>
@@ -164,7 +165,7 @@ export default function Banner(props: any) {
               variant="contained"
               onClick={handleClickTwo(TransitionLeft)}
             >
-              <InfoOutlinedIcon />
+              <InfoOutlinedIcon fontSize="small" />
             </Button>
           </Tooltip>
         </Paper>
@@ -211,18 +212,23 @@ export default function Banner(props: any) {
           }
           key={transition ? transition.name : ""}
         />
-        <Box mt={10}>
-          <Paper>
-            <h1 style={{ fontFamily: "Kaushan Script" }}>User Maunal</h1>
-
+        <Box mt={5}>
+          <Paper elevation={23}>
             <UserManual />
           </Paper>
         </Box>
       </Grid>
       <Grid item xs={12}>
-        <Box mt={10}>
+        <Box mt={5}>
           <Paper elevation={23}>
-            <h1 style={{ fontFamily: "Kaushan Script" }}> Developer Info.</h1>
+            <h1
+              style={{
+                fontFamily: "Kaushan Script",
+              }}
+            >
+              {" "}
+              Developer Info
+            </h1>
             <Tooltip
               color="primary"
               TransitionComponent={Fade}
