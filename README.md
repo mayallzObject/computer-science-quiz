@@ -112,7 +112,6 @@ server runs on port 4000 by default.
 ![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
 ![Webp net-resizeimage](https://user-images.githubusercontent.com/66206483/92654815-aefb5080-f2f0-11ea-9894-b1fda98b2c9f.png)
 ![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/66206483/92654481-2977a080-f2f0-11ea-8a83-3d67f5c97b0e.jpg)
-![Webp net-resizeimage (14)](https://user-images.githubusercontent.com/66206483/92657434-1b784e80-f2f5-11ea-8065-8182d7224626.png)
 ![Webp net-resizeimage (17)](https://user-images.githubusercontent.com/66206483/92657602-685c2500-f2f5-11ea-95f3-b48faa2903cc.png)
 
 
