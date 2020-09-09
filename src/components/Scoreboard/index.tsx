@@ -37,19 +37,28 @@ const Scoreboard = () => {
             <TableRow>
               <StyledTableCell
                 align="left"
-                style={{ fontFamily: "Kaushan Script" }}
+                style={{
+                  fontFamily: "Kaushan Script",
+                  backgroundColor: "#3c4f65",
+                }}
               >
                 Place
               </StyledTableCell>
               <StyledTableCell
                 align="left"
-                style={{ fontFamily: "Kaushan Script" }}
+                style={{
+                  fontFamily: "Kaushan Script",
+                  backgroundColor: "#3c4f65",
+                }}
               >
                 Points
               </StyledTableCell>
               <StyledTableCell
                 align="left"
-                style={{ fontFamily: "Kaushan Script" }}
+                style={{
+                  fontFamily: "Kaushan Script",
+                  backgroundColor: "#3c4f65",
+                }}
               >
                 Player
               </StyledTableCell>

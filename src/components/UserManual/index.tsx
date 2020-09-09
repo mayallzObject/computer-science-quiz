@@ -11,12 +11,10 @@ export default function UserManual() {
         <CardContent>
           <h1 style={{ fontFamily: "Kaushan Script" }}>User Manual</h1>
           <Typography
-            color="textSecondary"
             gutterBottom
             component="ul"
             style={{
               fontFamily: "Kaushan Script",
-              fontWeight: "bold",
             }}
           >
             <ul>
