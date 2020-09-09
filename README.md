@@ -27,7 +27,7 @@
 
 
 
-## II. Introduction
+## **Introduction**
 Hello! My name is Ivaylo, and this is my 1st portfolio project.
 I made this portfolio project because I like to learn in a fun way. Being part of the Philosophy club in University 
 I learned the value of questions.    
