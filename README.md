@@ -5,17 +5,17 @@
 [App](https://cool-trivia-quiz.netlify.app)
 
 - [Introduction](#Introduction)
-- [Traveler's Diary](#Traveler's-Diary)
-- [Goals of this project](#Goals-of-this-project)
-- [Technologies used](#Technologies-used)
-- [Demo](#Demo)
-- [Server repository](#Server-repository)
+- [Setup](#Setup)
+- [Goals of this project](#Goals of this project)
+- [Technologies](#Technologies)
+- [Screen Shots](#Screen Shots)
+
 
 [Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
 [DB-Model](https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5)
 [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
-## I. Screen Shots
+## **Screen Shots**
 ![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
 ![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
 ![Webp net-resizeimage](https://user-images.githubusercontent.com/66206483/92654815-aefb5080-f2f0-11ea-9894-b1fda98b2c9f.png)
@@ -36,7 +36,7 @@ It's a fairly simple application made with the emphasis on learning new technolo
 few months.
 
 
-## III. Goals of this project
+##  **Goals of this project**
 The main goal of this project is to gain experience developing a full-stack app and learn new Technologies. 
 My idea was to have one day of research in TypeScript and Material-UI then adjust on the fly.
 The front end was made with React, Redux and Material-UI.
@@ -59,7 +59,7 @@ New scoring system and category picker, will be added in the new feature
    1. The git hub commits and pull requests went pretty bad.
    There is a lot to improve ,but thankfully during my team-project I had the opportunity to make do it better.
 
-## IV. Setup
+## **Setup**
 #### Server setup
 - clone the repository; 
 - cd into the project directory
@@ -77,7 +77,7 @@ server runs on port 4000 by default.
 - client runs on localhost:3000 by default;
    
 
-## V. Technologies
+## **Technologies**
 
 #### Back end -Express and SequelizeORM
   <img            
