@@ -13,9 +13,12 @@
 
 ### App Screen shots
 ![captured (2)](https://user-images.githubusercontent.com/66206483/92603911-252b9300-f2b0-11ea-9e0d-0a34ab7ddc74.png)
+
 ![captured](https://user-images.githubusercontent.com/66206483/92603889-1f35b200-f2b0-11ea-9781-6e4117c6f14e.png)
 
+![Screenshot from 2020-09-09 16-34-23](https://user-images.githubusercontent.com/66206483/92613337-26ae8880-f2bb-11ea-851d-d038f30e81c1.png)
 
+![Screenshot from 2020-09-09 16-34-47](https://user-images.githubusercontent.com/66206483/92613343-27dfb580-f2bb-11ea-935a-4193b6962dd9.png)
 
 ### 2. Introduction
 Hi, my name is Ivaylo, and this is my 1sr portfolio project.
