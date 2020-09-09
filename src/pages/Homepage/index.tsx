@@ -95,10 +95,10 @@ export default function Home(props: Props) {
         xs={12}
         sm={3}
       >
-        <Paper>
+        <Paper style={{ marginTop: 35 }}>
           <CoolPlaces />
         </Paper>
-        <Box mt={9}>
+        <Box mt={9} mb={5}>
           <Scoreboard />
         </Box>
       </Grid>

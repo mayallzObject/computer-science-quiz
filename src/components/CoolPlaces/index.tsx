@@ -1,4 +1,5 @@
 import React from "react";
+
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
@@ -56,13 +57,13 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     display: "flex",
-    alignItems: "center",
-    height: 50,
+    padding: 20,
+    height: 70,
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: "#33313b",
   },
   img: {
-    height: 255,
+    height: 225,
     display: "block",
     maxWidth: 400,
     overflow: "hidden",
