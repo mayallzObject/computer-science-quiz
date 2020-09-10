@@ -30,11 +30,9 @@ few months.
 
 
 ##  **Goals of this project**
-The main goal of this project is to gain experience developing a full-stack app and learn new Technologies. 
-My idea was to have one day of research in TypeScript and Material-UI then adjust on the fly.
-The front end was made with React, Redux and Material-UI.
+The main goal of this project is to gain experience in developing a full-stack app and learn new technologies. My idea is to have one day of research in TypeScript and Material-UI then adjust on the fly. The front end is made with React, Redux, and Material-UI. 
 The app is fully responsive but styling is not final. 
-New scoring system and category picker, will be added in the new feature
+New scoring system and category picker, will be added in the new upate.
 
 ### Objectives 
    - Practical applications of learned skills: react, redux, REST, 
