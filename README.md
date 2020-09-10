@@ -15,11 +15,7 @@
 - [Screen Shots](#Screen-Shots)
 - [DB Model](#DB-model)
 - [Wire Frame](#Wire-frame)
-
-
-[Wireframe](https://wireframepro.mockflow.com/view/Mf54e6c160a321098f6bbed9de032400e1596808348687#/page/M778b9c6af79f4de175dff7634d186db31596808348687) 
-[DB-Model](https://dbdiagram.io/d/5f324c62e1246d54aa2ce0a5)
-[Server repository](https://github.com/mayallzObject/cool-trivia-back)
+- [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 
 
 
