@@ -16,6 +16,7 @@
 - [DB Model](#DB-model)
 - [Wire Frame](#Wire-frame)
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
+- [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects)
 
 
 
