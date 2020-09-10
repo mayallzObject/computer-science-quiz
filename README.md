@@ -5,7 +5,7 @@
 
 
 
-[Development Application](https://cool-trivia-quiz.netlify.app)
+[Dev.Application](https://cool-trivia-quiz.netlify.app)
 
 ## **Table of content**
 - [Introduction](#Introduction)
