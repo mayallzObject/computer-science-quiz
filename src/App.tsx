@@ -3,48 +3,23 @@ import { Route, Switch } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components
-import MessageBox from "./components/MessageBox";
-import Loading from "./components/loading";
-import NavBar from "./components/navigation/NavBar";
-import AboutMe from "./pages/AboutMe";
 import Home from "./pages/Homepage";
+import AboutMe from "./pages/AboutMe";
+import NavBar from "./components/navigation/NavBar";
+import Loading from "./components/loading";
+import MessageBox from "./components/MessageBox";
 
 // Redux store
 import { selectAppLoading } from "./store/appState/selectors";
+import { loadUser } from "./store/user/actions";
 
 // Mui components
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { Container, CssBaseline } from "@material-ui/core";
-import { loadUser } from "./store/user/actions";
+import { ThemeProvider } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
+import { lightTheme, darkTheme } from "./Theme";
 
-const lightTheme = createMuiTheme({
-  palette: {
-    background: {
-      default: "#9c968b",
-      paper: "#978d58",
-    },
-    primary: {
-      main: "#3c4f65",
-      dark: "#040348",
-    },
-    type: "light",
-  },
-});
-
-const darkTheme = createMuiTheme({
-  palette: {
-    background: {
-      default: "#3c4f65",
-      paper: "#33313b",
-    },
-    primary: {
-      main: "#834c69",
-      dark: "#720058 ",
-    },
-    type: "dark",
-  },
-});
 const App = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectAppLoading);
