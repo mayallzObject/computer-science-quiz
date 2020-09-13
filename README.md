@@ -3,9 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
 
 ![Alt Text](https://media.giphy.com/media/WQZgqb80EPgIvWxgjH/giphy.gif)
-
-
-![Alt Text](https://media.giphy.com/media/fwW3Ei3OctV7DQeMyM/giphy.gif)
+![Alt Text](https://media.giphy.com/media/Q5QuM8Ar4rLYolgT7C/giphy.gif)
 
 [Dev.Application](https://cool-trivia-quiz.netlify.app)
 
