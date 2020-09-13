@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) =>
     },
     button: {
       margin: 4,
+      marginBottom: 20,
     },
   })
 );
@@ -288,12 +289,25 @@ export default function Banner(props: any) {
           </Tooltip>
         </Paper>
 
-        <Typography paragraph component="h3">
+        <Typography paragraph component="ul">
           <Snackbar
             open={state.open}
             onClose={handleClose}
             TransitionComponent={state.Transition}
-            message={<h2>{props.description}</h2>}
+            message={
+              <ul
+                style={{
+                  fontFamily: "Kaushan Script",
+                  textDecoration: "none",
+                  alignItems: "center",
+                }}
+              >
+                <h2>{`${props.description}`}</h2>
+                <h2>{`${props.aboutMe}`}</h2>
+                <h2>{`Location: ${props.location}`}</h2>
+                <h2>{`Email: ${props.email}`}</h2>
+              </ul>
+            }
             key={state.Transition.name}
           />
         </Typography>

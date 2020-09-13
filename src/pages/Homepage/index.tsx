@@ -21,22 +21,15 @@ type Props = {
 const founder = [
   {
     name: "Developer",
-    description: ` ℍ𝕚, 𝕥𝕙𝕖𝕣𝕖.✌ 
-    
-    𝕄𝕪 𝕟𝕒𝕞𝕖 𝕚𝕤 𝕀𝕧𝕒𝕪𝕝𝕠 𝕐𝕒𝕟𝕜𝕠𝕧. 🌞 𝕀 𝕒𝕞 𝕒 𝕁𝕣. 𝔽𝕦𝕝𝕝 𝕊𝕥𝕒𝕔𝕜 𝕎𝕖𝕓 𝔻𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕣.
-    𝕀 𝕒𝕞 𝕖𝕒𝕘𝕖𝕣 𝕥𝕠 𝕝𝕖𝕒𝕣𝕟 𝕒𝕟𝕕 𝕕𝕖𝕧𝕖𝕝𝕠𝕡 𝕞𝕪 𝕔𝕠𝕕𝕚𝕟𝕘 𝕤𝕜𝕚𝕝𝕝𝕤, 𝕨𝕠𝕣𝕜 𝕙𝕒𝕣𝕕 𝕓𝕦𝕥 𝕒𝕝𝕤𝕠 𝕖𝕟𝕛𝕠𝕪 𝕥𝕙𝕖 𝕛𝕠𝕦𝕣𝕟𝕖𝕪.🔥
-    
-    𝕄𝕪 𝕡𝕒𝕤𝕤𝕚𝕠𝕟𝕤 𝕒𝕣𝕖 𝕡𝕣𝕠𝕓𝕝𝕖𝕞-𝕤𝕠𝕝𝕧𝕚𝕟𝕘, 𝕔𝕠𝕕𝕚𝕟𝕘, 𝕒𝕟𝕕 𝕖𝕩𝕥𝕣𝕖𝕞𝕖 𝕤𝕡𝕠𝕣𝕥𝕤.💙
-    🌞🅲🅾🆁🅴 🆂🅺🅸🅻🅻🆂🌞
-    𝕁𝕒𝕧𝕒𝕊𝕔𝕣𝕚𝕡𝕥 || 𝕋𝕪𝕡𝕖𝕊𝕔𝕣𝕚𝕡𝕥 || ℕ𝕠𝕕𝕖𝕁𝕊 || ℝ𝕖𝕒𝕔𝕥 || ℝ𝕖𝕕𝕦𝕩 || 𝔼𝕩𝕡𝕣𝕖𝕤𝕤 || 𝔸𝕩𝕚𝕠𝕤 || ℝ𝔼𝕊𝕋 || 𝕊𝕖𝕢𝕦𝕖𝕝𝕚𝕫𝕖 || 𝕋𝕪𝕡𝕖𝕆ℝ𝕄 || ℍ𝕋𝕄𝕃𝟝 || 𝕊𝔸𝕊𝕊 || 𝕄𝔸𝕋𝔼ℝ𝕀𝔸𝕃-𝕌𝕀
-    
-    `,
+    description: ` Welcome to, Cool Triva.✌ I made this is application as a first portfolio project. 
+    My goal is to learn new technologies and desing a cool looking site.`,
     imageUrl:
       "https://avatars0.githubusercontent.com/u/66206483?s=400&u=c2a444fe4defb6454d8f0876bb6538ed653c2111&v=4",
     gitUrl: "https://github.com/mayallzObject",
-    email: "goranbre@abv.bg",
-    location: "the Netherlands",
-    aboutMe: "Float like a butterfly, sting like a bee.",
+    email: "mayallzobject@gmail.com",
+    location: "Venlo, the Netherlands",
+    aboutMe:
+      "My name is Ivaylo Yankov. I am passionate about coding, crazy about people, and inlove with problem solving",
     linkedUrl: "https://www.linkedin.com/in/ivo-yankov/",
   },
 ];
@@ -77,7 +70,7 @@ export default function Home(props: Props) {
           elevation={23}
           style={{
             borderRadius: 100,
-            minHeight: 720,
+            minHeight: 750,
             backgroundImage:
               "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
           }}

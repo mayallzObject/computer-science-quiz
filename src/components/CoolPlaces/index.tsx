@@ -56,13 +56,16 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   header: {
+    fontWeight: "bold",
+    fontSize: 15,
     display: "flex",
-    padding: 20,
-    height: 70,
+    alignItems: "center",
+    height: 50,
     paddingLeft: theme.spacing(4),
+    backgroundColor: theme.palette.background.paper,
   },
   img: {
-    height: 250,
+    height: 220,
     display: "block",
     maxWidth: 400,
     overflow: "hidden",
@@ -94,6 +97,20 @@ function CoolPlaces() {
 
   return (
     <div className={classes.root}>
+      <Paper
+        square
+        elevation={23}
+        style={{
+          fontFamily: "Kaushan Script",
+          fontSize: 25,
+          fontWeight: "bold",
+          color: "#ffffff",
+          backgroundColor: "#3c4f65",
+          padding: 10,
+        }}
+      >
+        CoolPlaces
+      </Paper>
       <Paper square elevation={23} className={classes.header}>
         <Typography
           style={{ fontFamily: "Kaushan Script", alignContent: "center" }}
@@ -119,6 +136,7 @@ function CoolPlaces() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+
       <MobileStepper
         steps={maxSteps}
         position="static"

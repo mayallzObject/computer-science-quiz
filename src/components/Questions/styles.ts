@@ -20,12 +20,12 @@ export const useStyles = makeStyles({
   },
   content: {
     fontSize: 28,
-    padding: 15,
+    padding: 20,
 
     fontFamily: "Kaushan Script",
   },
   button: {
-    borderRadius: 20,
+    borderRadius: 10,
     padding: 5,
     fontSize: 14,
     minWidth: 140,
@@ -37,16 +37,18 @@ export const useStyles = makeStyles({
       color: "gold",
     },
   },
-  startButton: {
-    borderRadius: 120,
-    fontSize: 100,
-    minWidth: 240,
-    margin: 20,
-    padding: 40,
-    color: "#978d58",
-    backgroundColor: "#3c4f65",
+  secondaryButton: {
+    borderRadius: 10,
+    padding: 5,
+    fontSize: 14,
+    minWidth: 140,
+    margin: 1,
+
     fontWeight: "bold",
-    fontFamily: "Kaushan Script",
+    fontFamily: "Arial",
+    "&:hover": {
+      color: "gold",
+    },
   },
 });
 
