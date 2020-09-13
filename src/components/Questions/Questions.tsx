@@ -17,7 +17,6 @@ import { Button, Box, Typography } from "@material-ui/core";
 import { OnClick } from "../../types/eventType";
 
 //MUI components
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import { useStyles } from "./styles";
 import SkipNextRoundedIcon from "@material-ui/icons/SkipNextRounded";
 
@@ -116,6 +115,16 @@ const Questions: React.FC = () => {
       )}
 
       <Box className="primary" m={4} pb={5}>
+        {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.secondaryButton}
+            onClick={submitScore}
+          >
+            Submit Score
+          </Button>
+        ) : null}
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <Button
             variant="contained"
@@ -126,22 +135,11 @@ const Questions: React.FC = () => {
             Play
           </Button>
         ) : null}
-        {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-          <Button
-            variant="contained"
-            color="primary"
-            className={classes.button}
-            startIcon={<CloudUploadIcon />}
-            onClick={submitScore}
-          >
-            Submit Score
-          </Button>
-        ) : null}
         {!gameOver &&
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (
           <Button
-            className={classes.button}
+            className={classes.secondaryButton}
             startIcon={<SkipNextRoundedIcon />}
             variant="contained"
             color="primary"
