@@ -3,9 +3,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
 
 ![Alt Text](https://media.giphy.com/media/WQZgqb80EPgIvWxgjH/giphy.gif)
+
+
 ![Alt Text](https://media.giphy.com/media/LOVbPrrSorMhpYuli9/giphy.gif)
-![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
-![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
+
 
 
 [Deploed version](https://cool-trivia-quiz.netlify.app)
