@@ -2,26 +2,22 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
- 
-![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
-![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
 ![Alt Text](https://media.giphy.com/media/QZPoY4fCMCWVLSU85i/giphy.gif)
 ![Alt Text](https://media.giphy.com/media/ZBh4ViUUBMKuYcAIwX/giphy.gif)
 
-
-
-[Deploed version](https://cool-trivia-quiz.netlify.app)
+[Production](https://cool-trivia-quiz.netlify.app)
 
 ## **Table of content**
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
 - [Setup](#Setup)
 - [Technologies](#Technologies)
-
 - [DB Model](#DB-model)
 - [Wire Frame](#Wire-frame)
+- [Screen Shots](#Screen-shots)
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
+
 
 
 
