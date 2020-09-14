@@ -13,7 +13,7 @@ import { fetchQuestions } from "../../store/questions/actions";
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types";
-import { Button, Box, Typography } from "@material-ui/core";
+import { Button, Box, Typography, Paper } from "@material-ui/core";
 import { OnClick } from "../../types/eventType";
 
 //MUI components
@@ -94,8 +94,9 @@ const Questions: React.FC = () => {
             style={{
               fontWeight: "bold",
               fontFamily: "Kaushan Script",
-              fontSize: 30,
-              color: "sandybrown",
+              fontSize: 20,
+              color: "#ffffff",
+              alignItems: "center",
             }}
           >
             {" "}
@@ -103,6 +104,7 @@ const Questions: React.FC = () => {
           </div>
         ) : null}
       </Typography>
+
       {!gameOver && (
         <QuestionCard
           questionNr={number + 1}
@@ -114,41 +116,38 @@ const Questions: React.FC = () => {
         />
       )}
 
-      <Box className="primary" m={4} pb={5}>
-        {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-          <Button
-            variant="contained"
-            color="primary"
-            className={classes.secondaryButton}
-            onClick={submitScore}
-          >
-            Submit Score
-          </Button>
-        ) : null}
-        {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-          <Button
-            variant="contained"
-            className={classes.button}
-            color="primary"
-            onClick={startTrivia}
-          >
-            Play
-          </Button>
-        ) : null}
-        {!gameOver &&
-        userAnswers.length === number + 1 &&
-        number !== TOTAL_QUESTIONS - 1 ? (
-          <Button
-            className={classes.secondaryButton}
-            startIcon={<SkipNextRoundedIcon />}
-            variant="contained"
-            color="primary"
-            onClick={nextQuestion}
-          >
-            Next Question
-          </Button>
-        ) : null}
-      </Box>
+      {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
+        <Button
+          variant="contained"
+          color="primary"
+          className={classes.submitButton}
+          onClick={submitScore}
+        >
+          Submit Score
+        </Button>
+      ) : null}
+      {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+        <Button
+          variant="contained"
+          className={classes.actionButton}
+          color="primary"
+          onClick={startTrivia}
+        >
+          New Game
+        </Button>
+      ) : null}
+      {!gameOver &&
+      userAnswers.length === number + 1 &&
+      number !== TOTAL_QUESTIONS - 1 ? (
+        <Button
+          className={classes.actionButton}
+          variant="contained"
+          color="primary"
+          onClick={nextQuestion}
+        >
+          Next Question
+        </Button>
+      ) : null}
     </>
   );
 };
