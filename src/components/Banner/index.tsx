@@ -117,8 +117,7 @@ export default function Banner(props: any) {
               fontFamily: "Kaushan Script",
               fontSize: 50,
               fontWeight: "bold",
-              color: "#ffffff",
-              backgroundColor: "#3c4f65",
+
               padding: 20,
             }}
           >

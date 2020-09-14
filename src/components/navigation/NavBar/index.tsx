@@ -33,7 +33,7 @@ const NavBar = (props: Props) => {
           color="inherit"
           aria-label="menu"
         >
-          <WbSunnySharpIcon fontSize="large" />
+          <WbSunnySharpIcon fontSize="small" />
         </IconButton>
       );
     } else {
@@ -45,7 +45,7 @@ const NavBar = (props: Props) => {
           color="inherit"
           aria-label="menu"
         >
-          <Brightness2SharpIcon fontSize="large" />
+          <Brightness2SharpIcon fontSize="small" />
         </IconButton>
       );
     }
@@ -73,7 +73,6 @@ const NavBar = (props: Props) => {
             Play
           </Button>
         </Tooltip>
-
         <Box>{darkModeButton()}</Box>
       </Toolbar>
     </AppBar>
