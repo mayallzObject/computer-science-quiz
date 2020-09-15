@@ -5,7 +5,7 @@
 ![Alt Text](https://media.giphy.com/media/JT7Asx46RyIPxRFpHL/giphy.gif)
 ![Alt Text](https://media.giphy.com/media/YRnxlmNRPSA1FDD7t9/giphy.gif)
 
-[Production](https://cool-trivia-quiz.netlify.app)
+[Production](https://cool-trivia-quizer.netlify.app/)
 
 ## **Table of content**
 - [Introduction](#Introduction)
