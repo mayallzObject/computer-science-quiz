@@ -17,7 +17,7 @@ import { loadUser } from "./store/user/actions";
 import { ThemeProvider } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
-
+import Paper from "@material-ui/core/Paper";
 import { lightTheme, darkTheme } from "./Theme";
 
 const App = () => {
@@ -32,10 +32,11 @@ const App = () => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Container disableGutters={true} maxWidth="lg">
-        <CssBaseline />
-        <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
-        <MessageBox />
-
+        <Paper>
+          <CssBaseline />
+          <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
+          <MessageBox />
+        </Paper>
         {isLoading ? <Loading /> : null}
         <Switch>
           <Route path="/about-me" component={AboutMe} />
