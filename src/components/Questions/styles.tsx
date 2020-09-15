@@ -12,29 +12,29 @@ export const useStyles = makeStyles({
     square: "false",
   },
   title: {
-    fontSize: 21,
-    fontWeight: "bold",
+    fontSize: 23,
+
     alignItems: "center",
     fontFamily: "Kaushan Script",
     color: "silver",
     backgroundColor: "#33313b",
     borderRadius: 360,
-    padding: 18,
+    padding: 12,
   },
 
   button: {
-    fontSize: 12,
-    padding: 5,
+    fontSize: 13,
+    padding: 10,
     minWidth: 200,
     elavation: 10,
-    margin: 5,
-
-    color: "#ffffff",
+    margin: 1,
+    color: "white",
     backgroundColor: "#28784b",
-    fontFamily: "'Rokkitt', serif",
+    fontWeight: "bold",
+    fontFamily: "'Inconsolata', monospace",
     "&:hover": {
-      color: "#28784b",
-      backgroundColor: "#ffffff",
+      color: "gold",
+      backgroundColor: "#044343",
     },
   },
   submitButton: {
@@ -42,7 +42,7 @@ export const useStyles = makeStyles({
     padding: 10,
     minWidth: 200,
     elavation: 23,
-    margin: 10,
+    margin: 5,
     color: "white",
     backgroundColor: "#28784b",
     fontWeight: "bold",
@@ -58,13 +58,12 @@ export const useStyles = makeStyles({
     minWidth: 200,
     elavation: 23,
     margin: 10,
-    color: "sandybrown",
-    backgroundColor: "#33313b",
+
     fontWeight: "bold",
     fontFamily: "'Rokkitt', serif",
     "&:hover": {
-      color: "#33313b",
-      backgroundColor: "#ffffff",
+      color: "#ffffff",
+      backgroundColor: "#28784b",
     },
   },
 });
