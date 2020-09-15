@@ -9,10 +9,9 @@ import Scoreboard from "../../components/Scoreboard";
 //Mui components
 import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
-import { Paper } from "@material-ui/core";
-
+import { Paper, Box } from "@material-ui/core";
+import CoolPlaces from "../../components/CoolPlaces";
 import Banner from "../../components/Banner";
-import UserManual from "../../components/UserManual";
 
 type Props = {
   darkMode: boolean;
@@ -39,10 +38,11 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.paper} container spacing={3}>
+    <Grid className={classes.paper} container spacing={2}>
       <Grid
         item
         style={{
+          marginTop: 40,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
@@ -67,44 +67,41 @@ export default function Home() {
       </Grid>
       <Grid item xs={12} sm={6}>
         <Paper
-          elevation={23}
           style={{
-            marginTop: 50,
-            marginBottom: 50,
-            borderRadius: 360,
-            minHeight: 590,
+            borderRadius: 100,
+            minHeight: 750,
             backgroundImage:
               "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
           }}
         >
-          <QuestionCard />
+          <Paper
+            elevation={23}
+            style={{
+              borderRadius: 100,
+              minHeight: 640,
+              backgroundImage:
+                "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+            }}
+          >
+            <QuestionCard />
+          </Paper>
         </Paper>
       </Grid>
       <Grid
         item
         style={{
+          marginTop: 30,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
         sm={3}
       >
-        <Paper
-          elevation={23}
-          style={{
-            marginTop: 20,
-          }}
-        >
-          <UserManual />
-        </Paper>
-        <Paper
-          elevation={23}
-          style={{
-            marginTop: 230,
-          }}
-        >
+        <CoolPlaces />
+
+        <Box mt={3} mb={17}>
           <Scoreboard />
-        </Paper>
+        </Box>
       </Grid>
     </Grid>
   );
