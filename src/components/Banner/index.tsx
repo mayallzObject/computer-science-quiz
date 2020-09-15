@@ -14,13 +14,14 @@ import {
   Box,
   Grid,
   Paper,
+  Card,
+  CardContent,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import FaceIcon from "@material-ui/icons/Face";
-import UserManual from "../UserManual";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -112,19 +113,22 @@ export default function Banner(props: any) {
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Paper elevation={23}>
-          <h1
-            style={{
-              fontFamily: "Kaushan Script",
-              fontSize: 50,
-              fontWeight: "bold",
-
-              padding: 20,
-            }}
+          <Paper
+            elevation={23}
+            style={{ borderRadius: 360, backgroundColor: "#28784b" }}
           >
-            Cool Trivia
-          </h1>
-
-          <h2 style={{ fontFamily: "Kaushan Script" }}>Portfolio Project</h2>
+            <h1
+              style={{
+                fontFamily: "Kaushan Script",
+                fontSize: 30,
+                fontWeight: "bold",
+                color: "sandybrown",
+                padding: 40,
+              }}
+            >
+              Cool Trivia
+            </h1>
+          </Paper>
           <Tooltip
             color="primary"
             TransitionComponent={Fade}
@@ -168,124 +172,140 @@ export default function Banner(props: any) {
               <InfoOutlinedIcon fontSize="small" />
             </Button>
           </Tooltip>
+        </Paper>
+        <Snackbar
+          style={{ fontSize: 10 }}
+          open={open}
+          onClose={handleCloseTwo}
+          TransitionComponent={transition}
+          message={
+            <Box>
+              <img
+                src="https://img.icons8.com/color/96/000000/typescript.png"
+                alt="typescript"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/nodejs.png"
+                alt="nodejs"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/javascript.png"
+                alt="JS"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/react-native.png"
+                alt="native"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/redux.png"
+                alt="redux"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/material-ui.png"
+                alt="mui"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/api-settings.png"
+                alt="rest"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/postgreesql.png"
+                alt="postgreesql"
+              />
+            </Box>
+          }
+          key={transition ? transition.name : ""}
+        />
+        <Paper elevation={23} style={{ marginTop: 220 }}>
+          <Grid item xs={12}>
+            <Card>
+              <CardContent>
+                <Grid item xs={12}>
+                  <h2
+                    style={{
+                      fontFamily: "'Nova Oval', cursive",
+                      fontSize: 30,
+                      borderRadius: 360,
+                      backgroundColor: "#28784b",
+                      color: "sandybrown",
+                    }}
+                  >
+                    Dev. details
+                  </h2>
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4D35AQHOGO8_YwjwlA/profile-framedphoto-shrink_200_200/0?e=1600228800&v=beta&t=QNx6VILYoLBQGPzQWMZxxKTcPjufvlx_WpcGGdx47ks"
+                    alt="postgreesql"
+                  />
+                </Grid>
 
-          <Snackbar
-            style={{ fontSize: 10 }}
-            open={open}
-            onClose={handleCloseTwo}
-            TransitionComponent={transition}
-            message={
-              <Box>
-                <img
-                  src="https://img.icons8.com/color/96/000000/typescript.png"
-                  alt="typescript"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/nodejs.png"
-                  alt="nodejs"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/javascript.png"
-                  alt="JS"
-                />
-                <img
-                  src="https://img.icons8.com/nolan/96/react-native.png"
-                  alt="native"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/redux.png"
-                  alt="redux"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/material-ui.png"
-                  alt="mui"
-                />
-                <img
-                  src="https://img.icons8.com/nolan/96/api-settings.png"
-                  alt="rest"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/postgreesql.png"
-                  alt="postgreesql"
-                />
-              </Box>
-            }
-            key={transition ? transition.name : ""}
-          />
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`Go to ${props.name}'s GitHub `}</h1>
+                  }
+                >
+                  <Link href={props.gitUrl} target="_blank">
+                    <Button
+                      className={classes.button}
+                      variant="contained"
+                      color="primary"
+                      aria-label="settings"
+                    >
+                      <GitHubIcon fontSize="small" />
+                    </Button>
+                  </Link>
+                </Tooltip>
 
-          <h2
-            style={{
-              fontFamily: "Kaushan Script",
-            }}
-          >
-            Developer Info
-          </h2>
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`Go to ${props.name}'s GitHub `}</h1>
-            }
-          >
-            <Link href={props.gitUrl} target="_blank">
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`Go to ${props.name}'s LinkedIn profile `}</h1>
-            }
-          >
-            <Link
-              href="https://www.linkedin.com/in/ivo-yankov/"
-              target="_blank"
-            >
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <LinkedInIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`${props.name}'s info`}</h1>
-            }
-          >
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="primary"
-              onClick={handleClick(SlideTransition)}
-            >
-              <FaceIcon fontSize="small" />
-            </Button>
-          </Tooltip>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`Go to ${props.name}'s LinkedIn profile `}</h1>
+                  }
+                >
+                  <Link
+                    href="https://www.linkedin.com/in/ivo-yankov/"
+                    target="_blank"
+                  >
+                    <Button
+                      className={classes.button}
+                      variant="contained"
+                      color="primary"
+                      aria-label="settings"
+                    >
+                      <LinkedInIcon fontSize="small" />
+                    </Button>
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`${props.name}'s info`}</h1>
+                  }
+                >
+                  <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                    onClick={handleClick(SlideTransition)}
+                  >
+                    <FaceIcon fontSize="small" />
+                  </Button>
+                </Tooltip>
+              </CardContent>
+            </Card>
+          </Grid>
         </Paper>
 
         <Typography paragraph component="ul">
@@ -310,11 +330,6 @@ export default function Banner(props: any) {
             key={state.Transition.name}
           />
         </Typography>
-        <Box mt={3}>
-          <Paper elevation={23}>
-            <UserManual />
-          </Paper>
-        </Box>
       </Grid>
     </Grid>
   );

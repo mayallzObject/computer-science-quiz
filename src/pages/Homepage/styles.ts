@@ -6,9 +6,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      margin: theme.spacing(1),
       padding: theme.spacing(2),
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(7),
+
       textAlign: "center",
     },
     button: {

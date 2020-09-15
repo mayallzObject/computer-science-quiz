@@ -39,9 +39,10 @@ const Scoreboard = () => {
                 align="left"
                 style={{
                   fontFamily: "Kaushan Script",
-                  backgroundColor: "#3c4f65",
+                  backgroundColor: "#28784b",
                   fontWeight: "bold",
                   fontSize: 20,
+                  color: "sandybrown",
                 }}
               >
                 Place
@@ -50,9 +51,10 @@ const Scoreboard = () => {
                 align="left"
                 style={{
                   fontFamily: "Kaushan Script",
-                  backgroundColor: "#3c4f65",
+                  backgroundColor: "#28784b",
                   fontWeight: "bold",
                   fontSize: 20,
+                  color: "sandybrown",
                 }}
               >
                 Points
@@ -61,9 +63,10 @@ const Scoreboard = () => {
                 align="left"
                 style={{
                   fontFamily: "Kaushan Script",
-                  backgroundColor: "#3c4f65",
+                  backgroundColor: "#28784b",
                   fontWeight: "bold",
                   fontSize: 20,
+                  color: "sandybrown",
                 }}
               >
                 Player

@@ -26,24 +26,24 @@ const QuestionCard: React.FC<Props> = ({
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Paper className={classes.title}>
-          <div
-            style={{
-              fontWeight: "bold",
-              fontFamily: "Kaushan Script",
-              fontSize: 14,
-              color: "sandybrown",
-            }}
-          >
-            Question: {questionNr} / {totalQuestions}
-          </div>
-
+        <Paper className={classes.title} style={{ backgroundColor: "#28784b" }}>
           <Typography
             className={classes.title}
             variant="body2"
             color="textSecondary"
             component="div"
           >
+            <div
+              style={{
+                fontWeight: "bold",
+                fontFamily: "Kaushan Script",
+                fontSize: 11,
+                color: "sandybrown",
+                padding: 5,
+              }}
+            >
+              Question: {questionNr} / {totalQuestions}
+            </div>
             <div>{renderHTML(question)}</div>
           </Typography>
         </Paper>
@@ -60,7 +60,7 @@ const QuestionCard: React.FC<Props> = ({
               value={answer}
               onClick={callback}
             >
-              <p dangerouslySetInnerHTML={{ __html: answer }} />
+              <div dangerouslySetInnerHTML={{ __html: answer }} />
             </Button>
           ))}
         </ButtonGroup>

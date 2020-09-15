@@ -9,23 +9,38 @@ export default function UserManual() {
     <Paper elevation={23}>
       <Card>
         <CardContent>
-          <h2
+          <Paper
+            elevation={23}
             style={{
-              fontFamily: "Kaushan Script",
-              fontWeight: "bold",
-              color: "#ffffff",
+              borderRadius: 360,
+              backgroundColor: "#28784b",
+              color: "sandybrown",
             }}
           >
-            User Manual
-          </h2>
+            <h2
+              style={{
+                fontFamily: " 'Nova Oval', cursive",
+                fontSize: 30,
+                fontWeight: "bold",
+              }}
+            >
+              User Manual
+            </h2>
+          </Paper>
           <div
             style={{
-              fontFamily: "Kaushan Script",
+              fontFamily: "'Nova Oval', cursive",
               fontSize: 20,
+              listStyle: "none",
             }}
           >
-            <ul>
-              <li>Register an account</li>
+            <ul
+              style={{
+                fontFamily: "'Nova Oval', cursive",
+                fontSize: 20,
+                listStyle: "none",
+              }}
+            >
               <li>Answer 10 Q.</li>
               <li>Submit your Score</li>
               <li>Progress in level</li>
