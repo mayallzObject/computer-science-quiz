@@ -67,15 +67,25 @@ export default function Home(props: Props) {
       </Grid>
       <Grid item xs={12} sm={6}>
         <Paper
+          className={classes.smHeader}
           elevation={23}
           style={{
+            padding: 20,
             borderRadius: 100,
-            minHeight: 750,
-            backgroundImage:
-              "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+            minHeight: 800,
           }}
         >
-          <QuestionCard />
+          <Paper
+            elevation={23}
+            style={{
+              borderRadius: 100,
+              minHeight: 750,
+              backgroundImage:
+                "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+            }}
+          >
+            <QuestionCard />
+          </Paper>
         </Paper>
       </Grid>
       <Grid

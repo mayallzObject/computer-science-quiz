@@ -15,7 +15,6 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     smHeader: {
       backgroundColor: theme.palette.primary.main,
-      fontFamily: "Kaushan Script",
     },
   })
 );

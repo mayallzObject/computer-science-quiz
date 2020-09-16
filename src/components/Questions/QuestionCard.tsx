@@ -6,6 +6,7 @@ import {
   Grid,
   ButtonGroup,
   Paper,
+  Box,
 } from "@material-ui/core";
 
 import { useStyles } from "./styles";
@@ -31,16 +32,19 @@ const QuestionCard: React.FC<Props> = ({
             fontWeight: "bold",
             fontFamily: "Kaushan Script",
             fontSize: 17,
-            color: "#f4f4f4",
-            padding: 2,
+            color: "sandybrown",
+            paddingBottom: 2,
           }}
         >
           Question: {questionNr} / {totalQuestions}
         </div>
         <Paper
+          className={classes.smHeader}
           elevation={23}
-          className={classes.title}
-          style={{ backgroundColor: "#005e4b" }}
+          style={{
+            padding: 20,
+            borderRadius: 100,
+          }}
         >
           <Typography
             className={classes.title}
@@ -53,21 +57,23 @@ const QuestionCard: React.FC<Props> = ({
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        <ButtonGroup orientation="vertical">
-          {answers.map((answer) => (
-            <Button
-              key={answer}
-              color="primary"
-              variant="contained"
-              className={classes.button}
-              disabled={userAnswer ? true : false}
-              value={answer}
-              onClick={callback}
-            >
-              <div dangerouslySetInnerHTML={{ __html: answer }} />
-            </Button>
-          ))}
-        </ButtonGroup>
+        <Paper className={classes.backButton}>
+          <ButtonGroup orientation="vertical">
+            {answers.map((answer) => (
+              <Button
+                key={answer}
+                color="primary"
+                variant="contained"
+                className={classes.button}
+                disabled={userAnswer ? true : false}
+                value={answer}
+                onClick={callback}
+              >
+                <div dangerouslySetInnerHTML={{ __html: answer }} />
+              </Button>
+            ))}
+          </ButtonGroup>
+        </Paper>
       </Grid>
     </Grid>
   );

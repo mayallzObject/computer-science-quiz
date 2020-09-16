@@ -2,6 +2,7 @@ import React from "react";
 
 // Mui components
 import jpg from "../../images/jpg.png";
+import oie from "../../images/oie.png";
 
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
@@ -18,7 +19,6 @@ import {
   Paper,
   Card,
   CardContent,
-  Avatar,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -53,17 +53,18 @@ export const useStyles = makeStyles((theme) =>
     },
     button: {
       margin: 4,
-      marginBottom: 15,
+      marginBottom: 5,
       fontFamily: "Kaushan Script",
       fontWeight: "bold",
     },
     header: {
+      flexgrow: 1,
       backgroundColor: theme.palette.primary.main,
       fontFamily: "Kaushan Script",
       fontSize: 50,
       fontWeight: "bold",
-      color: "greenyellow",
-      padding: 20,
+      color: "#28784b",
+      margin: 10,
     },
     smHeader: {
       backgroundColor: theme.palette.primary.main,
@@ -129,9 +130,9 @@ export default function Banner(props: any) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Paper elevation={23}>
+        <Paper elevation={23} style={{ padding: 10, marginTop: 35 }}>
           <h1 className={classes.header}>Cool Trivia</h1>
-          <h3 style={{ fontFamily: "Kaushan Script" }}>Links</h3>
+          <h1 style={{ fontFamily: "Kaushan Script" }}>Project</h1>
           <Tooltip
             color="primary"
             TransitionComponent={Fade}
@@ -175,55 +176,56 @@ export default function Banner(props: any) {
               <InfoOutlinedIcon fontSize="small" />
             </Button>
           </Tooltip>
-
-          <Snackbar
-            style={{ fontSize: 10 }}
-            open={open}
-            onClose={handleCloseTwo}
-            TransitionComponent={transition}
-            message={
-              <Box>
-                <img
-                  src="https://img.icons8.com/color/96/000000/typescript.png"
-                  alt="typescript"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/nodejs.png"
-                  alt="nodejs"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/javascript.png"
-                  alt="JS"
-                />
-                <img
-                  src="https://img.icons8.com/nolan/96/react-native.png"
-                  alt="native"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/redux.png"
-                  alt="redux"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/material-ui.png"
-                  alt="mui"
-                />
-                <img
-                  src="https://img.icons8.com/nolan/96/api-settings.png"
-                  alt="rest"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/postgreesql.png"
-                  alt="postgreesql"
-                />
-              </Box>
-            }
-            key={transition ? transition.name : ""}
-          />
         </Paper>
+
+        <Snackbar
+          style={{ fontSize: 10 }}
+          open={open}
+          onClose={handleCloseTwo}
+          TransitionComponent={transition}
+          message={
+            <Box>
+              <img
+                src="https://img.icons8.com/color/96/000000/typescript.png"
+                alt="typescript"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/nodejs.png"
+                alt="nodejs"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/javascript.png"
+                alt="JS"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/react-native.png"
+                alt="native"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/redux.png"
+                alt="redux"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/material-ui.png"
+                alt="mui"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/api-settings.png"
+                alt="rest"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/postgreesql.png"
+                alt="postgreesql"
+              />
+            </Box>
+          }
+          key={transition ? transition.name : ""}
+        />
+
         <Paper
           elevation={23}
           style={{
-            marginTop: 20,
+            marginTop: 100,
           }}
         >
           <Card>
@@ -251,7 +253,7 @@ export default function Banner(props: any) {
               />
 
               <Box>
-                <h3 style={{ fontFamily: "Kaushan Script" }}>Links</h3>
+                <h1 style={{ fontFamily: "Kaushan Script" }}>Links</h1>
                 <Tooltip
                   color="primary"
                   TransitionComponent={Fade}

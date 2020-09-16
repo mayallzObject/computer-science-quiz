@@ -13,35 +13,31 @@ export const useStyles = makeStyles((theme: Theme) =>
       square: "false",
     },
     title: {
-      fontSize: 27,
+      fontSize: 28,
       fontWeight: "bold",
       alignItems: "center",
       fontFamily: "Kaushan Script",
-      color: "#ffffff",
-      backgroundColor: "#33313b",
+      backgroundColor: theme.palette.background.paper,
       borderRadius: 360,
-      padding: 25,
+      padding: 35,
     },
 
     button: {
-      fontSize: 15,
-      padding: 5,
-      minWidth: 200,
-      elavation: 23,
-      margin: 10,
-      borderColor: "coral",
-      color: "#ffffff",
-      backgroundColor: "#005e4b",
       fontFamily: "'Rokkitt', serif",
+      fontSize: 13,
+      elavation: 23,
+      margin: 5,
+      minWidth: 200,
+      maxWidht: 250,
+
       "&:hover": {
-        color: "#28784b",
-        backgroundColor: "#ffffff",
+        color: "sandybrown",
+        backgroundColor: "#33313b",
       },
     },
     submitButton: {
       fontSize: 13,
       padding: 10,
-      minWidth: 200,
       elavation: 23,
       margin: 10,
       color: "white",
@@ -65,6 +61,24 @@ export const useStyles = makeStyles((theme: Theme) =>
       "&:hover": {
         color: "#ffffff",
         backgroundColor: "#28784b",
+      },
+    },
+    smHeader: {
+      backgroundColor: theme.palette.primary.main,
+    },
+
+    backButton: {
+      alignContent: "center",
+      fontSize: 13,
+      padding: 10,
+      margin: 20,
+      backgroundColor: theme.palette.background.paper,
+
+      fontWeight: "bold",
+      fontFamily: "'Rokkitt', serif",
+      "&:hover": {
+        color: "#ffffff",
+        backgroundColor: theme.palette.primary.main,
       },
     },
   })
