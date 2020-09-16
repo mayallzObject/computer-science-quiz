@@ -1,6 +1,8 @@
 import React from "react";
 
 // Mui components
+import jpg from "../../images/jpg.png";
+
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import Typography from "@material-ui/core/Typography";
@@ -14,15 +16,17 @@ import {
   Box,
   Grid,
   Paper,
+  Card,
+  CardContent,
+  Avatar,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import FaceIcon from "@material-ui/icons/Face";
-import UserManual from "../UserManual";
 
-const useStyles = makeStyles((theme) =>
+export const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,
@@ -49,7 +53,21 @@ const useStyles = makeStyles((theme) =>
     },
     button: {
       margin: 4,
-      marginBottom: 20,
+      marginBottom: 15,
+      fontFamily: "Kaushan Script",
+      fontWeight: "bold",
+    },
+    header: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
+      fontSize: 50,
+      fontWeight: "bold",
+      color: "greenyellow",
+      padding: 20,
+    },
+    smHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
     },
   })
 );
@@ -112,19 +130,8 @@ export default function Banner(props: any) {
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Paper elevation={23}>
-          <h1
-            style={{
-              fontFamily: "Kaushan Script",
-              fontSize: 50,
-              fontWeight: "bold",
-
-              padding: 20,
-            }}
-          >
-            Cool Trivia
-          </h1>
-
-          <h2 style={{ fontFamily: "Kaushan Script" }}>Portfolio Project</h2>
+          <h1 className={classes.header}>Cool Trivia</h1>
+          <h3 style={{ fontFamily: "Kaushan Script" }}>Links</h3>
           <Tooltip
             color="primary"
             TransitionComponent={Fade}
@@ -212,80 +219,106 @@ export default function Banner(props: any) {
             }
             key={transition ? transition.name : ""}
           />
+        </Paper>
+        <Paper
+          elevation={23}
+          style={{
+            marginTop: 20,
+          }}
+        >
+          <Card>
+            <CardContent>
+              <Paper elevation={23}>
+                <h2
+                  className={classes.smHeader}
+                  style={{
+                    fontFamily: "Kaushan Script",
+                    fontWeight: "bold",
+                    color: "sandybrown",
+                  }}
+                >
+                  Personal
+                </h2>
+              </Paper>
 
-          <h2
-            style={{
-              fontFamily: "Kaushan Script",
-            }}
-          >
-            Developer Info
-          </h2>
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`Go to ${props.name}'s GitHub `}</h1>
-            }
-          >
-            <Link href={props.gitUrl} target="_blank">
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
+              <img
+                style={{
+                  height: 100,
+                  width: 100,
+                }}
+                src={jpg}
+                alt="ivo"
+              />
 
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`Go to ${props.name}'s LinkedIn profile `}</h1>
-            }
-          >
-            <Link
-              href="https://www.linkedin.com/in/ivo-yankov/"
-              target="_blank"
-            >
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <LinkedInIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`${props.name}'s info`}</h1>
-            }
-          >
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="primary"
-              onClick={handleClick(SlideTransition)}
-            >
-              <FaceIcon fontSize="small" />
-            </Button>
-          </Tooltip>
+              <Box>
+                <h3 style={{ fontFamily: "Kaushan Script" }}>Links</h3>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`Go to ${props.name}'s GitHub `}</h1>
+                  }
+                >
+                  <Link href={props.gitUrl} target="_blank">
+                    <Button
+                      className={classes.button}
+                      variant="contained"
+                      color="primary"
+                      aria-label="settings"
+                    >
+                      <GitHubIcon fontSize="small" />
+                    </Button>
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`Go to ${props.name}'s LinkedIn profile `}</h1>
+                  }
+                >
+                  <Link
+                    href="https://www.linkedin.com/in/ivo-yankov/"
+                    target="_blank"
+                  >
+                    <Button
+                      className={classes.button}
+                      variant="contained"
+                      color="primary"
+                      aria-label="settings"
+                    >
+                      <LinkedInIcon fontSize="small" />
+                    </Button>
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`${props.name}'s info`}</h1>
+                  }
+                >
+                  <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                    onClick={handleClick(SlideTransition)}
+                  >
+                    <FaceIcon fontSize="small" />
+                  </Button>
+                </Tooltip>
+              </Box>
+            </CardContent>
+          </Card>
         </Paper>
 
         <Typography paragraph component="ul">
@@ -310,11 +343,6 @@ export default function Banner(props: any) {
             key={state.Transition.name}
           />
         </Typography>
-        <Box mt={3}>
-          <Paper elevation={23}>
-            <UserManual />
-          </Paper>
-        </Box>
       </Grid>
     </Grid>
   );

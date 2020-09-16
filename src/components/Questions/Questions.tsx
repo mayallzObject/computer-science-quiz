@@ -13,12 +13,11 @@ import { fetchQuestions } from "../../store/questions/actions";
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types";
-import { Button, Box, Typography, Paper } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import { OnClick } from "../../types/eventType";
 
 //MUI components
 import { useStyles } from "./styles";
-import SkipNextRoundedIcon from "@material-ui/icons/SkipNextRounded";
 
 const Questions: React.FC = () => {
   const classes = useStyles();
@@ -95,7 +94,7 @@ const Questions: React.FC = () => {
               fontWeight: "bold",
               fontFamily: "Kaushan Script",
               fontSize: 20,
-              color: "#ffffff",
+              color: "#f4f4f4",
               alignItems: "center",
             }}
           >

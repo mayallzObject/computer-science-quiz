@@ -6,13 +6,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      margin: theme.spacing(1),
-      padding: theme.spacing(2),
-      marginTop: theme.spacing(10),
+      padding: theme.spacing(4),
+      marginTop: theme.spacing(5),
       textAlign: "center",
     },
     button: {
       margin: 24,
+    },
+    smHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
     },
   })
 );

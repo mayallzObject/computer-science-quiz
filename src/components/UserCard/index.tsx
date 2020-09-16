@@ -53,12 +53,23 @@ export default function UserCard() {
 
   return (
     <Card>
-      <Paper elevation={23}>
+      <Paper
+        elevation={23}
+        style={{
+          borderRadius: 360,
+          backgroundColor: "#3c4f65",
+          minHeight: 300,
+        }}
+      >
         <CardHeader
-          title={<h2 style={{ fontFamily: "Kaushan Script" }}>{user.name}</h2>}
+          title={
+            <h2 style={{ fontFamily: "Kaushan Script", color: "#ffffff" }}>
+              {user.name}
+            </h2>
+          }
           subheader={
             <h2
-              style={{ fontFamily: "Kaushan Script" }}
+              style={{ fontFamily: "Kaushan Script", color: "sandybrown" }}
             >{`Score: ${user.score}  Level: ${level}`}</h2>
           }
         />
@@ -66,7 +77,7 @@ export default function UserCard() {
         <Box
           style={{
             width: `${score}%`,
-            backgroundColor: "gray",
+            backgroundColor: "purple",
           }}
           p={1}
         >
