@@ -2,8 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
-![Alt Text](https://media.giphy.com/media/JNyLF5hFa6adtK7F5O/giphy.gif)
-![Alt Text](https://media.giphy.com/media/d7x8x3ObXdUb6sGQIn/giphy.gif)
+![Alt Text](https://media.giphy.com/media/5uIBpDiQMC9uGPpfZF/giphy.gif)
+![Alt Text](https://media.giphy.com/media/XnFF3zH1WhqtISj9NS/giphy.gif)
 
 [Production](https://cool-trivia-quizer.netlify.app/)
 
