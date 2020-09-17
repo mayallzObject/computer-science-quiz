@@ -1,12 +1,6 @@
 import React from "react";
 import { Props } from "./types";
-import {
-  Button,
-  Typography,
-  Grid,
-  ButtonGroup,
-  Paper,
-} from "@material-ui/core";
+import { Button, Typography, Grid, Paper } from "@material-ui/core";
 
 import { useStyles } from "./styles";
 
@@ -26,18 +20,25 @@ const QuestionCard: React.FC<Props> = ({
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Paper className={classes.title}>
-          <div
-            style={{
-              fontWeight: "bold",
-              fontFamily: "Kaushan Script",
-              fontSize: 14,
-              color: "sandybrown",
-            }}
-          >
-            Question: {questionNr} / {totalQuestions}
-          </div>
-
+        <div
+          style={{
+            fontWeight: "bold",
+            fontFamily: "Kaushan Script",
+            fontSize: 17,
+            padding: 4,
+            color: "silver",
+          }}
+        >
+          Question: {questionNr} / {totalQuestions}
+        </div>
+        <Paper
+          className={classes.smHeader}
+          elevation={23}
+          style={{
+            padding: 10,
+            borderRadius: 360,
+          }}
+        >
           <Typography
             className={classes.title}
             variant="body2"
@@ -49,21 +50,27 @@ const QuestionCard: React.FC<Props> = ({
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        <ButtonGroup orientation="vertical">
-          {answers.map((answer) => (
-            <Button
-              key={answer}
-              color="primary"
-              variant="contained"
-              className={classes.button}
-              disabled={userAnswer ? true : false}
-              value={answer}
-              onClick={callback}
-            >
-              <p dangerouslySetInnerHTML={{ __html: answer }} />
-            </Button>
-          ))}
-        </ButtonGroup>
+        <Paper
+          className={classes.smHeader}
+          elevation={23}
+          style={{ padding: 10, borderRadius: 360 }}
+        >
+          <Paper elevation={23} className={classes.backButton}>
+            {answers.map((answer) => (
+              <Button
+                key={answer}
+                color="primary"
+                variant="contained"
+                className={classes.button}
+                disabled={userAnswer ? true : false}
+                value={answer}
+                onClick={callback}
+              >
+                <div dangerouslySetInnerHTML={{ __html: answer }} />
+              </Button>
+            ))}
+          </Paper>
+        </Paper>
       </Grid>
     </Grid>
   );

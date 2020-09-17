@@ -6,11 +6,30 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      marginTop: theme.spacing(15),
-      padding: theme.spacing(5),
+      padding: theme.spacing(4),
+      marginTop: theme.spacing(5),
+
       textAlign: "center",
-      backgroundImage:
-        "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+    },
+    button: {
+      margin: 24,
+    },
+    smHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
+    },
+    header: {
+      flexgrow: 1,
+      backgroundColor: theme.palette.background.default,
+      fontFamily: "Kaushan Script",
+      fontSize: 30,
+      fontWeight: "bold",
+      margin: 10,
+      padding: 8,
+    },
+    backHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
     },
   })
 );

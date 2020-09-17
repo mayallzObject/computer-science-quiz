@@ -10,8 +10,8 @@ import Scoreboard from "../../components/Scoreboard";
 import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
 import { Paper, Box } from "@material-ui/core";
-import CoolPlaces from "../../components/CoolPlaces";
 import Banner from "../../components/Banner";
+import UserManual from "../../components/UserManual";
 
 type Props = {
   darkMode: boolean;
@@ -34,15 +34,15 @@ const founder = [
   },
 ];
 
-export default function Home() {
+export default function Home(props: Props) {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.paper} container spacing={2}>
+    <Grid className={classes.paper} container spacing={5}>
       <Grid
         item
         style={{
-          marginTop: 40,
+          marginTop: 10,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
@@ -67,18 +67,19 @@ export default function Home() {
       </Grid>
       <Grid item xs={12} sm={6}>
         <Paper
+          className={classes.smHeader}
+          elevation={23}
           style={{
-            borderRadius: 100,
-            minHeight: 750,
-            backgroundImage:
-              "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+            padding: 20,
+            borderRadius: 360,
+            minHeight: 700,
           }}
         >
           <Paper
             elevation={23}
             style={{
-              borderRadius: 100,
-              minHeight: 640,
+              borderRadius: 360,
+              minHeight: 700,
               backgroundImage:
                 "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
             }}
@@ -90,16 +91,15 @@ export default function Home() {
       <Grid
         item
         style={{
-          marginTop: 30,
+          marginTop: 10,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
         sm={3}
       >
-        <CoolPlaces />
-
-        <Box mt={3} mb={17}>
+        <UserManual />
+        <Box mt={4} mb={12}>
           <Scoreboard />
         </Box>
       </Grid>

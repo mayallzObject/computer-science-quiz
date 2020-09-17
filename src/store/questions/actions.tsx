@@ -11,7 +11,9 @@ export const fetchQuestions = () => async (
   getState: GetState
 ) => {
   try {
-    const res = await axios.get("https://opentdb.com/api.php?amount=10");
+    const res = await axios.get(
+      "https://opentdb.com/api.php?amount=10&category=18"
+    );
 
     const data = res.data.results.map((question: Question) => ({
       ...question,

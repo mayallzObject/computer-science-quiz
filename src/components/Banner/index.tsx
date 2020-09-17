@@ -1,6 +1,8 @@
 import React from "react";
 
 // Mui components
+import jpg from "../../images/jpg.png";
+
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import Typography from "@material-ui/core/Typography";
@@ -14,15 +16,16 @@ import {
   Box,
   Grid,
   Paper,
+  Card,
+  CardContent,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import FaceIcon from "@material-ui/icons/Face";
-import UserManual from "../UserManual";
 
-const useStyles = makeStyles((theme) =>
+export const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,
@@ -49,21 +52,31 @@ const useStyles = makeStyles((theme) =>
     },
     button: {
       margin: 4,
-      marginBottom: 20,
+      marginTop: 25,
+      fontFamily: "Kaushan Script",
+      fontWeight: "bold",
+    },
+    header: {
+      flexgrow: 1,
+      backgroundImage:
+        "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+      fontFamily: "Kaushan Script",
+      fontSize: 30,
+      fontWeight: "bold",
+      margin: 10,
+      padding: 8,
+      color: "sandybrown",
+    },
+    backHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
+    },
+    smHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
     },
   })
 );
-
-// const HtmlTooltip = withStyles((theme) => ({
-//   tooltip: {
-//     backgroundColor: "#f5f5f9",
-//     color: "rgba(0, 0, 0, 0.87)",
-//     minWidth: 400,
-//     fontSize: theme.typography.pxToRem(14),
-//     border: "1px solid #dadde9",
-//     textColor: "#000000",
-//   },
-// }))(Tooltip);
 
 function SlideTransition(props: any) {
   return <Slide {...props} direction="up" />;
@@ -110,21 +123,15 @@ export default function Banner(props: any) {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <Paper elevation={23}>
-          <h1
-            style={{
-              fontFamily: "Kaushan Script",
-              fontSize: 50,
-              fontWeight: "bold",
-
-              padding: 20,
-            }}
+      <Grid item xs={12} sm={12}>
+        <Paper elevation={23} style={{ padding: 20 }}>
+          <Paper
+            elevation={23}
+            className={classes.backHeader}
+            style={{ padding: 20 }}
           >
-            Cool Trivia
-          </h1>
-
-          <h2 style={{ fontFamily: "Kaushan Script" }}>Portfolio Project</h2>
+            <h1 className={classes.header}>Cool Trivia Computer Science</h1>
+          </Paper>
           <Tooltip
             color="primary"
             TransitionComponent={Fade}
@@ -168,124 +175,145 @@ export default function Banner(props: any) {
               <InfoOutlinedIcon fontSize="small" />
             </Button>
           </Tooltip>
+        </Paper>
 
-          <Snackbar
-            style={{ fontSize: 10 }}
-            open={open}
-            onClose={handleCloseTwo}
-            TransitionComponent={transition}
-            message={
+        <Snackbar
+          open={open}
+          onClose={handleCloseTwo}
+          TransitionComponent={transition}
+          message={
+            <Box style={{ fontSize: 10, backgroundColor: "#000000" }}>
+              <img
+                src="https://img.icons8.com/color/96/000000/typescript.png"
+                alt="typescript"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/nodejs.png"
+                alt="nodejs"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/javascript.png"
+                alt="JS"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/react-native.png"
+                alt="native"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/redux.png"
+                alt="redux"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/material-ui.png"
+                alt="mui"
+              />
+              <img
+                src="https://img.icons8.com/nolan/96/api-settings.png"
+                alt="rest"
+              />
+              <img
+                src="https://img.icons8.com/color/96/000000/postgreesql.png"
+                alt="postgreesql"
+              />
+            </Box>
+          }
+          key={transition ? transition.name : ""}
+        />
+      </Grid>
+      <Grid item xs={12} style={{ marginTop: 80 }}>
+        <Paper elevation={23}>
+          <Card>
+            <CardContent>
+              <Paper elevation={23}>
+                <h2
+                  className={classes.smHeader}
+                  style={{
+                    fontFamily: "Kaushan Script",
+                    fontWeight: "bold",
+                    color: "sandybrown",
+                  }}
+                >
+                  Personal
+                </h2>
+              </Paper>
+
+              <img
+                style={{
+                  height: 100,
+                  width: 100,
+                }}
+                src={jpg}
+                alt="ivo"
+              />
+
               <Box>
-                <img
-                  src="https://img.icons8.com/color/96/000000/typescript.png"
-                  alt="typescript"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/nodejs.png"
-                  alt="nodejs"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/javascript.png"
-                  alt="JS"
-                />
-                <img
-                  src="https://img.icons8.com/nolan/96/react-native.png"
-                  alt="native"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/redux.png"
-                  alt="redux"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/material-ui.png"
-                  alt="mui"
-                />
-                <img
-                  src="https://img.icons8.com/nolan/96/api-settings.png"
-                  alt="rest"
-                />
-                <img
-                  src="https://img.icons8.com/color/96/000000/postgreesql.png"
-                  alt="postgreesql"
-                />
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`Go to ${props.name}'s GitHub `}</h1>
+                  }
+                >
+                  <Link href={props.gitUrl} target="_blank">
+                    <Button
+                      className={classes.button}
+                      variant="contained"
+                      color="primary"
+                      aria-label="settings"
+                    >
+                      <GitHubIcon fontSize="small" />
+                    </Button>
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`Go to ${props.name}'s LinkedIn profile `}</h1>
+                  }
+                >
+                  <Link
+                    href="https://www.linkedin.com/in/ivo-yankov/"
+                    target="_blank"
+                  >
+                    <Button
+                      className={classes.button}
+                      variant="contained"
+                      color="primary"
+                      aria-label="settings"
+                    >
+                      <LinkedInIcon fontSize="small" />
+                    </Button>
+                  </Link>
+                </Tooltip>
+                <Tooltip
+                  color="primary"
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 600 }}
+                  title={
+                    <h1
+                      style={{ fontFamily: "Kaushan Script" }}
+                    >{`${props.name}'s info`}</h1>
+                  }
+                >
+                  <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                    onClick={handleClick(SlideTransition)}
+                  >
+                    <FaceIcon fontSize="small" />
+                  </Button>
+                </Tooltip>
               </Box>
-            }
-            key={transition ? transition.name : ""}
-          />
-
-          <h2
-            style={{
-              fontFamily: "Kaushan Script",
-            }}
-          >
-            Developer Info
-          </h2>
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`Go to ${props.name}'s GitHub `}</h1>
-            }
-          >
-            <Link href={props.gitUrl} target="_blank">
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`Go to ${props.name}'s LinkedIn profile `}</h1>
-            }
-          >
-            <Link
-              href="https://www.linkedin.com/in/ivo-yankov/"
-              target="_blank"
-            >
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <LinkedInIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1
-                style={{ fontFamily: "Kaushan Script" }}
-              >{`${props.name}'s info`}</h1>
-            }
-          >
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="primary"
-              onClick={handleClick(SlideTransition)}
-            >
-              <FaceIcon fontSize="small" />
-            </Button>
-          </Tooltip>
+            </CardContent>
+          </Card>
         </Paper>
 
         <Typography paragraph component="ul">
@@ -310,11 +338,6 @@ export default function Banner(props: any) {
             key={state.Transition.name}
           />
         </Typography>
-        <Box mt={3}>
-          <Paper elevation={23}>
-            <UserManual />
-          </Paper>
-        </Box>
       </Grid>
     </Grid>
   );

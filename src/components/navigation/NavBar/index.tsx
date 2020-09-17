@@ -66,7 +66,6 @@ const NavBar = (props: Props) => {
           <Button
             className={classes.button}
             variant="contained"
-            color="primary"
             component={NavLink}
             to="/"
           >

@@ -23,7 +23,7 @@ import { lightTheme, darkTheme } from "./Theme";
 const App = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectAppLoading);
-  const [darkMode, set_darkMode] = useState(false);
+  const [darkMode, set_darkMode] = useState(true);
 
   useEffect(() => {
     dispatch(loadUser());

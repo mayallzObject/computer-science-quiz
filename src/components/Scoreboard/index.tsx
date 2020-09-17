@@ -16,8 +16,10 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableBody from "@material-ui/core/TableBody";
 import TableRow from "@material-ui/core/TableRow";
+import { useStyles } from "./styles";
 
 const Scoreboard = () => {
+  const classes = useStyles();
   const someUser = useSelector(selectUser);
   const [score, setScore] = useState<ScoreBoard[]>([]);
 
@@ -37,33 +39,37 @@ const Scoreboard = () => {
             <TableRow>
               <StyledTableCell
                 align="left"
+                className={classes.smHeader}
                 style={{
                   fontFamily: "Kaushan Script",
-                  backgroundColor: "#3c4f65",
                   fontWeight: "bold",
-                  fontSize: 20,
+                  fontSize: 17,
+                  color: "sandybrown",
                 }}
               >
                 Place
               </StyledTableCell>
               <StyledTableCell
                 align="left"
+                className={classes.smHeader}
                 style={{
                   fontFamily: "Kaushan Script",
-                  backgroundColor: "#3c4f65",
                   fontWeight: "bold",
-                  fontSize: 20,
+                  fontSize: 17,
+                  color: "sandybrown",
                 }}
               >
                 Points
               </StyledTableCell>
               <StyledTableCell
                 align="left"
+                className={classes.smHeader}
                 style={{
                   fontFamily: "Kaushan Script",
-                  backgroundColor: "#3c4f65",
+
                   fontWeight: "bold",
-                  fontSize: 20,
+                  fontSize: 17,
+                  color: "sandybrown",
                 }}
               >
                 Player
