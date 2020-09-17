@@ -23,15 +23,22 @@
 
 
 ## **Introduction**
-Hello! My name is Ivaylo, and this is my 1st portfolio project.
-I made this portfolio project because I like to learn in a fun way. Being part of the Philosophy Club at the university I learned the value of questions.    
-The Cool Trivia web application is in MVP status, with the plan of adding more functionality and styling.
-It's a fairly simple application made with the emphasis on learning new technologies and applying the skills that I required in the past 
-few months.
+Hello!
+   My name is Ivaylo, and this is my 1st portfolio project.
+I made the "Cool Trivia Science Computer Science" quiz because I love science and the science I know the least about is CS. 
 
+  Being part of the Philosophy Club at the university I learned the value of questions. So created this app. useing a Trivia API, 
+and seleceted only the CS category of quitions. 
+
+  It's a fairly simple application made with the emphasis on learning new technologies and applying the skills that I required in the past 
+few months.
+  
+  
+  
 
 ##  **Goals of this project**
-The main goal of this project is to gain experience in developing a full-stack app and learn new technologies. My idea is to have one day of research in TypeScript and Material-UI then adjust on the fly. The front end is made with React, Redux, and Material-UI. 
+The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
+
 The app is fully responsive but styling is not final. 
 A new scoring system and category picker will be added in the new update.
 
@@ -68,7 +75,12 @@ the server runs on port 4000 by default.
 - on the first run, run the script npm run initialize, this will run npm install && react-scripts star
 - afterward, the first run just run the script npm run start to start development
 - the client runs on localhost:3000 by default
-
+)
+Your new Blitz rating is 1054 (-9).
+Match Scores alonaboutboul (1021) [3] vs Candytor (1054) [2]
+NEW GAME
+Candytor (1054) [2] vs. alonaboutboul (1021) [3] (3 min)
+win +7 / draw -1 / lose -9
 ## **Technologies**
 
 #### Back end -Express and SequelizeORM
