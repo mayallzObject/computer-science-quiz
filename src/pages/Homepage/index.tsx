@@ -9,9 +9,9 @@ import Scoreboard from "../../components/Scoreboard";
 //Mui components
 import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
-import { Paper, Box, Card, CardContent } from "@material-ui/core";
-
+import { Paper, Box } from "@material-ui/core";
 import Banner from "../../components/Banner";
+import UserManual from "../../components/UserManual";
 
 type Props = {
   darkMode: boolean;
@@ -42,7 +42,7 @@ export default function Home(props: Props) {
       <Grid
         item
         style={{
-          marginTop: 30,
+          marginTop: 10,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
@@ -71,15 +71,15 @@ export default function Home(props: Props) {
           elevation={23}
           style={{
             padding: 20,
-            borderRadius: 100,
-            minHeight: 800,
+            borderRadius: 360,
+            minHeight: 700,
           }}
         >
           <Paper
             elevation={23}
             style={{
-              borderRadius: 100,
-              minHeight: 750,
+              borderRadius: 360,
+              minHeight: 700,
               backgroundImage:
                 "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
             }}
@@ -91,45 +91,15 @@ export default function Home(props: Props) {
       <Grid
         item
         style={{
-          marginTop: 30,
+          marginTop: 10,
           backgroundImage:
             "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
         }}
         xs={12}
         sm={3}
       >
-        <Box mt={4} mb={2}>
-          <Paper elevation={23}>
-            <Card>
-              <CardContent>
-                <Paper elevation={23} className={classes.smHeader}>
-                  <h2
-                    style={{
-                      fontFamily: "Kaushan Script",
-                      fontWeight: "bold",
-                      color: "sandybrown",
-                    }}
-                  >
-                    User Manual
-                  </h2>
-                </Paper>
-                <div
-                  style={{
-                    fontFamily: "Kaushan Script",
-                    fontSize: 12,
-                  }}
-                >
-                  <h2>Register an account</h2>
-                  <h2>Answer 10 random Qestions.</h2>
-                  <h2>Submit your Score</h2>
-                  <h2>Progress in level</h2>
-                  <h2>Follow your position</h2>
-                </div>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Box>
-        <Box mt={3} mb={13}>
+        <UserManual />
+        <Box mt={4} mb={12}>
           <Scoreboard />
         </Box>
       </Grid>

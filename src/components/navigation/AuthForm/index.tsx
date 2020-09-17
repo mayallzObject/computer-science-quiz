@@ -8,7 +8,6 @@ import SignUp from "../../Auth/signupAuth";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
 import { useStyles } from "./styles";
 import { Fade, Tooltip } from "@material-ui/core";
 
@@ -33,35 +32,32 @@ const AuthForm = () => {
     );
   return (
     <div>
-      <Paper>
-        <Tooltip
-          color="primary"
-          TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
-          title={
-            <h1 style={{ fontFamily: "Kaushan Script" }}>Login and Singup</h1>
-          }
+      <Tooltip
+        color="primary"
+        TransitionComponent={Fade}
+        TransitionProps={{ timeout: 600 }}
+        title={
+          <h1 style={{ fontFamily: "Kaushan Script" }}>Login and Singup</h1>
+        }
+      >
+        <Button
+          className={classes.button}
+          variant="contained"
+          onClick={handleOpen}
         >
-          <Button
-            className={classes.button}
-            variant="contained"
-            color="primary"
-            onClick={handleOpen}
-          >
-            LOGIN
-          </Button>
-        </Tooltip>
-        <Dialog
-          className={classes.root}
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="auth-modal-login-signup"
-          aria-describedby="auth-modal-login-signup"
-        >
-          <DialogTitle id="form-dialog-title">{title}</DialogTitle>
-          {formToDisplay}
-        </Dialog>
-      </Paper>
+          LOGIN
+        </Button>
+      </Tooltip>
+      <Dialog
+        className={classes.root}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="auth-modal-login-signup"
+        aria-describedby="auth-modal-login-signup"
+      >
+        <DialogTitle id="form-dialog-title">{title}</DialogTitle>
+        {formToDisplay}
+      </Dialog>
     </div>
   );
 };

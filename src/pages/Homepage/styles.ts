@@ -7,7 +7,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     paper: {
       padding: theme.spacing(4),
-      marginTop: theme.spacing(5),
+      marginTop: theme.spacing(15),
+
       textAlign: "center",
     },
     button: {
@@ -15,6 +16,20 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     smHeader: {
       backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
+    },
+    header: {
+      flexgrow: 1,
+      backgroundColor: theme.palette.background.default,
+      fontFamily: "Kaushan Script",
+      fontSize: 30,
+      fontWeight: "bold",
+      margin: 10,
+      padding: 8,
+    },
+    backHeader: {
+      backgroundColor: theme.palette.primary.main,
+      fontFamily: "Kaushan Script",
     },
   })
 );

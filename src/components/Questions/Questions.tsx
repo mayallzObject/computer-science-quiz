@@ -13,7 +13,7 @@ import { fetchQuestions } from "../../store/questions/actions";
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types";
-import { Button, Typography } from "@material-ui/core";
+import { Button, Typography, Paper } from "@material-ui/core";
 import { OnClick } from "../../types/eventType";
 
 //MUI components
@@ -93,8 +93,8 @@ const Questions: React.FC = () => {
             style={{
               fontWeight: "bold",
               fontFamily: "Kaushan Script",
-              fontSize: 20,
-              color: "#f4f4f4",
+              fontSize: 25,
+              color: "sandybrown",
               alignItems: "center",
             }}
           >
@@ -116,36 +116,60 @@ const Questions: React.FC = () => {
       )}
 
       {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-        <Button
-          variant="contained"
-          color="primary"
-          className={classes.submitButton}
-          onClick={submitScore}
+        <Paper
+          className={classes.smHeader}
+          elevation={23}
+          style={{ padding: 10, borderRadius: 360 }}
         >
-          Submit Score
-        </Button>
+          <Paper elevation={23} className={classes.backButton}>
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.submitButton}
+              onClick={submitScore}
+            >
+              Submit Score
+            </Button>
+          </Paper>
+        </Paper>
       ) : null}
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-        <Button
-          variant="contained"
-          className={classes.actionButton}
-          color="primary"
-          onClick={startTrivia}
+        <Paper
+          className={classes.smHeader}
+          elevation={23}
+          style={{ padding: 10, borderRadius: 360 }}
         >
-          New Game
-        </Button>
+          <Paper elevation={23} className={classes.backButton}>
+            <Button
+              variant="contained"
+              className={classes.actionButton}
+              color="primary"
+              onClick={startTrivia}
+            >
+              New Game
+            </Button>
+          </Paper>
+        </Paper>
       ) : null}
       {!gameOver &&
       userAnswers.length === number + 1 &&
       number !== TOTAL_QUESTIONS - 1 ? (
-        <Button
-          className={classes.actionButton}
-          variant="contained"
-          color="primary"
-          onClick={nextQuestion}
+        <Paper
+          className={classes.smHeader}
+          elevation={23}
+          style={{ padding: 10, borderRadius: 360 }}
         >
-          Next Question
-        </Button>
+          <Paper elevation={23} className={classes.backButton}>
+            <Button
+              className={classes.actionButton}
+              variant="contained"
+              color="primary"
+              onClick={nextQuestion}
+            >
+              Next Question
+            </Button>
+          </Paper>
+        </Paper>
       ) : null}
     </>
   );

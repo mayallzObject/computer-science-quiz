@@ -2,7 +2,6 @@ import React from "react";
 
 // Mui components
 import jpg from "../../images/jpg.png";
-import oie from "../../images/oie.png";
 
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
@@ -53,18 +52,24 @@ export const useStyles = makeStyles((theme) =>
     },
     button: {
       margin: 4,
-      marginBottom: 5,
+      marginTop: 25,
       fontFamily: "Kaushan Script",
       fontWeight: "bold",
     },
     header: {
       flexgrow: 1,
+      backgroundImage:
+        "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+      fontFamily: "Kaushan Script",
+      fontSize: 30,
+      fontWeight: "bold",
+      margin: 10,
+      padding: 8,
+      color: "sandybrown",
+    },
+    backHeader: {
       backgroundColor: theme.palette.primary.main,
       fontFamily: "Kaushan Script",
-      fontSize: 50,
-      fontWeight: "bold",
-      color: "#28784b",
-      margin: 10,
     },
     smHeader: {
       backgroundColor: theme.palette.primary.main,
@@ -72,17 +77,6 @@ export const useStyles = makeStyles((theme) =>
     },
   })
 );
-
-// const HtmlTooltip = withStyles((theme) => ({
-//   tooltip: {
-//     backgroundColor: "#f5f5f9",
-//     color: "rgba(0, 0, 0, 0.87)",
-//     minWidth: 400,
-//     fontSize: theme.typography.pxToRem(14),
-//     border: "1px solid #dadde9",
-//     textColor: "#000000",
-//   },
-// }))(Tooltip);
 
 function SlideTransition(props: any) {
   return <Slide {...props} direction="up" />;
@@ -129,10 +123,15 @@ export default function Banner(props: any) {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <Paper elevation={23} style={{ padding: 10, marginTop: 35 }}>
-          <h1 className={classes.header}>Cool Trivia</h1>
-          <h1 style={{ fontFamily: "Kaushan Script" }}>Project</h1>
+      <Grid item xs={12} sm={12}>
+        <Paper elevation={23} style={{ padding: 20 }}>
+          <Paper
+            elevation={23}
+            className={classes.backHeader}
+            style={{ padding: 20 }}
+          >
+            <h1 className={classes.header}>Cool Trivia Computer Science</h1>
+          </Paper>
           <Tooltip
             color="primary"
             TransitionComponent={Fade}
@@ -179,12 +178,11 @@ export default function Banner(props: any) {
         </Paper>
 
         <Snackbar
-          style={{ fontSize: 10 }}
           open={open}
           onClose={handleCloseTwo}
           TransitionComponent={transition}
           message={
-            <Box>
+            <Box style={{ fontSize: 10, backgroundColor: "#000000" }}>
               <img
                 src="https://img.icons8.com/color/96/000000/typescript.png"
                 alt="typescript"
@@ -221,13 +219,9 @@ export default function Banner(props: any) {
           }
           key={transition ? transition.name : ""}
         />
-
-        <Paper
-          elevation={23}
-          style={{
-            marginTop: 100,
-          }}
-        >
+      </Grid>
+      <Grid item xs={12} style={{ marginTop: 80 }}>
+        <Paper elevation={23}>
           <Card>
             <CardContent>
               <Paper elevation={23}>
@@ -253,7 +247,6 @@ export default function Banner(props: any) {
               />
 
               <Box>
-                <h1 style={{ fontFamily: "Kaushan Script" }}>Links</h1>
                 <Tooltip
                   color="primary"
                   TransitionComponent={Fade}

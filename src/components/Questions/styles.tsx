@@ -13,10 +13,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       square: "false",
     },
     title: {
-      fontSize: 28,
+      fontSize: 27,
       fontWeight: "bold",
       alignItems: "center",
-      fontFamily: "Kaushan Script",
+      fontFamily: "'Rokkitt', serif",
       backgroundColor: theme.palette.background.paper,
       borderRadius: 360,
       padding: 35,
@@ -24,43 +24,47 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     button: {
       fontFamily: "'Rokkitt', serif",
-      fontSize: 13,
+      fontSize: 14,
+      padding: 10,
       elavation: 23,
       margin: 5,
-      minWidth: 200,
-      maxWidht: 250,
+      width: 200,
 
+      backgroundColor: theme.palette.primary.dark,
       "&:hover": {
-        color: "sandybrown",
-        backgroundColor: "#33313b",
+        backgroundColor: theme.palette.primary.main,
+        color: "yellow",
       },
     },
     submitButton: {
-      fontSize: 13,
+      fontSize: 14,
       padding: 10,
       elavation: 23,
-      margin: 10,
-      color: "white",
-      backgroundColor: "#28784b",
+      margin: 5,
+      borderRadius: 360,
+      width: 200,
+      color: "yellow",
+      backgroundColor: theme.palette.primary.main,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: "#28784b",
-        backgroundColor: "white",
+        backgroundColor: theme.palette.primary.dark,
+        color: "yellow",
       },
     },
     actionButton: {
-      fontSize: 13,
+      fontSize: 14,
       padding: 10,
-      minWidth: 200,
       elavation: 23,
-      margin: 10,
-
+      margin: 5,
+      width: 200,
+      borderRadius: 360,
+      backgroundColor: theme.palette.primary.dark,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: "#ffffff",
-        backgroundColor: "#28784b",
+        backgroundColor: theme.palette.primary.main,
+        color: "yellow",
       },
     },
     smHeader: {
@@ -69,16 +73,14 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     backButton: {
       alignContent: "center",
-      fontSize: 13,
       padding: 10,
-      margin: 20,
+      borderRadius: 360,
       backgroundColor: theme.palette.background.paper,
-
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
         color: "#ffffff",
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.background.default,
       },
     },
   })

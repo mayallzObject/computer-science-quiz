@@ -34,21 +34,52 @@ export default function AboutMe() {
 
     return (
       <Grid className={classes.paper} container spacing={2}>
-        <Grid item xs={12} sm={8}>
-          <Paper elevation={23}>
-            <UserCard />
+        <Grid item xs={12} sm={6}>
+          <Paper
+            className={classes.smHeader}
+            elevation={23}
+            style={{
+              marginTop: 80,
+              padding: 20,
+              borderRadius: 360,
+              minHeight: 600,
+            }}
+          >
+            <Paper
+              elevation={23}
+              style={{
+                borderRadius: 360,
+                minHeight: 550,
+                backgroundImage:
+                  "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
+              }}
+            >
+              <UserCard />
+            </Paper>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <Paper elevation={23}>
-            <Scoreboard />
-          </Paper>
-        </Grid>
-        <Grid item xs={12}>
-          <Paper elevation={23}>
-            <h1 style={{ fontFamily: "Kaushan Script", color: "gray" }}>
-              ???Change details will be added with the next update???
-            </h1>
+        <Grid item xs={12} sm={6}>
+          <Paper
+            className={classes.smHeader}
+            elevation={23}
+            style={{
+              marginTop: 80,
+              padding: 20,
+              borderRadius: 360,
+              minHeight: 600,
+            }}
+          >
+            <Paper
+              elevation={23}
+              style={{
+                borderRadius: 360,
+                minHeight: 550,
+                backgroundImage:
+                  "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+              }}
+            >
+              <Scoreboard />
+            </Paper>
           </Paper>
         </Grid>
       </Grid>
