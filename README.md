@@ -1,4 +1,4 @@
-# :rocket: Cool Trivia Computer Science :satellite:
+# :rocket: Computer Science Quiz Front :satellite:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
@@ -20,7 +20,7 @@
 
 
 ## :clipboard: Introduction
-        I made the "Cool Trivia Science Computer Science" quiz because I love science,
+        I made the "Computer Science Quiz Front" quiz because I love science,
         and the science I know the least about is CS.
         Being part of the Philosophy Club at the university I understand the value of questions.  
         It's a fairly simple application produced with the emphasis on 
