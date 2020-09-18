@@ -7,7 +7,7 @@
 
 [Production](https://cool-trivia-quizer.netlify.app/)
 
-## :pushpin:  **Table of content**
+## :pushpin: Table of content
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
 - [Setup](#Setup)
@@ -19,21 +19,21 @@
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
 
-## :clipboard:  Introduction
+## :clipboard: Introduction
 
     I made the "Cool Trivia Science Computer Science" quiz because I love science, and the science I know the least about is CS.
     Being part of the Philosophy Club at the university I understand the value of questions.  I made this application using a Trivia API.
     It's a fairly simple application produced with the emphasis on learning new technologies( TypeScript + Material-UI ) 
     and applying the skills that I've required in the past few months.
   
-##  :mortar_board:  Goals of this project
+##  :mortar_board: Goals of this project
 
  1. The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
 
         note: The app is not fully responsive and styling is not final. 
         A new scoring system and category picker will be added in the new update.
 
-###  :pencil2:  Objectives 
+###  :pencil2: Objectives 
    1. Practical applications of learned skills: 
          
           ReactJS | Node(ES6) | Redux | REST  
@@ -51,19 +51,19 @@
          Atomic Commits | Branching | Good Commit Masseges |  
   
   
-######  :heavy_check_mark:  Objectives that I did good. 
+######  :heavy_check_mark: Objectives that I did good. 
      Successfully implemented part of the required skills.
      A functional TypeScript app with Material-UI styling.
    
    
-######  :x:  Objectives that I could do better 
+######  :x: Objectives that I could do better 
      Commit masseges and atomic commits were not implamentet correctly.
      Due to time restrictions, bad planning and inexperience I did not do a good job
      Communication is a key for me. I am curretly doing advaced GitHub courses.
      Instead of starting the project from scratch. I decided to leave it like this
      and improve on my new project. 
 
-##  :octocat:  Setup
+##  :octocat: Setup
 **Server setup**
     
     clone the repository
