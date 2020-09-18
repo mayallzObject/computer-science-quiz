@@ -1,8 +1,6 @@
 import React from "react";
 
 // Mui components
-import { makeStyles, createStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
 import Typography from "@material-ui/core/Typography";
 import {
   Link,
@@ -23,60 +21,9 @@ import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import FaceIcon from "@material-ui/icons/Face";
 
+import { useStyles } from "./styles";
+
 import jpg from "../../images/jpg.png";
-
-export const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-      alignItems: "center",
-    },
-    media: {
-      paddingTop: "56.25%", // 16:9
-      minHeight: 500,
-
-      alignItems: "center",
-    },
-    expand: {
-      transform: "rotate(0deg)",
-      marginLeft: "auto",
-      transition: theme.transitions.create("transform", {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: "rotate(180deg)",
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-    button: {
-      margin: 4,
-      marginTop: 25,
-      fontFamily: "Kaushan Script",
-      fontWeight: "bold",
-    },
-    header: {
-      flexgrow: 1,
-      backgroundImage:
-        "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
-      fontFamily: "Kaushan Script",
-      fontSize: 30,
-      fontWeight: "bold",
-      margin: 10,
-      padding: 8,
-      color: "sandybrown",
-    },
-    backHeader: {
-      backgroundColor: theme.palette.primary.main,
-      fontFamily: "Kaushan Script",
-    },
-    smHeader: {
-      backgroundColor: theme.palette.primary.main,
-      fontFamily: "Kaushan Script",
-    },
-  })
-);
 
 function SlideTransition(props: any) {
   return <Slide {...props} direction="up" />;
@@ -130,7 +77,7 @@ export default function Banner(props: any) {
             className={classes.backHeader}
             style={{ padding: 20, flexGrow: 1 }}
           >
-            <h1 className={classes.header}>Cool Trivia Computer Science</h1>
+            <h1 className={classes.header}>Computer Science Quiz</h1>
           </Paper>
           <Tooltip
             color="primary"

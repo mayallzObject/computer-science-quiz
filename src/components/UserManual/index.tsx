@@ -3,7 +3,7 @@ import React from "react";
 //Mui components
 import Card from "@material-ui/core/Card";
 import { Paper, CardContent } from "@material-ui/core";
-import { useStyles } from "../../components/Banner";
+import { useStyles } from "./styles";
 
 export default function UserManual() {
   const classes = useStyles();
@@ -12,16 +12,7 @@ export default function UserManual() {
       <Card>
         <CardContent>
           <Paper elevation={23} className={classes.smHeader}>
-            <h2
-              className={classes.smHeader}
-              style={{
-                fontFamily: "Kaushan Script",
-                fontWeight: "bold",
-                color: "sandybrown",
-              }}
-            >
-              User Manual
-            </h2>
+            <h2 className={classes.smHeader}>User Manual</h2>
           </Paper>
           <div
             style={{
