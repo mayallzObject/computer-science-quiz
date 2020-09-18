@@ -36,29 +36,31 @@
         A new scoring system and category picker will be added in the new update.
 
 ###  :pencil2: Objectives 
-   1. Practical applications of learned skills: 
-         
-          ReactJS | Node(ES6) | Redux | REST  
+   **1. Practical applications of learned skills:** 
    
-   2. Implementation of new technologies:
+        ReactJS | Node(ES6) | Redux | REST  
+   
+   **2. Implementation of new technologies:**
            
-          TypeScript | Material-UI
+       TypeScript | Material-UI
    
-   3. Planning: 
+   **3. Planning:** 
           
-          User Stories | Database Diagrams wireframes
+      User Stories | Database Diagrams wireframes
    
-   4 Practice with version control 
+   **4 Practice with version control:** 
            
-         Atomic Commits | Branching | Good Commit Masseges |  
+     Atomic Commits | Branching | Good Commit Masseges  
   
   
 ######  :heavy_check_mark: Objectives that I did good. 
+     
      Successfully implemented part of the required skills.
      A functional TypeScript app with Material-UI styling.
    
    
 ######  :x: Objectives that I could do better 
+     
      Commit masseges and atomic commits were not implamentet correctly.
      Due to time restrictions, bad planning and inexperience I did not do a good job
      Communication is a key for me. I am curretly doing advaced GitHub courses.
