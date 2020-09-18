@@ -78,8 +78,8 @@
 
         clone the repository
         cd into the project directory
-        on the first run, run the script npm run initialize, this will run npm install && react-scripts star
-        afterward, the first run just run the script npm run start to start development
+        on the first run, run the script npm run initialize, this will run npm install && react-scripts 
+        star afterward, the first run just run the script npm run start to start development
         the client runs on localhost:3000 by default
 
 
