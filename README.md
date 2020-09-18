@@ -5,7 +5,7 @@
 ![Alt Text](https://media.giphy.com/media/5uIBpDiQMC9uGPpfZF/giphy.gif)
 ![Alt Text](https://media.giphy.com/media/XnFF3zH1WhqtISj9NS/giphy.gif)
 
-[Production](https://cool-trivia-quizer.netlify.app/)
+[Netlify Link](https://cool-trivia-quizer.netlify.app/)
 
 ## :pushpin: Table of content
 - [Introduction](#Introduction)
