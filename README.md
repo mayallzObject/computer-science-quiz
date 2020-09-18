@@ -37,21 +37,18 @@
         A new scoring system and category picker will be added in the new update.
 
 ##  :pencil2: Objectives 
-   **1. Practical applications of learned skills:** 
    
+    1. Practical applications of learned skills: 
         ReactJS | Node(ES6) | Redux | REST  
    
-   **2. Implementation of new technologies:**
-           
-       TypeScript | Material-UI
+    2. Implementation of new technologies:
+        TypeScript | Material-UI
    
-   **3. Planning:** 
-          
-      User Stories | Database Diagrams wireframes
+    3. Planning: 
+       User Stories | Database Diagrams wireframes
    
-   **4 Practice with version control:** 
-           
-     Atomic Commits | Branching | Good Commit Masseges  
+    4. Practice with version control: 
+       Atomic Commits | Branching | Good Commit Masseges  
   
   
 ###### :heavy_check_mark: Objectives that I did good. 
