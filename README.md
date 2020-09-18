@@ -86,12 +86,13 @@
 
 ## :computer:  Technologies
 
-**Back end -Express and SequelizeORM**
+    Back end -Express and SequelizeORM:
+
   <img            
-           src="https://img.icons8.com/nolan/96/api-settings.png"
+           src="https://img.icons8.com/nolan/48/api-settings.png"
           />
                   <img 
-                    src="https://img.icons8.com/color/96/000000/nodejs.png"
+                    src="https://img.icons8.com/color/48/000000/nodejs.png"
                   />
                   <img
                     src="https://img.icons8.com/color/48/000000/javascript.png"
@@ -102,7 +103,7 @@
                   />
 
 
-**Front end**
+    Front end:
  <img 
            src="https://img.icons8.com/color/48/000000/nodejs.png"
           />
