@@ -1,4 +1,4 @@
-# Cool Trivia
+# :rocket: Cool Trivia Computer Science :satellite:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
@@ -7,7 +7,7 @@
 
 [Production](https://cool-trivia-quizer.netlify.app/)
 
-## **Table of content**
+## :pushpin: **Table of content**
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
 - [Setup](#Setup)
@@ -19,32 +19,28 @@
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
 
+## :clipboard:**Introduction**
 
-
-
-## **Introduction**
-Hello!
-   My name is Ivaylo, and this is my 1st portfolio project.
-I made the "Cool Trivia Science Computer Science" quiz because I love science and the science I know the least about is CS. 
-
-  Being part of the Philosophy Club at the university I learned the value of questions. So created this app. useing a Trivia API, 
-and seleceted only the CS category of quitions. 
-
-  It's a fairly simple application made with the emphasis on learning new technologies and applying the skills that I required in the past 
-few months.
+    I made the "Cool Trivia Science Computer Science" quiz because I love science, and the science I know the least about is CS.
+    Being part of the Philosophy Club at the university I understand the value of questions.  I made this application using a Trivia API.
+    It's a fairly simple application produced with the emphasis on learning new technologies( TypeScript + Material-UI ) 
+    and applying the skills that I've required in the past few months.
   
-  
-  
-
 ##  **Goals of this project**
-The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
 
-The app is fully responsive but styling is not final. 
-A new scoring system and category picker will be added in the new update.
+ 1. The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
+
+        note: The app is not fully responsive and styling is not final. 
+        A new scoring system and category picker will be added in the new update.
 
 ### Objectives 
-   - Practical applications of learned skills: react, redux, REST, 
+   - Practical applications of learned skills: 
+         
+         ReactJS, Node(ES6), Redux, REST,  
+   
    - Implementation of new technologies.
+      1. TypeScript
+      2. Material-UI
    - Creating user stories, database models, and wireframes.
    - Practice with version control - branching and pull requests.
   
@@ -76,11 +72,7 @@ the server runs on port 4000 by default.
 - afterward, the first run just run the script npm run start to start development
 - the client runs on localhost:3000 by default
 )
-Your new Blitz rating is 1054 (-9).
-Match Scores alonaboutboul (1021) [3] vs Candytor (1054) [2]
-NEW GAME
-Candytor (1054) [2] vs. alonaboutboul (1021) [3] (3 min)
-win +7 / draw -1 / lose -9
+
 ## **Technologies**
 
 #### Back end -Express and SequelizeORM
