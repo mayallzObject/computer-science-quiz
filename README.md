@@ -7,7 +7,7 @@
 
 [Production](https://cool-trivia-quizer.netlify.app/)
 
-## :pushpin: **Table of content**
+## :pushpin:  **Table of content**
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
 - [Setup](#Setup)
@@ -19,59 +19,63 @@
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
 
-## :clipboard:**Introduction**
+## :clipboard:  **Introduction**
 
     I made the "Cool Trivia Science Computer Science" quiz because I love science, and the science I know the least about is CS.
     Being part of the Philosophy Club at the university I understand the value of questions.  I made this application using a Trivia API.
     It's a fairly simple application produced with the emphasis on learning new technologies( TypeScript + Material-UI ) 
     and applying the skills that I've required in the past few months.
   
-##  **Goals of this project**
+##  :mortar_board:  **Goals of this project**
 
  1. The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
 
         note: The app is not fully responsive and styling is not final. 
         A new scoring system and category picker will be added in the new update.
 
-### Objectives 
+###  :pencil2:  Objectives 
    - Practical applications of learned skills: 
          
          ReactJS, Node(ES6), Redux, REST,  
    
    - Implementation of new technologies.
-      1. TypeScript
-      2. Material-UI
-   - Creating user stories, database models, and wireframes.
+           
+           TypeScript, Material-UI
+   
+   - Creating user stories, database diagrams, and wireframes.
    - Practice with version control - branching and pull requests.
   
   
-###### Objectives that I did good. 
-   1. Successfully implemented part of the required skills.
-   2. A functional TypeScript app with Material-UI styling.
+######  :heavy_check_mark:  Objectives that I did good. 
+    Successfully implemented part of the required skills.
+    A functional TypeScript app with Material-UI styling.
    
    
-###### Objectives that I could do better 
-   1. The git hub commits and pull requests went bad. 
-   There is a lot to improve, but thankfully during my team-project, I had the opportunity to make do it better.
-   Communication is a key for me so I will be doing GitHub courses.
+######  :x:  Objectives that I could do better 
+     Commit masseges and atomic commits were not implamentet correctly.
+     Due to time restrictions, bad planning and inexperience I did not do a good job
+     Communication is a key for me. I am curretly doing advaced GitHub courses.
+     Instead of starting the project from scratch. I decided to leave it like this
+     and improve on my new project. 
 
 ## **Setup**
-#### Server setup
-- clone the repository
-- cd into the project directory
-- on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start
-afterward, simply run npm run start which will run the script npx nodemon index.js or node index.js
-the server runs on port 4000 by default.
+**Server setup**
+    
+    clone the repository
+    cd into the project directory
+    on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start
+    afterward, simply run npm run start which will run the script npx nodemon index.js or node index.js
+    the server runs on port 4000 by default.
 
 
-#### Client setup
+**Client setup**
 
-- clone the repository
-- cd into the project directory
-- on the first run, run the script npm run initialize, this will run npm install && react-scripts star
-- afterward, the first run just run the script npm run start to start development
-- the client runs on localhost:3000 by default
-)
+    clone the repository
+    cd into the project directory
+    on the first run, run the script npm run initialize, this will run npm install && react-scripts star
+    afterward, the first run just run the script npm run start to start development
+    the client runs on localhost:3000 by default
+
 
 ## **Technologies**
 
@@ -83,34 +87,36 @@ the server runs on port 4000 by default.
                     src="https://img.icons8.com/color/96/000000/nodejs.png"
                   />
                   <img
-                    src="https://img.icons8.com/color/96/000000/javascript.png"
+                    src="https://img.icons8.com/color/48/000000/javascript.png"
                     alt="JS"
                   />
-                  <img src="https://img.icons8.com/color/96/000000/postgreesql.png"/>
+                  <img src="https://img.icons8.com/color/48/000000/postgreesql.png"
+                  alt="postgresql"
+                  />
 
 
 #### Front end
  <img 
-           src="https://img.icons8.com/color/96/000000/nodejs.png"
+           src="https://img.icons8.com/color/48/000000/nodejs.png"
           />
                   <img
-                    src="https://img.icons8.com/color/96/000000/javascript.png"
+                    src="https://img.icons8.com/color/48/000000/javascript.png"
                     alt="JS"
                   />
                   <img
-                    src="https://img.icons8.com/color/96/000000/typescript.png"
+                    src="https://img.icons8.com/color/48/000000/typescript.png"
                     alt="react"
                   />
                   <img
-                    src="https://img.icons8.com/nolan/96/react-native.png"
+                    src="https://img.icons8.com/nolan/48/react-native.png"
                     alt="native"
                   />
                   <img
-                    src="https://img.icons8.com/color/96/000000/redux.png"
+                    src="https://img.icons8.com/color/48/000000/redux.png"
                     alt="redux"
                   />
                   <img
-                    src="https://img.icons8.com/color/96/000000/material-ui.png"
+                    src="https://img.icons8.com/color/48/000000/material-ui.png"
                     alt="mui"
                   />
                   
