@@ -21,10 +21,10 @@
 
 ## :clipboard: Introduction
 
-   I made the "Cool Trivia Science Computer Science" quiz because I love science, 
+    I made the "Cool Trivia Science Computer Science" quiz because I love science, 
  and the science I know the least about is CS.
  Being part of the Philosophy Club at the university I understand the value of questions.  
- It's a fairly simple application produced with the emphasis on 
+    It's a fairly simple application produced with the emphasis on 
  learning new technologies( TypeScript + Material-UI ) 
  and applying the skills that I've required in the past few months.
   
