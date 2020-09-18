@@ -1,8 +1,6 @@
 import React from "react";
 
 // Mui components
-import jpg from "../../images/jpg.png";
-
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import Typography from "@material-ui/core/Typography";
@@ -24,6 +22,8 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import FaceIcon from "@material-ui/icons/Face";
+
+import jpg from "../../images/jpg.png";
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
@@ -123,12 +123,12 @@ export default function Banner(props: any) {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={12}>
+      <Grid item xs={12}>
         <Paper elevation={23} style={{ padding: 20 }}>
           <Paper
             elevation={23}
             className={classes.backHeader}
-            style={{ padding: 20 }}
+            style={{ padding: 20, flexGrow: 1 }}
           >
             <h1 className={classes.header}>Cool Trivia Computer Science</h1>
           </Paper>
