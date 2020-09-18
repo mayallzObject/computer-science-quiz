@@ -19,14 +19,14 @@
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
 
-## :clipboard:  **Introduction**
+## :clipboard:  Introduction
 
     I made the "Cool Trivia Science Computer Science" quiz because I love science, and the science I know the least about is CS.
     Being part of the Philosophy Club at the university I understand the value of questions.  I made this application using a Trivia API.
     It's a fairly simple application produced with the emphasis on learning new technologies( TypeScript + Material-UI ) 
     and applying the skills that I've required in the past few months.
   
-##  :mortar_board:  **Goals of this project**
+##  :mortar_board:  Goals of this project
 
  1. The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
 
@@ -34,21 +34,26 @@
         A new scoring system and category picker will be added in the new update.
 
 ###  :pencil2:  Objectives 
-   - Practical applications of learned skills: 
+   1. Practical applications of learned skills: 
          
-         ReactJS, Node(ES6), Redux, REST,  
+          ReactJS | Node(ES6) | Redux | REST  
    
-   - Implementation of new technologies.
+   2. Implementation of new technologies:
            
-           TypeScript, Material-UI
+          TypeScript | Material-UI
    
-   - Creating user stories, database diagrams, and wireframes.
-   - Practice with version control - branching and pull requests.
+   3. Planning: 
+          
+          User Stories | Database Diagrams wireframes
+   
+   4 Practice with version control 
+           
+         Atomic Commits | Branching | Good Commit Masseges |  
   
   
 ######  :heavy_check_mark:  Objectives that I did good. 
-    Successfully implemented part of the required skills.
-    A functional TypeScript app with Material-UI styling.
+     Successfully implemented part of the required skills.
+     A functional TypeScript app with Material-UI styling.
    
    
 ######  :x:  Objectives that I could do better 
@@ -58,7 +63,7 @@
      Instead of starting the project from scratch. I decided to leave it like this
      and improve on my new project. 
 
-## **Setup**
+##  :octocat:  Setup
 **Server setup**
     
     clone the repository
@@ -77,9 +82,9 @@
     the client runs on localhost:3000 by default
 
 
-## **Technologies**
+##  :computer:  Technologies
 
-#### Back end -Express and SequelizeORM
+**Back end -Express and SequelizeORM**
   <img            
            src="https://img.icons8.com/nolan/96/api-settings.png"
           />
@@ -95,7 +100,7 @@
                   />
 
 
-#### Front end
+**Front end**
  <img 
            src="https://img.icons8.com/color/48/000000/nodejs.png"
           />
@@ -120,16 +125,14 @@
                     alt="mui"
                   />
                   
-## **DB model**                  
+## DB model                  
 ![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
 
-## **Wire frame** 
+## Wire frame** 
 ![Screenshot from 2020-09-10 01-17-50](https://user-images.githubusercontent.com/66206483/92664147-816bd280-f303-11ea-82bb-0b90c98ebaa3.png)
              
                   
- ## **Screen Shots**
-![Screenshot from 2020-09-09 16-55-51](https://user-images.githubusercontent.com/66206483/92615652-a0e00c80-f2bd-11ea-82d5-1fb6f6fca7ee.png)
-![Screenshot from 2020-09-09 16-55-39](https://user-images.githubusercontent.com/66206483/92615674-a6d5ed80-f2bd-11ea-849a-51faf3639967.png)
+
 
 
 
