@@ -20,15 +20,7 @@ const QuestionCard: React.FC<Props> = ({
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <div
-          style={{
-            fontWeight: "bold",
-            fontFamily: "Kaushan Script",
-            fontSize: 17,
-            padding: 4,
-            color: "silver",
-          }}
-        >
+        <div className={classes.number}>
           Question: {questionNr} / {totalQuestions}
         </div>
         <Paper

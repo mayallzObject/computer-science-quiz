@@ -71,12 +71,12 @@ export default function Banner(props: any) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Paper elevation={23} style={{ padding: 20 }}>
-          <Paper
-            elevation={23}
-            className={classes.backHeader}
-            style={{ padding: 20, flexGrow: 1 }}
-          >
+        <Paper
+          elevation={23}
+          style={{ padding: 10 }}
+          className={classes.smHeader}
+        >
+          <Paper elevation={23} className={classes.smHeader}>
             <h1 className={classes.header}>Computer Science Quiz</h1>
           </Paper>
           <Tooltip
@@ -167,7 +167,7 @@ export default function Banner(props: any) {
           key={transition ? transition.name : ""}
         />
       </Grid>
-      <Grid item xs={12} style={{ marginTop: 80 }}>
+      <Grid item xs={12} style={{ marginTop: 50 }}>
         <Paper elevation={23}>
           <Card>
             <CardContent>

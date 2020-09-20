@@ -6,8 +6,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(4),
-      marginTop: theme.spacing(15),
+      padding: theme.spacing(1),
+      marginTop: theme.spacing(8),
 
       textAlign: "center",
     },

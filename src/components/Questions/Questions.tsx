@@ -89,18 +89,7 @@ const Questions: React.FC = () => {
     <>
       <Typography component="div">
         {!gameOver ? (
-          <div
-            style={{
-              fontWeight: "bold",
-              fontFamily: "Kaushan Script",
-              fontSize: 25,
-              color: "sandybrown",
-              alignItems: "center",
-            }}
-          >
-            {" "}
-            Score: {score}
-          </div>
+          <div className={classes.score}> Score: {score}</div>
         ) : null}
       </Typography>
 
