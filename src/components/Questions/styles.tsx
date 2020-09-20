@@ -13,7 +13,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       square: "false",
     },
     title: {
-      fontSize: 27,
+      fontSize: "1rem",
+      "@media (min-width:600px)": {
+        fontSize: "1.2rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.6rem",
+      },
       fontWeight: "bold",
       alignItems: "center",
       fontFamily: "'Rokkitt', serif",
@@ -24,26 +30,39 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     button: {
       fontFamily: "'Rokkitt', serif",
-      fontSize: 14,
+      fontSize: "0.6rem",
+      "@media (min-width:600px)": {
+        fontSize: "0.6rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "0.8rem",
+      },
+      backgroundColor: theme.palette.primary.dark,
+      color: "gold",
       padding: 10,
       elavation: 23,
       margin: 5,
-      width: 200,
+      width: 230,
+      fontWeight: "bold",
 
-      backgroundColor: theme.palette.primary.dark,
       "&:hover": {
-        backgroundColor: theme.palette.primary.main,
         color: "yellow",
+        backgroundColor: theme.palette.primary.main,
       },
     },
     submitButton: {
-      fontSize: 14,
+      fontSize: "0.6rem",
+      "@media (min-width:600px)": {
+        fontSize: "0.6rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "0.8rem",
+      },
       padding: 10,
       elavation: 23,
-      margin: 5,
       borderRadius: 360,
       width: 200,
-      color: "yellow",
+      color: "gold",
       backgroundColor: theme.palette.primary.main,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
@@ -53,12 +72,18 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     actionButton: {
-      fontSize: 14,
+      fontSize: "0.6rem",
+      "@media (min-width:600px)": {
+        fontSize: "0.6rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "0.8rem",
+      },
       padding: 10,
       elavation: 23,
-      margin: 5,
       width: 200,
       borderRadius: 360,
+      color: "gold",
       backgroundColor: theme.palette.primary.dark,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
@@ -81,6 +106,32 @@ export const useStyles = makeStyles((theme: Theme) =>
       "&:hover": {
         color: "#ffffff",
         backgroundColor: theme.palette.background.default,
+      },
+    },
+    number: {
+      fontSize: "0.6rem",
+      "@media (min-width:600px)": {
+        fontSize: "0.8rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1rem",
+      },
+      color: "#ffffff",
+      fontFamily: "'Rokkitt', serif",
+    },
+    score: {
+      fontWeight: "bold",
+      fontFamily: "'Rokkitt', serif",
+      padding: 10,
+      alignItems: "center",
+
+      color: "#f4a460",
+      fontSize: "1rem",
+      "@media (min-width:600px)": {
+        fontSize: "1rem",
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.6rem",
       },
     },
   })
