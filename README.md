@@ -3,8 +3,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
 
-![Alt Text](https://media.giphy.com/media/V0r3WbvvL1NAp3I8wO/giphy.gif)
-
+   ![Alt Text](https://media.giphy.com/media/sGPqC8Yxigres92oyy/giphy.gif)
+   
+   ![Alt Text](https://media.giphy.com/media/844ZsspUYL57vM1Rl5/giphy.gif)
+   
 [Netlify Link](https://cool-trivia-quizer.netlify.app/)
 
 ## :pushpin: Table of content
