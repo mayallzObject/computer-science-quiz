@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       elavation: 23,
       margin: 10,
       maxWidth: 250,
-      minWidth: 230,
+      minWidth: 200,
       fontWeight: "bold",
 
       "&:hover": {
@@ -63,7 +63,7 @@ export const useStyles = makeStyles((theme: Theme) =>
 
       elavation: 23,
       borderRadius: 360,
-      width: 300,
+      width: 220,
       color: "gold",
       backgroundColor: theme.palette.primary.dark,
       fontWeight: "bold",
@@ -83,10 +83,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
       padding: 10,
       elavation: 23,
-      width: 300,
+      width: 220,
       borderRadius: 360,
       backgroundColor: theme.palette.primary.main,
-      color: "gold",
+      marginTop: 5,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
