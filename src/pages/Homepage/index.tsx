@@ -65,8 +65,8 @@ export default function Home(props: Props) {
         item
         xs={12}
         style={{
-          marginTop: 150,
-          marginBottom: 150,
+          marginTop: 180,
+          marginBottom: 180,
         }}
       >
         <Paper
@@ -100,17 +100,7 @@ export default function Home(props: Props) {
           marginBottom: 100,
         }}
       >
-        <Paper
-          elevation={23}
-          className={classes.smHeader}
-          style={{
-            padding: 10,
-          }}
-        >
-          <Paper elevation={23} className={classes.backPaper}>
-            <Scoreboard />
-          </Paper>
-        </Paper>
+        <Scoreboard />
       </Grid>
       <Grid
         item
@@ -120,17 +110,7 @@ export default function Home(props: Props) {
           marginBottom: 100,
         }}
       >
-        <Paper
-          elevation={23}
-          className={classes.smHeader}
-          style={{
-            padding: 10,
-          }}
-        >
-          <Paper elevation={23} className={classes.backPaper}>
-            <UserManual />
-          </Paper>
-        </Paper>
+        <UserManual />
       </Grid>
     </Grid>
   );
