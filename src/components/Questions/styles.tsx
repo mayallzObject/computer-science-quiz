@@ -30,19 +30,20 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     button: {
       fontFamily: "'Robboto', monospace",
-      fontSize: "0.6rem",
+      fontSize: "0.7rem",
       "@media (min-width:600px)": {
         fontSize: "0.6rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "0.8rem",
+        fontSize: "0.9rem",
       },
       backgroundColor: theme.palette.primary.light,
       color: theme.palette.background.paper,
       padding: 10,
       elavation: 23,
       margin: 10,
-      width: 230,
+      maxWidth: 250,
+      minWidth: 230,
       fontWeight: "bold",
 
       "&:hover": {
@@ -53,45 +54,44 @@ export const useStyles = makeStyles((theme: Theme) =>
     submitButton: {
       fontSize: "0.6rem",
       "@media (min-width:600px)": {
-        fontSize: "0.6rem",
-      },
-      [theme.breakpoints.up("md")]: {
         fontSize: "0.8rem",
       },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1rem",
+      },
       padding: 10,
+
       elavation: 23,
       borderRadius: 360,
-      width: 200,
+      width: 300,
       color: "gold",
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.dark,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: theme.palette.primary.light,
         color: "yellow",
       },
     },
     actionButton: {
-      marginTop: 10,
       fontSize: "0.6rem",
       "@media (min-width:600px)": {
-        fontSize: "0.6rem",
+        fontSize: "0.8rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "0.9rem",
+        fontSize: "1rem",
       },
       padding: 10,
       elavation: 23,
-      width: 200,
+      width: 300,
       borderRadius: 360,
       backgroundColor: theme.palette.primary.main,
       color: "gold",
-
       fontWeight: "bold",
-      fontFamily: "'Robboto', monospace",
+      fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: theme.palette.background.paper,
-        backgroundColor: theme.palette.primary.light,
+        color: "yellow",
+        backgroundColor: theme.palette.primary.dark,
       },
     },
     smHeader: {
@@ -110,7 +110,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     number: {
-      fontSize: "0.6rem",
+      fontSize: "1rem",
       "@media (min-width:600px)": {
         fontSize: "1.4rem",
       },

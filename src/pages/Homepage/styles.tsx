@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     paper: {
       padding: theme.spacing(2),
-      marginTop: theme.spacing(12),
+      marginTop: theme.spacing(8),
 
       textAlign: "center",
     },
