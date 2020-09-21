@@ -11,9 +11,6 @@ import {
   Tooltip,
   Box,
   Grid,
-  Paper,
-  Card,
-  CardContent,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -70,59 +67,50 @@ export default function Banner(props: any) {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <Paper
-          elevation={23}
-          style={{ padding: 10 }}
-          className={classes.smHeader}
+      <Grid item xs={12} sm={9}>
+        <h1 className={classes.header}>Computer Science Quiz</h1>
+
+        <Tooltip
+          color="primary"
+          TransitionComponent={Fade}
+          TransitionProps={{ timeout: 600 }}
+          title={
+            <h1 style={{ fontFamily: "Kaushan Script" }}>Project Repository</h1>
+          }
         >
-          <Paper elevation={23} className={classes.smHeader}>
-            <h1 className={classes.header}>Computer Science Quiz</h1>
-          </Paper>
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1 style={{ fontFamily: "Kaushan Script" }}>
-                Project Repository
-              </h1>
-            }
-          >
-            <Link
-              href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
-              target="_blank"
-            >
-              <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
-                aria-label="settings"
-              >
-                <GitHubIcon fontSize="small" />
-              </Button>
-            </Link>
-          </Tooltip>
-          <Tooltip
-            color="primary"
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title={
-              <h1 style={{ fontFamily: "Kaushan Script" }}>
-                Project Technologies
-              </h1>
-            }
+          <Link
+            href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+            target="_blank"
           >
             <Button
               className={classes.button}
-              color="primary"
               variant="contained"
-              onClick={handleClickTwo(TransitionLeft)}
+              color="primary"
+              aria-label="settings"
             >
-              <InfoOutlinedIcon fontSize="small" />
+              <GitHubIcon fontSize="small" />
             </Button>
-          </Tooltip>
-        </Paper>
+          </Link>
+        </Tooltip>
+        <Tooltip
+          color="primary"
+          TransitionComponent={Fade}
+          TransitionProps={{ timeout: 600 }}
+          title={
+            <h1 style={{ fontFamily: "Kaushan Script" }}>
+              Project Technologies
+            </h1>
+          }
+        >
+          <Button
+            className={classes.button}
+            color="primary"
+            variant="contained"
+            onClick={handleClickTwo(TransitionLeft)}
+          >
+            <InfoOutlinedIcon fontSize="small" />
+          </Button>
+        </Tooltip>
 
         <Snackbar
           open={open}
@@ -167,101 +155,83 @@ export default function Banner(props: any) {
           key={transition ? transition.name : ""}
         />
       </Grid>
-      <Grid item xs={12} style={{ marginTop: 50 }}>
-        <Paper elevation={23}>
-          <Card>
-            <CardContent>
-              <Paper elevation={23}>
-                <h2
-                  className={classes.smHeader}
-                  style={{
-                    fontFamily: "Kaushan Script",
-                    fontWeight: "bold",
-                    color: "sandybrown",
-                  }}
-                >
-                  Personal
-                </h2>
-              </Paper>
+      <Grid item xs={12} sm={3}>
+        <img
+          style={{
+            height: 120,
+            width: 120,
+            marginTop: 20,
+          }}
+          src={jpg}
+          alt="ivo"
+        />
 
-              <img
-                style={{
-                  height: 100,
-                  width: 100,
-                }}
-                src={jpg}
-                alt="ivo"
-              />
-
-              <Box>
-                <Tooltip
-                  color="primary"
-                  TransitionComponent={Fade}
-                  TransitionProps={{ timeout: 600 }}
-                  title={
-                    <h1
-                      style={{ fontFamily: "Kaushan Script" }}
-                    >{`Go to ${props.name}'s GitHub `}</h1>
-                  }
-                >
-                  <Link href={props.gitUrl} target="_blank">
-                    <Button
-                      className={classes.button}
-                      variant="contained"
-                      color="primary"
-                      aria-label="settings"
-                    >
-                      <GitHubIcon fontSize="small" />
-                    </Button>
-                  </Link>
-                </Tooltip>
-                <Tooltip
-                  color="primary"
-                  TransitionComponent={Fade}
-                  TransitionProps={{ timeout: 600 }}
-                  title={
-                    <h1
-                      style={{ fontFamily: "Kaushan Script" }}
-                    >{`Go to ${props.name}'s LinkedIn profile `}</h1>
-                  }
-                >
-                  <Link
-                    href="https://www.linkedin.com/in/ivo-yankov/"
-                    target="_blank"
-                  >
-                    <Button
-                      className={classes.button}
-                      variant="contained"
-                      color="primary"
-                      aria-label="settings"
-                    >
-                      <LinkedInIcon fontSize="small" />
-                    </Button>
-                  </Link>
-                </Tooltip>
-                <Tooltip
-                  color="primary"
-                  TransitionComponent={Fade}
-                  TransitionProps={{ timeout: 600 }}
-                  title={
-                    <h1
-                      style={{ fontFamily: "Kaushan Script" }}
-                    >{`${props.name}'s info`}</h1>
-                  }
-                >
-                  <Button
-                    className={classes.button}
-                    variant="contained"
-                    color="primary"
-                    onClick={handleClick(SlideTransition)}
-                  >
-                    <FaceIcon fontSize="small" />
-                  </Button>
-                </Tooltip>
-              </Box>
-            </CardContent>
-          </Card>
-        </Paper>
+        <Box>
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={
+              <h1
+                style={{ fontFamily: "Kaushan Script" }}
+              >{`Go to ${props.name}'s GitHub `}</h1>
+            }
+          >
+            <Link href={props.gitUrl} target="_blank">
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                aria-label="settings"
+              >
+                <GitHubIcon fontSize="small" />
+              </Button>
+            </Link>
+          </Tooltip>
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={
+              <h1
+                style={{ fontFamily: "Kaushan Script" }}
+              >{`Go to ${props.name}'s LinkedIn profile `}</h1>
+            }
+          >
+            <Link
+              href="https://www.linkedin.com/in/ivo-yankov/"
+              target="_blank"
+            >
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                aria-label="settings"
+              >
+                <LinkedInIcon fontSize="small" />
+              </Button>
+            </Link>
+          </Tooltip>
+          <Tooltip
+            color="primary"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title={
+              <h1
+                style={{ fontFamily: "Kaushan Script" }}
+              >{`${props.name}'s info`}</h1>
+            }
+          >
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="primary"
+              onClick={handleClick(SlideTransition)}
+            >
+              <FaceIcon fontSize="small" />
+            </Button>
+          </Tooltip>
+        </Box>
 
         <Typography paragraph component="ul">
           <Snackbar

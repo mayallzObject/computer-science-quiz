@@ -1,6 +1,12 @@
 import React from "react";
 import { Props } from "./types";
-import { Button, Typography, Grid, Paper } from "@material-ui/core";
+import {
+  Button,
+  Typography,
+  Grid,
+  Paper,
+  ButtonGroup,
+} from "@material-ui/core";
 
 import { useStyles } from "./styles";
 
@@ -19,7 +25,7 @@ const QuestionCard: React.FC<Props> = ({
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
+      <Grid item xs={12} sm={6}>
         <div className={classes.number}>
           Question: {questionNr} / {totalQuestions}
         </div>
@@ -27,7 +33,7 @@ const QuestionCard: React.FC<Props> = ({
           className={classes.smHeader}
           elevation={23}
           style={{
-            padding: 10,
+            padding: 20,
             borderRadius: 360,
           }}
         >
@@ -41,26 +47,28 @@ const QuestionCard: React.FC<Props> = ({
           </Typography>
         </Paper>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} sm={6}>
         <Paper
-          className={classes.smHeader}
+          className={classes.answers}
           elevation={23}
           style={{ padding: 10, borderRadius: 360 }}
         >
           <Paper elevation={23} className={classes.backButton}>
-            {answers.map((answer) => (
-              <Button
-                key={answer}
-                color="primary"
-                variant="contained"
-                className={classes.button}
-                disabled={userAnswer ? true : false}
-                value={answer}
-                onClick={callback}
-              >
-                <div dangerouslySetInnerHTML={{ __html: answer }} />
-              </Button>
-            ))}
+            <ButtonGroup orientation="vertical">
+              {answers.map((answer) => (
+                <Button
+                  key={answer}
+                  color="primary"
+                  variant="contained"
+                  className={classes.button}
+                  disabled={userAnswer ? true : false}
+                  value={answer}
+                  onClick={callback}
+                >
+                  <div dangerouslySetInnerHTML={{ __html: answer }} />
+                </Button>
+              ))}
+            </ButtonGroup>
           </Paper>
         </Paper>
       </Grid>
