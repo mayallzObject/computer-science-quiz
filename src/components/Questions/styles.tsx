@@ -86,12 +86,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       width: 300,
       borderRadius: 360,
       backgroundColor: theme.palette.primary.main,
-
+      color: "gold",
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: theme.palette.background.paper,
-        backgroundColor: theme.palette.primary.light,
+        color: "yellow",
+        backgroundColor: theme.palette.primary.dark,
       },
     },
     smHeader: {
