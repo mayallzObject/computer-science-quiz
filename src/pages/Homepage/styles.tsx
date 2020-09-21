@@ -6,8 +6,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(1),
-      marginTop: theme.spacing(8),
+      padding: theme.spacing(2),
+      marginTop: theme.spacing(12),
 
       textAlign: "center",
     },
@@ -15,8 +15,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       margin: 24,
     },
     smHeader: {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.light,
       fontFamily: "Kaushan Script",
+      borderRadius: 360,
+      padding: 10,
     },
     header: {
       flexgrow: 1,
@@ -27,9 +29,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       margin: 10,
       padding: 8,
     },
-    backHeader: {
-      backgroundColor: theme.palette.primary.main,
-      fontFamily: "Kaushan Script",
+
+    backPaper: {
+      padding: 20,
+      backgroundColor: theme.palette.background.paper,
+      borderRadius: 360,
     },
   })
 );

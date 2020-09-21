@@ -13,11 +13,12 @@ import { fetchQuestions } from "../../store/questions/actions";
 
 // TypesScript types
 import { AnswerObject, ID, QuestionsState } from "./types";
-import { Button, Typography, Paper } from "@material-ui/core";
 import { OnClick } from "../../types/eventType";
 
 //MUI components
 import { useStyles } from "./styles";
+import { Button, Typography } from "@material-ui/core";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
 
 const Questions: React.FC = () => {
   const classes = useStyles();
@@ -105,60 +106,37 @@ const Questions: React.FC = () => {
       )}
 
       {number > 0 && userAnswers.length === TOTAL_QUESTIONS ? (
-        <Paper
-          className={classes.smHeader}
-          elevation={23}
-          style={{ padding: 10, borderRadius: 360 }}
+        <Button
+          variant="contained"
+          color="primary"
+          className={classes.submitButton}
+          onClick={submitScore}
         >
-          <Paper elevation={23} className={classes.backButton}>
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.submitButton}
-              onClick={submitScore}
-            >
-              Submit Score
-            </Button>
-          </Paper>
-        </Paper>
+          Submit Score
+        </Button>
       ) : null}
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-        <Paper
-          className={classes.smHeader}
-          elevation={23}
-          style={{ padding: 10, borderRadius: 360 }}
+        <Button
+          variant="contained"
+          className={classes.actionButton}
+          color="primary"
+          onClick={startTrivia}
         >
-          <Paper elevation={23} className={classes.backButton}>
-            <Button
-              variant="contained"
-              className={classes.actionButton}
-              color="primary"
-              onClick={startTrivia}
-            >
-              New Game
-            </Button>
-          </Paper>
-        </Paper>
+          New Game
+        </Button>
       ) : null}
       {!gameOver &&
       userAnswers.length === number + 1 &&
       number !== TOTAL_QUESTIONS - 1 ? (
-        <Paper
-          className={classes.smHeader}
-          elevation={23}
-          style={{ padding: 10, borderRadius: 360 }}
+        <Button
+          className={classes.actionButton}
+          startIcon={<SkipNextIcon />}
+          variant="contained"
+          color="primary"
+          onClick={nextQuestion}
         >
-          <Paper elevation={23} className={classes.backButton}>
-            <Button
-              className={classes.actionButton}
-              variant="contained"
-              color="primary"
-              onClick={nextQuestion}
-            >
-              Next Question
-            </Button>
-          </Paper>
-        </Paper>
+          Question
+        </Button>
       ) : null}
     </>
   );

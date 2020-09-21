@@ -26,37 +26,31 @@ export const useStyles = makeStyles((theme: Theme) =>
       margin: 4,
       fontFamily: "Kaushan Script",
       fontWeight: "bold",
-      backgroundImage:
-        "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+
       "&:hover": {
-        color: "sandybrown",
+        color: "yellow",
       },
     },
     header: {
-      height: 300,
-      flexgrow: 1,
-      color: "sandybrown",
-
+      color: theme.palette.primary.main,
       fontFamily: "Kaushan Script",
-      fontSize: "2.5rem",
+      fontSize: "1.5rem",
       "@media (min-width:600px)": {
-        fontSize: "1.2rem",
+        fontSize: "2rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "2.5rem",
+        fontSize: "3.5rem",
       },
       fontWeight: "bold",
-      padding: 40,
-      backgroundImage:
-        "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
+      marginTop: 30,
     },
     backHeader: {
-      backgroundColor: theme.palette.primary.main,
-      fontFamily: "Kaushan Script",
+      backgroundColor: theme.palette.primary.light,
+      fontFamily: "'Rokkitt', serif",
     },
     smHeader: {
-      backgroundColor: theme.palette.primary.main,
-      fontFamily: "Kaushan Script",
+      backgroundColor: theme.palette.primary.light,
+      fontFamily: "'Rokkitt', serif",
     },
   })
 );
