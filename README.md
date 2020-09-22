@@ -3,6 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
 ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/66206483/93872955-3376a780-fcd1-11ea-88c5-a7f035280e94.gif)
+![ezgif com-video-to-gif (3)](https://user-images.githubusercontent.com/66206483/93873360-e21ae800-fcd1-11ea-83a6-0f2e52d2da66.gif)
 
    
 [Netlify Link](https://cool-trivia-quizer.netlify.app/)
