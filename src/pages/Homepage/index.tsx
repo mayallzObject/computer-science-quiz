@@ -11,7 +11,6 @@ import { useStyles } from "./styles";
 import Grid from "@material-ui/core/Grid";
 import { Paper } from "@material-ui/core";
 import Banner from "../../components/Banner";
-import UserManual from "../../components/UserManual";
 import sphinx from "../../images/sphinx.jpg";
 
 type Props = {
@@ -84,7 +83,6 @@ export default function Home(props: Props) {
             style={{
               borderRadius: 360,
               height: 570,
-
               backgroundImage: `url(${sphinx})`,
             }}
           >
@@ -101,16 +99,6 @@ export default function Home(props: Props) {
         }}
       >
         <Scoreboard />
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        style={{
-          marginBottom: 100,
-        }}
-      >
-        <UserManual />
       </Grid>
     </Grid>
   );

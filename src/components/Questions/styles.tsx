@@ -52,15 +52,15 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     submitButton: {
-      fontSize: "0.6rem",
+      fontSize: "0.7rem",
       "@media (min-width:600px)": {
-        fontSize: "0.8rem",
-      },
-      [theme.breakpoints.up("md")]: {
         fontSize: "1rem",
       },
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.2rem",
+      },
       padding: 10,
-      marginTop: 5,
+      margin: 5,
       elavation: 23,
       borderRadius: 360,
       width: 220,
@@ -91,8 +91,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: "yellow",
-        backgroundColor: theme.palette.primary.dark,
+        color: theme.palette.background.default,
+        backgroundColor: "yellow",
       },
     },
     smHeader: {

@@ -35,51 +35,13 @@ export default function AboutMe() {
     return (
       <Grid className={classes.paper} container spacing={2}>
         <Grid item xs={12} sm={6}>
-          <Paper
-            className={classes.smHeader}
-            elevation={23}
-            style={{
-              marginTop: 80,
-              padding: 20,
-              borderRadius: 360,
-              minHeight: 600,
-            }}
-          >
-            <Paper
-              elevation={23}
-              style={{
-                borderRadius: 360,
-                minHeight: 550,
-                backgroundImage:
-                  "url(http://quotesideas.com/wp-content/uploads/2015/05/Summer-Beach-Wallpaper-107.jpg)",
-              }}
-            >
-              <UserCard />
-            </Paper>
+          <Paper>
+            <UserCard />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper
-            className={classes.smHeader}
-            elevation={23}
-            style={{
-              marginTop: 80,
-              padding: 20,
-              borderRadius: 360,
-              minHeight: 600,
-            }}
-          >
-            <Paper
-              elevation={23}
-              style={{
-                borderRadius: 360,
-                minHeight: 550,
-                backgroundImage:
-                  "url(https://a-static.besthdwallpaper.com/sphinx-and-the-pyramid-of-giza-oil-on-canvas-wallpaper-640x960-6798_169.jpg)",
-              }}
-            >
-              <Scoreboard />
-            </Paper>
+          <Paper className={classes.smHeader} elevation={23}>
+            <Scoreboard />
           </Paper>
         </Grid>
       </Grid>

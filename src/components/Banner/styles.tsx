@@ -32,8 +32,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     header: {
-      color: theme.palette.primary.main,
-
+      color: "#ffd3b6",
       fontFamily: "Kaushan Script",
       fontSize: "1.7rem",
       "@media (min-width:600px)": {

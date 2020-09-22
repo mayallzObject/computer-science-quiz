@@ -19,6 +19,7 @@ import { OnClick } from "../../types/eventType";
 import { useStyles } from "./styles";
 import { Button, Typography } from "@material-ui/core";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
+import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 
 const Questions: React.FC = () => {
   const classes = useStyles();
@@ -122,7 +123,7 @@ const Questions: React.FC = () => {
           color="primary"
           onClick={startTrivia}
         >
-          New Game
+          <PlayCircleFilledWhiteIcon fontSize="large" />
         </Button>
       ) : null}
       {!gameOver &&
@@ -130,12 +131,11 @@ const Questions: React.FC = () => {
       number !== TOTAL_QUESTIONS - 1 ? (
         <Button
           className={classes.actionButton}
-          startIcon={<SkipNextIcon />}
           variant="contained"
           color="primary"
           onClick={nextQuestion}
         >
-          Question
+          <SkipNextIcon fontSize="large" />
         </Button>
       ) : null}
     </>
