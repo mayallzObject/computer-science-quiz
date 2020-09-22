@@ -12,6 +12,7 @@ import Grid from "@material-ui/core/Grid";
 import { Paper } from "@material-ui/core";
 import Banner from "../../components/Banner";
 import UserManual from "../../components/UserManual";
+import sphinx from "../../images/sphinx.jpg";
 
 type Props = {
   darkMode: boolean;
@@ -65,7 +66,7 @@ export default function Home(props: Props) {
         item
         xs={12}
         style={{
-          marginTop: 180,
+          marginTop: 20,
           marginBottom: 180,
         }}
       >
@@ -84,8 +85,7 @@ export default function Home(props: Props) {
               borderRadius: 360,
               height: 570,
 
-              backgroundImage:
-                "url(https://initiate.alphacoders.com/images/930/cropped-1920-1080-930473.jpg?4611)",
+              backgroundImage: `url(${sphinx})`,
             }}
           >
             <QuestionCard />

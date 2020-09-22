@@ -24,7 +24,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexgrow: 1,
       backgroundColor: theme.palette.background.default,
       fontFamily: "Kaushan Script",
-      fontSize: 30,
+      fontSize: 20,
       fontWeight: "bold",
       margin: 10,
       padding: 8,
@@ -32,7 +32,6 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     backPaper: {
       padding: 20,
-      backgroundColor: theme.palette.background.paper,
       borderRadius: 360,
     },
   })

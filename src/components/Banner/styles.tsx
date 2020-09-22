@@ -33,13 +33,14 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
       color: theme.palette.primary.main,
+
       fontFamily: "Kaushan Script",
-      fontSize: "1.5rem",
+      fontSize: "1.7rem",
       "@media (min-width:600px)": {
         fontSize: "2rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "3.5rem",
+        fontSize: "2rem",
       },
       fontWeight: "bold",
       marginTop: 30,

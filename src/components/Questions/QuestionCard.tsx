@@ -51,9 +51,9 @@ const QuestionCard: React.FC<Props> = ({
         <Paper
           className={classes.answers}
           elevation={23}
-          style={{ padding: 10, borderRadius: 360 }}
+          style={{ padding: 2, borderRadius: 360 }}
         >
-          <Paper elevation={23} className={classes.backButton}>
+          <Paper className={classes.backButton}>
             <ButtonGroup orientation="vertical">
               {answers.map((answer) => (
                 <Button
