@@ -146,7 +146,7 @@ export default function Banner(props: any) {
       <Grid item xs={12} sm={3}>
         <img
           style={{
-            marginTop: 20,
+            marginTop: 11,
             height: 80,
             width: 80,
           }}

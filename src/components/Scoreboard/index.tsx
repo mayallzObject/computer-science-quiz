@@ -44,7 +44,6 @@ const Scoreboard = () => {
                   fontFamily: "Kaushan Script",
                   fontWeight: "bold",
                   fontSize: 17,
-                  color: "sandybrown",
                 }}
               >
                 Place
@@ -56,7 +55,6 @@ const Scoreboard = () => {
                   fontFamily: "Kaushan Script",
                   fontWeight: "bold",
                   fontSize: 17,
-                  color: "sandybrown",
                 }}
               >
                 Points
@@ -69,7 +67,6 @@ const Scoreboard = () => {
 
                   fontWeight: "bold",
                   fontSize: 17,
-                  color: "sandybrown",
                 }}
               >
                 Player
@@ -80,21 +77,11 @@ const Scoreboard = () => {
             {score.length > 0 &&
               score.map((data, index) => (
                 <StyledTableRow key={index}>
-                  <StyledTableCell style={{ fontFamily: "Kaushan Script" }}>
-                    {data.id}
-                  </StyledTableCell>
-                  <StyledTableCell
-                    component="th"
-                    scope="row"
-                    style={{ fontFamily: "Kaushan Script" }}
-                  >
+                  <StyledTableCell>{data.id}</StyledTableCell>
+                  <StyledTableCell component="th" scope="row">
                     {data.score}
                   </StyledTableCell>
-                  <StyledTableCell
-                    component="th"
-                    scope="row"
-                    style={{ fontFamily: "Kaushan Script" }}
-                  >
+                  <StyledTableCell component="th" scope="row">
                     {data.user.name}
                   </StyledTableCell>
                 </StyledTableRow>

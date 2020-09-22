@@ -3,11 +3,20 @@ import React, { useEffect, useState } from "react";
 // Mui components
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
-import { Fade, Snackbar } from "@material-ui/core";
+import {
+  Fade,
+  Snackbar,
+  Box,
+  CardHeader,
+  Paper,
+  CardMedia,
+} from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
+import { useStyles } from "./styles";
 
 export default function UserCard() {
+  const classes = useStyles();
   const user = useSelector(selectUser);
   const [state, setState] = React.useState({
     open: false,
@@ -52,20 +61,37 @@ export default function UserCard() {
 
   return (
     <Card>
-      <h2 style={{ fontFamily: "Kaushan Script" }}>{user.name}</h2>
-
-      <h2 style={{ fontFamily: "Kaushan Script" }}>{`Score: ${user.score}`}</h2>
-      <h2 style={{ fontFamily: "Kaushan Script" }}>{`Level: ${level}`}</h2>
-
-      <Typography paragraph>
-        <Snackbar
-          open={state.open}
-          onClose={handleClose}
-          TransitionComponent={state.Transition}
-          message={<h1>{user.score}</h1>}
-          key={state.Transition.name}
+      <Paper elevation={23}>
+        <CardHeader
+          title={<h2>{user.name}</h2>}
+          subheader={<h2>{`Score: ${user.score} Level:${level}`}</h2>}
         />
-      </Typography>
+
+        <Box
+          style={{
+            width: `${score}%`,
+            backgroundColor: "darkgreen",
+          }}
+          p={1}
+          right={0}
+        ></Box>
+        <Typography paragraph>
+          <Snackbar
+            open={state.open}
+            onClose={handleClose}
+            TransitionComponent={state.Transition}
+            message={<h1>{user.score}</h1>}
+            key={state.Transition.name}
+          />
+        </Typography>
+
+        <CardMedia
+          className={classes.media}
+          //@ts-ignore
+          image={user.userImg}
+          title={user.name}
+        />
+      </Paper>
     </Card>
   );
 }
