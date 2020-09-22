@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       square: "false",
     },
     title: {
-      fontSize: "1rem",
+      fontSize: "1.2rem",
       "@media (min-width:600px)": {
         fontSize: "1.2rem",
       },
@@ -30,7 +30,7 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     button: {
       fontFamily: "'Robboto', monospace",
-      fontSize: "0.7rem",
+      fontSize: "0.6rem",
       "@media (min-width:600px)": {
         fontSize: "0.6rem",
       },
@@ -38,17 +38,17 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: "0.9rem",
       },
       backgroundColor: theme.palette.primary.light,
-      color: theme.palette.background.paper,
+      color: "#000000",
       padding: 10,
       elavation: 23,
       margin: 10,
-      maxWidth: 250,
+      maxWidth: 320,
       minWidth: 200,
       fontWeight: "bold",
 
       "&:hover": {
-        color: theme.palette.primary.light,
-        backgroundColor: theme.palette.background.paper,
+        color: "yellow",
+        backgroundColor: theme.palette.primary.dark,
       },
     },
     submitButton: {
@@ -60,7 +60,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: "1rem",
       },
       padding: 10,
-
+      marginTop: 5,
       elavation: 23,
       borderRadius: 360,
       width: 220,
@@ -85,7 +85,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       elavation: 23,
       width: 220,
       borderRadius: 360,
-      backgroundColor: theme.palette.primary.main,
+      color: "yellow",
+      backgroundColor: theme.palette.background.default,
       marginTop: 5,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
@@ -100,7 +101,7 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     backButton: {
       alignContent: "center",
-      padding: 10,
+
       borderRadius: 360,
       backgroundColor: theme.palette.background.paper,
       fontWeight: "bold",
@@ -123,10 +124,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     score: {
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
-      padding: 10,
       alignItems: "center",
 
-      color: "#f4f4f4",
+      color: "gold",
       fontSize: "1rem",
       "@media (min-width:600px)": {
         fontSize: "1.8rem",

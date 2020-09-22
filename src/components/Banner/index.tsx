@@ -16,15 +16,10 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
-import FaceIcon from "@material-ui/icons/Face";
 
 import { useStyles } from "./styles";
 
 import jpg from "../../images/jpg.png";
-
-function SlideTransition(props: any) {
-  return <Slide {...props} direction="up" />;
-}
 
 function TransitionLeft(props: TransitionProps) {
   return <Slide {...props} direction="left" />;
@@ -41,13 +36,6 @@ export default function Banner(props: any) {
   const [transition, setTransition] = React.useState<
     React.ComponentType<TransitionProps> | undefined
   >(undefined);
-
-  const handleClick = (Transition: any) => () => {
-    setState({
-      open: true,
-      Transition,
-    });
-  };
 
   const handleClickTwo = (Transition: any) => () => {
     setTransition(() => Transition);
@@ -117,7 +105,7 @@ export default function Banner(props: any) {
           onClose={handleCloseTwo}
           TransitionComponent={transition}
           message={
-            <Box style={{ fontSize: 10, backgroundColor: "#000000" }}>
+            <Box>
               <img
                 src="https://img.icons8.com/color/96/000000/typescript.png"
                 alt="typescript"
@@ -158,9 +146,9 @@ export default function Banner(props: any) {
       <Grid item xs={12} sm={3}>
         <img
           style={{
-            height: 120,
-            width: 120,
             marginTop: 20,
+            height: 80,
+            width: 80,
           }}
           src={jpg}
           alt="ivo"
@@ -212,7 +200,7 @@ export default function Banner(props: any) {
               </Button>
             </Link>
           </Tooltip>
-          <Tooltip
+          {/* <Tooltip
             color="primary"
             TransitionComponent={Fade}
             TransitionProps={{ timeout: 600 }}
@@ -230,7 +218,7 @@ export default function Banner(props: any) {
             >
               <FaceIcon fontSize="small" />
             </Button>
-          </Tooltip>
+          </Tooltip> */}
         </Box>
 
         <Typography paragraph component="ul">
