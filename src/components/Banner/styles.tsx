@@ -23,8 +23,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       transform: "rotate(180deg)",
     },
     button: {
-      margin: 4,
-      fontFamily: "Kaushan Script",
+      margin: 10,
+
       fontWeight: "bold",
 
       "&:hover": {
@@ -42,7 +42,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: "3rem",
       },
       fontWeight: "bold",
-      padding: 20,
+      padding: 16,
     },
     backHeader: {
       backgroundColor: theme.palette.primary.light,
