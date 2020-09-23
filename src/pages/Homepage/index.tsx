@@ -65,7 +65,7 @@ export default function Home(props: Props) {
         item
         xs={12}
         style={{
-          marginTop: 65,
+          marginTop: 150,
           marginBottom: 200,
         }}
       >
