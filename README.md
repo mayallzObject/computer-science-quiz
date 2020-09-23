@@ -3,8 +3,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b942ebe7-0e49-47c5-b84c-59aa49768789/deploy-status)](https://app.netlify.com/sites/cool-trivia-quizer/deploys)
  
 
-![ezgif com-video-to-gif (10)](https://user-images.githubusercontent.com/66206483/94061364-90fc1880-fde5-11ea-8bc3-f40277158e7a.gif)
-![ezgif com-video-to-gif (14)](https://user-images.githubusercontent.com/66206483/94066487-d4a65080-fdec-11ea-88d2-a72bae42058f.gif)
+![ezgif com-video-to-gif (13)](https://user-images.githubusercontent.com/66206483/94065912-0834ab00-fdec-11ea-909d-abc7ba45d04e.gif)
+![ezgif com-video-to-gif (15)](https://user-images.githubusercontent.com/66206483/94067843-b6d9eb00-fdee-11ea-8d55-4ddd19dfd931.gif)
    
 [Netlify Link](https://cool-trivia-quizer.netlify.app/)
 
