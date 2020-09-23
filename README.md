@@ -4,7 +4,8 @@
  
 
 ![ezgif com-video-to-gif (10)](https://user-images.githubusercontent.com/66206483/94061364-90fc1880-fde5-11ea-8bc3-f40277158e7a.gif)
-![ezgif com-video-to-gif (9)](https://user-images.githubusercontent.com/66206483/93965983-ccee9980-fd63-11ea-9a43-61da94d3c874.gif)
+![ezgif com-video-to-gif (12)](https://user-images.githubusercontent.com/66206483/94065097-f1da1f80-fdea-11ea-947e-ae0bfe94bef8.gif)
+
 ![ezgif com-video-to-gif (8)](https://user-images.githubusercontent.com/66206483/93965347-37063f00-fd62-11ea-84da-3d2237cc89e8.gif)
 
 
