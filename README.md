@@ -5,13 +5,6 @@
 
 ![ezgif com-video-to-gif (10)](https://user-images.githubusercontent.com/66206483/94061364-90fc1880-fde5-11ea-8bc3-f40277158e7a.gif)
 ![ezgif com-video-to-gif (14)](https://user-images.githubusercontent.com/66206483/94066487-d4a65080-fdec-11ea-88d2-a72bae42058f.gif)
-
-![ezgif com-video-to-gif (13)](https://user-images.githubusercontent.com/66206483/94065912-0834ab00-fdec-11ea-909d-abc7ba45d04e.gif)
-![ezgif com-video-to-gif (12)](https://user-images.githubusercontent.com/66206483/94065097-f1da1f80-fdea-11ea-947e-ae0bfe94bef8.gif)
-
-![ezgif com-video-to-gif (8)](https://user-images.githubusercontent.com/66206483/93965347-37063f00-fd62-11ea-84da-3d2237cc89e8.gif)
-
-
    
 [Netlify Link](https://cool-trivia-quizer.netlify.app/)
 
