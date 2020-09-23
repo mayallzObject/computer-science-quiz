@@ -32,17 +32,17 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     header: {
-      color: "#ffd3b6",
+      color: theme.palette.secondary.dark,
       fontFamily: "Kaushan Script",
-      fontSize: "1.7rem",
+      fontSize: "2rem",
       "@media (min-width:600px)": {
         fontSize: "2rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "2rem",
+        fontSize: "3rem",
       },
       fontWeight: "bold",
-      marginTop: 30,
+      padding: 20,
     },
     backHeader: {
       backgroundColor: theme.palette.primary.light,

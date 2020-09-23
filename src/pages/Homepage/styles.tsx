@@ -20,19 +20,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 360,
       padding: 10,
     },
-    header: {
-      flexgrow: 1,
-      backgroundColor: theme.palette.background.default,
-      fontFamily: "Kaushan Script",
-      fontSize: 20,
-      fontWeight: "bold",
-      margin: 10,
-      padding: 8,
-    },
 
     backPaper: {
       padding: 20,
       borderRadius: 360,
+      backgroundColor: theme.palette.background.paper,
     },
   })
 );

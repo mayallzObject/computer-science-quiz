@@ -146,14 +146,13 @@ export default function Banner(props: any) {
       <Grid item xs={12} sm={3}>
         <img
           style={{
-            marginTop: 11,
-            height: 80,
-            width: 80,
+            marginTop: 45,
+            height: 120,
+            width: 120,
           }}
           src={jpg}
           alt="ivo"
         />
-
         <Box>
           <Tooltip
             color="primary"
