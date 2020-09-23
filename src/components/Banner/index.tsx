@@ -56,7 +56,7 @@ export default function Banner(props: any) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={9}>
-        <h1 className={classes.header}>Computer Science Quiz</h1>
+        <div className={classes.header}>Computer Science Quiz</div>
 
         <Tooltip
           color="primary"
@@ -146,9 +146,8 @@ export default function Banner(props: any) {
       <Grid item xs={12} sm={3}>
         <img
           style={{
-            marginTop: 45,
-            height: 120,
-            width: 120,
+            height: 100,
+            width: 100,
           }}
           src={jpg}
           alt="ivo"

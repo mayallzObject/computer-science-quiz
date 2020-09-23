@@ -24,7 +24,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: "Kaushan Script",
       fontSize: 30,
       fontWeight: "bold",
-      margin: 10,
+
       padding: 8,
     },
     backHeader: {
