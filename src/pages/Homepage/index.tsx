@@ -65,7 +65,7 @@ export default function Home(props: Props) {
         item
         xs={12}
         style={{
-          marginTop: 150,
+          marginTop: 50,
           marginBottom: 200,
         }}
       >
@@ -93,6 +93,7 @@ export default function Home(props: Props) {
       <Grid
         item
         xs={12}
+        sm={7}
         style={{
           marginBottom: 100,
         }}
