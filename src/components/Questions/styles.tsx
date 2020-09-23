@@ -18,7 +18,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: "1.2rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "1.6rem",
+        fontSize: "1.9rem",
       },
       fontWeight: "bold",
       alignItems: "center",
@@ -37,18 +37,18 @@ export const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up("md")]: {
         fontSize: "0.9rem",
       },
-      backgroundColor: theme.palette.primary.light,
-      color: "#000000",
+      backgroundColor: theme.palette.background.paper,
+      color: theme.palette.secondary.light,
       padding: 10,
       elavation: 23,
       margin: 10,
-      maxWidth: 320,
+      maxWidth: 350,
       minWidth: 200,
       fontWeight: "bold",
 
       "&:hover": {
-        color: "yellow",
-        backgroundColor: theme.palette.primary.dark,
+        color: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.background.paper,
       },
     },
     submitButton: {
@@ -57,7 +57,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: "1rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "1.2rem",
+        fontSize: "1.5rem",
       },
       padding: 10,
       margin: 5,
@@ -79,20 +79,21 @@ export const useStyles = makeStyles((theme: Theme) =>
         fontSize: "0.8rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "1rem",
+        fontSize: "1.5rem",
       },
-      padding: 10,
+      padding: 5,
       elavation: 23,
-      width: 220,
+      width: 200,
       borderRadius: 360,
-      color: "yellow",
-      backgroundColor: theme.palette.background.default,
-      marginTop: 5,
+      color: theme.palette.secondary.light,
+      backgroundColor: theme.palette.background.paper,
+
+      margin: 5,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: theme.palette.background.default,
-        backgroundColor: "yellow",
+        color: theme.palette.background.paper,
+        backgroundColor: theme.palette.secondary.dark,
       },
     },
     smHeader: {
@@ -103,11 +104,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignContent: "center",
 
       borderRadius: 360,
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.background.default,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: "#ffffff",
+        backgroundColor: theme.palette.primary.main,
       },
     },
     number: {
@@ -126,8 +127,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontFamily: "'Rokkitt', serif",
       alignItems: "center",
 
-      color: "gold",
-      fontSize: "1rem",
+      color: theme.palette.secondary.light,
+      fontSize: "1.2rem",
       "@media (min-width:600px)": {
         fontSize: "1.8rem",
       },
