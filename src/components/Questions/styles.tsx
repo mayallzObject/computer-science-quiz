@@ -52,25 +52,26 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     submitButton: {
-      fontSize: "0.7rem",
+      fontSize: "0.8rem",
       "@media (min-width:600px)": {
-        fontSize: "1rem",
+        fontSize: "0.8rem",
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
       },
-      padding: 10,
-      margin: 5,
+      padding: 5,
       elavation: 23,
+      width: 200,
       borderRadius: 360,
-      width: 220,
-      color: "gold",
-      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.background.paper,
+      backgroundColor: theme.palette.secondary.dark,
+
+      margin: 5,
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        backgroundColor: theme.palette.primary.light,
-        color: "yellow",
+        color: theme.palette.background.paper,
+        backgroundColor: theme.palette.secondary.dark,
       },
     },
     actionButton: {
