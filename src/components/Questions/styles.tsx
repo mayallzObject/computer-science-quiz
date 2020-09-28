@@ -37,7 +37,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up("md")]: {
         fontSize: "0.9rem",
       },
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.secondary.main,
       color: theme.palette.secondary.light,
       padding: 10,
       elavation: 23,
@@ -70,8 +70,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       fontWeight: "bold",
       fontFamily: "'Rokkitt', serif",
       "&:hover": {
-        color: theme.palette.background.paper,
-        backgroundColor: theme.palette.secondary.dark,
+        color: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.background.paper,
       },
     },
     actionButton: {

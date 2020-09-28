@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import AuthForm from "../AuthForm";
-import Logout from "../../Auth/logoutAuth";
+import Logout from "../../Auth/LogoutAuth";
 
 // TypeScript
 import { Props } from "./types";

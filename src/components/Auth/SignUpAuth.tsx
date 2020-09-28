@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SingUp = (props: any) => {
+const SignUp = (props: any) => {
   const classes = useStyles();
   const { handleClose, set_ModalForm } = props;
   // const [image, setImage] = useState("");
@@ -110,4 +110,4 @@ const SingUp = (props: any) => {
   );
 };
 
-export default SingUp;
+export default SignUp;
