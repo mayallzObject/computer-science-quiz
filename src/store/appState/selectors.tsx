@@ -1,6 +1,6 @@
 // Types
-import { StoreState } from "../types"
+import { StoreState } from "../types";
 
-export const selectAppLoading = (state: StoreState) => state.appState.loading
+export const selectAppLoading = (state: StoreState) => state.appState.loading;
 
-export const selectMessage = (state: StoreState) => state.appState.message
+export const selectMessage = (state: StoreState) => state.appState.message;
