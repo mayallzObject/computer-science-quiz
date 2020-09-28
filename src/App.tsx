@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Home from "./pages/Homepage";
 import AboutMe from "./pages/AboutMe";
 import NavBar from "./components/navigation/NavBar";
-import Loading from "./components/loading";
+import Loading from "./components/Loading";
 import MessageBox from "./components/MessageBox";
 
 // Redux store
@@ -36,8 +36,8 @@ const App = () => {
           <CssBaseline />
           <NavBar darkMode={darkMode} set_darkMode={set_darkMode} />
           <MessageBox />
+          {isLoading ? <Loading /> : null}
         </Paper>
-        {isLoading ? <Loading /> : null}
         <Switch>
           <Route path="/about-me" component={AboutMe} />
           <Route exact path="/" component={Home} />

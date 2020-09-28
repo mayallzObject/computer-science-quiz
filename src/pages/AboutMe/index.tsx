@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import Loading from "../../components/loading";
+import Loading from "../../components/Loading";
 
 //Redux store
 import { selectUser } from "../../store/user/selectors";

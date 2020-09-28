@@ -67,7 +67,7 @@ export default function Banner(props: any) {
           }
         >
           <Link
-            href="https://github.com/mayallzObject/cool-trivia-front/tree/master"
+            href="https://github.com/mayallzObject/computer-science-quiz"
             target="_blank"
           >
             <Button

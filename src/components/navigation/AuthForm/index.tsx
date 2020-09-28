@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 // Components
-import Login from "../../Auth/loginAuth";
-import SignUp from "../../Auth/signupAuth";
+import Login from "../../Auth/LoginAuth";
+import SignUp from "../../Auth/SignUpAuth";
 
 // Mui components
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -37,7 +37,7 @@ const AuthForm = () => {
         TransitionComponent={Fade}
         TransitionProps={{ timeout: 600 }}
         title={
-          <h1 style={{ fontFamily: "Kaushan Script" }}>Login and Singup</h1>
+          <h1 style={{ fontFamily: "Kaushan Script" }}>Login and SignUp</h1>
         }
       >
         <Button
