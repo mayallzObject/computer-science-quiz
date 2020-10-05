@@ -77,20 +77,18 @@ the client runs on localhost:3000 by default.
  
 
 #### Back end: 
- ReactJS 
- Node(ES6) 
- JavaScript  
- Express 
- PostreSQL
-
+  -ReactJS 
+  -Node(ES6) 
+  -JavaScript  
+  -Express 
+  -PostreSQL
 
 
 #### Front end:
- TypeScript 
- Material-UI
- ReactJS
- Redux
-
+   -TypeScript 
+   -Material-UI
+   -ReactJS
+   -Redux
 
 ## DB model
 
