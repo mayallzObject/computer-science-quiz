@@ -22,18 +22,18 @@
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 - [Project Kanban Board](https://github.com/mayallzObject/computer-science-quiz/projects/1)
 
-### Introduction
+## Introduction
 
    I made the Computer Science Quiz application with the emphasis on learning new technologies( TypeScript + Material-UI ).
    Users can test the game of 10 random questions and get scored a point for each correct answer. Registred users   
    
 
-### Goals
+## Goals
 
    The main goal of this project is to gain experience in developing a full-stack app and learn new technologies
    A new scoring system and category picker will be added in the new update.
 
-### Objectives
+## Objectives
 
 1. Stack:
        
@@ -51,7 +51,7 @@
        Atomic Commits | Branching | Good Commit Masseges
 
 
-### Setup
+## Setup
 
 **Server setup**
   1.Clone the repositorycd into the project directory.
@@ -86,11 +86,11 @@
 
 
 
-### DB model
+## DB model
 
 ![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
 
-### Wire frame
+## Wire frame
 
 ![Screenshot from 2020-09-10 01-17-50](https://user-images.githubusercontent.com/66206483/92664147-816bd280-f303-11ea-82bb-0b90c98ebaa3.png)
 
