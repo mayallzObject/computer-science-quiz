@@ -39,93 +39,74 @@
 
 ## :pencil2: Objectives
 
-        1. Practical applications of learned skills:
-        ReactJS | Node(ES6) | Redux | REST
+   1. Stack:
+   ReactJS | Node(ES6) | Redux | REST | Express | PostreSQL
 
-        2. Implementation of new technologies:
-        TypeScript | Material-UI
+   2. New technologies:
+   TypeScript | Material-UI
 
-       3. Planning:
-       User Stories | Database Diagrams wireframes
+   3. Planning:
+   User Stories | Database Diagram | Wireframe
 
-       4. Practice with version control:
-       Atomic Commits | Branching | Good Commit Masseges
+   4. Practice with GitHub:
+   Atomic Commits | Branching | Good Commit Masseges
 
 ###### :heavy_check_mark: Objectives that I did good.
 
-        Successfully implemented part of the required skills.
-        A functional TypeScript app with Material-UI styling.
+   Successfully implemented part of the required skills.
+   A functional TypeScript app with Material-UI styling.
 
 ###### :x: Objectives that I could do better
 
-        Commit masseges and atomic commits were not implamentet correctly.
-        Due to time restrictions, bad planning and inexperience I did not do a good job
+   Commit masseges and atomic commits were not implamentet correctly.
+   Due to time restrictions, bad planning and inexperience I did not do a good job
 
-        Communication is a key for me. I am curretly doing advanced GitHub courses.
-        Instead of starting the project from scratch. I decided to leave it like this
-        and improve on my new project. It's was good lesson to learn.
+   Communication is a key for me. I am curretly doing advanced GitHub courses.
+   Instead of starting the project from scratch. I decided to leave it like this
+   and improve on my new project. It's was good lesson to learn.
 
 ## :octocat: Setup
 
 **Server setup**
 
-        clone the repository
-        cd into the project directory
-        on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start
-        afterward, simply run npm run start which will run the script npx nodemon index.js or node index.js
-        the server runs on port 4000 by default.
+   clone the repositorycd into the project directory
+   on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start
+   afterward, simply run npm run start which will run the script npx nodemon index.js or node index.js
+   the server runs on port 4000 by default.
 
 **Client setup**
 
-        clone the repository
-        cd into the project directory
-        on the first run, run the script npm run initialize, this will run npm install && react-scripts
-        star afterward, the first run just run the script npm run start to start development
-        the client runs on localhost:3000 by default
+   clone the repository
+   cd into the project directory
+   on the first run, run the script npm run initialize, this will run npm install && react-scripts
+   star afterward, the first run just run the script npm run start to start development
+   the client runs on localhost:3000 by default
 
 ## :computer: Technologies
 
-    Back end -Express and SequelizeORM:
+Front end:
+ TypeScript 
+ Material-UI
+ ReactJS
+ Redux
+ Axios
+ 
 
-<img            
-           src="https://img.icons8.com/nolan/48/api-settings.png"
-          />
-<img 
-                    src="https://img.icons8.com/color/48/000000/nodejs.png"
-                  />
-<img
-                    src="https://img.icons8.com/color/48/000000/javascript.png"
-                    alt="JS"
-                  />
-<img src="https://img.icons8.com/color/48/000000/postgreesql.png"
-                  alt="postgresql"
-                  />
+Back end: 
+ ReactJS 
+ Node(ES6) 
+ JavaScript  
+ Express 
+ PostreSQL
 
-    Front end:
 
-<img 
-           src="https://img.icons8.com/color/48/000000/nodejs.png"
-          />
-<img
-                    src="https://img.icons8.com/color/48/000000/javascript.png"
-                    alt="JS"
-                  />
-<img
-                    src="https://img.icons8.com/color/48/000000/typescript.png"
-                    alt="react"
-                  />
-<img
-                    src="https://img.icons8.com/nolan/48/react-native.png"
-                    alt="native"
-                  />
-<img
-                    src="https://img.icons8.com/color/48/000000/redux.png"
-                    alt="redux"
-                  />
-<img
-                    src="https://img.icons8.com/color/48/000000/material-ui.png"
-                    alt="mui"
-                  />
+
+Front end:
+ TypeScript 
+ Material-UI
+ ReactJS
+ Redux
+
 
 ## DB model
 
