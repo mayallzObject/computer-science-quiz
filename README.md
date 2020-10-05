@@ -36,9 +36,12 @@
 ## :pencil2: Objectives
 
 1. Stack:
-    ReactJS | Node(ES6) | Redux | REST | Express | PostreSQL
+       
+       ReactJS | Node(ES6) | Redux | REST | Express | PostreSQL
+
 2. New technologies:
-    TypeScript | Material-UI
+
+       TypeScript | Material-UI
 3. Planning:
     User Stories | Database Diagram | Wireframe
 4. Practice with GitHub:
