@@ -13,12 +13,12 @@
 ## :pushpin: Table of content
 
 - [Introduction](#Introduction)
-- [Goals of this project](#Goals-of-this-project)
+- [Goals](#Goals)
+- [Objectives](#Objectives)
 - [Setup](#Setup)
 - [Technologies](#Technologies)
 - [DB Model](#DB-model)
 - [Wire Frame](#Wire-frame)
-- [Screen Shots](#Screen-shots)
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
@@ -28,7 +28,7 @@
    Users can test the game of 10 random questions and get scored a point for each correct answer. Registred users   
    
 
-## Goals of this project
+## Goals
 
    The main goal of this project is to gain experience in developing a full-stack app and learn new technologies
    A new scoring system and category picker will be added in the new update.
