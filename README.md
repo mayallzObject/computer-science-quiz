@@ -10,7 +10,7 @@
 
 [Netlify Link](https://cool-trivia-quizer.netlify.app/)
 
-## :pushpin: Table of content
+### :pushpin: Table of content
 
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
@@ -22,7 +22,7 @@
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
-## :clipboard: Introduction
+### :clipboard: Introduction
 
    I made the Computer Science Quiz application with the emphasis on learning new technologies( TypeScript + Material-UI ).
    Users can test the game of 10 random questions and get scored a point for each correct answer. Registred users   
@@ -35,13 +35,13 @@
 
 ## :pencil2: Objectives
 
-##### 1. Stack:
+1. Stack:
     ReactJS | Node(ES6) | Redux | REST | Express | PostreSQL
-##### 2. New technologies:
+2. New technologies:
     TypeScript | Material-UI
-##### 3. Planning:
+3. Planning:
     User Stories | Database Diagram | Wireframe
-##### 4. Practice with GitHub:
+4. Practice with GitHub:
     Atomic Commits | Branching | Good Commit Masseges
 
 
