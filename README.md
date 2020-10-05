@@ -10,7 +10,7 @@
 
 [Netlify Link](https://cool-trivia-quizer.netlify.app/)
 
-### :pushpin: Table of content
+## :pushpin: Table of content
 
 - [Introduction](#Introduction)
 - [Goals of this project](#Goals-of-this-project)
@@ -22,7 +22,7 @@
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
 - [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
 
-### :clipboard: Introduction
+## :clipboard: Introduction
 
    I made the Computer Science Quiz application with the emphasis on learning new technologies( TypeScript + Material-UI ).
    Users can test the game of 10 random questions and get scored a point for each correct answer. Registred users   
@@ -43,25 +43,28 @@
 
        TypeScript | Material-UI
 3. Planning:
-    User Stories | Database Diagram | Wireframe
+    
+       User Stories | Database Diagram | Wireframe
+
 4. Practice with GitHub:
-    Atomic Commits | Branching | Good Commit Masseges
+    
+       Atomic Commits | Branching | Good Commit Masseges
 
 
 ## :octocat: Setup
 
 **Server setup**
-clone the repositorycd into the project directory
-on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start
-afterward, simply run npm run start which will run the script npx nodemon index.js or node index.js
+clone the repositorycd into the project directory.
+on first run, run the script npm run initialize, this will run npm i && npm run resetDB && npm run start.
+afterward, simply run npm run start which will run the script npx nodemon index.js or node index.js.
 the server runs on port 4000 by default.
 
 **Client setup**
-clone the repository
-cd into the project directory
-on the first run, run the script npm run initialize, this will run npm install && react-scripts
-star afterward, the first run just run the script npm run start to start development
-the client runs on localhost:3000 by default
+clone the repository.
+cd into the project directory.
+on the first run, run the script npm run initialize, this will run npm install && react-scripts.
+star afterward, the first run just run the script npm run start to start development.
+the client runs on localhost:3000 by default.
 
 ## :computer: Technologies
 
