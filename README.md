@@ -20,7 +20,7 @@
 - [DB Model](#DB-model)
 - [Wire Frame](#Wire-frame)
 - [Server repository](https://github.com/mayallzObject/cool-trivia-back)
-- [Project Kanban Board](https://github.com/mayallzObject/cool-trivia-front/projects/1)
+- [Project Kanban Board](https://github.com/mayallzObject/computer-science-quiz/projects/1)
 
 ### Introduction
 
@@ -86,10 +86,10 @@
 
 
 
-## DB model
+### DB model
 
 ![Copy of Project databse  (1)](https://user-images.githubusercontent.com/66206483/92661749-934a7700-f2fd-11ea-8a86-2d8be33fe21b.png)
 
-## Wire frame\*\*
+### Wire frame
 
 ![Screenshot from 2020-09-10 01-17-50](https://user-images.githubusercontent.com/66206483/92664147-816bd280-f303-11ea-82bb-0b90c98ebaa3.png)
