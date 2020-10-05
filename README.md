@@ -56,7 +56,7 @@
 ## Setup
 
 **Server setup**
-  1.Clone the repositorycd into the project directory.
+  1. Clone the repositorycd into the project directory.
   2. On first run, run the script npm run initialize, this will run 
   npm i && npm run resetDB && npm run start.
   3. Afterward, simply run npm run start which will run the script 
