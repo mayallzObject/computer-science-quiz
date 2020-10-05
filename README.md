@@ -24,14 +24,17 @@
 
 ## Introduction
 
-   I made the Computer Science Quiz application with the emphasis on learning new technologies( TypeScript + Material-UI ).
-   Users can test the game of 10 random questions and get scored a point for each correct answer. Registred users   
+    I made the Computer Science Quiz application with the emphasis 
+    on learning new technologies( TypeScript + Material-UI ).
+    Users can test the game of 10 random questions and get scored a point for each correct answer. 
+    Registred users can play the game earn points and compete on the leader board.
    
 
 ## Goals
 
-   The main goal of this project is to gain experience in developing a full-stack app and learn new technologies
-   A new scoring system and category picker will be added in the new update.
+    The main goal of this project is to gain experience in developing a full-stack app 
+    and learn new technologies.
+    A new scoring system and category picker will be added in the new update.
 
 ## Objectives
 
