@@ -24,46 +24,29 @@
 
 ## :clipboard: Introduction
 
-        I made the "Computer Science Quiz Front" quiz because I love science,
-        and the science I know the least about is CS.
-        Being part of the Philosophy Club at the university I understand the value of questions.
-        It's a fairly simple application produced with the emphasis on
-        learning new technologies( TypeScript + Material-UI )
-        and applying the skills that I've required in the past few months.
+   I made the Computer Science Quiz application with the emphasis on learning new technologies( TypeScript + Material-UI ).
+   Users can test the game of 10 random questions and get scored a point for each correct answer. Registred users   
+   
 
 ## :mortar_board: Goals of this project
 
-1.  The main goal of this project is to gain experience in developing a full-stack app and learn new technologies
-        note: The app is not fully responsive and styling is not final.
-        A new scoring system and category picker will be added in the new update.
+   The main goal of this project is to gain experience in developing a full-stack app and learn new technologies
+   A new scoring system and category picker will be added in the new update.
 
 ## :pencil2: Objectives
 
-   1. Stack:
+   #### 1. Stack:
    ReactJS | Node(ES6) | Redux | REST | Express | PostreSQL
 
-   2. New technologies:
+   #### 2. New technologies:
    TypeScript | Material-UI
 
-   3. Planning:
+   #### 3. Planning:
    User Stories | Database Diagram | Wireframe
 
-   4. Practice with GitHub:
+   #### 4. Practice with GitHub:
    Atomic Commits | Branching | Good Commit Masseges
 
-###### :heavy_check_mark: Objectives that I did good.
-
-   Successfully implemented part of the required skills.
-   A functional TypeScript app with Material-UI styling.
-
-###### :x: Objectives that I could do better
-
-   Commit masseges and atomic commits were not implamentet correctly.
-   Due to time restrictions, bad planning and inexperience I did not do a good job
-
-   Communication is a key for me. I am curretly doing advanced GitHub courses.
-   Instead of starting the project from scratch. I decided to leave it like this
-   and improve on my new project. It's was good lesson to learn.
 
 ## :octocat: Setup
 
@@ -84,7 +67,7 @@
 
 ## :computer: Technologies
 
-Front end:
+#### Front end:
  TypeScript 
  Material-UI
  ReactJS
@@ -92,7 +75,7 @@ Front end:
  Axios
  
 
-Back end: 
+#### Back end: 
  ReactJS 
  Node(ES6) 
  JavaScript  
@@ -101,7 +84,7 @@ Back end:
 
 
 
-Front end:
+#### Front end:
  TypeScript 
  Material-UI
  ReactJS
