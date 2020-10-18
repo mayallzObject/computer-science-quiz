@@ -13,10 +13,6 @@ import { Paper } from "@material-ui/core";
 import Banner from "../../components/Banner";
 import sphinx from "../../images/sphinx.jpg";
 
-type Props = {
-  darkMode: boolean;
-  set_darkMode: (value: boolean) => void;
-};
 
 const founder = [
   {
@@ -34,7 +30,7 @@ const founder = [
   },
 ];
 
-export default function Home(props: Props) {
+export default function Home() {
   const classes = useStyles();
 
   return (
