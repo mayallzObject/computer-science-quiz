@@ -23,17 +23,13 @@
 
     I made the Computer Science Quiz application with the emphasis 
     on learning new technologies( TypeScript + Material-UI ).
-    Users can test the game of 10 random questions and score 
-    a point for each correct answer. 
-    Registred users can play the game earn points 
-    and compete on the leader board.
+    Users can test the game of 10 random questions and score a point for each correct answer. 
+    Registered users can play the game, earn points, and compete on the leader board.
    
 
 ## Goals
 
-    The main goal of this project is to gain experience 
-    in developing a full-stack app and learn new technologies.
-    A new scoring system and category picker will be added in the new update.
+    The main goal of this project is to gain experience in developing a full-stack app and learn new technologies.
 
 ## Objectives
 
@@ -53,28 +49,9 @@
        Atomic Commits | Branching | Good Commit Masseges
 
 
-## Setup
-
-**Server setup**
-  1. Clone the repositorycd into the project directory.
-  2. On first run, run the script npm run initialize, this will run 
-  npm i && npm run resetDB && npm run start.
-  3. Afterward, simply run npm run start which will run the script 
-  npx nodemon index.js or node index.js.
-  4. The server runs on port 4000 by default.
-
-**Client setup**
-  1. Clone the repository.
-  2. Cd into the project directory.
-  3. On the first run, run the script npm run initialize, 
-  this will run npm install && react-scripts.
-  4. Star afterward, the first run just run the script 
-  npm run start to start development.
-  5. The client runs on localhost:3000 by default.
-
 ## Technologies
 
-#### Front end:
+#### Frontend:
     TypeScript 
     Material-UI
     ReactJS
@@ -82,7 +59,7 @@
     Axios
  
 
-#### Back end: 
+#### Backend: 
     ReactJS 
     Node(ES6) 
     JavaScript  
