@@ -18,7 +18,7 @@
     "@types/react-swipeable-views-utils": "^0.13.2",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "material-ui-banner": "^1.4.3",
     "moment": "^2.27.0",
     "notistack": "^0.9.17",
